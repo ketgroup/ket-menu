@@ -47,6 +47,7 @@ window.KET_VENUES = {
     tagline: "Kitchen · Bar",
     tabLabel: "K5 Fai",
     href: "k5.html",
+    tripadvisor: "https://www.tripadvisor.com/Attraction_Review-g298085-d34677504-Reviews-K_t_Fai-Da_Nang.html",
     logo: "img/logos/k5.png",
     accent: "#BF5AF2",
     accentRgb: "191, 90, 242",
