@@ -1355,8 +1355,9 @@ body {
 
 .about-venue-tile {
   display: flex;
-  align-items: center;
-  gap: 14px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
   padding: 16px;
   border-radius: 16px;
   text-decoration: none;
@@ -1366,8 +1367,59 @@ body {
   transition: transform 0.15s ease;
 }
 
-.about-venue-tile:active {
+.about-venue-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease;
+}
+
+.about-venue-main:active {
   transform: scale(0.98);
+}
+
+.about-venue-tile { --venue-rgb: 255, 255, 255; }
+.about-venue-tile--k1 { --venue-rgb: 255, 159, 10; }
+.about-venue-tile--k2 { --venue-rgb: 242, 242, 247; }
+.about-venue-tile--k5 { --venue-rgb: 214, 102, 242; }
+.about-venue-tile--k9 { --venue-rgb: 255, 69, 58; }
+
+.venue-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-left: 58px;
+}
+
+.venue-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: rgb(var(--venue-rgb));
+  background: rgba(var(--venue-rgb), 0.14);
+  border: 1px solid rgba(var(--venue-rgb), 0.3);
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.venue-social-btn svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+}
+
+.venue-social-btn:active {
+  transform: scale(0.9);
+  background: rgba(var(--venue-rgb), 0.26);
+}
+
+@media (max-width: 360px) {
+  .venue-social { padding-left: 0; }
 }
 
 .about-venue-tile--k1 {
