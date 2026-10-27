@@ -53,10 +53,10 @@
 
   var current = document.body.getAttribute("data-current-venue");
   if (current) {
-    document.querySelectorAll(".venue-pill").forEach(function (pill) {
-      if (pill.getAttribute("data-venue") === current) {
-        pill.classList.add("is-current");
-        pill.setAttribute("aria-current", "page");
+    document.querySelectorAll(".ios-tab-bar .tab-item").forEach(function (tab) {
+      if (tab.getAttribute("data-venue") === current) {
+        tab.classList.add("is-selected");
+        tab.setAttribute("aria-current", "page");
       }
     });
   }
