@@ -72,7 +72,7 @@ window.KET_VENUES = {
 
 window.KET_BRAND = {
   name: "Kết Group",
-  homeLogo: "img/logos/logo-vang.png",
+  homeLogo: "img/logos/ket-logo-mau.png",
   homeLogoAlt: "Kết Group",
   favicon: "img/logos/favicon.png",
   appleTouchIcon: "img/logos/apple-touch-icon.png",
