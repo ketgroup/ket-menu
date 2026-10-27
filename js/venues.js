@@ -29,7 +29,7 @@ window.KET_VENUES = {
     price: { from: 100, to: 480, avg: 175 },
     code: "K2",
     title: "Kết High",
-    tagline: "F.U.N in the house · Nơi mượn niềm vui",
+    tagline: "Cocktail & view",
     tabLabel: "K2 High",
     href: "k2.html",
     tripadvisor: "https://www.tripadvisor.com/Attraction_Review-g298085-d27699650-Reviews-Ket_High_Cocktail_Bar-Da_Nang.html",
