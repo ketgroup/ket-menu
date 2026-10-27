@@ -9,6 +9,7 @@ window.KET_VENUE_ORDER = ["k1", "k2", "k5", "k9"];
 window.KET_VENUES = {
   k1: {
     id: "k1",
+    price: { from: 99, to: 489, avg: 170 },
     code: "K1",
     title: "Kết Bar",
     tagline: "Tiệm chữa lành · Pain killer",
@@ -25,6 +26,7 @@ window.KET_VENUES = {
   },
   k2: {
     id: "k2",
+    price: { from: 100, to: 480, avg: 175 },
     code: "K2",
     title: "Kết High",
     tagline: "F.U.N in the house · Nơi mượn niềm vui",
@@ -42,6 +44,7 @@ window.KET_VENUES = {
   },
   k5: {
     id: "k5",
+    price: { from: 39, to: 209, avg: 125 },
     code: "K5",
     title: "Kết Fai",
     tagline: "Kitchen · Bar",
@@ -58,6 +61,7 @@ window.KET_VENUES = {
   },
   k9: {
     id: "k9",
+    price: { from: 50, to: 490, avg: 180 },
     code: "K9",
     title: "Kết Underground",
     tagline: "Dammm",
@@ -80,6 +84,21 @@ window.KET_BRAND = {
   homeLogoAlt: "Kết Group",
   favicon: "img/logos/favicon.png",
   appleTouchIcon: "img/logos/apple-touch-icon.png",
+};
+
+/**
+ * Dòng giá nhỏ trên nút chọn quán (cập nhật 27/10/2026), đơn vị nghìn đồng.
+ * Chỉ tính đồ uống bán ly: cocktail, mocktail, shot, bia, rượu mạnh bán ly,
+ * vang ly, cà phê/nước (K5). Bỏ chai/carafe/jug/combo, món 0đ, thuốc lá,
+ * đồ ăn/snack, nước mixer, topping thêm.
+ * from/to = giá ly thấp nhất / cao nhất; avg = trung bình cộng giá các món
+ * đồ uống bán ly, làm tròn 5k. K1 theo sheet «List Menu K1 Giá mới» (07/08/2026);
+ * K2/K5/K9 theo giá trên ảnh menu của trang.
+ */
+window.KET_priceLine = function (venue) {
+  var p = venue && venue.price;
+  if (!p) return "";
+  return "Từ " + p.from + "k – " + p.to + "k · TB ~" + p.avg + "k/ly";
 };
 
 window.KET_mapsUrl = function (address) {
