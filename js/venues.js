@@ -58,7 +58,7 @@ window.KET_VENUES = {
     logo: "img/logos/k9.png",
     accent: "#FF453A",
     accentRgb: "255, 69, 58",
-    hours: null,
+    hours: ["19:30 – 02:30"],
     address: null,
     phone: null,
     phoneDisplay: null,
