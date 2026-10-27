@@ -707,6 +707,52 @@ body[data-venue-light-accent="true"] .venue-info-link {
   text-align: center;
 }
 
+.file-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.file-picker-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.file-picker-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: var(--radius-btn);
+  background: rgba(255, 159, 10, 0.18);
+  color: #ff9f0a;
+  font-family: var(--font-ui);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.12s ease, opacity 0.12s ease;
+}
+
+.file-picker-btn:active {
+  transform: scale(0.98);
+  opacity: 0.85;
+}
+
+.file-picker-name {
+  font-size: 13px;
+  color: var(--label-secondary);
+  word-break: break-all;
+}
+
 .thank-you-box {
   padding: 28px 20px 12px;
   text-align: center;
