@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ứng tuyển – Kết Group</title>
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kết Group">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" type="image/png" href="img/logos/favicon.png">
+<link rel="apple-touch-icon" href="img/logos/apple-touch-icon.png">
+<link rel="stylesheet" href="css/app.css?v=20261027d">
+<script src="js/venues.js?v=20261027d"></script>
+</head>
+<body class="page-site page-static" data-site-tab="apply">
+<header class="ios-nav">
+<div class="ios-nav-bar">
+<a class="ios-btn ios-btn--tinted ios-btn--back" href="./" aria-label="Trang chủ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>Trang chủ</span></a>
+<div class="ios-nav-title-group"><h1 class="ios-nav-title">Ứng tuyển</h1></div>
+<span class="ios-nav-code" aria-hidden="true">KG</span>
+</div>
+</header>
+<main class="page-main">
+<p class="prose-intro">Điền form bên dưới — đội ngũ Kết Group sẽ liên hệ khi có vị trí phù hợp. Thông tin chỉ dùng cho mục đích tuyển dụng.</p>
+<div class="inset-group" style="padding-left:0;padding-right:0;padding-top:0">
+<form class="ios-form inset-card" action="https://formsubmit.co/ketcocktail@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Ứng tuyển Kết Group">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_next" value="https://lanle102.github.io/ket-menu/ung-tuyen-thanh-cong.html">
+<div class="form-field"><label for="full_name">Họ tên *</label><input id="full_name" name="Họ tên" type="text" required autocomplete="name"></div>
+<div class="form-field"><label for="phone">Số điện thoại / Zalo *</label><input id="phone" name="Số điện thoại / Zalo" type="tel" required autocomplete="tel"></div>
+<div class="form-field"><label for="birth_year">Năm sinh *</label><input id="birth_year" name="Năm sinh" type="number" inputmode="numeric" min="1960" max="2010" required></div>
+<div class="form-field"><label for="venue">Quán muốn làm *</label><select id="venue" name="Quán muốn làm" required><option value="">Chọn quán</option><option>K1 · Kết Bar</option><option>K2 · Kết High</option><option>K5 · Kết Fai</option><option>K9 · Kết Underground</option><option>Quán nào cũng được</option></select></div>
+<div class="form-field"><label for="position">Vị trí *</label><select id="position" name="Vị trí" required><option value="">Chọn vị trí</option><option>Bartender</option><option>Phục vụ</option><option>Bếp</option><option>Thu ngân</option><option>Khác</option></select></div>
+<div class="form-field"><label for="schedule">Thời gian có thể làm *</label><select id="schedule" name="Thời gian có thể làm" required><option value="">Chọn thời gian</option><option>Full-time</option><option>Part-time (ca sáng)</option><option>Part-time (ca tối)</option><option>Part-time (linh hoạt)</option></select></div>
+<div class="form-field"><label for="experience">Kinh nghiệm</label><textarea id="experience" name="Kinh nghiệm" placeholder="Mô tả ngắn kinh nghiệm làm việc (nếu có)"></textarea></div>
+<div class="form-field"><label for="profile_link">Link CV hoặc Facebook</label><input id="profile_link" name="Link CV hoặc Facebook" type="url" inputmode="url" placeholder="https://"></div>
+<div class="form-actions">
+<p class="form-hint">Sau khi gửi, bạn có thể được chuyển qua bước xác minh chống spam.</p>
+<button type="submit" class="ios-btn ios-btn--filled">Gửi đơn ứng tuyển</button>
+</div>
+</form>
+</div>
+</main>
+<nav class="ios-tab-bar ios-tab-bar--site" aria-label="Điều hướng chính"><a class="tab-item" href="./" data-site-tab="home"><span class="tab-icon tab-icon--home" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 10.5L12 4l8 6.5V20a1 1 0 01-1 1h-5v-6H10v6H5a1 1 0 01-1-1v-9.5z"/></svg></span><span class="tab-label">Trang chủ</span></a><a class="tab-item" href="gioi-thieu.html" data-site-tab="about"><span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 10v6M12 7h.01"/></svg></span><span class="tab-label">Về Kết</span></a><a class="tab-item" href="ung-tuyen.html" data-site-tab="apply"><span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span><span class="tab-label">Ứng tuyển</span></a></nav>
+<script src="js/app.js?v=20261027d" defer></script>
+</body>
+</html>

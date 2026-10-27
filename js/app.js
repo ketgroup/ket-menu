@@ -152,4 +152,14 @@
       }
     });
   }
+
+  var siteTab = document.body.getAttribute("data-site-tab");
+  if (siteTab) {
+    document.querySelectorAll(".ios-tab-bar--site .tab-item").forEach(function (tab) {
+      if (tab.getAttribute("data-site-tab") === siteTab) {
+        tab.classList.add("is-selected");
+        tab.setAttribute("aria-current", "page");
+      }
+    });
+  }
 })();

@@ -51,8 +51,14 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-body.page-home {
-  padding-bottom: calc(20px + var(--safe-bottom));
+body.page-home,
+body.page-site {
+  padding-bottom: calc(var(--tab-bar-h) + var(--safe-bottom) + 8px);
+}
+
+body.page-static {
+  --venue-accent: #ff9f0a;
+  --venue-accent-rgb: 255, 159, 10;
 }
 
 a {
@@ -570,6 +576,177 @@ body[data-venue-light-accent="true"] .venue-info-link {
 
 .tab-item.is-selected {
   color: var(--venue-accent);
+}
+
+.ios-tab-bar--site .tab-item.is-selected {
+  color: #ff9f0a;
+}
+
+/* —— Static / about / form pages —— */
+.page-main {
+  padding: 0 calc(16px + var(--safe-right)) 16px calc(16px + var(--safe-left));
+}
+
+.prose-intro {
+  margin: 0 0 16px;
+  font-family: var(--font-ui);
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--label-secondary);
+}
+
+.about-venue-card {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 0.5px solid var(--separator);
+  transition: background 0.15s ease;
+}
+
+.about-venue-card:last-child {
+  border-bottom: none;
+}
+
+.about-venue-card:active {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.about-venue-card .venue-app-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.about-venue-body {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-ui);
+}
+
+.about-venue-body b {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--label-primary);
+}
+
+.about-venue-body .tagline {
+  display: block;
+  margin-top: 2px;
+  font-size: 14px;
+  color: var(--label-secondary);
+}
+
+.about-venue-body .meta {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--label-tertiary);
+}
+
+.hotline-block {
+  padding: 4px 0 8px;
+}
+
+.ios-form {
+  font-family: var(--font-ui);
+}
+
+.form-field {
+  padding: 12px 16px;
+  border-bottom: 0.5px solid var(--separator);
+}
+
+.form-field:last-child {
+  border-bottom: none;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--label-secondary);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--bg-secondary);
+  color: var(--label-primary);
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.form-field textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: 2px solid rgba(255, 159, 10, 0.45);
+  outline-offset: 0;
+}
+
+.form-actions {
+  padding: 16px;
+}
+
+.form-hint {
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: var(--label-tertiary);
+  text-align: center;
+}
+
+.thank-you-box {
+  padding: 28px 20px 12px;
+  text-align: center;
+  font-family: var(--font-ui);
+}
+
+.thank-you-box h2 {
+  margin: 0 0 10px;
+  font-family: var(--brand-serif);
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.thank-you-box p {
+  margin: 0 0 20px;
+  font-size: 15px;
+  color: var(--label-secondary);
+  line-height: 1.4;
+}
+
+.row-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.venue-row .row-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: rgba(255, 159, 10, 0.12);
+  color: #ff9f0a;
 }
 
 @media (min-width: 768px) {
