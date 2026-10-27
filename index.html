@@ -1,15 +1,31 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Menu Kết – K1 · K2 · K5 · K9</title><meta name="theme-color" content="#0d0b0a"><style>*{box-sizing:border-box}html{background:#0d0b0a}body{margin:0;font-family:Georgia,'Times New Roman',serif;color:#efe6d6;background:#0d0b0a;max-width:900px;margin:0 auto}
-header{padding:18px 16px 10px;text-align:center;border-bottom:1px solid #3a2f22}h1{margin:0;font-size:1.35rem;letter-spacing:.06em;color:#d9b779;font-weight:normal}
-.sub{font-size:.8rem;color:#a99a83;margin-top:4px}a{color:#d9b779}.back{position:absolute;left:12px;top:18px;text-decoration:none;font-size:1.3rem}
-nav.tabs{position:sticky;top:0;z-index:2;display:flex;gap:8px;padding:10px;background:#0d0b0aee}nav.tabs a{flex:1;text-align:center;padding:11px;border:1px solid #d9b779;border-radius:24px;text-decoration:none;font-size:1rem}
-h2{color:#d9b779;font-weight:normal;text-align:center;margin:18px 0 8px;letter-spacing:.08em}
-img{display:block;width:100%;height:auto;margin:0 0 6px;background:#1a1612}
-footer{padding:22px 16px 34px;text-align:center;font-size:.8rem;color:#8d8170;border-top:1px solid #3a2f22;margin-top:10px}
-.grid{display:grid;gap:14px;padding:22px 16px}.btn{display:block;padding:22px 18px;border:1px solid #d9b779;border-radius:14px;text-decoration:none;background:linear-gradient(135deg,#1c1711,#0f0d0b)}
-.btn b{display:block;font-size:1.6rem;color:#d9b779;font-weight:normal;letter-spacing:.1em}.btn span{color:#cfc3ae;font-size:1rem}</style></head><body>
-<header><h1>MENU KẾT</h1><div class="sub">Chọn quán để xem menu</div></header><div class="grid">
-<a class="btn" href="k1.html"><b>K1</b><span>Kết Bar</span></a>
-<a class="btn" href="k2.html"><b>K2</b><span>Kết High</span></a>
-<a class="btn" href="k5.html"><b>K5</b><span>Kết Fai</span></a>
-<a class="btn" href="k9.html"><b>K9</b><span>Kết Underground</span></a>
-</div></body></html>
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kết Group</title>
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kết Group">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="img/logos/favicon.png">
+<link rel="apple-touch-icon" href="img/logos/apple-touch-icon.png">
+<link rel="stylesheet" href="css/app.css">
+<script src="js/venues.js"></script>
+</head>
+<body class="page-home">
+<div class="home-hero">
+<div class="home-logo-wrap">
+<img class="home-logo" src="img/logos/logo-vang.png" width="168" height="132" alt="Logo Kết">
+</div>
+<h1 class="large-title">Kết Group</h1>
+<p class="large-subtitle">Chọn quán để xem menu</p>
+</div>
+<main class="inset-group">
+<p class="inset-group-label">Các quán</p>
+<div class="inset-card" id="venue-list-home"></div>
+</main>
+<script src="js/app.js" defer></script>
+</body>
+</html>
