@@ -1,0 +1,23 @@
+{
+  "name": "Kết Group",
+  "short_name": "Kết Group",
+  "description": "Menu các quán Kết — K1, K2, K5, K9",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "lang": "vi",
+  "icons": [
+    {
+      "src": "img/logos/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/logos/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

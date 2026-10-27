@@ -44,8 +44,9 @@ window.KET_VENUES = {
 };
 
 window.KET_BRAND = {
+  name: "Kết Group",
   homeLogo: "img/logos/logo-vang.png",
-  homeLogoAlt: "Logo Kết",
+  homeLogoAlt: "Kết Group",
   favicon: "img/logos/favicon.png",
   appleTouchIcon: "img/logos/apple-touch-icon.png",
 };
