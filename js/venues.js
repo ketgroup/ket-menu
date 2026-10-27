@@ -14,6 +14,7 @@ window.KET_VENUES = {
     id: "k2",
     code: "K2",
     title: "Kết High",
+    tagline: "Cocktail & view",
     tabLabel: "K2 High",
     href: "k2.html",
     logo: "img/logos/k2.png",
