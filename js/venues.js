@@ -92,7 +92,8 @@ window.KET_BRAND = {
  * vang ly, cà phê/nước (K5). Bỏ chai/carafe/jug/combo, món 0đ, thuốc lá,
  * đồ ăn/snack, nước mixer, topping thêm.
  * from/to = giá ly thấp nhất / cao nhất; avg = trung bình cộng giá các món
- * đồ uống bán ly, làm tròn 5k. K1 theo sheet «List Menu K1 Giá mới» (07/08/2026);
+ * đồ uống bán ly, làm tròn 5k. K1 theo menu PDF mới pdf/menu-k1.pdf (27/10/2026):
+ * 109 món bán ly (28 cocktail + 81 mocktail/bia/shot/rượu ly), TB 169,1 → 170;
  * K2/K5/K9 theo giá trên ảnh menu của trang.
  */
 window.KET_priceLine = function (venue) {
