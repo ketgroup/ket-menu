@@ -102,6 +102,7 @@ img.menu-page {
   letter-spacing: 0.02em;
   line-height: 1.1;
   color: var(--label-primary);
+  text-align: center;
 }
 
 .large-subtitle {
