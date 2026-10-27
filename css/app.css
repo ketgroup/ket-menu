@@ -249,6 +249,15 @@ img.menu-page {
   color: var(--venue-accent);
 }
 
+body[data-venue-light-accent="true"] .ios-btn--tinted {
+  background: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+}
+
+body[data-venue-light-accent="true"] .ios-btn--tinted svg {
+  stroke: #ffffff;
+}
+
 .ios-btn--back svg {
   width: 18px;
   height: 18px;
@@ -298,6 +307,11 @@ img.menu-page {
   letter-spacing: 0.06em;
   color: var(--venue-accent);
   background: rgba(var(--venue-accent-rgb), 0.18);
+}
+
+body[data-venue-light-accent="true"] .ios-nav-code {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.22);
 }
 
 /* —— UISegmentedControl —— */
@@ -462,16 +476,16 @@ img.menu-page {
 }
 
 .tab-item[data-venue="k1"].is-selected {
-  color: #ff453a;
-}
-.tab-item[data-venue="k2"].is-selected {
   color: #ff9f0a;
 }
-.tab-item[data-venue="k5"].is-selected {
+.tab-item[data-venue="k2"].is-selected {
   color: #f2f2f7;
 }
-.tab-item[data-venue="k9"].is-selected {
+.tab-item[data-venue="k5"].is-selected {
   color: #bf5af2;
+}
+.tab-item[data-venue="k9"].is-selected {
+  color: #ff453a;
 }
 
 .tab-item[data-venue="home"].is-selected {

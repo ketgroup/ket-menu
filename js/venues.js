@@ -7,8 +7,8 @@ window.KET_VENUES = {
     tabLabel: "K1 Bar",
     href: "k1.html",
     logo: "img/logos/k1.png",
-    accent: "#FF453A",
-    accentRgb: "255, 69, 58",
+    accent: "#FF9F0A",
+    accentRgb: "255, 159, 10",
   },
   k2: {
     id: "k2",
@@ -17,8 +17,9 @@ window.KET_VENUES = {
     tabLabel: "K2 High",
     href: "k2.html",
     logo: "img/logos/k2.png",
-    accent: "#FF9F0A",
-    accentRgb: "255, 159, 10",
+    accent: "#F2F2F7",
+    accentRgb: "242, 242, 247",
+    lightAccent: true,
   },
   k5: {
     id: "k5",
@@ -27,8 +28,8 @@ window.KET_VENUES = {
     tabLabel: "K5 Fai",
     href: "k5.html",
     logo: "img/logos/k5.png",
-    accent: "#EBEBF5",
-    accentRgb: "235, 235, 245",
+    accent: "#BF5AF2",
+    accentRgb: "191, 90, 242",
   },
   k9: {
     id: "k9",
@@ -37,13 +38,13 @@ window.KET_VENUES = {
     tabLabel: "K9 UG",
     href: "k9.html",
     logo: "img/logos/k9.png",
-    accent: "#BF5AF2",
-    accentRgb: "191, 90, 242",
+    accent: "#FF453A",
+    accentRgb: "255, 69, 58",
   },
 };
 
 window.KET_BRAND = {
-  homeLogo: "img/logos/k2.png",
+  homeLogo: "img/logos/logo-vang.png",
   homeLogoAlt: "Logo Kết",
   favicon: "img/logos/favicon.png",
   appleTouchIcon: "img/logos/apple-touch-icon.png",
@@ -56,4 +57,7 @@ window.KET_BRAND = {
   var root = document.documentElement;
   root.style.setProperty("--venue-accent", v.accent);
   root.style.setProperty("--venue-accent-rgb", v.accentRgb);
+  if (v.lightAccent) {
+    document.body.setAttribute("data-venue-light-accent", "true");
+  }
 })();
