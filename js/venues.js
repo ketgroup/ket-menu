@@ -1,7 +1,7 @@
 /** Cấu hình quán & logo — chỉnh màu/logo tại đây */
 window.KET_HOTLINE = {
-  phone: "0905756801",
-  phoneDisplay: "090 575 68 01",
+  phone: "0896789768",
+  phoneDisplay: "089 6789768",
 };
 
 window.KET_VENUE_ORDER = ["k1", "k2", "k5", "k9"];
