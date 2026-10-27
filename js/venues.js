@@ -1,4 +1,9 @@
 /** Cấu hình quán & logo — chỉnh màu/logo tại đây */
+window.KET_HOTLINE = {
+  phone: "0905756801",
+  phoneDisplay: "090 575 68 01",
+};
+
 window.KET_VENUE_ORDER = ["k1", "k2", "k5", "k9"];
 
 window.KET_VENUES = {
@@ -14,8 +19,8 @@ window.KET_VENUES = {
     accentRgb: "255, 159, 10",
     hours: ["19:00 – 02:30"],
     address: "04 Phan Kế Bính, Thuận Phước, Hải Châu, Đà Nẵng",
-    phone: "0905756801",
-    phoneDisplay: "090 575 68 01",
+    phone: window.KET_HOTLINE.phone,
+    phoneDisplay: window.KET_HOTLINE.phoneDisplay,
   },
   k2: {
     id: "k2",
@@ -30,8 +35,8 @@ window.KET_VENUES = {
     lightAccent: true,
     hours: ["19:00 – 02:30"],
     address: "Tầng 3, 200 Bạch Đằng, Hải Châu, Đà Nẵng",
-    phone: "0869072921",
-    phoneDisplay: "0869 072 921",
+    phone: window.KET_HOTLINE.phone,
+    phoneDisplay: window.KET_HOTLINE.phoneDisplay,
   },
   k5: {
     id: "k5",
@@ -45,8 +50,8 @@ window.KET_VENUES = {
     accentRgb: "191, 90, 242",
     hours: ["Bếp 09:00 – 22:30", "Cocktail 18:00 – khuya"],
     address: "138 Đỗ Bá, An Thượng, Đà Nẵng",
-    phone: null,
-    phoneDisplay: null,
+    phone: window.KET_HOTLINE.phone,
+    phoneDisplay: window.KET_HOTLINE.phoneDisplay,
   },
   k9: {
     id: "k9",
@@ -60,8 +65,8 @@ window.KET_VENUES = {
     accentRgb: "255, 69, 58",
     hours: ["19:30 – 02:30"],
     address: null,
-    phone: null,
-    phoneDisplay: null,
+    phone: window.KET_HOTLINE.phone,
+    phoneDisplay: window.KET_HOTLINE.phoneDisplay,
   },
 };
 
