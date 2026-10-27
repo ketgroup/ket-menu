@@ -85,14 +85,23 @@ window.KET_hoursHome = function (venue) {
   return venue.hours.join(" · ");
 };
 
-(function applyTheme() {
-  var venueId = document.body && document.body.getAttribute("data-current-venue");
+window.applyVenueTheme = function () {
+  var body = document.body;
+  if (!body) return;
+  var venueId = body.getAttribute("data-current-venue");
+  body.removeAttribute("data-venue-light-accent");
   if (!venueId || !window.KET_VENUES[venueId]) return;
   var v = window.KET_VENUES[venueId];
   var root = document.documentElement;
   root.style.setProperty("--venue-accent", v.accent);
   root.style.setProperty("--venue-accent-rgb", v.accentRgb);
   if (v.lightAccent) {
-    document.body.setAttribute("data-venue-light-accent", "true");
+    body.setAttribute("data-venue-light-accent", "true");
   }
-})();
+};
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", window.applyVenueTheme);
+} else {
+  window.applyVenueTheme();
+}

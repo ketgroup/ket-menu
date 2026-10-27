@@ -266,6 +266,7 @@ img.menu-page {
 }
 
 body[data-venue-light-accent="true"] .ios-btn--filled {
+  background: #ebebf5;
   color: #000000;
 }
 
@@ -274,12 +275,12 @@ body[data-venue-light-accent="true"] .ios-btn--filled {
 }
 
 body[data-venue-light-accent="true"] .ios-btn--tinted {
-  background: rgba(255, 255, 255, 0.28);
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.92);
+  color: #000000;
 }
 
 body[data-venue-light-accent="true"] .ios-btn--tinted svg {
-  stroke: #ffffff;
+  stroke: #000000;
 }
 
 .ios-btn--back svg {
@@ -334,8 +335,8 @@ body[data-venue-light-accent="true"] .ios-btn--tinted svg {
 }
 
 body[data-venue-light-accent="true"] .ios-nav-code {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.22);
+  color: #000000;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 /* —— UISegmentedControl —— */
@@ -386,6 +387,10 @@ body[data-venue-light-accent="true"] .ios-nav-code {
   background: var(--bg-tertiary);
   color: var(--label-primary);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18), 0 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+body[data-current-venue] .segment-btn.is-active {
+  color: var(--venue-accent);
 }
 
 /* —— Venue info card (menu pages) —— */
@@ -564,23 +569,6 @@ body[data-venue-light-accent="true"] .venue-info-link {
 
 .tab-item.is-selected {
   color: var(--venue-accent);
-}
-
-.tab-item[data-venue="k1"].is-selected {
-  color: #ff9f0a;
-}
-.tab-item[data-venue="k2"].is-selected {
-  color: #f2f2f7;
-}
-.tab-item[data-venue="k5"].is-selected {
-  color: #bf5af2;
-}
-.tab-item[data-venue="k9"].is-selected {
-  color: #ff453a;
-}
-
-.tab-item[data-venue="home"].is-selected {
-  color: #ff9f0a;
 }
 
 @media (min-width: 768px) {

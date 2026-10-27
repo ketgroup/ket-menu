@@ -1,6 +1,10 @@
 (function () {
   "use strict";
 
+  if (window.applyVenueTheme) {
+    window.applyVenueTheme();
+  }
+
   function escapeHtml(s) {
     return String(s)
       .replace(/&/g, "&amp;")
