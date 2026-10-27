@@ -189,6 +189,15 @@ img.menu-page {
   color: var(--label-secondary);
 }
 
+.venue-row-hours {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.08px;
+  color: var(--label-tertiary);
+}
+
 .venue-row-chevron {
   flex-shrink: 0;
   font-family: var(--font-ui);
@@ -247,6 +256,21 @@ img.menu-page {
 .ios-btn--tinted {
   background: rgba(var(--venue-accent-rgb), 0.22);
   color: var(--venue-accent);
+}
+
+.ios-btn--filled {
+  width: 100%;
+  min-height: 44px;
+  background: var(--venue-accent);
+  color: #ffffff;
+}
+
+body[data-venue-light-accent="true"] .ios-btn--filled {
+  color: #000000;
+}
+
+.ios-btn--call {
+  margin: 0;
 }
 
 body[data-venue-light-accent="true"] .ios-btn--tinted {
@@ -362,6 +386,73 @@ body[data-venue-light-accent="true"] .ios-nav-code {
   background: var(--bg-tertiary);
   color: var(--label-primary);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18), 0 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+/* —— Venue info card (menu pages) —— */
+.venue-info-mount {
+  padding-top: 10px;
+  padding-bottom: 4px;
+}
+
+.venue-info-mount--compact .inset-group-label {
+  display: none;
+}
+
+.venue-info-card {
+  margin: 0;
+}
+
+.venue-info-block {
+  padding: 10px 16px;
+  border-bottom: 0.5px solid var(--separator);
+}
+
+.venue-info-block:last-of-type {
+  border-bottom: none;
+}
+
+.venue-info-label {
+  margin: 0 0 4px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--label-secondary);
+}
+
+.venue-info-value {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--label-primary);
+}
+
+.venue-info-value + .venue-info-value {
+  margin-top: 4px;
+}
+
+.venue-info-link {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 15px;
+  line-height: 1.35;
+  color: var(--venue-accent);
+  text-decoration: none;
+}
+
+body[data-venue-light-accent="true"] .venue-info-link {
+  color: #f2f2f7;
+}
+
+.venue-info-link:active {
+  opacity: 0.7;
+}
+
+.venue-info-actions {
+  padding: 12px 16px 14px;
 }
 
 /* —— Menu sections —— */
