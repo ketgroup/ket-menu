@@ -48,3 +48,9 @@ html:not(.bv-js) .reveal { opacity: 1 !important; transform: none !important; }
   .bv-js .bv:not(.bv-in) { opacity: 1 !important; transform: none !important; }
   .about-venue-tile::before, .about-venue-tile .venue-app-icon, .apply-submit::after { animation: none !important; }
 }
+/* Thanh đầu cân đối: 2 nút tròn cùng cỡ */
+.ios-nav-bar .ios-btn--back { width: 34px; height: 34px; min-width: 34px; padding: 0 !important; border-radius: 50% !important; justify-content: center; gap: 0; }
+.ios-nav-bar .ios-btn--back span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.ios-nav-bar .ios-btn--back svg { width: 18px; height: 18px; margin: 0 1px 0 -1px; }
+.ios-nav-bar .ios-nav-code { width: 34px; height: 34px; min-width: 34px; padding: 0 !important; border-radius: 50% !important;
+  display: inline-flex; align-items: center; justify-content: center; font-family: "Be Vietnam Pro", -apple-system, Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .02em; }
