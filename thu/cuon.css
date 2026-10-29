@@ -1,0 +1,29 @@
+/* Bản thử: cuộn hai chiều + thẻ quán viền sáng (gioi-thieu, ung-tuyen) */
+@property --cv-a { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+html:not(.cv-js) .reveal { opacity: 1 !important; transform: none !important; }
+.cv-js .reveal, .cv-js .cv-item { transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1); transition-delay: var(--sd-delay,0ms); }
+.cv-js .cv-item:not(.is-visible) { opacity: 0; transform: translateY(var(--cv-y,22px)) scale(.985); }
+.cv-js .reveal:not(.is-visible) { transform: translateY(var(--cv-y,28px)); }
+.cv-js .cv-from-top { --cv-y: -22px; }
+.about-venue-tile { position: relative; isolation: isolate; box-shadow: 0 0 18px -6px rgba(var(--venue-rgb),.45);
+  animation: cv-breathe 3.6s ease-in-out infinite; }
+.about-venue-tile::before { content:""; position:absolute; inset:-1.5px; border-radius:inherit; z-index:-1; pointer-events:none;
+  background: conic-gradient(from var(--cv-a), transparent 0 55%, rgb(var(--venue-rgb)) 75%, transparent 92%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  padding: 1.5px; animation: cv-spin 3.4s linear infinite; }
+.about-venue-tile--k2::before{animation-delay:-.8s}.about-venue-tile--k5::before{animation-delay:-1.6s}.about-venue-tile--k9::before{animation-delay:-2.4s}
+.about-venue-tile--k2{animation-delay:.4s}.about-venue-tile--k5{animation-delay:.8s}.about-venue-tile--k9{animation-delay:1.2s}
+.about-venue-tile .venue-app-icon { animation: cv-logo 4.2s ease-in-out infinite; }
+.about-venue-tile:active { transform: scale(.96) translateY(-2px); box-shadow: 0 0 30px -2px rgba(var(--venue-rgb),.6); }
+.apply-submit { position: relative; overflow: hidden; transition: transform .45s cubic-bezier(.34,1.56,.64,1); }
+.apply-submit:active { transform: scale(.95); }
+.apply-submit::after { content:""; position:absolute; top:0; bottom:0; left:-60%; width:45%; pointer-events:none;
+  background: linear-gradient(105deg, transparent, rgba(255,255,255,.35), transparent); transform: skewX(-18deg); animation: sd-shine 4.5s ease-in-out 1s infinite; }
+.cv-test-note { position: fixed; left: 50%; bottom: 96px; transform: translateX(-50%); z-index: 999; background: rgba(28,28,30,.96);
+  color: #fff; padding: 12px 18px; border-radius: 14px; font: 600 15px/1.3 var(--font-ui, system-ui); box-shadow: 0 8px 30px rgba(0,0,0,.5); }
+@keyframes cv-spin { to { --cv-a: 360deg; } }
+@keyframes cv-breathe { 50% { box-shadow: 0 0 28px -2px rgba(var(--venue-rgb),.55); } }
+@keyframes cv-logo { 0%,100% { transform: none; } 30% { transform: translateY(-3px) rotate(-4deg); } 65% { transform: translateY(-1px) rotate(3deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .cv-js .cv-item:not(.is-visible), .cv-js .reveal:not(.is-visible) { opacity: 1 !important; transform: none !important; }
+}

@@ -1,0 +1,46 @@
+/* Bản thử «nút & chữ sống động» – chỉ thêm hiệu ứng, không đổi bố cục/màu */
+a, button, .ios-btn, .tab-item, .promo-card, .venue-social-btn, .about-cta-btn, .about-venue-tile {
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .45s cubic-bezier(.34,1.56,.64,1), filter .25s ease, box-shadow .3s ease;
+}
+.ios-btn:active, .tab-item:active, .promo-card:active, .venue-social-btn:active,
+.about-cta-btn:active, .about-venue-tile:active, button:active, .sd-press {
+  transform: scale(.95); transition-duration: .12s; filter: brightness(.96);
+}
+@media (hover:hover) {
+  .ios-btn:hover, .venue-social-btn:hover, .about-cta-btn:hover, button:hover { transform: translateY(-1px) scale(1.03); filter: brightness(1.06); }
+  .promo-card:hover, .about-venue-tile:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,.18); }
+  .tab-item:hover .tab-icon { transform: translateY(-2px); }
+}
+.tab-icon { transition: transform .4s cubic-bezier(.34,1.56,.64,1); }
+.tab-item:active .tab-icon { transform: scale(.85); }
+/* gợn sóng */
+.sd-ripple-host { position: relative; overflow: hidden; }
+.sd-ripple { position: absolute; border-radius: 50%; pointer-events: none; background: currentColor; opacity: .22;
+  transform: scale(0); animation: sd-ripple .6s cubic-bezier(.2,.8,.2,1) forwards; }
+@keyframes sd-ripple { to { transform: scale(2.6); opacity: 0; } }
+/* ánh sáng lướt qua nút chính */
+.ios-btn--filled, .about-cta-btn, .promo-card { position: relative; overflow: hidden; }
+.ios-btn--filled::after, .about-cta-btn::after, .promo-card::after {
+  content: ""; position: absolute; top: 0; bottom: 0; left: -60%; width: 45%; pointer-events: none;
+  background: linear-gradient(105deg, transparent, rgba(255,255,255,.38), transparent);
+  transform: skewX(-18deg); animation: sd-shine 4.5s ease-in-out 1.2s infinite;
+}
+.promo-card--careers::after { animation-delay: 2.2s; }
+@keyframes sd-shine { 0% { left: -60%; } 22%, 100% { left: 130%; } }
+/* tiêu đề */
+.ios-nav-title, .home-title, h1 { animation: sd-title .9s cubic-bezier(.2,.8,.2,1) both; }
+.ios-nav-logo, .home-logo { animation: sd-pop .8s cubic-bezier(.34,1.56,.64,1) both, sd-breathe 5s ease-in-out 1s infinite; }
+@keyframes sd-title { from { opacity: .001; transform: translateY(8px); letter-spacing: .06em; } to { opacity: 1; transform: none; } }
+@keyframes sd-pop { from { transform: scale(.85); } to { transform: scale(1); } }
+@keyframes sd-breathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.035); } }
+/* hiện dần khi lướt – chỉ ẩn khi JS đã chạy */
+.sd-js .sd-reveal:not(.sd-in) { opacity: 0; transform: translateY(18px) scale(.985); }
+.sd-js .sd-reveal { transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1);
+  transition-delay: var(--sd-delay, 0ms); }
+.sd-js .sd-reveal.sd-now { transition: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .sd-js .sd-reveal:not(.sd-in) { opacity: 1; transform: none; }
+  .sd-ripple { display: none; }
+}
