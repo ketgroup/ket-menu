@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700&subset=vietnamese&display=swap");
 /* Về Kết + Ứng tuyển: nội dung bay từ ngoài vào khi cuộn (2 chiều) */
 @property --cv-a { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
 html, body { overflow-x: clip; }
@@ -31,10 +32,10 @@ html:not(.bv-js) .reveal { opacity: 1 !important; transform: none !important; }
 .apply-submit::after { content:""; position:absolute; top:0; bottom:0; left:-60%; width:45%; pointer-events:none;
   background: linear-gradient(105deg, transparent, rgba(255,255,255,.38), transparent); transform: skewX(-18deg); animation: sd-shine 4.5s ease-in-out 1s infinite; }
 /* Ứng tuyển: tiêu đề căn giữa + font đồng bộ */
-.ios-nav-bar { display: grid !important; grid-template-columns: 1fr auto 1fr; align-items: center; }
-.ios-nav-bar > :first-child { justify-self: start; }
-.ios-nav-bar > .ios-nav-code { justify-self: end; }
-.ios-nav-title-group { justify-self: center; }
+.ios-nav-bar { position: relative; }
+.ios-nav-title-group { position: absolute !important; left: 50%; top: 50%; transform: translate(-50%,-50%); margin: 0 !important; max-width: 55%; pointer-events: none; }
+.ios-nav-title-group .ios-nav-title { font-family: "Be Vietnam Pro", -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif !important;
+  text-transform: uppercase; font-weight: 700; font-size: 16px; letter-spacing: .08em; white-space: nowrap; }
 .apply-shell { padding-top: 24px; }
 .apply-shell input, .apply-shell select, .apply-shell textarea, .apply-shell button, .field-control {
   font-family: var(--font-ui) !important; font-size: 16px; letter-spacing: -0.2px; }
