@@ -15,8 +15,6 @@ function setCounts(){$$('.stat b[data-n]').forEach(function(b){b.textContent=b.d
 if(reduce||!window.gsap||!window.ScrollTrigger){document.documentElement.classList.add('reduce');setCounts();$$('img[data-src]').forEach(function(i){i.src=i.dataset.src});$('.z2').style.opacity=1;return}
 gsap.registerPlugin(ScrollTrigger);
 var mob=innerWidth<860;
-// background colour transitions
-$$('section[data-bg]').forEach(function(s){ScrollTrigger.create({trigger:s,start:'top 55%',end:'bottom 55%',onToggle:function(st){if(st.isActive){gsap.to('body',{backgroundColor:s.dataset.bg,duration:.8,overwrite:'auto'});puff()}}})});
 // hero
 gsap.timeline({scrollTrigger:{trigger:'.hero',start:'top top',end:'+=100%',scrub:.6,pin:true}})
  .to('.hero-txt',{scale:.6,opacity:0,y:-60,transformOrigin:'left center',ease:'none'},0)
@@ -50,7 +48,7 @@ mid();
 // infinite zoom
 gsap.timeline({scrollTrigger:{trigger:'.zoom',start:'top top',end:'+=220%',scrub:.6,pin:true}})
  .fromTo('.z1',{scale:1},{scale:7,ease:'power2.in',duration:1})
- .to('.zt1',{opacity:0,scale:1.4,duration:.4},0.3)
+ .to('.zt1',{opacity:0,y:-40,duration:.4},0.3)
  .to('.z1',{opacity:0,duration:.3},.8)
  .fromTo('.z2',{scale:2.6,opacity:0},{scale:1,opacity:1,duration:1,ease:'power2.out'},.8)
  .to('.zt2',{opacity:1,y:-20,duration:.4},1.3);
@@ -69,5 +67,7 @@ var spr=document.createElement('canvas');spr.width=spr.height=128;var sx=spr.get
 var last=0;
 function puff(){var n=performance.now();if(n-last<900)return;last=n;parts=[];for(var i=0;i<14;i++)parts.push({x:-0.3*W+Math.random()*W*.4,y:Math.random()*H,r:(.25+Math.random()*.35)*Math.max(W,H),v:(.9+Math.random()*.6)*W/60});if(!run){run=1;gsap.to(cv,{opacity:.55,duration:.3});requestAnimationFrame(tick)}gsap.to(cv,{opacity:0,duration:.8,delay:.9,onComplete:function(){run=0}})}
 function tick(){if(!run){cx.clearRect(0,0,W,H);return}cx.clearRect(0,0,W,H);parts.forEach(function(p){p.x+=p.v;cx.drawImage(spr,p.x-p.r,p.y-p.r,p.r*2,p.r*2)});requestAnimationFrame(tick)}
+// background colour transitions
+$$('section[data-bg]').forEach(function(s){ScrollTrigger.create({trigger:s,start:'top 55%',end:'bottom 55%',onToggle:function(st){if(st.isActive){gsap.to('body',{backgroundColor:s.dataset.bg,duration:.8,overwrite:'auto'});puff()}}})});
 addEventListener('load',function(){ScrollTrigger.refresh()});
 })();
