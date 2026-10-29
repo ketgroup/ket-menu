@@ -11,12 +11,14 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" href="img/logos/favicon.png">
 <link rel="apple-touch-icon" href="img/logos/apple-touch-icon.png">
-<link rel="stylesheet" href="css/app.css?v=20261029zc">
-<script src="js/venues.js?v=20261029zc"></script>
-<link rel="stylesheet" href="css/song-dong.css?v=20261029zc">
-<script src="js/song-dong.js?v=20261029zc" defer></script>
-<link rel="stylesheet" href="css/nut-quan.css?v=20261029zc">
-<script src="js/nut-quan.js?v=20261029zc" defer></script>
+<link rel="stylesheet" href="css/app.css?v=20261029zd">
+<script src="js/venues.js?v=20261029zd"></script>
+<link rel="stylesheet" href="css/song-dong.css?v=20261029zd">
+<script src="js/song-dong.js?v=20261029zd" defer></script>
+<link rel="stylesheet" href="css/nut-quan.css?v=20261029zd">
+<script src="js/nut-quan.js?v=20261029zd" defer></script>
+<link rel="stylesheet" href="css/danh-gia.css?v=20261029zd">
+<script src="js/danh-gia.js?v=20261029zd" defer></script>
 </head>
 <body class="page-home page-site page-static" data-site-tab="home">
 <div class="home-hero">
@@ -31,21 +33,25 @@
 <div class="inset-card" id="venue-list-home"></div>
 </main>
 <div class="inset-group">
-<p class="inset-group-label">Kết Group</p>
-<div class="promo-grid">
-<a class="promo-card promo-card--about" href="gioi-thieu.html">
-<span class="promo-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 11.5a3 3 0 100-6 3 3 0 000 6z"/><path d="M6.5 20v-.8a5.5 5.5 0 0111 0v.8"/></svg></span>
-<div class="promo-text"><b>Về Kết Group</b><span>Giới thiệu bốn quán tại Đà Nẵng</span></div>
-<span class="promo-chevron" aria-hidden="true">›</span>
-</a>
-<a class="promo-card promo-card--careers" href="ung-tuyen.html">
-<span class="promo-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
-<div class="promo-text"><b>Ứng tuyển</b><span>Gia nhập đội ngũ Kết Group</span></div>
-<span class="promo-chevron" aria-hidden="true">›</span>
-</a>
+<p class="inset-group-label">Đánh giá Kết</p>
+<div class="review-list" id="review-list">
+<div class="review-row" style="--c:#ffc21a;--rgb:255,194,26"><img class="venue-app-icon" src="img/logos/k1.png" alt="" width="44" height="44"><b class="review-name">K1 · Kết Bar</b><div class="review-btns">
+<button type="button" class="review-btn" data-qr="img/qr/k1-google.png" data-url="https://search.google.com/local/writereview?placeid=ChIJu9GUjOgZQjERpfx8z-GIMEw" data-title="K1 · Kết Bar" data-kind="Google Maps"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg><span>Google</span></button>
+<button type="button" class="review-btn" data-qr="img/qr/k1-trip.png" data-url="https://www.tripadvisor.com/UserReviewEdit-g298085-d27147348-Ket_Bar-Da_Nang.html" data-title="K1 · Kết Bar" data-kind="Tripadvisor"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="13" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="13" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="7" cy="13" r="1" fill="currentColor"/><circle cx="17" cy="13" r="1" fill="currentColor"/><path d="M3 8.5h18M12 8.5l-2 3M12 8.5l2 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Trip</span></button></div></div>
+<div class="review-row" style="--c:#ffffff;--rgb:255,255,255"><img class="venue-app-icon" src="img/logos/k2.png" alt="" width="44" height="44"><b class="review-name">K2 · Kết High</b><div class="review-btns">
+<button type="button" class="review-btn" data-qr="img/qr/k2-google.png" data-url="https://search.google.com/local/writereview?placeid=ChIJh3XZqZgZQjERm2fg63ZDaRI" data-title="K2 · Kết High" data-kind="Google Maps"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg><span>Google</span></button>
+<button type="button" class="review-btn" data-qr="img/qr/k2-trip.png" data-url="https://www.tripadvisor.com/UserReviewEdit-g298085-d27699650-Ket_High_Cocktail_Bar-Da_Nang.html" data-title="K2 · Kết High" data-kind="Tripadvisor"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="13" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="13" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="7" cy="13" r="1" fill="currentColor"/><circle cx="17" cy="13" r="1" fill="currentColor"/><path d="M3 8.5h18M12 8.5l-2 3M12 8.5l2 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Trip</span></button></div></div>
+<div class="review-row" style="--c:#d84cff;--rgb:216,76,255"><img class="venue-app-icon" src="img/logos/k5.png" alt="" width="44" height="44"><b class="review-name">K5 · Kết Fai</b><div class="review-btns">
+<button type="button" class="review-btn" data-qr="img/qr/k5-google.png" data-url="https://search.google.com/local/writereview?placeid=ChIJIWMyJsgXQjER8IQ4UPnfaP0" data-title="K5 · Kết Fai" data-kind="Google Maps"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg><span>Google</span></button>
+<button type="button" class="review-btn" data-qr="img/qr/k5-trip.png" data-url="https://www.tripadvisor.com/UserReviewEdit-g298085-d34677504-K_t_Fai-Da_Nang.html" data-title="K5 · Kết Fai" data-kind="Tripadvisor"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="13" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="13" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="7" cy="13" r="1" fill="currentColor"/><circle cx="17" cy="13" r="1" fill="currentColor"/><path d="M3 8.5h18M12 8.5l-2 3M12 8.5l2 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Trip</span></button></div></div>
+<div class="review-row" style="--c:#ff2d3d;--rgb:255,45,61"><img class="venue-app-icon" src="img/logos/k9.png" alt="" width="44" height="44"><b class="review-name">K9 · Kết Underground</b><div class="review-btns">
+<button type="button" class="review-btn" data-qr="img/qr/k9-google.png" data-url="https://search.google.com/local/writereview?placeid=ChIJ23qONGMZQjERxKR4pIiI4D4" data-title="K9 · Kết Underground" data-kind="Google Maps"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg><span>Google</span></button>
+<button type="button" class="review-btn" data-qr="img/qr/k9-trip.png" data-url="https://www.tripadvisor.com/UserReviewEdit-g298085-d34676378-K_t_Underground-Da_Nang.html" data-title="K9 · Kết Underground" data-kind="Tripadvisor"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="13" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="13" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="7" cy="13" r="1" fill="currentColor"/><circle cx="17" cy="13" r="1" fill="currentColor"/><path d="M3 8.5h18M12 8.5l-2 3M12 8.5l2 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Trip</span></button></div></div>
 </div>
 </div>
+<div class="qr-sheet" id="qr-sheet" hidden><div class="qr-backdrop" data-close></div><div class="qr-panel" role="dialog" aria-modal="true" aria-labelledby="qr-title"><span class="qr-grab" aria-hidden="true"></span><p class="qr-kind" id="qr-kind"></p><h2 class="qr-title" id="qr-title"></h2><img class="qr-img" id="qr-img" alt="Mã QR đánh giá" width="260" height="260"><p class="qr-hint">Quét mã bằng camera điện thoại để viết đánh giá</p><a class="qr-open" id="qr-open" href="#" target="_blank" rel="noopener">Mở link</a><button type="button" class="qr-close" data-close>Đóng</button></div></div>
+
 <nav class="ios-tab-bar ios-tab-bar--site" aria-label="Điều hướng chính"><a class="tab-item" href="./" data-site-tab="home"><span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 10.5 12 5l6.5 5.5V19a1 1 0 01-1 1h-4.5v-5.5h-3V20H6.5a1 1 0 01-1-1v-8.5z"/></svg></span><span class="tab-label">Trang chủ</span></a><a class="tab-item" href="gioi-thieu.html" data-site-tab="about"><span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 11.5a3 3 0 100-6 3 3 0 000 6z"/><path d="M6.5 20v-.8a5.5 5.5 0 0111 0v.8"/></svg></span><span class="tab-label">Về Kết</span></a><a class="tab-item" href="ung-tuyen.html" data-site-tab="apply"><span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><span class="tab-label">Ứng tuyển</span></a></nav>
-<script src="js/app.js?v=20261029zc" defer></script>
+<script src="js/app.js?v=20261029zd" defer></script>
 </body>
 </html>

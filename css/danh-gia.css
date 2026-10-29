@@ -1,0 +1,46 @@
+@property --dg-a { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+.review-list { display: grid; gap: 10px; }
+.review-row { position: relative; isolation: isolate; display: flex; align-items: center; gap: 12px; padding: 10px 12px 10px 14px; border-radius: 16px;
+  background: var(--bg-grouped); box-shadow: 0 0 16px -6px rgba(var(--rgb),.4), 0 6px 16px rgba(0,0,0,.35);
+  animation: nq-in .8s cubic-bezier(.2,.9,.25,1.2) both; }
+.review-row:nth-child(2){animation-delay:.12s}.review-row:nth-child(3){animation-delay:.24s}.review-row:nth-child(4){animation-delay:.36s}
+.review-row::before { content:""; position:absolute; inset:-1.5px; border-radius:17.5px; z-index:-1; padding:1.5px; pointer-events:none;
+  background: conic-gradient(from var(--dg-a), transparent 0 60%, var(--c) 80%, transparent 94%), rgba(255,255,255,.06);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  animation: dg-spin 4s linear infinite; }
+.review-row:nth-child(2)::before{animation-delay:-1s}.review-row:nth-child(3)::before{animation-delay:-2s}.review-row:nth-child(4)::before{animation-delay:-3s}
+.review-row .venue-app-icon { width: 40px; height: 40px; box-shadow: 0 0 12px -3px rgba(var(--rgb),.6); }
+.review-name { flex: 1; min-width: 0; font-family: var(--font-ui); font-size: 15px; font-weight: 600; color: var(--label-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.review-btns { display: flex; gap: 8px; }
+.review-btn { position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 5px; padding: 8px 11px; border: 0; border-radius: 999px;
+  background: rgba(var(--rgb),.16); color: var(--c); font: 600 13px/1 var(--font-ui); cursor: pointer;
+  box-shadow: inset 0 0 0 1px rgba(var(--rgb),.35); transition: transform .45s cubic-bezier(.34,1.56,.64,1), background .2s; }
+.review-btn svg { width: 16px; height: 16px; }
+.review-btn:active { transform: scale(.9); background: rgba(var(--rgb),.3); transition-duration: .1s; }
+.review-btn::after { content:""; position:absolute; top:0; bottom:0; left:-70%; width:50%; pointer-events:none;
+  background: linear-gradient(105deg, transparent, rgba(255,255,255,.3), transparent); transform: skewX(-18deg); animation: sd-shine 5s ease-in-out 1.5s infinite; }
+.review-row:nth-child(even) .review-btn::after { animation-delay: 2.7s; }
+/* sheet iOS */
+.qr-sheet { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: flex-end; justify-content: center; }
+.qr-sheet[hidden] { display: none; }
+.qr-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.55); backdrop-filter: blur(6px); animation: dg-fade .3s ease both; }
+.qr-panel { position: relative; width: 100%; max-width: 480px; box-sizing: border-box; padding: 10px 24px calc(24px + env(safe-area-inset-bottom));
+  background: #1c1c1e; border-radius: 22px 22px 0 0; text-align: center; font-family: var(--font-ui);
+  box-shadow: 0 -10px 40px rgba(0,0,0,.5), 0 -2px 30px -8px rgba(var(--rgb),.6); animation: dg-up .45s cubic-bezier(.2,.9,.25,1.1) both; }
+.qr-sheet.closing .qr-panel { animation: dg-down .25s ease-in both; } .qr-sheet.closing .qr-backdrop { animation: dg-fade .25s reverse both; }
+.qr-grab { display: block; width: 38px; height: 5px; margin: 0 auto 14px; border-radius: 3px; background: rgba(255,255,255,.25); }
+.qr-kind { margin: 0; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--c); }
+.qr-title { margin: 4px 0 14px; font-size: 20px; font-weight: 700; color: #fff; }
+.qr-img { display: block; width: min(260px, 70vw); height: auto; margin: 0 auto; padding: 10px; background: #fff; border-radius: 18px;
+  box-shadow: 0 0 0 3px var(--c), 0 0 34px -4px rgba(var(--rgb),.7); animation: dg-pop .5s cubic-bezier(.34,1.56,.64,1) .1s both; }
+.qr-hint { margin: 14px 0 16px; font-size: 14px; color: rgba(235,235,245,.6); }
+.qr-open { display: block; padding: 14px; border-radius: 14px; background: var(--c); color: #000; font-weight: 700; font-size: 17px; text-decoration: none;
+  transition: transform .45s cubic-bezier(.34,1.56,.64,1); }
+.qr-open:active, .qr-close:active { transform: scale(.95); transition-duration: .1s; }
+.qr-close { margin-top: 10px; width: 100%; padding: 12px; border: 0; border-radius: 14px; background: rgba(255,255,255,.08); color: #fff; font: 600 16px var(--font-ui); }
+@keyframes dg-spin { to { --dg-a: 360deg; } }
+@keyframes dg-fade { from { opacity: 0; } }
+@keyframes dg-up { from { transform: translateY(100%); } }
+@keyframes dg-down { to { transform: translateY(100%); } }
+@keyframes dg-pop { from { transform: scale(.7); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .review-row, .review-row::before, .review-btn::after, .qr-panel, .qr-img, .qr-backdrop { animation: none !important; } }
