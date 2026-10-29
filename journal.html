@@ -3,153 +3,177 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="robots" content="noindex">
-<meta name="theme-color" content="#0d0b09">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#07090f">
 <title>The Bartender's Journal · Kết (bản thử nghiệm)</title>
-<link rel="icon" href="img/logos/favicon.png?v=20261030b">
+<link rel="icon" href="img/logos/favicon.png?v=20261030c">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800;900&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/journal.css?v=20261030b">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800;900&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/journal.css?v=20261030c">
 </head>
 <body>
 <div class="beta">Bản thử nghiệm · không phải trang chính thức</div>
+<canvas id="smoke" aria-hidden="true"></canvas>
 
-<header class="hero" id="hero">
-  <img class="hero-photo" src="img/journal/hero.webp?v=20261030b" alt="Quầy bar K1 lên đèn">
-  <div class="hero-shade"></div>
-  <svg class="hero-sketch draw" viewBox="0 0 300 360" aria-hidden="true">
-    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path class="cu" d="M20 340 H280"/>
-      <path class="cu" d="M40 340 V120 Q150 40 260 120 V340"/>
-      <path class="tr" d="M60 340 V135 Q150 70 240 135 V340"/>
-      <path class="tr" d="M60 230 H240 M60 260 H240"/>
-      <path class="cu" d="M150 60 V95 M135 95 H165 L158 110 H142 Z"/>
-      <path class="tr" d="M120 110 l-8 10 M180 110 l8 10 M150 115 v12"/>
-      <path class="cu" d="M95 150 L150 200 L205 150 Z"/>
-      <path class="cu" d="M150 200 V240 M125 244 H175"/>
-      <path class="tr" d="M108 162 H192"/>
-      <circle class="cu" cx="186" cy="150" r="9"/>
-      <path class="tr" d="M80 300 h30 v40 M190 300 h30 v40 M80 300 v40 M220 300 v40"/>
-      <path class="tr" d="M74 228 v-20 h10 v20 M98 228 v-28 h8 v28 M200 228 v-24 h12 v24 M222 228 v-18 h8 v18"/>
-    </g>
-  </svg>
-  <div class="hero-text">
-    <p class="kicker">Kết · Đà Nẵng</p>
-    <h1>THE BARTENDER'S<br>JOURNAL</h1>
-    <p class="hand">“Chào bạn, đây là cuốn sổ nơi chúng tôi ghi lại từng ly, từng đêm.”</p>
-    <p class="scroll-hint">Cuộn xuống để bật đèn ↓</p>
+<!-- 1 HERO -->
+<section class="hero" data-bg="#07090f">
+  <div class="hero-in">
+    <div class="hero-txt">
+      <p class="kicker">Kết · Đà Nẵng · since <span class="ph-num">20XX</span></p>
+      <h1><span>THE</span><span>BARTENDER'S</span><span class="cu">JOURNAL</span></h1>
+      <p class="hand">“Chào bạn – đây là cuốn sổ nơi chúng tôi ghi lại từng ly, từng đêm.”</p>
+    </div>
+    <div class="hero-obj">
+      <div class="glow"></div>
+      <svg class="glass draw" viewBox="0 0 200 260" aria-hidden="true">
+        <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path class="s-cu" d="M30 40 H170 L100 130 Z"/>
+          <path class="s-w" d="M48 62 H152"/>
+          <path class="s-cu" d="M100 130 V215"/>
+          <path class="s-cu" d="M60 222 Q100 210 140 222"/>
+          <circle class="s-w" cx="150" cy="44" r="16"/>
+          <path class="s-w" d="M150 28 V60 M134 44 H166"/>
+          <path class="s-w" d="M70 20 L96 92"/>
+          <path class="s-cu" d="M56 72 Q100 66 140 72" opacity=".6"/>
+        </g>
+      </svg>
+    </div>
   </div>
-</header>
+  <p class="scroll-hint">Cuộn để mở sổ ↓</p>
+</section>
 
-<main>
-<section class="blueprint" id="blueprint">
-  <h2 class="sec">The Blueprint <small>Bản vẽ giá trị</small></h2>
-  <div class="bp-grid">
-    <article class="bp reveal">
-      <svg viewBox="0 0 120 120" class="pencil draw"><path d="M35 20 H85 L80 105 H40 Z M38 40 H82 M60 5 V60 M55 5 h10"/><path d="M42 70 Q60 64 78 70"/></svg>
-      <h3>Chính xác</h3><p>Mỗi ml đều được đo. Một ly ngon phải ngon như nhau ở mọi đêm.</p>
-      <span class="note">← đo 2 lần, rót 1 lần</span>
-    </article>
-    <article class="bp reveal">
-      <svg viewBox="0 0 120 120" class="pencil draw"><path d="M20 100 H100 M20 100 V20"/><path d="M20 85 Q45 80 60 60 T100 30"/><circle cx="40" cy="78" r="3"/><circle cx="62" cy="58" r="3"/><circle cx="90" cy="35" r="3"/></svg>
-      <h3>Tầng hương vị</h3><p>Đầu lưỡi – thân – hậu vị. Chúng tôi vẽ sơ đồ trước khi pha.</p>
-      <span class="note">chua → ngọt → đắng nhẹ ↗</span>
-    </article>
-    <article class="bp reveal">
-      <svg viewBox="0 0 120 120" class="pencil draw"><path d="M20 45 L60 25 L100 45 L60 65 Z M20 45 V85 L60 105 V65 M100 45 V85 L60 105"/><path d="M40 55 v30 M80 55 v30"/></svg>
-      <h3>Không gian</h3><p>Ánh sáng, âm nhạc, khoảng cách quầy – tất cả là một phần của ly.</p>
-      <span class="note">đèn thấp, nhạc vừa ↙</span>
-    </article>
-    <article class="bp reveal">
-      <svg viewBox="0 0 120 120" class="pencil draw"><path d="M30 60 Q60 20 90 60 Q60 100 30 60 Z"/><circle cx="60" cy="60" r="10"/><path d="M15 60 H30 M90 60 H105"/></svg>
-      <h3>Lắng nghe khách</h3><p>Ly đúng nhất là ly hợp với người đang ngồi trước quầy.</p>
-      <span class="note">hỏi trước, pha sau ✓</span>
-    </article>
+<!-- 2 STATS -->
+<section class="stats" data-bg="#0c1424">
+  <div class="stats-l">
+    <p class="kicker">Con số</p>
+    <h2>Mỗi đêm,<br>một trang sổ mới.</h2>
+    <p class="muted">Những con số ghi «số mẫu» sẽ được thay bằng số thật.</p>
+  </div>
+  <div class="stats-r">
+    <div class="stat"><b data-n="4">0</b><span>quán đang mở: K1 · K2 · K5 · K9</span></div>
+    <div class="stat"><b data-n="106">0</b><span>trang menu trên web Kết (đếm từ menu thật)</span></div>
+    <div class="stat ph"><b data-ph="XX">XX</b><span>năm hoạt động – <em>số mẫu</em></span></div>
+    <div class="stat ph"><b data-ph="XX">XX</b><span>bartender – <em>số mẫu</em></span></div>
+    <div class="stat ph"><b data-ph="XXX">XXX</b><span>công thức thử nghiệm – <em>số mẫu</em></span></div>
   </div>
 </section>
 
-<section class="lab" id="lab">
-  <h2 class="sec">Lab &amp; Daily Operations <small>Phòng thí nghiệm hằng đêm</small></h2>
-  <p class="lead">Chạm vào thẻ để lật mặt sau.</p>
-  <div class="cards">
-    <div class="flip reveal" tabindex="0"><div class="inner">
-      <div class="face front polaroid"><span class="tape"></span><img src="img/journal/lab-dem.webp?v=20261030b" alt="Bartender sau quầy" loading="lazy"><p class="cap">Phục vụ hằng đêm · 4 quán</p></div>
-      <div class="face back paper"><span class="tape"></span><p class="hand">K1 · K2 · K5 · K9 – mở đèn mỗi tối, chuẩn bị quầy từ chiều. Đá, trái cây, syrup – kiểm tra trước giờ mở cửa.</p></div>
-    </div></div>
-    <div class="flip reveal" tabindex="0"><div class="inner">
-      <div class="face front polaroid tilt"><span class="tape t2"></span><img src="img/journal/lab-dj.webp?v=20261030b" alt="DJ tại K9" loading="lazy"><p class="cap">Guest Shift · DJ night</p></div>
-      <div class="face back paper"><span class="tape t2"></span><p class="hand">Mời bartender khách đến đứng quầy một đêm – học nhau, đổi công thức, đổi năng lượng.</p></div>
-    </div></div>
-    <div class="flip reveal" tabindex="0"><div class="inner">
-      <div class="face front polaroid"><span class="tape"></span><img src="img/journal/lab-ban.webp?v=20261030b" alt="Cùng nhau pha chế tại K1" loading="lazy"><p class="cap">Đào tạo · cùng nhau</p></div>
-      <div class="face back paper"><span class="tape"></span><p class="hand">Lớp nội bộ: kỹ thuật lắc – khuấy, cân bằng vị, phục vụ khách. Ghi chép vào sổ sau mỗi buổi.</p></div>
-    </div></div>
+<!-- 3 PROCESS -->
+<section class="process" data-bg="#07090f">
+  <div class="proc-in">
+    <div class="proc-txt">
+      <p class="kicker">The Ritual</p>
+      <h2>Một ly ra đời</h2>
+      <ol class="steps">
+        <li class="on"><b>01</b> Đong – rót rượu nền bằng jigger</li>
+        <li><b>02</b> Lắc – đá, nhịp tay, 12 giây</li>
+        <li><b>03</b> Lọc – rót qua rây vào ly lạnh</li>
+        <li><b>04</b> Garnish – vỏ chanh, chạm cuối cùng</li>
+      </ol>
+    </div>
+    <svg class="proc-svg" viewBox="0 0 320 320" aria-hidden="true">
+      <defs><clipPath id="cup"><path d="M80 170 H240 L160 260 Z"/></clipPath>
+      <linearGradient id="liq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0a24f"/><stop offset="1" stop-color="#a5521c"/></linearGradient></defs>
+      <g id="bottle" fill="none" stroke="#e9e3d8" stroke-width="2">
+        <path d="M40 40 h22 v18 q14 8 14 26 v70 h-50 v-70 q0 -18 14 -26 Z"/><path d="M26 110 h50" stroke="#c9813f"/>
+      </g>
+      <path id="stream" d="M74 70 Q120 70 150 120" fill="none" stroke="#f0a24f" stroke-width="4" stroke-linecap="round"/>
+      <g id="shaker" fill="none" stroke="#e9e3d8" stroke-width="2">
+        <path d="M140 110 h44 l-6 80 h-32 Z"/><path d="M144 98 h36 v12 h-36 Z" stroke="#c9813f"/><path d="M152 86 h20 v12 h-20 Z"/>
+        <g class="ice" stroke="#9fc3e0"><rect x="150" y="150" width="10" height="10"/><rect x="164" y="160" width="10" height="10"/><rect x="155" y="170" width="10" height="10"/></g>
+      </g>
+      <g id="cupg">
+        <rect id="fill" x="80" y="260" width="160" height="90" fill="url(#liq)" clip-path="url(#cup)"/>
+        <path d="M80 170 H240 L160 260 Z M160 260 V300 M128 304 H192" fill="none" stroke="#e9e3d8" stroke-width="2"/>
+      </g>
+      <g id="garnish" fill="none" stroke="#c9813f" stroke-width="3" stroke-linecap="round"><path d="M215 160 q20 -30 40 -10 q-10 20 -40 10"/></g>
+      <path id="pour" d="M178 192 Q170 200 160 230" fill="none" stroke="#f0a24f" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+  </div>
+</section>
+
+<!-- 4 LAB horizontal -->
+<section class="lab" data-bg="#0c1424">
+  <div class="lab-head"><p class="kicker">Lab &amp; Daily Operations</p><h2>Phòng thí nghiệm hằng đêm</h2></div>
+  <div class="track">
+    <article class="card"><img data-src="img/journal/lab-dem.webp?v=20261030c" alt="Bartender sau quầy"><div><b>01 · Phục vụ hằng đêm</b><p>4 quán mở đèn mỗi tối – quầy được chuẩn bị từ chiều: đá, trái cây, syrup.</p></div></article>
+    <article class="card"><img data-src="img/journal/lab-dj.webp?v=20261030c" alt="DJ tại K9"><div><b>02 · Guest Shift &amp; DJ night</b><p>Mời bartender, DJ khách đến đứng quầy một đêm – đổi công thức, đổi năng lượng.</p></div></article>
+    <article class="card"><img data-src="img/journal/lab-ban.webp?v=20261030c" alt="Cùng pha chế tại K1"><div><b>03 · Đào tạo</b><p>Lớp nội bộ: lắc – khuấy, cân bằng vị, phục vụ khách. Ghi sổ sau mỗi buổi.</p></div></article>
+    <article class="card"><img data-src="img/journal/r2.webp?v=20261030c" alt="Cocktail tại K1"><div><b>04 · R&amp;D công thức</b><p>Mỗi ly mới đi qua nhiều bản nháp trước khi lên menu.</p></div></article>
+    <article class="card"><img data-src="img/journal/q-k5.webp?v=20261030c" alt="Bữa tối tại K5"><div><b>05 · Bếp &amp; bàn tiệc</b><p>Kết Fai phục vụ thêm bếp – đồ ăn đi cùng cocktail.</p></div></article>
+  </div>
+</section>
+
+<!-- 5 ZOOM -->
+<section class="zoom" data-bg="#000">
+  <div class="zoom-in">
+    <img class="z1" data-src="img/journal/r1.webp?v=20261030c" alt="Ly cocktail hổ phách">
+    <img class="z2" data-src="img/journal/hero.webp?v=20261030c" alt="Toàn cảnh quầy K1">
+    <h2 class="zt zt1">Bước vào một ly…</h2>
+    <h2 class="zt zt2">…và thấy cả một quán.</h2>
+  </div>
+</section>
+
+<!-- 6 VENUES strip + blueprint (light) -->
+<section class="blueprint" data-bg="#efe8db">
+  <p class="kicker dk">The Blueprint</p>
+  <h2 class="dk">Bốn giá trị, một bản vẽ</h2>
+  <div class="bp-grid">
+    <article class="bp"><svg viewBox="0 0 120 120" class="pencil draw"><path d="M35 20 H85 L80 105 H40 Z M38 40 H82 M60 5 V60 M55 5 h10"/></svg><h3>Chính xác</h3><p>Mỗi ml đều được đo – ngon như nhau ở mọi đêm.</p><span class="note">đo 2 lần, rót 1 lần ↗</span></article>
+    <article class="bp"><svg viewBox="0 0 120 120" class="pencil draw"><path d="M20 100 H100 M20 100 V20 M20 85 Q45 80 60 60 T100 30"/></svg><h3>Tầng hương vị</h3><p>Đầu lưỡi – thân – hậu vị, vẽ sơ đồ trước khi pha.</p><span class="note">chua → ngọt → đắng nhẹ</span></article>
+    <article class="bp"><svg viewBox="0 0 120 120" class="pencil draw"><path d="M20 45 L60 25 L100 45 L60 65 Z M20 45 V85 L60 105 V65 M100 45 V85 L60 105"/></svg><h3>Không gian</h3><p>Ánh sáng, âm nhạc, khoảng cách quầy – cũng là một phần của ly.</p><span class="note">đèn thấp, nhạc vừa ↙</span></article>
+    <article class="bp"><svg viewBox="0 0 120 120" class="pencil draw"><path d="M30 60 Q60 20 90 60 Q60 100 30 60 Z M50 60 a10 10 0 1 0 20 0 a10 10 0 1 0 -20 0"/></svg><h3>Lắng nghe khách</h3><p>Ly đúng nhất là ly hợp với người trước quầy.</p><span class="note">hỏi trước, pha sau ✓</span></article>
   </div>
   <div class="strip">
-    <figure class="reveal"><img src="img/journal/q-k1.webp?v=20261030b" alt="Kết Bar" loading="lazy"><figcaption>K1 · Kết Bar</figcaption></figure>
-    <figure class="reveal"><img src="img/journal/q-k2.webp?v=20261030b" alt="Kết High" loading="lazy"><figcaption>K2 · Kết High</figcaption></figure>
-    <figure class="reveal"><img src="img/journal/q-k5.webp?v=20261030b" alt="Kết Fai" loading="lazy"><figcaption>K5 · Kết Fai</figcaption></figure>
-    <figure class="reveal"><img src="img/journal/q-k9.webp?v=20261030b" alt="Kết Underground" loading="lazy"><figcaption>K9 · Kết Underground</figcaption></figure>
+    <figure><img data-src="img/journal/q-k1.webp?v=20261030c" alt="K1"><figcaption>K1 · Kết Bar</figcaption></figure>
+    <figure><img data-src="img/journal/q-k2.webp?v=20261030c" alt="K2"><figcaption>K2 · Kết High</figcaption></figure>
+    <figure><img data-src="img/journal/q-k5.webp?v=20261030c" alt="K5"><figcaption>K5 · Kết Fai</figcaption></figure>
+    <figure><img data-src="img/journal/q-k9.webp?v=20261030c" alt="K9"><figcaption>K9 · Kết Underground</figcaption></figure>
   </div>
 </section>
 
-<section class="alch" id="alchemists">
-  <h2 class="sec">The Alchemists <small>Những người pha chế</small></h2>
-  <figure class="team reveal"><img src="img/journal/team.webp?v=20261030b" alt="Đội ngũ Kết High" loading="lazy"><figcaption class="hand">Đội ngũ Kết High – cuối tuần</figcaption></figure>
-  <p class="lead">Chân dung và tên từng người đang chờ cập nhật – chạm thẻ để mở sổ tay.</p>
+<!-- 7 RECIPES -->
+<section class="recipes" data-bg="#0c1424">
+  <p class="kicker">The Recipe Book</p>
+  <h2>Sổ công thức thử nghiệm</h2>
+  <p class="muted">Vuốt ngang → · Công thức mẫu, không phải món trên menu.</p>
+  <div class="book">
+    <article class="page"><img class="snap" data-src="img/journal/r1.webp?v=20261030c" alt="Cocktail"><p class="no">Thử nghiệm #01</p><h3>Khói Sơn Trà</h3><ul><li>Rum nền <s>60ml</s> <i>50ml</i></li><li>Syrup mật ong <s>20ml</s> <i>15ml</i></li><li>Chanh 20ml</li><li><s>Bitters cam</s> <i>Bitters quế</i></li></ul><p class="hand red">Thử giảm 5ml syrup → bớt gắt ngọt</p></article>
+    <article class="page"><img class="snap" data-src="img/journal/r2.webp?v=20261030c" alt="Cocktail"><p class="no">Thử nghiệm #02</p><h3>Mưa Hội An</h3><ul><li><s>Vodka 45ml</s> <i>Gin 45ml</i></li><li>Trà nhài lạnh 60ml</li><li>Syrup sả 15ml</li><li>Soda <s>top</s> <i>40ml</i></li></ul><p class="hand red">Đổi sang nền gin – hợp trà hơn</p></article>
+    <article class="page"><img class="snap" data-src="img/journal/r3.webp?v=20261030c" alt="Cocktail"><p class="no">Thử nghiệm #03</p><h3>Đêm Hàn</h3><ul><li>Whisky 50ml</li><li>Vermouth đỏ <s>25ml</s> <i>20ml</i></li><li>Cà phê ủ lạnh 10ml</li><li><s>Đá viên</s> <i>1 đá khối lớn</i></li></ul><p class="hand red">Khuấy 30 vòng, không lắc!</p></article>
+    <article class="page"><svg viewBox="0 0 120 120" class="sk"><path d="M35 20 Q35 70 60 75 Q85 70 85 20 Z M60 75 V102 M44 104 H76"/></svg><p class="no">Thử nghiệm #04</p><h3>Hoa Sứ</h3><ul><li>Tequila 40ml</li><li>Nước ép dứa <s>40ml</s> <i>30ml</i></li><li>Syrup hoa sứ 10ml</li><li><s>Muối viền</s> <i>Muối ớt nửa viền</i></li></ul><p class="hand red">Thêm 5ml chanh?</p></article>
+  </div>
+</section>
+
+<!-- 8 TEAM -->
+<section class="team" data-bg="#07090f">
+  <p class="kicker">The Alchemists</p>
+  <h2>Những người pha chế</h2>
+  <figure class="teamph"><img data-src="img/journal/team.webp?v=20261030c" alt="Ảnh nhóm tại Kết High"><figcaption>Ảnh nhóm tại Kết High – chờ ảnh đội ngũ chính thức</figcaption></figure>
   <div class="people">
-    <button class="person reveal" data-i="1"><div class="ph"><svg viewBox="0 0 100 120"><circle cx="50" cy="42" r="20"/><path d="M15 120 Q50 70 85 120"/></svg><span>Ảnh mẫu</span></div><b>Tên bartender</b><i>Chức vụ</i><em class="sig">Chữ ký mẫu</em></button>
-    <button class="person reveal" data-i="2"><div class="ph"><svg viewBox="0 0 100 120"><circle cx="50" cy="42" r="20"/><path d="M15 120 Q50 70 85 120"/></svg><span>Ảnh mẫu</span></div><b>Tên bartender</b><i>Chức vụ</i><em class="sig">Chữ ký mẫu</em></button>
-    <button class="person reveal" data-i="3"><div class="ph"><svg viewBox="0 0 100 120"><circle cx="50" cy="42" r="20"/><path d="M15 120 Q50 70 85 120"/></svg><span>Ảnh mẫu</span></div><b>Tên bartender</b><i>Chức vụ</i><em class="sig">Chữ ký mẫu</em></button>
+    <button class="person"><div class="pp"><span>Ảnh mẫu</span></div><b>Tên bartender</b><i>Chức vụ</i><em>Chữ ký mẫu</em></button>
+    <button class="person"><div class="pp"><span>Ảnh mẫu</span></div><b>Tên bartender</b><i>Chức vụ</i><em>Chữ ký mẫu</em></button>
+    <button class="person"><div class="pp"><span>Ảnh mẫu</span></div><b>Tên bartender</b><i>Chức vụ</i><em>Chữ ký mẫu</em></button>
   </div>
 </section>
 
-<section class="recipes" id="recipes">
-  <h2 class="sec">The Recipe Book <small>Sổ công thức thử nghiệm</small></h2>
-  <p class="lead">Vuốt ngang để lật trang → · Công thức mẫu thử nghiệm, không phải món trên menu.</p>
-  <div class="book" tabindex="0">
-    <article class="page">
-      <img class="snap" src="img/journal/r1.webp?v=20261030b" alt="Ảnh cocktail tại Kết" loading="lazy"><p class="no">Thử nghiệm #01</p><h3>Khói Sơn Trà</h3>
-      <svg viewBox="0 0 120 120" class="glass draw"><path d="M30 25 H90 L60 65 Z M60 65 V100 M42 104 H78"/><circle cx="82" cy="28" r="8"/></svg>
-      <ul><li>Rum nền <s>60ml</s> <span class="fix">50ml</span></li><li>Syrup mật ong <s>20ml</s> <span class="fix">15ml</span></li><li>Chanh 20ml</li><li><s>Bitters cam</s> <span class="fix">Bitters quế</span></li></ul>
-      <p class="hand note2">Thử giảm 5ml syrup → bớt gắt ngọt</p><p class="hand">Garnish: vỏ chanh xoắn</p>
-    </article>
-    <article class="page">
-      <img class="snap" src="img/journal/r2.webp?v=20261030b" alt="Ảnh cocktail tại Kết" loading="lazy"><p class="no">Thử nghiệm #02</p><h3>Mưa Hội An</h3>
-      <svg viewBox="0 0 120 120" class="glass draw"><path d="M38 20 H82 V100 H38 Z M38 45 H82"/><path d="M50 30 l20 60"/></svg>
-      <ul><li><s>Vodka 45ml</s> <span class="fix">Gin 45ml</span></li><li>Trà nhài lạnh 60ml</li><li>Syrup sả 15ml</li><li>Soda <s>top</s> <span class="fix">40ml</span></li></ul>
-      <p class="hand note2">Đổi sang nền gin – hợp trà hơn</p><p class="hand">Garnish: nhánh sả</p>
-    </article>
-    <article class="page">
-      <img class="snap" src="img/journal/r3.webp?v=20261030b" alt="Ảnh cocktail tại Kết" loading="lazy"><p class="no">Thử nghiệm #03</p><h3>Đêm Hàn</h3>
-      <svg viewBox="0 0 120 120" class="glass draw"><path d="M30 40 H90 V95 Q60 110 30 95 Z"/><path d="M45 55 h12 v12 h-12 Z M62 62 h12 v12 h-12 Z"/></svg>
-      <ul><li>Whisky 50ml</li><li>Vermouth đỏ <s>25ml</s> <span class="fix">20ml</span></li><li>Cà phê ủ lạnh 10ml</li><li><s>Đá viên</s> <span class="fix">1 đá khối lớn</span></li></ul>
-      <p class="hand note2">Khuấy 30 vòng, không lắc!</p><p class="hand">Garnish: vỏ cam đốt</p>
-    </article>
-    <article class="page">
-      <p class="no">Thử nghiệm #04</p><h3>Hoa Sứ</h3>
-      <svg viewBox="0 0 120 120" class="glass draw"><path d="M35 20 Q35 70 60 75 Q85 70 85 20 Z M60 75 V102 M44 104 H76"/><path d="M50 15 q10 -10 20 0"/></svg>
-      <ul><li>Tequila 40ml</li><li>Nước ép dứa <s>40ml</s> <span class="fix">30ml</span></li><li>Syrup hoa sứ 10ml</li><li><s>Muối viền</s> <span class="fix">Muối ớt nửa viền</span></li></ul>
-      <p class="hand note2">Cân lại độ chua – thêm 5ml chanh?</p><p class="hand">Garnish: cánh hoa khô</p>
-    </article>
+<dialog id="nb"><form method="dialog"><button class="x" aria-label="Đóng">×</button></form><p class="no">Sổ tay · nội dung mẫu</p><h3>Tên bartender</h3><p class="hand">Ly tâm đắc: (nội dung mẫu)</p><p>“Pha chế là lắng nghe – nghe khách, nghe nguyên liệu, rồi mới đến tay nghề.” <em>(nội dung mẫu)</em></p></dialog>
+
+<!-- 9 MASK OUTRO -->
+<section class="outro" data-bg="#07090f">
+  <div class="outro-in">
+    <h2 class="mask">KẾT</h2>
+    <footer class="foot">
+      <p class="big">Hẹn bạn ở quầy.</p>
+      <img src="img/logos/ket-logo-mau.png?v=20261030c" alt="Kết" class="logo" loading="lazy">
+      <p>K1 · K2 · K5 · K9 · Đà Nẵng</p>
+      <a href="tel:0896789768" class="tel">089 6789768</a>
+    </footer>
   </div>
 </section>
-</main>
 
-<dialog id="notebook">
-  <form method="dialog"><button class="x" aria-label="Đóng">×</button></form>
-  <p class="no">Sổ tay · nội dung mẫu</p>
-  <h3>Tên bartender</h3>
-  <svg viewBox="0 0 120 120" class="glass draw"><path d="M30 25 H90 L60 65 Z M60 65 V100 M42 104 H78"/><circle cx="82" cy="28" r="8"/></svg>
-  <p class="hand">Ly tâm đắc: (nội dung mẫu)</p>
-  <p>“Pha chế là lắng nghe – nghe khách, nghe nguyên liệu, rồi mới đến tay nghề.” <em>(nội dung mẫu – chờ lời thật của bartender)</em></p>
-</dialog>
-
-<footer class="foot">
-  <img src="img/logos/ket-logo-mau.png?v=20261030b" alt="Kết" class="logo">
-  <p>K1 · K2 · K5 · K9 · Đà Nẵng</p>
-  <a href="tel:0896789768" class="tel">089 6789768</a>
-</footer>
-<script src="js/journal.js?v=20261030b"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="js/journal.js?v=20261030c"></script>
 </body>
 </html>
