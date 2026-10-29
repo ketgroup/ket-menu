@@ -101,10 +101,15 @@ dialog::backdrop{background:#000c}dialog h3{font-weight:900}dialog .hand{font-si
 /* outro */
 .outro{padding:0;background:var(--bg)}
 .outro-in{position:relative;height:100svh;overflow:hidden}
-.mask{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:58vw;font-weight:900;letter-spacing:-.05em;line-height:1;background:url(../img/journal/hero.webp?v=20261030c) center/cover;-webkit-background-clip:text;background-clip:text;color:transparent;will-change:transform}
+.mask{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:58vw;font-weight:900;letter-spacing:-.05em;line-height:1;background:url(../img/journal/hero.webp?v=20261030d) center/cover;-webkit-background-clip:text;background-clip:text;color:transparent;will-change:transform}
 .foot{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#040507;gap:10px;padding:20px}
 .big{font-weight:900;font-size:clamp(40px,12vw,110px);line-height:1}
 .logo{width:96px}.tel{color:var(--cu);font-weight:800;font-size:22px;text-decoration:none}
 .nojs .foot,.reduce .foot{position:relative;inset:auto;min-height:60vh}
 .reduce .mask{position:relative;height:40vh}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.draw path,.draw circle{stroke-dashoffset:0}}
+
+.hero-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32;filter:saturate(.8)}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,#07090fcc,#07090f66 40%,#07090fee)}
+.hero-in{position:relative;z-index:1}
+.card video{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#1a2336}

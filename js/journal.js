@@ -4,6 +4,8 @@ var $=function(s,c){return (c||document).querySelector(s)},$$=function(s,c){retu
 // lazy images
 var lio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var i=e.target;i.src=i.dataset.src;lio.unobserve(i)}})},{rootMargin:'600px'});
 $$('img[data-src]').forEach(function(i){i.decoding='async';lio.observe(i)});
+var vio=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){if(!v.src){v.src=v.dataset.src}if(!reduce){var p=v.play();p&&p.catch(function(){})}}else if(v.src)v.pause()})},{rootMargin:'200px'});
+$$('video.lzv').forEach(function(v){vio.observe(v)});
 // draw lengths
 $$('.draw path,.draw circle').forEach(function(p){try{p.style.setProperty('--len',Math.ceil(p.getTotalLength())+2)}catch(e){}});
 var dio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');dio.unobserve(e.target)}})},{threshold:.3});
