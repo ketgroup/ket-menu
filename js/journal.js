@@ -11,7 +11,7 @@ $$('.draw path,.draw circle').forEach(function(p){try{p.style.setProperty('--len
 var dio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');dio.unobserve(e.target)}})},{threshold:.3});
 $$('.draw').forEach(function(d){reduce?d.classList.add('on'):dio.observe(d)});
 // notebook
-var nb=$('#nb');$$('.person').forEach(function(b){b.addEventListener('click',function(){nb.showModal()})});
+var nb=$('#nb');$$('.person').forEach(function(b){b.addEventListener('click',function(){$('#nbn').textContent=b.dataset.n;$('#nbr').textContent=b.dataset.r;nb.showModal()})});
 nb.addEventListener('click',function(e){if(e.target===nb)nb.close()});
 function setCounts(){$$('.stat b[data-n]').forEach(function(b){b.textContent=b.dataset.n})}
 if(reduce||!window.gsap||!window.ScrollTrigger){document.documentElement.classList.add('reduce');setCounts();$$('img[data-src]').forEach(function(i){i.src=i.dataset.src});$('.z2').style.opacity=1;return}

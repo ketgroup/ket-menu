@@ -101,7 +101,7 @@ dialog::backdrop{background:#000c}dialog h3{font-weight:900}dialog .hand{font-si
 /* outro */
 .outro{padding:0;background:var(--bg)}
 .outro-in{position:relative;height:100svh;overflow:hidden}
-.mask{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:58vw;font-weight:900;letter-spacing:-.05em;line-height:1;background:url(../img/journal/hero.webp?v=20261030d) center/cover;-webkit-background-clip:text;background-clip:text;color:transparent;will-change:transform}
+.mask{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:58vw;font-weight:900;letter-spacing:-.05em;line-height:1;background:url(../img/journal/hero.webp?v=20261030e) center/cover;-webkit-background-clip:text;background-clip:text;color:transparent;will-change:transform}
 .foot{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#040507;gap:10px;padding:20px}
 .big{font-weight:900;font-size:clamp(40px,12vw,110px);line-height:1}
 .logo{width:96px}.tel{color:var(--cu);font-weight:800;font-size:22px;text-decoration:none}
@@ -113,3 +113,12 @@ dialog::backdrop{background:#000c}dialog h3{font-weight:900}dialog .hand{font-si
 .hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,#07090fcc,#07090f66 40%,#07090fee)}
 .hero-in{position:relative;z-index:1}
 .card video{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#1a2336}
+
+.sign{font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--w);opacity:.7;margin-top:8px}
+.people{grid-template-columns:repeat(3,1fr)}
+.pp.mono{display:flex;align-items:center;justify-content:center;aspect-ratio:1;font-weight:900;font-size:26px;color:#ffe2bf;border:1px solid #d08a4755}
+.person em{display:block;font-size:19px;margin-top:6px;line-height:1.1}.person i{font-size:10.5px;line-height:1.3;margin-top:3px}
+.barteam{margin-top:34px;border-top:1px solid #ffffff22;padding-top:20px}
+.names{font-size:22px;line-height:1.5;color:#ffe2bf}
+.gal figure{flex:0 0 40%}.gal img{aspect-ratio:3/4;border-radius:10px}
+.sk{width:110px;height:110px}.sk path{fill:none;stroke:#3b342c;stroke-width:1.6;stroke-linecap:round}
