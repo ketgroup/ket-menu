@@ -54,7 +54,7 @@ window.KET_VENUES = {
     logo: "img/logos/k5.png",
     accent: "#BF5AF2",
     accentRgb: "191, 90, 242",
-    hours: ["Bếp 09:00 – 22:30", "Cocktail 18:00 – khuya"],
+    hours: ["Kitchen 10:30 – 14:00, 17:30 – 22:00", "Cocktail 18:00 – khuya"],
     address: "138 Đỗ Bá, An Thượng, Đà Nẵng",
     phone: window.KET_HOTLINE.phone,
     phoneDisplay: window.KET_HOTLINE.phoneDisplay,
