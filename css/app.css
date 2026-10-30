@@ -1579,3 +1579,6 @@ html { scroll-behavior: smooth; }
 body[data-apply] .apply-submit { position:fixed !important; left:16px; right:16px; width:auto !important; bottom:calc(var(--tab-bar-h, 56px) + var(--safe-bottom, 0px) + 10px); z-index:200; margin:0 !important; animation:none !important; transition:none !important; box-shadow:0 8px 24px rgba(0,0,0,.5); }
 body[data-apply] .apply-submit::after { display:none !important; }
 @media (min-width: 700px) { body[data-apply] .apply-submit { left:50%; right:auto; width:min(560px,90vw) !important; transform:translateX(-50%) !important; } }
+body[data-apply] .apply-submit, body[data-apply] .apply-top-btn { opacity:1 !important; visibility:visible !important; filter:none !important; }
+@media (max-width: 699px) { body[data-apply] .apply-submit { transform:none !important; bottom:calc(var(--tab-bar-h, 56px) + env(safe-area-inset-bottom, 0px) + 10px) !important; }
+  body[data-apply] .apply-shell { padding-bottom: calc(var(--tab-bar-h, 56px) + env(safe-area-inset-bottom, 0px) + 110px) !important; } }
