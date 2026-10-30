@@ -1571,7 +1571,7 @@ body {
 .about-cta-btn--hero { margin-top: 20px; min-width: 200px; box-shadow: 0 6px 18px rgba(191,90,242,.35); }
 
 /* Trang ung-tuyen: nút luôn hiện */
-body[data-apply] .apply-form, body[data-apply] .apply-form *, body[data-apply] .apply-intro { opacity:1 !important; transform:none !important; visibility:visible !important; }
+body[data-apply] .apply-form, body[data-apply] .apply-form *:not(input[type=file]), body[data-apply] .apply-intro { opacity:1 !important; transform:none !important; visibility:visible !important; }
 body[data-apply] main, body[data-apply] .apply-form { padding-bottom: calc(var(--tab-bar-h, 56px) + var(--safe-bottom, 0px) + 96px) !important; }
 html { scroll-behavior: smooth; }
 #apply-form { scroll-margin-top: 70px; }
