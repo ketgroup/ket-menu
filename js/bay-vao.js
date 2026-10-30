@@ -8,10 +8,10 @@
    function add(el, cls, d){ if (!el || el.classList.contains("bv")) return; el.classList.remove("sd-reveal","sd-in");
      el.classList.add("bv", cls); el.style.setProperty("--bv-d", (d||0)+"ms"); items.push(el); }
    // khối lớn xen kẽ trái/phải, nội dung bên trong từ dưới lên so le
-   document.querySelectorAll(".about-block-inner, .form-section, .apply-intro").forEach(function(b){
+   document.querySelectorAll(".about-block-inner").forEach(function(b){
      add(b, (side++%2) ? "bv-right" : "bv-left", 0);
    });
-   document.querySelectorAll(".about-block-inner > *, .form-stack > *, .field, .apply-submit, .site-footer").forEach(function(el){
+   document.querySelectorAll(".about-block-inner > *, .site-footer").forEach(function(el){
      if (el.classList.contains("bv")) return;
      var sib=[].indexOf.call(el.parentNode.children, el);
      add(el, el.classList.contains("about-venue-tile") ? ((sib%2)?"bv-right":"bv-left") : "bv-up", 120 + Math.min(sib,6)*90);

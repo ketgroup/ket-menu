@@ -7,7 +7,7 @@
     function setup() {
       var seen = [], groups = new Map();
       document.querySelectorAll(SEL).forEach(function (el) {
-        if (el.closest(".reveal") || el.closest(".sd-reveal") || el.closest(".ios-tab-bar") || el.closest(".ios-nav")) return;
+        if (el.closest(".apply-shell") || el.closest(".reveal") || el.closest(".sd-reveal") || el.closest(".ios-tab-bar") || el.closest(".ios-nav")) return;
         el.classList.add("sd-reveal"); seen.push(el);
         var p = el.parentNode, i = groups.get(p) || 0; groups.set(p, i + 1);
         el.style.setProperty("--sd-delay", Math.min(i, 6) * 70 + "ms");
