@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>KẾT · TRẢI NGHIỆM ĐÊM (bản thử)</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../img/logos/favicon.png">
+<link rel="stylesheet" href="exp.css?v=20261030x1">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="chi"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="3"/></filter>
+  <filter id="muc"><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncR type="discrete" tableValues="0 0 1 1"/><feFuncG type="discrete" tableValues="0 0 1 1"/><feFuncB type="discrete" tableValues="0 0 1 1"/></feComponentTransfer></filter>
+  <pattern id="gach" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><line x1="0" y1="0" x2="0" y2="6" stroke="#000" stroke-width="2"/></pattern>
+</svg>
+<div id="contro" aria-hidden="true"></div>
+<canvas id="nhieu" aria-hidden="true"></canvas>
+<a class="nut-goc" href="../">MENU</a>
+
+<!-- CẢNH 1 -->
+<section class="canh" id="c1">
+  <div class="lop nen do"></div>
+  <svg class="lop thanhpho" viewBox="0 0 400 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <g filter="url(#chi)"><path d="M0 300V180h30v-40h25v60h20V120h35v80h15v-50h30v150h20V140h40v60h25v-90h30v190h25v-70h30v-30h25v100h20V300Z" fill="#000"/>
+    <path d="M0 300V180h30v-40h25v60h20V120h35v80h15v-50h30v150h20V140h40v60h25v-90h30v190h25v-70h30v-30h25v100h20V300Z" fill="url(#gach)" opacity=".5"/></g>
+  </svg>
+  <svg class="lop nhanvat" viewBox="0 0 200 400" aria-hidden="true"><g filter="url(#chi)">
+    <path d="M100 30c22 0 34 16 32 40-2 20-14 30-14 30l40 30 20 270H22L42 130l40-30s-14-10-16-30c-2-24 12-40 34-40z" fill="#000"/>
+    <path d="M60 22h80l-6 18H66z M40 40h120v8H40z" fill="#000"/>
+    <path d="M86 70l8 2M108 72l8-2" stroke="#fff" stroke-width="3"/></g></svg>
+  <div class="lop chu">
+    <p class="o-thoai lon">KẾT</p>
+    <p class="o-thoai">ĐÊM ĐÀ NẴNG BẮT ĐẦU</p>
+    <p class="o-thoai nho">CUỘN XUỐNG ↓</p>
+  </div>
+</section>
+
+<!-- CẢNH 2: KỆ -->
+<section class="canh" id="c2">
+  <div class="lop nen trang"></div>
+  <div class="ke" id="ke">
+    <svg viewBox="0 0 400 300" aria-hidden="true"><g filter="url(#chi)">
+      <rect x="0" y="230" width="400" height="14" fill="#000"/><rect x="0" y="244" width="400" height="60" fill="url(#gach)"/>
+      <g id="chai1"><path d="M70 230v-110q0-20 14-30v-40h16v40q14 10 14 30v110z" fill="#00E5FF" stroke="#000" stroke-width="4"/><rect x="74" y="150" width="36" height="40" fill="#fff" stroke="#000" stroke-width="3"/><text x="92" y="175" font-size="13" text-anchor="middle" font-weight="900">K1</text></g>
+      <g id="chai2"><path d="M180 230v-120q0-22 12-32v-46h16v46q12 10 12 32v120z" fill="#39FF14" stroke="#000" stroke-width="4"/><rect x="184" y="150" width="32" height="40" fill="#fff" stroke="#000" stroke-width="3"/><text x="200" y="175" font-size="13" text-anchor="middle" font-weight="900">K2</text></g>
+      <g id="chai3"><path d="M290 230v-100q0-24 16-32v-38h16v38q16 8 16 32v100z" fill="#FFD60A" stroke="#000" stroke-width="4"/><rect x="294" y="150" width="40" height="40" fill="#fff" stroke="#000" stroke-width="3"/><text x="314" y="175" font-size="13" text-anchor="middle" font-weight="900">K9</text></g>
+      <path d="M78 130v80M188 120v90M298 140v70" stroke="#fff" stroke-width="5" opacity=".7"/>
+    </g></svg>
+  </div>
+  <div class="lop chu"><p class="o-thoai">BA CHAI. MỘT ĐÊM.</p><p class="o-thoai nho" style="margin-left:auto">CHỌN ĐI.</p></div>
+</section>
+
+<!-- CẢNH 3: 4 QUÁN -->
+<section class="canh" id="c3">
+  <div class="lop nen den"></div>
+  <div class="truyen" id="truyen"></div>
+</section>
+
+<!-- CẢNH 4: GIỮ & RÓT -->
+<section class="canh" id="c4">
+  <div class="lop nen do"></div>
+  <div class="rot" id="rot">
+    <svg viewBox="0 0 300 520" id="rotsvg" aria-hidden="true">
+      <g id="chairot" transform="rotate(0 150 90)"><g filter="url(#chi)">
+        <path d="M120 150V60q0-18 14-26V0h32v34q14 8 14 26v90z" fill="#FFD60A" stroke="#000" stroke-width="5"/>
+        <rect x="126" y="80" width="48" height="40" fill="#fff" stroke="#000" stroke-width="3"/></g></g>
+      <rect id="dong" x="146" y="200" width="8" height="0" fill="#FFC300" stroke="#000" stroke-width="1.5"/>
+      <g id="giot"></g>
+      <clipPath id="trongly"><path d="M70 330h160l-80 90z"/></clipPath>
+      <rect id="ruou" x="60" y="420" width="180" height="0" fill="#FFC300" clip-path="url(#trongly)"/>
+      <g filter="url(#chi)" fill="none" stroke="#000" stroke-width="6">
+        <path d="M70 330h160l-80 90z"/><path d="M150 420v70M105 500h90"/></g>
+      <path d="M90 340l50 56" stroke="#fff" stroke-width="5" opacity=".8"/>
+    </svg>
+  </div>
+  <div class="lop chu"><p class="o-thoai" id="loirot">GIỮ ĐỂ RÓT</p></div>
+</section>
+
+<!-- CẢNH 5: CUỐI -->
+<section class="canh cuoi" id="c5">
+  <div class="lop nen trang"></div>
+  <div class="cuoi-noi">
+    <p class="o-thoai lon">CHỌN QUÁN</p>
+    <div class="nut-quan" id="nutquan"></div>
+    <a class="o-thoai nho" href="tel:0896789768">GỌI 089 6789768</a>
+    <p class="ghichu">BẢN THỬ · ĐỒ HOẠ TẠM, CHỜ HOẠ SĨ</p>
+  </div>
+</section>
+
+<script src="../js/venues.js?v=20261030x1"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="exp.js?v=20261030x1"></script>
+</body>
+</html>
