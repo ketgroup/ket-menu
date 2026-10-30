@@ -1568,3 +1568,4 @@ body {
   font-variant-numeric: tabular-nums;
 }
 .about-venue-body .meta.price { margin-top: 2px; }
+.about-cta-btn--hero { margin-top: 20px; min-width: 200px; box-shadow: 0 6px 18px rgba(191,90,242,.35); }
