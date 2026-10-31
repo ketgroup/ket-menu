@@ -142,21 +142,9 @@
 "Happy Halloween 🎃": "Selamat Halloween 🎃",
 "Mừng ngày Nhà giáo Việt Nam 20/11 💐": "Selamat Hari Guru Vietnam 💐",
 "Đêm Giáng sinh an lành 🎄": "Selamat Malam Natal 🎄",
-"Merry Christmas 🎄": "Selamat Natal 🎄"
+"Merry Christmas 🎄": "Selamat Natal 🎄",
+"Chỉ đường": "Petunjuk arah",
+"Mở Google Maps": "Buka Google Maps"
 },
-"p": {
-"gift": "{a}/{b} item gratis dipilih",
-"left": "Masih bisa pilih {n} item gratis.",
-"total": "{n} item · subtotal {x}",
-"plusvenue": " + item harga di tempat",
-"call": "Telepon {x}",
-"from": "Dari {a} – {b}",
-"avg": "rata-rata ~{x}/gelas",
-"late": "larut",
-"today": "hari ini",
-"reviewon": "Ulas di {x}",
-"language": "Bahasa",
-"channels": "Kanal {x}",
-"page": "{x} – halaman {n}"
-}
+"p": {"gift": "{a}/{b} item gratis dipilih", "left": "Masih bisa pilih {n} item gratis.", "total": "{n} item · subtotal {x}", "plusvenue": " + item harga di tempat", "call": "Telepon {x}", "from": "Dari {a} – {b}", "avg": "rata-rata ~{x}/gelas", "late": "larut", "today": "hari ini", "reviewon": "Ulas di {x}", "language": "Bahasa", "channels": "Kanal {x}", "page": "{x} – halaman {n}"}
 }

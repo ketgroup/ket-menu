@@ -90,13 +90,16 @@
       parts += '<div class="venue-info-block">';
       parts += '<p class="venue-info-label">Địa chỉ</p>';
       parts +=
-        '<a class="venue-info-link" href="' +
+        '<a class="venue-info-link venue-info-link--map" href="' +
         escapeHtml(maps) +
         '" target="_blank" rel="noopener noreferrer">' +
-        escapeHtml(v.address) +
+        '<svg class="vil-pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>' +
+        '<span class="vil-text"><span class="vil-addr">' + escapeHtml(v.address) + '</span>' +
+        '<span class="vil-hint">Chỉ đường · Mở Google Maps</span></span>' +
+        '<svg class="vil-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>' +
         "</a></div>";
     }
-    if (hasPhone || v.tripadvisor) {
+    if (hasPhone || v.tripadvisor || hasAddress) {
       parts += '<div class="venue-info-actions">';
       if (hasPhone) {
         parts +=
@@ -105,6 +108,14 @@
           '">Gọi ' +
           escapeHtml(v.phoneDisplay) +
           "</a>";
+      }
+      if (hasAddress) {
+        parts +=
+          '<a class="ios-btn ios-btn--tinted ios-btn--directions" href="' +
+          escapeHtml(window.KET_mapsUrl(v.address)) +
+          '" target="_blank" rel="noopener noreferrer">' +
+          '<svg class="ios-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>' +
+          "<span>Chỉ đường</span></a>";
       }
       if (v.tripadvisor) {
         parts +=

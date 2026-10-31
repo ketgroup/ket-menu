@@ -142,21 +142,9 @@
 "Happy Halloween 🎃": "Happy Halloween 🎃",
 "Mừng ngày Nhà giáo Việt Nam 20/11 💐": "Maligayang Araw ng mga Guro 💐",
 "Đêm Giáng sinh an lành 🎄": "Maligayang Bisperas ng Pasko 🎄",
-"Merry Christmas 🎄": "Maligayang Pasko 🎄"
+"Merry Christmas 🎄": "Maligayang Pasko 🎄",
+"Chỉ đường": "Direksyon",
+"Mở Google Maps": "Buksan ang Google Maps"
 },
-"p": {
-"gift": "{a}/{b} libreng item ang napili",
-"left": "May {n} libreng item ka pang mapipili.",
-"total": "{n} item · subtotal {x}",
-"plusvenue": " + item na presyo sa bar",
-"call": "Tumawag {x}",
-"from": "Mula {a} – {b}",
-"avg": "avg ~{x}/baso",
-"late": "hatinggabi",
-"today": "ngayon",
-"reviewon": "Mag-review sa {x}",
-"language": "Wika",
-"channels": "Mga channel ng {x}",
-"page": "{x} – pahina {n}"
-}
+"p": {"gift": "{a}/{b} libreng item ang napili", "left": "May {n} libreng item ka pang mapipili.", "total": "{n} item · subtotal {x}", "plusvenue": " + item na presyo sa bar", "call": "Tumawag {x}", "from": "Mula {a} – {b}", "avg": "avg ~{x}/baso", "late": "hatinggabi", "today": "ngayon", "reviewon": "Mag-review sa {x}", "language": "Wika", "channels": "Mga channel ng {x}", "page": "{x} – pahina {n}"}
 }

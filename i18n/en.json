@@ -146,21 +146,9 @@
 "Happy Halloween 🎃": "Happy Halloween 🎃",
 "Mừng ngày Nhà giáo Việt Nam 20/11 💐": "Happy Vietnamese Teachers' Day 💐",
 "Đêm Giáng sinh an lành 🎄": "Merry Christmas Eve 🎄",
-"Merry Christmas 🎄": "Merry Christmas 🎄"
+"Merry Christmas 🎄": "Merry Christmas 🎄",
+"Chỉ đường": "Directions",
+"Mở Google Maps": "Open Google Maps"
 },
-"p": {
-"gift": "{a}/{b} free items chosen",
-"left": "You can still choose {n} free item(s).",
-"total": "{n} item(s) · subtotal {x}",
-"plusvenue": " + items priced at venue",
-"call": "Call {x}",
-"from": "From {a} – {b}",
-"avg": "avg ~{x}/glass",
-"late": "late",
-"today": "today",
-"reviewon": "Review on {x}",
-"language": "Language",
-"channels": "{x} channels",
-"page": "{x} – page {n}"
-}
+"p": {"gift": "{a}/{b} free items chosen", "left": "You can still choose {n} free item(s).", "total": "{n} item(s) · subtotal {x}", "plusvenue": " + items priced at venue", "call": "Call {x}", "from": "From {a} – {b}", "avg": "avg ~{x}/glass", "late": "late", "today": "today", "reviewon": "Review on {x}", "language": "Language", "channels": "{x} channels", "page": "{x} – page {n}"}
 }

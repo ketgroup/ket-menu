@@ -142,21 +142,9 @@
 "Happy Halloween 🎃": "万圣节快乐 🎃",
 "Mừng ngày Nhà giáo Việt Nam 20/11 💐": "越南教师节快乐 💐",
 "Đêm Giáng sinh an lành 🎄": "平安夜快乐 🎄",
-"Merry Christmas 🎄": "圣诞快乐 🎄"
+"Merry Christmas 🎄": "圣诞快乐 🎄",
+"Chỉ đường": "路线",
+"Mở Google Maps": "打开 Google 地图"
 },
-"p": {
-"gift": "已选 {a}/{b} 份免费品",
-"left": "还可选 {n} 份免费品。",
-"total": "{n} 项 · 小计 {x}",
-"plusvenue": " + 部分价格以店内为准",
-"call": "致电 {x}",
-"from": "{a} – {b}",
-"avg": "均价 ~{x}/杯",
-"late": "深夜",
-"today": "今天",
-"reviewon": "在 {x} 上评价",
-"language": "语言",
-"channels": "{x} 的频道",
-"page": "{x} – 第 {n} 页"
-}
+"p": {"gift": "已选 {a}/{b} 份免费品", "left": "还可选 {n} 份免费品。", "total": "{n} 项 · 小计 {x}", "plusvenue": " + 部分价格以店内为准", "call": "致电 {x}", "from": "{a} – {b}", "avg": "均价 ~{x}/杯", "late": "深夜", "today": "今天", "reviewon": "在 {x} 上评价", "language": "语言", "channels": "{x} 的频道", "page": "{x} – 第 {n} 页"}
 }

@@ -142,21 +142,9 @@
 "Happy Halloween 🎃": "Mutlu Cadılar Bayramı 🎃",
 "Mừng ngày Nhà giáo Việt Nam 20/11 💐": "Vietnam Öğretmenler Günü 💐",
 "Đêm Giáng sinh an lành 🎄": "Mutlu Noel arifesi 🎄",
-"Merry Christmas 🎄": "Mutlu Noeller 🎄"
+"Merry Christmas 🎄": "Mutlu Noeller 🎄",
+"Chỉ đường": "Yol tarifi",
+"Mở Google Maps": "Google Haritalar'ı aç"
 },
-"p": {
-"gift": "{a}/{b} ücretsiz ürün seçildi",
-"left": "{n} ücretsiz ürün daha seçebilirsiniz.",
-"total": "{n} ürün · ara toplam {x}",
-"plusvenue": " + mekân fiyatlı ürünler",
-"call": "Ara {x}",
-"from": "{a} – {b}",
-"avg": "ort. ~{x}/bardak",
-"late": "geç",
-"today": "bugün",
-"reviewon": "{x}'da değerlendir",
-"language": "Dil",
-"channels": "{x} kanalları",
-"page": "{x} – sayfa {n}"
-}
+"p": {"gift": "{a}/{b} ücretsiz ürün seçildi", "left": "{n} ücretsiz ürün daha seçebilirsiniz.", "total": "{n} ürün · ara toplam {x}", "plusvenue": " + mekân fiyatlı ürünler", "call": "Ara {x}", "from": "{a} – {b}", "avg": "ort. ~{x}/bardak", "late": "geç", "today": "bugün", "reviewon": "{x}'da değerlendir", "language": "Dil", "channels": "{x} kanalları", "page": "{x} – sayfa {n}"}
 }
