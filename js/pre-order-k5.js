@@ -1,7 +1,7 @@
 (function () {
   "use strict";
   // Nối app Kết: đặt URL vào đây. Lỗi mạng/404/khác 2xx => dự phòng FormSubmit.
-  var USE_API = true; // main: false (FormSubmit + data/menu-k5.json). Nhánh preorder-api: true.
+  var USE_API = true; // Bật nối app Kết (sếp Lan 31/10 22:13). API lỗi -> FormSubmit dự phòng.
   var PREORDER_ENDPOINT = USE_API ? "https://ket-app.vercel.app/api/pre-order" : "";
   var MENU_ENDPOINT = "https://ket-app.vercel.app/api/menu?quan=K5";
   var MENU_FALLBACK = "data/menu-k5.json?v=20261031n";
