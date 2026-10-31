@@ -3,14 +3,15 @@
   // Nối app Kết: đặt URL vào đây. Lỗi mạng/404/khác 2xx => dự phòng FormSubmit.
   var PREORDER_ENDPOINT = "https://ket-app.vercel.app/api/pre-order";
   var MENU_ENDPOINT = "https://ket-app.vercel.app/api/menu?quan=K5";
-  var MENU_FALLBACK = "data/menu-k5.json?v=20261031c";
+  var MENU_FALLBACK = "data/menu-k5.json?v=20261031l";
+  var GET_TIMEOUT = 6000;
   var THANKS = "pre-order-k5-thanh-cong.html";
 
   var form = document.getElementById("po-form");
   if (!form) return;
   var box = document.getElementById("po_menu"), totalEl = document.getElementById("po_total");
   var btn = document.getElementById("po_submit");
-  var menu = [], qty = {};
+  var menu = [], qty = {}, fromApi = false;
   // Món tặng: mua 1 cocktail/mocktail tặng 1 món. Giá gốc lấy từ menu K5 theo mã (null = menu chưa có giá).
   // Giá gốc đặt cứng ở đây cho dễ sửa (null = chưa có giá, chỉ hiện 0đ).
   var GIFTS = [
@@ -21,7 +22,9 @@
     { key: "water", ten: "3 Bottles of Water", gia_goc: null }
   ];
   var gq = {};
-  var COCKTAIL_GROUPS = /cocktail|non-alcoholic|mocktail/i;
+  // Nhóm tính món tặng: Signature/Classic Cocktail, Non-alcoholic; API tách classic thành Low/Medium/High ABV.
+  // Nhóm "COCKTAIL" (Custom ...) và Custom Mocktail KHÔNG tính.
+  var COCKTAIL_GROUPS = /^(signature cocktail|classic cocktail|non-alcoholic.*|low abv|medium abv|high abv)$/i;
   var giftBox = document.getElementById("po_gifts"), giftCount = document.getElementById("po_gift_count"), giftHint = document.getElementById("po_gift_hint");
   function giftPrice(g) { return g.gia_goc != null ? g.gia_goc : null; }
   function cocktailQty() { var n = 0; menu.forEach(function (m) { if (COCKTAIL_GROUPS.test(m.nhom)) n += qty[m.ma] || 0; }); return n; }
@@ -65,6 +68,7 @@
     var arr = Array.isArray(d) ? d : (d.mon || d.items || d.data || []);
     return arr.map(function (m) {
       return { ma: m.ma || m.ma_mon || m.id || m.code, ten: m.ten || m.ten_mon || m.name, gia: m.gia != null ? Number(m.gia) : (m.price != null ? Number(m.price) : null), nhom: m.nhom || m.group || "Khác" };
+    }).filter(function (m) { return m.ma && m.ten && !/^custom mocktail$/i.test(m.ten) || (m.ma === "CUMO"); }).map(function (m) { return m;
     }).filter(function (m) { return m.ma && m.ten; });
   }
   function render() {
@@ -94,7 +98,7 @@
     qty[ma] = q; row.querySelector("output").textContent = q; row.classList.toggle("is-picked", q > 0); updateTotal(); syncGifts();
   };
   box.addEventListener("click", poClick); document.getElementById("po_menu_top").addEventListener("click", poClick);
-  getJSON(MENU_ENDPOINT).then(norm).then(function (m) { if (!m.length) throw 0; return m; })
+  getJSON(MENU_ENDPOINT).then(norm).then(function (m) { if (!m.length) throw 0; fromApi = true; return m; })
     .catch(function () { return getJSON(MENU_FALLBACK).then(norm); })
     .then(function (m) { menu = m; render(); renderGifts(); updateTotal(); syncGifts(); })
     .catch(function () { document.getElementById("po_menu_top").innerHTML = ""; box.innerHTML = '<p class="po-loading">Không tải được menu, bạn ghi món vào ô Ghi chú nhé.</p>'; });
@@ -146,10 +150,24 @@
       mon_tang: giftData(),
       ghi_chu: val("po_ghichu")
     };
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return fail("po_email", "Vui lòng nhập email để quán xác nhận đơn.");
+    if (!data.mon.length) return fail("po_menu_top", "Vui lòng chọn ít nhất 1 món.");
     btn.disabled = true; btn.textContent = "Đang gửi…";
-    if (!PREORDER_ENDPOINT) return fallback(data);
-    Promise.race([fetch(PREORDER_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) }), timeout(8000)])
-      .then(function (r) { if (!r.ok || r.redirected) throw new Error("HTTP " + r.status); location.href = THANKS + "?ma=" + encodeURIComponent(data.id); })
+    if (!PREORDER_ENDPOINT || !fromApi) return fallback(data);
+    var tang = data.mon_tang.map(function (g) { return g.so_luong + " × " + g.ten; }).join(", ");
+    var api = { quan: "K5", ten_khach: ten.slice(0, 80), email: email, dong_y_nhan_tin: false, sdt: sdt,
+      ngay_den: val("po_ngay"), gio_den: val("po_gio"), so_khach: Math.min(50, nguoi),
+      mon: data.mon.slice(0, 40).map(function (m) { return { ma: m.ma, so_luong: m.so_luong }; }),
+      ghi_chu: ("Latin Dance" + (tang ? " · Món tặng: " + tang : "") + (data.ghi_chu ? " · " + data.ghi_chu : "")).slice(0, 500),
+      website: form._honey ? form._honey.value : "" };
+    function again(msg) { btn.disabled = false; btn.textContent = "Gửi đặt món"; window.alert(msg); }
+    Promise.race([fetch(PREORDER_ENDPOINT, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(api) }), timeout(8000)])
+      .then(function (r) {
+        if (r.status === 201 || r.ok) return r.json().catch(function () { return {}; }).then(function (j) { location.href = THANKS + "?ma=" + encodeURIComponent(j.id || data.id); });
+        if (r.status === 429) return again("Bạn đã gửi quá nhiều lần. Vui lòng thử lại sau khoảng 10 phút hoặc gọi 089 6789768.");
+        if (r.status === 400) return r.json().then(function (j) { again(j.error || "Thông tin chưa hợp lệ, bạn kiểm tra lại nhé."); }, function () { again("Thông tin chưa hợp lệ, bạn kiểm tra lại nhé."); });
+        throw new Error("HTTP " + r.status);
+      })
       .catch(function () { fallback(data); });
   });
 })();
