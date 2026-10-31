@@ -43,7 +43,7 @@
     giftBox.classList.toggle("is-locked", t >= max);
     giftBox.querySelectorAll('button[data-g="1"]').forEach(function (b) { b.disabled = t >= max; });
     giftCount.textContent = "Đã chọn " + t + "/" + max + " món tặng";
-    giftHint.textContent = max ? (t < max ? "Bạn còn " + (max - t) + " món tặng có thể chọn." : "Đã đủ số món tặng.") : "Chọn cocktail hoặc mocktail bên dưới để mở món tặng.";
+    giftHint.textContent = max ? (t < max ? "Bạn còn " + (max - t) + " món tặng có thể chọn." : "Đã đủ số món tặng.") : "Chọn cocktail hoặc mocktail ở trên để mở món tặng.";
   }
   giftBox.addEventListener("click", function (e) {
     var b = e.target.closest("button[data-g]"); if (!b || b.disabled) return;
@@ -73,29 +73,34 @@
   function render() {
     var groups = {}, order = [];
     menu.forEach(function (m) { if (!groups[m.nhom]) { groups[m.nhom] = []; order.push(m.nhom); } groups[m.nhom].push(m); });
-    box.innerHTML = order.map(function (g) {
-      return '<details class="po-group"' + (g === order[0] ? " open" : "") + '><summary>' + esc(g) + ' <small>' + groups[g].length + '</small></summary>' +
+    function html(list) { return list.map(function (g) {
+      return '<details class="po-group"' + (g === list[0] ? " open" : "") + '><summary>' + esc(g) + ' <small>' + groups[g].length + '</small></summary>' +
         groups[g].map(function (m) {
           return '<div class="po-item" data-ma="' + esc(m.ma) + '"><div class="po-item-meta"><b>' + esc(m.ten) + '</b><span>' + (m.gia == null ? "Giá theo quán" : money(m.gia)) + '</span></div>' +
             '<div class="po-stepper"><button type="button" data-d="-1" aria-label="Bớt">−</button><output>0</output><button type="button" data-d="1" aria-label="Thêm">+</button></div></div>';
         }).join("") + '</details>';
-    }).join("");
+    }).join(""); }
+    var top = order.filter(function (g) { return COCKTAIL_GROUPS.test(g); });
+    var rest = order.filter(function (g) { return !COCKTAIL_GROUPS.test(g); });
+    document.getElementById("po_menu_top").innerHTML = html(top);
+    box.innerHTML = html(rest);
   }
   function updateTotal() {
     var n = 0, sum = 0, unknown = false;
     menu.forEach(function (m) { var q = qty[m.ma] || 0; if (q) { n += q; if (m.gia == null) unknown = true; else sum += q * m.gia; } });
     totalEl.textContent = n ? (n + " món · tạm tính " + money(sum) + (unknown ? " + món giá theo quán" : "")) : "Chưa chọn món";
   }
-  box.addEventListener("click", function (e) {
+  var poClick = function (e) {
     var b = e.target.closest("button[data-d]"); if (!b) return;
     var row = b.closest(".po-item"), ma = row.getAttribute("data-ma");
     var q = Math.max(0, Math.min(99, (qty[ma] || 0) + Number(b.getAttribute("data-d"))));
     qty[ma] = q; row.querySelector("output").textContent = q; row.classList.toggle("is-picked", q > 0); updateTotal(); syncGifts();
-  });
+  };
+  box.addEventListener("click", poClick); document.getElementById("po_menu_top").addEventListener("click", poClick);
   getJSON(MENU_ENDPOINT).then(norm).then(function (m) { if (!m.length) throw 0; return m; })
     .catch(function () { return getJSON(MENU_FALLBACK).then(norm); })
     .then(function (m) { menu = m; render(); renderGifts(); updateTotal(); syncGifts(); })
-    .catch(function () { box.innerHTML = '<p class="po-loading">Không tải được menu, bạn ghi món vào ô Ghi chú nhé.</p>'; });
+    .catch(function () { document.getElementById("po_menu_top").innerHTML = ""; box.innerHTML = '<p class="po-loading">Không tải được menu, bạn ghi món vào ô Ghi chú nhé.</p>'; });
 
   // Ngày thứ 4 / thứ 6 trong 8 tuần tới, theo giờ Việt Nam
   function vnToday() { var d = new Date(Date.now() + 7 * 3600e3); return new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate())); }

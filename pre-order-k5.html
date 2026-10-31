@@ -9,13 +9,13 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="icon" type="image/png" href="img/logos/favicon.png">
 <link rel="apple-touch-icon" href="img/logos/apple-touch-icon.png">
-<link rel="stylesheet" href="css/app.css?v=20261031e">
-<script src="js/venues.js?v=20261031e"></script>
-<link rel="stylesheet" href="css/song-dong.css?v=20261031e">
-<link rel="stylesheet" href="css/bay-vao.css?v=20261031e">
-<link rel="stylesheet" href="css/pre-order.css?v=20261031e">
-<script src="js/song-dong.js?v=20261031e" defer></script>
-<script src="js/bay-vao.js?v=20261031e" defer></script>
+<link rel="stylesheet" href="css/app.css?v=20261031f">
+<script src="js/venues.js?v=20261031f"></script>
+<link rel="stylesheet" href="css/song-dong.css?v=20261031f">
+<link rel="stylesheet" href="css/bay-vao.css?v=20261031f">
+<link rel="stylesheet" href="css/pre-order.css?v=20261031f">
+<script src="js/song-dong.js?v=20261031f" defer></script>
+<script src="js/bay-vao.js?v=20261031f" defer></script>
 </head>
 <body data-apply data-preorder data-current-venue="k5" class="page-static">
 <header class="ios-nav"><div class="ios-nav-bar">
@@ -42,14 +42,15 @@
 <div class="field"><label class="field-label" for="po_nguoi">Số người *</label><input class="field-control" id="po_nguoi" type="number" inputmode="numeric" min="1" max="50" value="2" required></div>
 </div></section>
 <section class="form-section"><h2 class="form-section-title">Chọn món</h2>
-<div class="po-promo" id="po_promo">
 <p class="po-promo-title">PLEASE SELECT YOUR PRE-ORDER SO WE CAN PREPARE BETTER FOR YOU</p>
+<div id="po_menu_top" class="po-menu"><p class="po-loading">Đang tải menu…</p></div>
+<div class="po-promo" id="po_promo">
 <p class="po-promo-sub">BUY 1 COCKTAIL OR MOCKTAIL GET FREE:</p>
 <div id="po_gifts" class="po-gifts"></div>
 <p class="po-gift-count" id="po_gift_count">Đã chọn 0/0 món tặng</p>
-<p class="po-gift-hint" id="po_gift_hint">Chọn cocktail hoặc mocktail bên dưới để mở món tặng.</p>
+<p class="po-gift-hint" id="po_gift_hint">Chọn cocktail hoặc mocktail ở trên để mở món tặng.</p>
 </div>
-<div id="po_menu" class="po-menu"><p class="po-loading">Đang tải menu…</p></div>
+<div id="po_menu" class="po-menu"></div>
 <p class="po-total" id="po_total">Chưa chọn món</p></section>
 <section class="form-section"><h2 class="form-section-title">Ghi chú</h2><div class="form-stack">
 <div class="field"><textarea class="field-control" id="po_ghichu" placeholder="Dị ứng, chỗ ngồi, dịp đặc biệt…"></textarea></div>
@@ -59,7 +60,7 @@
 </form>
 </main>
 <nav class="ios-tab-bar" aria-label="Điều hướng quán"><a class="tab-item" href="./" data-venue="home"><span class="tab-icon tab-icon--home" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 10.5L12 4l8 6.5V20a1 1 0 01-1 1h-5v-6H10v6H5a1 1 0 01-1-1v-9.5z"/></svg></span><span class="tab-label">Trang chủ</span></a><a class="tab-item" href="k1.html" data-venue="k1"><img class="tab-icon tab-icon--logo" src="img/logos/k1.png" alt="" width="26" height="26"><span class="tab-label">K1 Bar</span></a><a class="tab-item" href="k2.html" data-venue="k2"><img class="tab-icon tab-icon--logo" src="img/logos/k2.png" alt="" width="26" height="26"><span class="tab-label">K2 High</span></a><a class="tab-item" href="k5.html" data-venue="k5"><img class="tab-icon tab-icon--logo" src="img/logos/k5.png" alt="" width="26" height="26"><span class="tab-label">K5 Fai</span></a><a class="tab-item" href="k9.html" data-venue="k9"><img class="tab-icon tab-icon--logo" src="img/logos/k9.png" alt="" width="26" height="26"><span class="tab-label">K9 UG</span></a></nav>
-<script src="js/app.js?v=20261031e" defer></script>
-<script src="js/pre-order-k5.js?v=20261031e" defer></script>
+<script src="js/app.js?v=20261031f" defer></script>
+<script src="js/pre-order-k5.js?v=20261031f" defer></script>
 </body>
 </html>
