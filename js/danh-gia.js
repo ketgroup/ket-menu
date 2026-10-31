@@ -9,7 +9,7 @@
   document.getElementById("qr-open").href=b.dataset.url;
   sh.classList.remove("closing"); sh.hidden=false; document.body.style.overflow="hidden"; sh.querySelector(".qr-open").focus({preventScroll:true}); }
  function close(){ sh.classList.add("closing"); setTimeout(function(){ sh.hidden=true; sh.classList.remove("closing"); document.body.style.overflow=""; if(last) last.focus(); }, 240); }
- document.querySelectorAll(".review-btn").forEach(function(b){ b.addEventListener("click", function(){ open(b); }); });
+ document.querySelectorAll(".review-btn").forEach(function(b){ b.addEventListener("click", function(){ if(window.matchMedia("(pointer:coarse)").matches){ window.location.href=b.getAttribute("data-url"); return; } open(b); }); });
  sh.querySelectorAll("[data-close]").forEach(function(el){ el.addEventListener("click", close); });
  document.addEventListener("keydown", function(e){ if(e.key==="Escape" && !sh.hidden) close(); });
 })();
