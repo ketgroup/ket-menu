@@ -1,27 +1,32 @@
 (function () {
   "use strict";
   // Nối app Kết: đặt URL vào đây. Lỗi mạng/404/khác 2xx => dự phòng FormSubmit.
-  var PREORDER_ENDPOINT = "https://ket-app.vercel.app/api/pre-order";
+  var USE_API = false; // main: false (FormSubmit + data/menu-k5.json). Nhánh preorder-api: true.
+  var PREORDER_ENDPOINT = USE_API ? "https://ket-app.vercel.app/api/pre-order" : "";
   var MENU_ENDPOINT = "https://ket-app.vercel.app/api/menu?quan=K5";
-  var MENU_FALLBACK = "data/menu-k5.json?v=20261031c";
+  var MENU_FALLBACK = "data/menu-k5.json?v=20261031n";
+  var GET_TIMEOUT = 6000;
   var THANKS = "pre-order-k5-thanh-cong.html";
 
   var form = document.getElementById("po-form");
   if (!form) return;
   var box = document.getElementById("po_menu"), totalEl = document.getElementById("po_total");
   var btn = document.getElementById("po_submit");
-  var menu = [], qty = {};
+  var menu = [], qty = {}, fromApi = false;
   // Món tặng: mua 1 cocktail/mocktail tặng 1 món. Giá gốc lấy từ menu K5 theo mã (null = menu chưa có giá).
+  // ma = mã món trong API (chỉ map khi chắc chắn). Món chưa có ma ghi vào ghi_chu.
   // Giá gốc đặt cứng ở đây cho dễ sửa (null = chưa có giá, chỉ hiện 0đ).
   var GIFTS = [
     { key: "wine", ten: "Wine", gia_goc: 129000 },
-    { key: "coconut", ten: "Coconut", gia_goc: 59000 },
+    { key: "coconut", ten: "Coconut", gia_goc: 59000, ma: "m167" },
     { key: "soft", ten: "Soft Drink", gia_goc: null },
     { key: "beer", ten: "Beer", gia_goc: 59000 },
     { key: "water", ten: "3 Bottles of Water", gia_goc: null }
   ];
   var gq = {};
-  var COCKTAIL_GROUPS = /cocktail|non-alcoholic|mocktail/i;
+  // Bước 1 (mở khoá món free): chỉ Signature/Classic Cocktail; API tách classic thành Low/Medium/High ABV.
+  // Non-Alcoholic (Signature), Mocktail/Custom Mocktail, nhóm "COCKTAIL" (Custom ...) KHÔNG tính.
+  var COCKTAIL_GROUPS = /^(signature cocktail|classic cocktail|low abv|medium abv|high abv)$/i;
   var giftBox = document.getElementById("po_gifts"), giftCount = document.getElementById("po_gift_count"), giftHint = document.getElementById("po_gift_hint");
   function giftPrice(g) { return g.gia_goc != null ? g.gia_goc : null; }
   function cocktailQty() { var n = 0; menu.forEach(function (m) { if (COCKTAIL_GROUPS.test(m.nhom)) n += qty[m.ma] || 0; }); return n; }
@@ -38,9 +43,10 @@
     for (var i = GIFTS.length - 1; i >= 0 && t > max; i--) { var k = GIFTS[i].key; while ((gq[k] || 0) > 0 && t > max) { gq[k]--; t--; } }
     GIFTS.forEach(function (g) { var row = giftBox.querySelector('[data-g-key="' + g.key + '"]'); if (!row) return; row.querySelector("output").textContent = gq[g.key] || 0; row.classList.toggle("is-picked", (gq[g.key] || 0) > 0); });
     giftBox.classList.toggle("is-locked", t >= max);
+    document.getElementById("po_step2").classList.toggle("is-locked", !max);
     giftBox.querySelectorAll('button[data-g="1"]').forEach(function (b) { b.disabled = t >= max; });
-    giftCount.textContent = "Đã chọn " + t + "/" + max + " món tặng";
-    giftHint.textContent = max ? (t < max ? "Bạn còn " + (max - t) + " món tặng có thể chọn." : "Đã đủ số món tặng.") : "Chọn cocktail hoặc mocktail ở trên để mở món tặng.";
+    giftCount.textContent = "Đã chọn " + t + "/" + max + " món free";
+    giftHint.textContent = max ? (t < max ? "Bạn còn " + (max - t) + " món free có thể chọn." : "Đã đủ số món free.") : "Chọn cocktail ở Bước 1 để mở khoá.";
   }
   giftBox.addEventListener("click", function (e) {
     var b = e.target.closest("button[data-g]"); if (!b || b.disabled) return;
@@ -49,7 +55,7 @@
     gq[k] = Math.max(0, (gq[k] || 0) + d); syncGifts();
   });
   function giftData() {
-    return GIFTS.filter(function (g) { return gq[g.key] > 0; }).map(function (g) { return { ten: g.ten, so_luong: gq[g.key], gia_goc: giftPrice(g), gia: 0 }; });
+    return GIFTS.filter(function (g) { return gq[g.key] > 0; }).map(function (g) { return { ma: g.ma || null, ten: g.ten, so_luong: gq[g.key], gia_goc: giftPrice(g), gia: 0 }; });
   }
 
   function money(n) { return n == null ? "" : n.toLocaleString("vi-VN").replace(/,/g, ".") + "đ"; }
@@ -65,13 +71,14 @@
     var arr = Array.isArray(d) ? d : (d.mon || d.items || d.data || []);
     return arr.map(function (m) {
       return { ma: m.ma || m.ma_mon || m.id || m.code, ten: m.ten || m.ten_mon || m.name, gia: m.gia != null ? Number(m.gia) : (m.price != null ? Number(m.price) : null), nhom: m.nhom || m.group || "Khác" };
+    }).filter(function (m) { return m.ma && m.ten; }).map(function (m) { return m;
     }).filter(function (m) { return m.ma && m.ten; });
   }
   function render() {
     var groups = {}, order = [];
     menu.forEach(function (m) { if (!groups[m.nhom]) { groups[m.nhom] = []; order.push(m.nhom); } groups[m.nhom].push(m); });
-    function html(list) { return list.map(function (g) {
-      return '<details class="po-group"' + (g === list[0] ? " open" : "") + '><summary>' + esc(g) + ' <small>' + groups[g].length + '</small></summary>' +
+    function html(list, open) { return list.map(function (g) {
+      return '<details class="po-group"' + (open ? " open" : "") + '><summary>' + esc(g) + ' <small>' + groups[g].length + '</small></summary>' +
         groups[g].map(function (m) {
           return '<div class="po-item" data-ma="' + esc(m.ma) + '"><div class="po-item-meta"><b>' + esc(m.ten) + '</b><span>' + (m.gia == null ? "Giá theo quán" : money(m.gia)) + '</span></div>' +
             '<div class="po-stepper"><button type="button" data-d="-1" aria-label="Bớt">−</button><output>0</output><button type="button" data-d="1" aria-label="Thêm">+</button></div></div>';
@@ -79,8 +86,8 @@
     }).join(""); }
     var top = order.filter(function (g) { return COCKTAIL_GROUPS.test(g); });
     var rest = order.filter(function (g) { return !COCKTAIL_GROUPS.test(g); });
-    document.getElementById("po_menu_top").innerHTML = html(top);
-    box.innerHTML = html(rest);
+    document.getElementById("po_menu_top").innerHTML = html(top, true);
+    box.innerHTML = html(rest, false);
   }
   function updateTotal() {
     var n = 0, sum = 0, unknown = false;
@@ -94,7 +101,7 @@
     qty[ma] = q; row.querySelector("output").textContent = q; row.classList.toggle("is-picked", q > 0); updateTotal(); syncGifts();
   };
   box.addEventListener("click", poClick); document.getElementById("po_menu_top").addEventListener("click", poClick);
-  getJSON(MENU_ENDPOINT).then(norm).then(function (m) { if (!m.length) throw 0; return m; })
+  (USE_API ? getJSON(MENU_ENDPOINT) : Promise.reject(0)).then(norm).then(function (m) { if (!m.length) throw 0; fromApi = true; return m; })
     .catch(function () { return getJSON(MENU_FALLBACK).then(norm); })
     .then(function (m) { menu = m; render(); renderGifts(); updateTotal(); syncGifts(); })
     .catch(function () { document.getElementById("po_menu_top").innerHTML = ""; box.innerHTML = '<p class="po-loading">Không tải được menu, bạn ghi món vào ô Ghi chú nhé.</p>'; });
@@ -123,8 +130,10 @@
     var add = function (k, v) { var i = document.createElement("input"); i.type = "hidden"; i.name = k; i.value = v; form.appendChild(i); };
     add("Mã đơn", data.id); add("Quán", "K5"); add("Tên khách", data.ten); add("SĐT", data.sdt); add("Email", data.email || "");
     add("Sự kiện", data.su_kien); add("Ngày giờ đến", data.ngay_gio_den); add("Số người", data.so_nguoi);
-    add("Món", data.mon.map(function (m) { return m.so_luong + " × " + m.ten + " [" + m.ma + "]" + (m.gia != null ? " (" + money(m.gia) + ")" : ""); }).join("\n") || "(chưa chọn)");
-    add("Món tặng", data.mon_tang.map(function (g) { return g.so_luong + " × " + g.ten + " (tặng, giá gốc " + (g.gia_goc != null ? money(g.gia_goc) : "chưa có") + " → 0đ)"; }).join("\n") || "(không)");
+    var line = function (m) { return m.so_luong + " × " + m.ten + " [" + m.ma + "]" + (m.gia != null ? " (" + money(m.gia) + ")" : ""); };
+    add("Bước 1 - Cocktail", data.mon.filter(function (m) { return m.buoc === 1; }).map(line).join("\n") || "(không)");
+    add("Bước 2 - Món free", data.mon_tang.map(function (g) { return g.so_luong + " × " + g.ten + " (free, giá gốc " + (g.gia_goc != null ? money(g.gia_goc) : "chưa có") + " → 0đ)"; }).join("\n") || "(không)");
+    add("Bước 3 - Món khác", data.mon.filter(function (m) { return m.buoc === 3; }).map(line).join("\n") || "(không)");
     add("Ghi chú", data.ghi_chu); add("JSON", JSON.stringify(data));
     form.submit();
   }
@@ -142,14 +151,31 @@
     var data = {
       id: makeId(), tao_luc: new Date().toISOString(), quan: "K5", ten: ten, sdt: sdt, email: email,
       su_kien: "Latin Dance", ngay_gio_den: den, so_nguoi: nguoi,
-      mon: menu.filter(function (m) { return qty[m.ma] > 0; }).map(function (m) { return { ma: m.ma, ten: m.ten, so_luong: qty[m.ma], gia: m.gia }; }),
+      mon: menu.filter(function (m) { return qty[m.ma] > 0; }).map(function (m) { return { ma: m.ma, ten: m.ten, so_luong: qty[m.ma], gia: m.gia, buoc: COCKTAIL_GROUPS.test(m.nhom) ? 1 : 3 }; }),
       mon_tang: giftData(),
       ghi_chu: val("po_ghichu")
     };
+    if (USE_API && !email || email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return fail("po_email", "Vui lòng nhập email để quán xác nhận đơn.");
+    if (!data.mon.length) return fail("po_menu_top", "Vui lòng chọn ít nhất 1 món.");
     btn.disabled = true; btn.textContent = "Đang gửi…";
-    if (!PREORDER_ENDPOINT) return fallback(data);
-    Promise.race([fetch(PREORDER_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) }), timeout(8000)])
-      .then(function (r) { if (!r.ok || r.redirected) throw new Error("HTTP " + r.status); location.href = THANKS + "?ma=" + encodeURIComponent(data.id); })
+    if (!PREORDER_ENDPOINT || !fromApi) return fallback(data);
+    var tangMa = data.mon_tang.filter(function (g) { return g.ma && menu.some(function (m) { return m.ma === g.ma; }); }).slice(0, 10);
+    var tang = data.mon_tang.filter(function (g) { return tangMa.indexOf(g) < 0; }).map(function (g) { return g.so_luong + " × " + g.ten; }).join(", ");
+    var tom = function (b) { return data.mon.filter(function (m) { return m.buoc === b; }).map(function (m) { return m.so_luong + "×" + m.ten; }).join(", ") || "-"; };
+    var tomTat = "Latin Dance | B1 Cocktail: " + tom(1) + " | B2 Free: " + (data.mon_tang.map(function (g) { return g.so_luong + "×" + g.ten; }).join(", ") || "-") + " | B3 Khác: " + tom(3);
+    var api = { quan: "K5", ten_khach: ten.slice(0, 80), email: email, dong_y_nhan_tin: false, sdt: sdt,
+      ngay_den: val("po_ngay"), gio_den: val("po_gio"), so_khach: Math.min(50, nguoi),
+      mon: data.mon.slice(0, 40).map(function (m) { return { ma: m.ma, so_luong: m.so_luong }; }).concat(tangMa.map(function (g) { return { ma: g.ma, so_luong: g.so_luong, tang: true }; })),
+      ghi_chu: (tomTat + (tang ? " | Free chưa có mã: " + tang : "") + (data.ghi_chu ? " · " + data.ghi_chu : "")).slice(0, 500),
+      website: form._honey ? form._honey.value : "" };
+    function again(msg) { btn.disabled = false; btn.textContent = "Gửi đặt món"; window.alert(msg); }
+    Promise.race([fetch(PREORDER_ENDPOINT, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(api) }), timeout(8000)])
+      .then(function (r) {
+        if (r.status === 201 || r.ok) return r.json().catch(function () { return {}; }).then(function (j) { location.href = THANKS + "?ma=" + encodeURIComponent(j.id || data.id); });
+        if (r.status === 429) return again("Bạn đã gửi quá nhiều lần. Vui lòng thử lại sau khoảng 10 phút hoặc gọi 089 6789768.");
+        if (r.status === 400) return r.json().then(function (j) { again(j.error || "Thông tin chưa hợp lệ, bạn kiểm tra lại nhé."); }, function () { again("Thông tin chưa hợp lệ, bạn kiểm tra lại nhé."); });
+        throw new Error("HTTP " + r.status);
+      })
       .catch(function () { fallback(data); });
   });
 })();
