@@ -47,7 +47,7 @@ window.KET_NGAY_DAC_BIET = [
     var html = '<span class="teaser-shine" aria-hidden="true"></span><span class="teaser-live"><i aria-hidden="true"></i><span>Hôm nay</span></span>';
     if (hit) html += '<a class="teaser-dip-link" href="#event-strip"><b class="teaser-dip">' + esc(hit[1]) + '</b><span class="teaser-cau">Hôm nay các quán Kết có bất ngờ đang chờ bạn…</span></a>';
     if (evs.length) {
-      html += '<div class="teaser-ev"><span class="teaser-ev-tit">Sự kiện hôm nay</span><div class="teaser-chips" role="list">' + evs.map(function (x) {
+      html += '<div class="teaser-ev"><div class="teaser-chips" role="list">' + evs.map(function (x) {
         var e = x[0];
         return '<a role="listitem" class="teaser-chip" data-ev="' + x[1] + '" href="' + (e.preorder ? esc(e.href) : "#event-strip") + '" style="--c:' + esc(e.mau) + '">' +
           '<span class="teaser-chip-ic" aria-hidden="true">' + esc(e.icon) + '</span><span class="teaser-chip-tx"><b>' + esc(e.ten) + '</b><small>' + esc(e.quan) + '</small></span>' +
