@@ -132,7 +132,7 @@
       return btn.getAttribute("data-target");
     });
 
-    function showPanel(id, scrollTop) {
+    function showPanel(id, scrollTop, updateHash) {
       panels.forEach(function (panel) {
         var match = panel.id === id;
         panel.classList.toggle("is-hidden", !match);
@@ -148,7 +148,9 @@
         var offset = bar ? bar.getBoundingClientRect().bottom + window.scrollY : 0;
         window.scrollTo({ top: offset, behavior: "smooth" });
       }
-      if (history.replaceState) {
+      if (!updateHash) {
+        /* Lúc mới mở trang: không gắn #hash, để trình duyệt khỏi tự cuộn xuống menu */
+      } else if (history.replaceState) {
         history.replaceState(null, "", "#" + id);
       } else {
         location.hash = id;
@@ -163,15 +165,15 @@
 
     buttons.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        showPanel(btn.getAttribute("data-target"), true);
+        showPanel(btn.getAttribute("data-target"), true, true);
       });
     });
 
     window.addEventListener("hashchange", function () {
-      showPanel(panelFromHash(), false);
+      showPanel(panelFromHash(), false, false);
     });
 
-    showPanel(panelFromHash(), false);
+    showPanel(panelFromHash(), false, false);
   }
 
   var current = document.body.getAttribute("data-current-venue");

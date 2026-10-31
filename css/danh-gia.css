@@ -11,7 +11,7 @@
   animation: dg-spin 4s linear infinite; }
 .review-row:nth-child(2)::before{animation-delay:-1s}.review-row:nth-child(3)::before{animation-delay:-2s}.review-row:nth-child(4)::before{animation-delay:-3s}
 .review-row .venue-app-icon { width: 40px; height: 40px; box-shadow: 0 0 12px -3px rgba(var(--rgb),.6); }
-.review-name { flex: 1; min-width: 0; font-family: var(--font-ui); font-size: 15px; font-weight: 600; color: var(--label-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.review-name { flex: 1; min-width: 0; font-family: var(--font-ui); font-size: 15px; font-weight: 600; color: var(--label-primary); white-space: normal; overflow: visible; overflow-wrap: break-word; line-height: 1.2; }
 .review-btns { display: flex; gap: 8px; }
 .review-btn { position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 5px; padding: 8px 10px; border: 0; border-radius: 999px;
   background: rgba(var(--rgb),.16); color: var(--c); font: 600 13px/1 var(--font-ui); cursor: pointer;

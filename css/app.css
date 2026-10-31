@@ -1200,6 +1200,7 @@ textarea.field-control::placeholder {
 html,
 body {
   overflow-x: hidden;
+  overflow-x: clip; /* clip: không tạo khung cuộn, header sticky mới bám được */
 }
 
 @media (min-width: 1280px) {
@@ -1599,3 +1600,6 @@ body[data-apply] .apply-submit:active { transform: scale(.95) !important; }
 .kg-nav .ios-nav-bar { padding-left: calc(10px + var(--safe-left)) !important; padding-right: calc(10px + var(--safe-left)) !important; }
 .kg-nav--long .ios-nav-bar .ios-btn--back { padding: 0 !important; width: 34px !important; justify-content: center; }
 .kg-nav--long .ios-nav-bar .ios-btn--back span { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; }
+
+/* Header trang quán bám trên đầu khi cuộn */
+.kg-nav { position: sticky !important; top: 0 !important; z-index: 100; }
