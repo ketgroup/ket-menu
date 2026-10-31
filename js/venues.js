@@ -8,7 +8,6 @@ window.KET_VENUE_ORDER = ["k1", "k2", "k5", "k9"];
 
 window.KET_VENUES = {
   k1: {
-    maps: "https://maps.app.goo.gl/Jw4EJ4yAvNu57tPE9",
     id: "k1",
     price: { from: 99, to: 489, avg: 170 },
     code: "K1",
@@ -26,7 +25,6 @@ window.KET_VENUES = {
     phoneDisplay: window.KET_HOTLINE.phoneDisplay,
   },
   k2: {
-    maps: "https://maps.app.goo.gl/gfpqagx7jqnNx8gx8",
     id: "k2",
     price: { from: 100, to: 480, avg: 175 },
     code: "K2",
@@ -45,7 +43,6 @@ window.KET_VENUES = {
     phoneDisplay: window.KET_HOTLINE.phoneDisplay,
   },
   k5: {
-    maps: "https://maps.app.goo.gl/jHd6d3vSBdpbnT3x6",
     id: "k5",
     price: { from: 39, to: 209, avg: 125 },
     code: "K5",
@@ -63,7 +60,6 @@ window.KET_VENUES = {
     phoneDisplay: window.KET_HOTLINE.phoneDisplay,
   },
   k9: {
-    maps: "https://maps.app.goo.gl/dxzVkypfbmShgBUCA",
     id: "k9",
     price: { from: 50, to: 490, avg: 180 },
     code: "K9",
@@ -78,6 +74,7 @@ window.KET_VENUES = {
     hours: ["19:30 – 02:30"],
     address: "106 Bạch Đằng – 04 Hùng Vương",
     /* Link tìm kiếm Google Maps (chưa tìm được link listing riêng) */
+    maps: "https://www.google.com/maps/search/?api=1&query=K%E1%BA%BFt+Underground+106+B%E1%BA%A1ch+%C4%90%E1%BA%B1ng+%C4%90%C3%A0+N%E1%BA%B5ng",
     phone: window.KET_HOTLINE.phone,
     phoneDisplay: window.KET_HOTLINE.phoneDisplay,
   },
