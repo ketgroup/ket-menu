@@ -36,7 +36,7 @@
         escapeHtml(v.logo) +
         '" alt="" width="44" height="44">' +
         '<div class="venue-row-text"><b>' +
-        escapeHtml(v.code + " · " + v.title) +
+        escapeHtml(v.title) +
         "</b><span>" +
         escapeHtml(v.tagline) +
         "</span>" +
