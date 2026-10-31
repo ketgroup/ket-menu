@@ -86,7 +86,7 @@
       parts += "</div>";
     }
     if (hasAddress) {
-      var maps = window.KET_mapsUrl(v.address);
+      var maps = (v.maps || window.KET_mapsUrl(v.address));
       parts += '<div class="venue-info-block">';
       parts += '<p class="venue-info-label">Địa chỉ</p>';
       parts +=
@@ -112,7 +112,7 @@
       if (hasAddress) {
         parts +=
           '<a class="ios-btn ios-btn--tinted ios-btn--directions" href="' +
-          escapeHtml(window.KET_mapsUrl(v.address)) +
+          escapeHtml((v.maps || window.KET_mapsUrl(v.address))) +
           '" target="_blank" rel="noopener noreferrer">' +
           '<svg class="ios-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>' +
           "<span>Chỉ đường</span></a>";

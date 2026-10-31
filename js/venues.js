@@ -72,7 +72,9 @@ window.KET_VENUES = {
     accent: "#FF453A",
     accentRgb: "255, 69, 58",
     hours: ["19:30 – 02:30"],
-    address: null,
+    address: "106 Bạch Đằng – 04 Hùng Vương (căn góc)",
+    /* Link tìm kiếm Google Maps (chưa tìm được link listing riêng) */
+    maps: "https://www.google.com/maps/search/?api=1&query=K%E1%BA%BFt+Underground+106+B%E1%BA%A1ch+%C4%90%E1%BA%B1ng+%C4%90%C3%A0+N%E1%BA%B5ng",
     phone: window.KET_HOTLINE.phone,
     phoneDisplay: window.KET_HOTLINE.phoneDisplay,
   },
