@@ -39,24 +39,6 @@
   #venue-list-home .venue-row::before { background: var(--c); opacity: .5; }
 }
 
-/* Nhóm K5 + nút con Pre-order Latin Dance */
-#venue-list-home .venue-group { display:grid; gap:0; --c:#d84cff; --glow:rgba(216,76,255,.38); }
-#venue-list-home .venue-group > .venue-row { border-radius:16px 16px 16px 16px; }
-#venue-list-home .venue-sub { position:relative; isolation:isolate; display:flex; align-items:center; gap:10px;
-  margin:-4px 14px 0 38px; padding:10px 14px; border-radius:0 0 14px 14px; text-decoration:none; color:inherit;
-  font-family:var(--font-ui); background:color-mix(in srgb, var(--c) 16%, var(--bg-grouped));
-  border:1px solid color-mix(in srgb, var(--c) 55%, transparent); border-top:none;
-  box-shadow:0 0 16px -6px var(--glow), 0 6px 14px rgba(0,0,0,.35);
-  animation: nq-in .8s cubic-bezier(.2,.9,.25,1.2) backwards, nq-breathe 3.6s ease-in-out infinite;
-  animation-delay: calc(var(--d,0s) + .15s), calc(var(--d,0s) + 1.05s); transition: transform .18s ease; }
-#venue-list-home .venue-sub::before { content:""; position:absolute; left:-22px; top:-4px; width:20px; height:50%;
-  border-left:1.5px solid color-mix(in srgb, var(--c) 60%, transparent); border-bottom:1.5px solid color-mix(in srgb, var(--c) 60%, transparent); border-bottom-left-radius:10px; }
-#venue-list-home .venue-sub:active { transform:scale(.97); }
-.venue-sub-icon { font-size:20px; flex:none; }
-.venue-sub-text { flex:1; min-width:0; }
-.venue-sub-text b { display:block; font-size:15px; font-weight:600; letter-spacing:-.24px; color:var(--c); line-height:1.25; }
-.venue-sub-text span { display:block; margin-top:1px; font-size:13px; color:var(--label-secondary); }
-#venue-list-home .venue-sub .venue-row-chevron { color:var(--c); animation:nq-arrow 1.8s ease-in-out infinite; }
 /* Dãy nút sự kiện */
 .event-strip { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; padding:4px 2px 12px; overflow:visible; }
 .event-strip.one { grid-template-columns:1fr; }
@@ -73,3 +55,9 @@
 .event-btn b { display:block; font-size:16px; font-weight:600; letter-spacing:-.3px; color:var(--label-primary); white-space:normal; overflow-wrap:anywhere; line-height:1.2; }
 .event-btn small { display:block; font-size:13px; color:var(--c); margin-top:3px; white-space:normal; overflow-wrap:anywhere; line-height:1.25; }
 .event-strip .event-btn:last-child:nth-child(odd) { grid-column:1 / -1; }
+
+/* Nhãn Pre-order trên nút sự kiện */
+.event-btn.has-preorder { padding-top:30px !important; }
+.event-tag { position:absolute; top:8px; right:8px; display:inline-flex; align-items:center; gap:3px; padding:3px 8px; border-radius:999px;
+  font-family:var(--font-ui); font-size:11px; font-weight:700; letter-spacing:.2px; line-height:1.2; color:#fff; white-space:nowrap;
+  background:linear-gradient(135deg,#d84cff,#9b3bff); box-shadow:0 0 10px rgba(216,76,255,.6); }

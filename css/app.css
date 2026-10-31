@@ -1200,6 +1200,7 @@ textarea.field-control::placeholder {
 html,
 body {
   overflow-x: hidden;
+  overflow-x: clip; /* clip: không tạo khung cuộn, header sticky mới bám được */
 }
 
 @media (min-width: 1280px) {
@@ -1581,3 +1582,23 @@ body[data-apply] .apply-submit:active { transform: scale(.95) !important; }
 @media (prefers-reduced-motion: reduce) { body[data-apply] .apply-submit { animation:none !important; } }
 
 /* Pre-order K5 trên trang chủ: luôn hiện, không hiệu ứng bay vào */
+
+/* Trang chủ: tiêu đề nhóm kiểu iOS large section header */
+.page-home .inset-group { padding-top: 28px; }
+.page-home .home-hero + .inset-group { padding-top: 12px; }
+.home-section-title { margin: 0 0 10px 4px; font-family: var(--font-ui); font-size: 22px; font-weight: 700; letter-spacing: -0.4px; color: var(--label-primary); line-height: 1.2; }
+.home-section-title ~ .home-section-title { margin-top: 28px; }
+.home-section-title:has(+ .home-section-sub) { margin-bottom: 2px; }
+.home-section-sub { margin: 0 0 10px 4px; font-family: var(--font-ui); font-size: 14px; color: var(--label-secondary); }
+/* Header trang quán: tên căn giữa thật, Back bên trái, KG bên phải */
+.kg-nav .ios-nav-bar { display: grid !important; grid-template-columns: 1fr auto 1fr !important; position: relative; gap: 8px; }
+.kg-nav .ios-nav-bar .ios-btn--back { grid-column: 1; justify-self: start; width: 34px; height: 34px; min-width: 34px; min-height: 34px; padding: 0 !important; border-radius: 50% !important; justify-content: center; gap: 0; }
+.kg-nav .ios-nav-bar .ios-btn--back svg { width: 18px; height: 18px; margin: 0 1px 0 -1px; }
+.kg-nav .ios-nav-bar .ios-btn--back span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.kg-nav .ios-nav-bar .ios-nav-title-group { grid-column: 2; position: relative !important; left: auto !important; top: auto !important; transform: none !important; max-width: none !important; }
+.kg-nav .ios-nav-bar .ios-nav-logo { position: absolute; right: 100%; top: 0; bottom: 0; margin: auto 6px auto 0; }
+.kg-nav .ios-nav-bar .kg-code { grid-column: 3; justify-self: end; margin: 0 !important; width: 34px; height: 34px; min-width: 34px; min-height: 34px; padding: 0 !important; border-radius: 50% !important; font-family: "Be Vietnam Pro", -apple-system, Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .02em; }
+.kg-nav .ios-nav-bar { padding-left: calc(10px + var(--safe-left)) !important; padding-right: calc(10px + var(--safe-left)) !important; }
+
+/* Header trang quán bám trên đầu khi cuộn */
+.kg-nav { position: sticky !important; top: 0 !important; z-index: 100; }

@@ -44,16 +44,7 @@
         priceHtml +
         "</div>" +
         '<span class="venue-row-chevron" aria-hidden="true">›</span></a>';
-      if (id === "k5") {
-        html +=
-          '<div class="venue-group" style="--d:.31s">' + row +
-          '<a class="venue-sub" href="pre-order-k5.html">' +
-          '<span class="venue-sub-icon" aria-hidden="true">💃</span>' +
-          '<span class="venue-sub-text"><b>Pre-order Latin Dance · Thứ 4 &amp; Thứ 6</b><span>Đặt món trước · Mua 1 cocktail tặng 1 món</span></span>' +
-          '<span class="venue-row-chevron" aria-hidden="true">›</span></a></div>';
-      } else {
-        html += row;
-      }
+      html += row;
     });
     root.innerHTML = html;
   }
@@ -141,7 +132,7 @@
       return btn.getAttribute("data-target");
     });
 
-    function showPanel(id, scrollTop) {
+    function showPanel(id, scrollTop, updateHash) {
       panels.forEach(function (panel) {
         var match = panel.id === id;
         panel.classList.toggle("is-hidden", !match);
@@ -157,7 +148,9 @@
         var offset = bar ? bar.getBoundingClientRect().bottom + window.scrollY : 0;
         window.scrollTo({ top: offset, behavior: "smooth" });
       }
-      if (history.replaceState) {
+      if (!updateHash) {
+        /* Lúc mới mở trang: không gắn #hash, để trình duyệt khỏi tự cuộn xuống menu */
+      } else if (history.replaceState) {
         history.replaceState(null, "", "#" + id);
       } else {
         location.hash = id;
@@ -172,15 +165,15 @@
 
     buttons.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        showPanel(btn.getAttribute("data-target"), true);
+        showPanel(btn.getAttribute("data-target"), true, true);
       });
     });
 
     window.addEventListener("hashchange", function () {
-      showPanel(panelFromHash(), false);
+      showPanel(panelFromHash(), false, false);
     });
 
-    showPanel(panelFromHash(), false);
+    showPanel(panelFromHash(), false, false);
   }
 
   var current = document.body.getAttribute("data-current-venue");
@@ -203,3 +196,6 @@
     });
   }
 })();
+
+/* Nút Back trang quán: nếu đến từ trang chủ thì quay lại, không thì mở trang chủ */
+(function(){document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest(".kg-back");if(!a)return;try{var r=document.referrer?new URL(document.referrer):null;if(r&&r.origin===location.origin&&/\/ket-menu\/(index\.html)?$/.test(r.pathname)&&history.length>1){e.preventDefault();history.back();}}catch(_){}});})();

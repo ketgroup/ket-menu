@@ -40,3 +40,13 @@ body[data-preorder] .ios-btn--tinted{color:var(--po)}
 #po_ngay{background-image:linear-gradient(45deg,transparent 50%,#aaa 50%),linear-gradient(135deg,#aaa 50%,transparent 50%);background-position:calc(100% - 18px) 50%,calc(100% - 13px) 50%;background-size:5px 5px;background-repeat:no-repeat;padding-right:34px}
 #po_gio::-webkit-date-and-time-value{text-align:left}
 .apply-form .field{min-width:0}
+
+/* Bước kiểu iOS */
+.po-step{position:relative}
+.po-step-title{display:flex;align-items:center;gap:10px;margin:18px 2px 8px;font:700 17px/1.25 var(--font-ui,system-ui);color:#fff}
+.po-step-title small{display:block;font-weight:400;font-size:12px;opacity:.6}
+.po-step-no{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--po);color:#fff;font-size:15px;font-weight:800}
+.po-step-hint{margin:0 2px 10px;font-size:13px;opacity:.7}
+.po-step.is-locked .po-promo{opacity:.45!important;filter:grayscale(.6)}
+.po-step.is-locked .po-step-no{background:#555}
+.po-stepper button:disabled{opacity:.3}
