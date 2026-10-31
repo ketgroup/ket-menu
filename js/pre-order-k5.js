@@ -97,6 +97,16 @@
     .then(function (m) { menu = m; render(); renderGifts(); updateTotal(); syncGifts(); })
     .catch(function () { box.innerHTML = '<p class="po-loading">Không tải được menu, bạn ghi món vào ô Ghi chú nhé.</p>'; });
 
+  // Ngày thứ 4 / thứ 6 trong 8 tuần tới, theo giờ Việt Nam
+  function vnToday() { var d = new Date(Date.now() + 7 * 3600e3); return new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate())); }
+  function iso(d) { return d.toISOString().slice(0, 10); }
+  function okDay(s) { var d = new Date(s + "T00:00:00Z"); return !isNaN(d) && (d.getUTCDay() === 3 || d.getUTCDay() === 5) && d >= vnToday(); }
+  (function fillDays() {
+    var sel = document.getElementById("po_ngay"), t = vnToday(), h = '<option value="">— Chọn thứ 4 hoặc thứ 6 —</option>';
+    for (var i = 0; i < 56; i++) { var d = new Date(t.getTime() + i * 864e5), w = d.getUTCDay();
+      if (w === 3 || w === 5) h += '<option value="' + iso(d) + '">' + (w === 3 ? "Thứ 4" : "Thứ 6") + ", " + pad(d.getUTCDate()) + "/" + pad(d.getUTCMonth() + 1) + "/" + d.getUTCFullYear() + (i === 0 ? " (hôm nay)" : "") + "</option>"; }
+    sel.innerHTML = h;
+  })();
   function val(id) { return (document.getElementById(id).value || "").trim(); }
   function pad(n) { return (n < 10 ? "0" : "") + n; }
   function makeId() {
@@ -110,7 +120,7 @@
   function fallback(data) {
     var add = function (k, v) { var i = document.createElement("input"); i.type = "hidden"; i.name = k; i.value = v; form.appendChild(i); };
     add("Mã đơn", data.id); add("Quán", "K5"); add("Tên khách", data.ten); add("SĐT", data.sdt); add("Email", data.email || "");
-    add("Đồng ý nhận KM", data.dong_y_km ? "Có" : "Không"); add("Ngày giờ đến", data.ngay_gio_den); add("Số người", data.so_nguoi);
+    add("Sự kiện", data.su_kien); add("Ngày giờ đến", data.ngay_gio_den); add("Số người", data.so_nguoi);
     add("Món", data.mon.map(function (m) { return m.so_luong + " × " + m.ten + " [" + m.ma + "]" + (m.gia != null ? " (" + money(m.gia) + ")" : ""); }).join("\n") || "(chưa chọn)");
     add("Món tặng", data.mon_tang.map(function (g) { return g.so_luong + " × " + g.ten + " (tặng, giá gốc " + (g.gia_goc != null ? money(g.gia_goc) : "chưa có") + " → 0đ)"; }).join("\n") || "(không)");
     add("Ghi chú", data.ghi_chu); add("JSON", JSON.stringify(data));
@@ -120,15 +130,16 @@
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     if (form._honey && form._honey.value) return;
-    var ten = val("po_ten"), sdt = phoneOk(val("po_sdt")), email = val("po_email"), den = val("po_den"), nguoi = parseInt(val("po_nguoi"), 10);
+    var ten = val("po_ten"), sdt = phoneOk(val("po_sdt")), email = val("po_email"), den = (val("po_ngay") && val("po_gio")) ? val("po_ngay") + "T" + val("po_gio") : "", nguoi = parseInt(val("po_nguoi"), 10);
     if (!ten) return fail("po_ten", "Vui lòng nhập tên.");
     if (!sdt) return fail("po_sdt", "Số điện thoại chưa đúng (VD 0896789768).");
     if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return fail("po_email", "Email chưa đúng.");
-    if (!den) return fail("po_den", "Vui lòng chọn ngày giờ đến.");
+    if (!val("po_ngay") || !okDay(val("po_ngay"))) return fail("po_ngay", "Pre-order chỉ nhận ngày thứ 4 hoặc thứ 6 (sự kiện Latin Dance) từ hôm nay.");
+    if (!val("po_gio")) return fail("po_gio", "Vui lòng chọn giờ đến.");
     if (!(nguoi >= 1)) return fail("po_nguoi", "Số người tối thiểu là 1.");
     var data = {
       id: makeId(), tao_luc: new Date().toISOString(), quan: "K5", ten: ten, sdt: sdt, email: email,
-      dong_y_km: document.getElementById("po_km").checked, ngay_gio_den: den, so_nguoi: nguoi,
+      su_kien: "Latin Dance", ngay_gio_den: den, so_nguoi: nguoi,
       mon: menu.filter(function (m) { return qty[m.ma] > 0; }).map(function (m) { return { ma: m.ma, ten: m.ten, so_luong: qty[m.ma], gia: m.gia }; }),
       mon_tang: giftData(),
       ghi_chu: val("po_ghichu")

@@ -1581,10 +1581,3 @@ body[data-apply] .apply-submit:active { transform: scale(.95) !important; }
 @media (prefers-reduced-motion: reduce) { body[data-apply] .apply-submit { animation:none !important; } }
 
 /* Pre-order K5 trên trang chủ: luôn hiện, không hiệu ứng bay vào */
-.home-preorder{display:flex!important;align-items:center;gap:12px;margin:8px 12px 10px;padding:13px 14px;border-radius:14px;background:linear-gradient(135deg,#d84cff,#8a3dff);color:#fff!important;text-decoration:none;box-shadow:0 6px 20px rgba(216,76,255,.38);opacity:1!important;visibility:visible!important;transform:none;animation:none;transition:transform .15s}
-.home-preorder:active{transform:scale(.97)}
-.home-preorder-icon{font-size:24px;flex:none}
-.home-preorder-text{display:flex;flex-direction:column;flex:1;min-width:0}
-.home-preorder-text b{font-size:17px;font-weight:700}
-.home-preorder-text span{font-size:13px;opacity:.9}
-.home-preorder-chevron{font-size:24px;opacity:.9}

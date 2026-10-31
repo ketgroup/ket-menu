@@ -33,3 +33,9 @@ body[data-preorder] .ios-btn--tinted{color:var(--po)}
 .po-gifts.is-locked .po-stepper button[data-g="1"]{opacity:.35}
 .po-gift-count{margin:10px 2px 0;font-weight:600}
 .po-gift-hint{margin:4px 2px 0;font-size:13px;opacity:.75}
+
+.po-event-badge{margin:0 0 8px;display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(216,76,255,.18);border:1px solid rgba(216,76,255,.6);color:#e9a2ff;font:600 13px/1.2 var(--font-ui);letter-spacing:.04em}
+#po_ngay,#po_gio{display:block;width:100%;max-width:100%;min-width:0;box-sizing:border-box;-webkit-appearance:none;appearance:none}
+#po_ngay{background-image:linear-gradient(45deg,transparent 50%,#aaa 50%),linear-gradient(135deg,#aaa 50%,transparent 50%);background-position:calc(100% - 18px) 50%,calc(100% - 13px) 50%;background-size:5px 5px;background-repeat:no-repeat;padding-right:34px}
+#po_gio::-webkit-date-and-time-value{text-align:left}
+.apply-form .field{min-width:0}

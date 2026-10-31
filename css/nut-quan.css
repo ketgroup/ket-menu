@@ -38,3 +38,36 @@
   #venue-list-home .venue-row { transform: none !important; }
   #venue-list-home .venue-row::before { background: var(--c); opacity: .5; }
 }
+
+/* Nhóm K5 + nút con Pre-order Latin Dance */
+#venue-list-home .venue-group { display:grid; gap:0; --c:#d84cff; --glow:rgba(216,76,255,.38); }
+#venue-list-home .venue-group > .venue-row { border-radius:16px 16px 16px 16px; }
+#venue-list-home .venue-sub { position:relative; isolation:isolate; display:flex; align-items:center; gap:10px;
+  margin:-4px 14px 0 38px; padding:10px 14px; border-radius:0 0 14px 14px; text-decoration:none; color:inherit;
+  font-family:var(--font-ui); background:color-mix(in srgb, var(--c) 16%, var(--bg-grouped));
+  border:1px solid color-mix(in srgb, var(--c) 55%, transparent); border-top:none;
+  box-shadow:0 0 16px -6px var(--glow), 0 6px 14px rgba(0,0,0,.35);
+  animation: nq-in .8s cubic-bezier(.2,.9,.25,1.2) both, nq-breathe 3.6s ease-in-out infinite;
+  animation-delay: calc(var(--d,0s) + .15s), calc(var(--d,0s) + 1.05s); transition: transform .18s ease; }
+#venue-list-home .venue-sub::before { content:""; position:absolute; left:-22px; top:-4px; width:20px; height:50%;
+  border-left:1.5px solid color-mix(in srgb, var(--c) 60%, transparent); border-bottom:1.5px solid color-mix(in srgb, var(--c) 60%, transparent); border-bottom-left-radius:10px; }
+#venue-list-home .venue-sub:active { transform:scale(.97); }
+.venue-sub-icon { font-size:20px; flex:none; }
+.venue-sub-text { flex:1; min-width:0; }
+.venue-sub-text b { display:block; font-size:15px; font-weight:600; letter-spacing:-.24px; color:var(--c); line-height:1.25; }
+.venue-sub-text span { display:block; margin-top:1px; font-size:13px; color:var(--label-secondary); }
+#venue-list-home .venue-sub .venue-row-chevron { color:var(--c); animation:nq-arrow 1.8s ease-in-out infinite; }
+/* Dãy nút sự kiện */
+.event-strip { display:flex; gap:10px; overflow-x:auto; scroll-snap-type:x mandatory; padding:4px 2px 12px; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+.event-strip::-webkit-scrollbar { display:none; }
+.event-btn { --c:#d84cff; --glow:rgba(216,76,255,.38); flex:0 0 auto; max-width:82%; scroll-snap-align:start; position:relative; isolation:isolate;
+  display:flex; align-items:center; gap:12px; padding:12px 16px; border-radius:16px; text-decoration:none; color:inherit; font-family:var(--font-ui);
+  background:var(--bg-grouped); box-shadow:0 0 18px -6px var(--glow), 0 6px 16px rgba(0,0,0,.35);
+  animation: nq-in .8s cubic-bezier(.2,.9,.25,1.2) both, nq-breathe 3.6s ease-in-out infinite; animation-delay:var(--d,0s), calc(var(--d,0s) + .9s); transition:transform .18s; }
+.event-btn::before { content:""; position:absolute; inset:-1.5px; border-radius:17.5px; z-index:-2;
+  background: conic-gradient(from var(--sd-a), transparent 0 55%, var(--c) 75%, transparent 92%), rgba(255,255,255,.08); animation: nq-spin 3.2s linear infinite; }
+.event-btn::after { content:""; position:absolute; inset:0; border-radius:16px; z-index:-1; background: radial-gradient(120% 140% at 15% 50%, color-mix(in srgb, var(--c) 18%, transparent), transparent 60%), var(--bg-grouped); }
+.event-btn:active { transform:scale(.97); }
+.event-btn-icon { font-size:26px; flex:none; }
+.event-btn b { display:block; font-size:16px; font-weight:600; letter-spacing:-.3px; color:var(--label-primary); white-space:nowrap; }
+.event-btn small { display:block; font-size:13px; color:var(--c); margin-top:2px; white-space:nowrap; }
