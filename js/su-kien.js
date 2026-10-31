@@ -7,7 +7,8 @@ window.KET_EVENTS = [
   { ten: "Extra Happy Hour", quan: "K2", lich: "Thứ 4 · Mua 1 tặng 1 tới 21:30 · DJ Minh", href: "k2.html", icon: "🎧", mau: "#F2F2F7", rgb: "242,242,247" },
   { ten: "Extra Happy Hour", quan: "K5", lich: "Chủ nhật · Mua 1 tặng 1 tới 21:30 · DJ Minh", href: "k5.html", icon: "🎧", mau: "#BF5AF2", rgb: "191,90,242" },
   { ten: "Extra Happy Hour", quan: "K9", lich: "Thứ 7 · Mua 1 tặng 1 tới 21:30 · DJ Minh", href: "k9.html", icon: "🎧", mau: "#FF453A", rgb: "255,69,58" },
-  { ten: "Happy Hour", quan: "K1 · K2 · K5 · K9", lich: "Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round", href: "#venue-list-home", icon: "🥂", mau: "#30D158", rgb: "48,209,88" }
+  { ten: "Happy Hour", quan: "K1 · K2 · K5 · K9", lich: "Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round", href: "#venue-list-home", icon: "🥂", mau: "#30D158", rgb: "48,209,88" },
+  { ten: "Pornstar Martini 69.000đ", quan: "K1 · K2 · K5 · K9", lich: "Mỗi ngày · Đồng giá tất cả các quán", href: "#venue-list-home", icon: "🍹", mau: "#FF375F", rgb: "255,55,95" }
 ];
 (function(){
   function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
