@@ -28,7 +28,8 @@ body[data-preorder] .ios-btn--tinted{color:var(--po)}
 .po-promo-sub{margin:0 0 10px;font-weight:700;font-size:14px;color:var(--po)}
 .po-gifts{display:flex;flex-direction:column;border-radius:12px;overflow:hidden;background:rgba(0,0,0,.25)}
 .po-gifts .po-item:first-child{border-top:0}
-.po-old{text-decoration:line-through;opacity:.6;margin-right:6px}
+.po-old{text-decoration:line-through;text-decoration-thickness:2px;color:#9a9a9a;opacity:1;margin-right:8px;display:inline}
+.po-free{color:#ff9f0a;font-weight:800}
 .po-free{color:#7dff9a;font-weight:700}
 .po-gifts.is-locked .po-stepper button[data-g="1"]{opacity:.35}
 .po-gift-count{margin:10px 2px 0;font-weight:600}

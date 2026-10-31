@@ -12,21 +12,18 @@
   var btn = document.getElementById("po_submit");
   var menu = [], qty = {};
   // Món tặng: mua 1 cocktail/mocktail tặng 1 món. Giá gốc lấy từ menu K5 theo mã (null = menu chưa có giá).
+  // Giá gốc đặt cứng ở đây cho dễ sửa (null = chưa có giá, chỉ hiện 0đ).
   var GIFTS = [
-    { key: "wine", ten: "Wine", ma: "K5-077", nhan: "ly Vieux Papes Brut" },
-    { key: "coconut", ten: "Coconut", ma: "K5-040" },
-    { key: "soft", ten: "Soft Drink", ma: null },
-    { key: "beer", ten: "Beer", ma: "K5-093", nhan: "Huda" },
-    { key: "water", ten: "3 Bottles of Water", ma: null, x: 3 }
+    { key: "wine", ten: "Wine", gia_goc: 129000 },
+    { key: "coconut", ten: "Coconut", gia_goc: 59000 },
+    { key: "soft", ten: "Soft Drink", gia_goc: null },
+    { key: "beer", ten: "Beer", gia_goc: 59000 },
+    { key: "water", ten: "3 Bottles of Water", gia_goc: null }
   ];
   var gq = {};
   var COCKTAIL_GROUPS = /cocktail|non-alcoholic|mocktail/i;
   var giftBox = document.getElementById("po_gifts"), giftCount = document.getElementById("po_gift_count"), giftHint = document.getElementById("po_gift_hint");
-  function giftPrice(g) {
-    if (!g.ma) return null;
-    var m = menu.filter(function (x) { return x.ma === g.ma; })[0];
-    return m && m.gia != null ? m.gia * (g.x || 1) : null;
-  }
+  function giftPrice(g) { return g.gia_goc != null ? g.gia_goc : null; }
   function cocktailQty() { var n = 0; menu.forEach(function (m) { if (COCKTAIL_GROUPS.test(m.nhom)) n += qty[m.ma] || 0; }); return n; }
   function giftTotal() { var n = 0; GIFTS.forEach(function (g) { n += gq[g.key] || 0; }); return n; }
   function renderGifts() {
