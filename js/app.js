@@ -194,3 +194,6 @@
     });
   }
 })();
+
+/* Nút Back trang quán: nếu đến từ trang chủ thì quay lại, không thì mở trang chủ */
+(function(){document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest(".kg-back");if(!a)return;try{var r=document.referrer?new URL(document.referrer):null;if(r&&r.origin===location.origin&&/\/ket-menu\/(index\.html)?$/.test(r.pathname)&&history.length>1){e.preventDefault();history.back();}}catch(_){}});})();

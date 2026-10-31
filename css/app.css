@@ -1581,3 +1581,21 @@ body[data-apply] .apply-submit:active { transform: scale(.95) !important; }
 @media (prefers-reduced-motion: reduce) { body[data-apply] .apply-submit { animation:none !important; } }
 
 /* Pre-order K5 trên trang chủ: luôn hiện, không hiệu ứng bay vào */
+
+/* Trang chủ: tiêu đề nhóm kiểu iOS large section header */
+.page-home .inset-group { padding-top: 28px; }
+.page-home .home-hero + .inset-group { padding-top: 12px; }
+.home-section-title { margin: 0 0 10px 4px; font-family: var(--font-ui); font-size: 22px; font-weight: 700; letter-spacing: -0.4px; color: var(--label-primary); line-height: 1.2; }
+.home-section-title ~ .home-section-title { margin-top: 28px; }
+.home-section-title:has(+ .home-section-sub) { margin-bottom: 2px; }
+.home-section-sub { margin: 0 0 10px 4px; font-family: var(--font-ui); font-size: 14px; color: var(--label-secondary); }
+/* Header trang quán: tên căn giữa thật, Back bên trái, KG bên phải */
+.kg-nav .ios-nav-bar { display: grid !important; grid-template-columns: 1fr auto 1fr !important; position: relative; gap: 8px; }
+.kg-nav .ios-nav-bar .ios-btn--back { grid-column: 1; justify-self: start; width: auto !important; min-width: 0 !important; height: auto !important; min-height: 34px; padding: 0 12px 0 8px !important; border-radius: var(--radius-btn) !important; gap: 2px !important; white-space: nowrap; }
+.kg-nav .ios-nav-bar .ios-btn--back span { position: static !important; width: auto !important; height: auto !important; overflow: visible !important; clip: auto !important; }
+.kg-nav .ios-nav-bar .ios-nav-title-group { grid-column: 2; position: relative !important; left: auto !important; top: auto !important; transform: none !important; max-width: none !important; }
+.kg-nav .ios-nav-bar .ios-nav-logo { position: absolute; right: 100%; margin-right: 6px; top: 50%; transform: translateY(-50%); }
+.kg-nav .ios-nav-bar .kg-code { grid-column: 3; justify-self: end; margin: 0 !important; }
+.kg-nav .ios-nav-bar { padding-left: calc(10px + var(--safe-left)) !important; padding-right: calc(10px + var(--safe-left)) !important; }
+.kg-nav--long .ios-nav-bar .ios-btn--back { padding: 0 !important; width: 34px !important; justify-content: center; }
+.kg-nav--long .ios-nav-bar .ios-btn--back span { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; }
