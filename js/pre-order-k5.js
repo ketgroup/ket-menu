@@ -16,11 +16,13 @@
   // Món tặng: mua 1 cocktail/mocktail tặng 1 món. Giá gốc lấy từ menu K5 theo mã (null = menu chưa có giá).
   // ma = mã món trong API (chỉ map khi chắc chắn). Món chưa có ma ghi vào ghi_chu.
   // Giá gốc đặt cứng ở đây cho dễ sửa (null = chưa có giá, chỉ hiện 0đ).
+  // Wine: app nói CSB (Citra Spumante Bianco) hoặc SW (Vieux Papes Brut), CHƯA CHỐT -> null = ghi vào ghi_chu.
+  var WINE_CODE = null;
   var GIFTS = [
-    { key: "wine", ten: "Wine", gia_goc: 129000 },
+    { key: "wine", ten: "Wine", gia_goc: 129000, ma: WINE_CODE },
     { key: "coconut", ten: "Coconut", gia_goc: 59000, ma: "m167" },
     { key: "soft", ten: "Soft Drink", gia_goc: null },
-    { key: "beer", ten: "Beer", gia_goc: 59000 },
+    { key: "beer", ten: "Beer", gia_goc: 59000, ma: "HB" },
     { key: "water", ten: "3 Bottles of Water", gia_goc: null }
   ];
   var gq = {};
@@ -165,7 +167,7 @@
     var tomTat = "Latin Dance | B1 Cocktail: " + tom(1) + " | B2 Free: " + (data.mon_tang.map(function (g) { return g.so_luong + "×" + g.ten; }).join(", ") || "-") + " | B3 Khác: " + tom(3);
     var api = { quan: "K5", ten_khach: ten.slice(0, 80), email: email, dong_y_nhan_tin: false, sdt: sdt,
       ngay_den: val("po_ngay"), gio_den: val("po_gio"), so_khach: Math.min(50, nguoi),
-      mon: data.mon.slice(0, 40).map(function (m) { return { ma: m.ma, so_luong: m.so_luong }; }).concat(tangMa.map(function (g) { return { ma: g.ma, so_luong: g.so_luong, tang: true }; })),
+      mon: data.mon.slice(0, 40).map(function (m) { return { ma: m.ma, so_luong: m.so_luong, buoc: m.buoc }; }).concat(tangMa.map(function (g) { return { ma: g.ma, so_luong: g.so_luong, tang: true, buoc: 2 }; })),
       ghi_chu: (tomTat + (tang ? " | Free chưa có mã: " + tang : "") + (data.ghi_chu ? " · " + data.ghi_chu : "")).slice(0, 500),
       website: form._honey ? form._honey.value : "" };
     function again(msg) { btn.disabled = false; btn.textContent = "Gửi đặt món"; window.alert(msg); }
