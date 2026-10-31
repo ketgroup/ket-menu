@@ -2,11 +2,11 @@
    ten: tên; quan: mã quán; lich: chữ hiện dòng 2; href: link khi bấm; icon: emoji; mau/rgb: màu quán. */
 window.KET_EVENTS = [
   { ten: "Latin Dance", quan: "K5", lich: "Thứ 4 & Thứ 6 · Pre-order", href: "pre-order-k5.html", icon: "💃", mau: "#d84cff", rgb: "216,76,255" },
-  { ten: "Ladies Night", quan: "K9", lich: "Thứ 6 · Mua 1 tặng 1 cocktail · DJ Minh", href: "k9.html", icon: "💋", mau: "#FF453A", rgb: "255,69,58" },
+  { ten: "Ladies Night", quan: "K9", lich: "Thứ 6 · Mua 1 tặng 1 cocktail", href: "k9.html", icon: "💋", mau: "#FF453A", rgb: "255,69,58" },
   { ten: "You Are Bartender", quan: "K1", lich: "Thứ 3 · Vào quầy tự pha, giảm 50% ly đó", href: "k1.html", icon: "🍸", mau: "#FF9F0A", rgb: "255,159,10" },
-  { ten: "Extra Happy Hour", quan: "K2", lich: "Thứ 4 · Mua 1 tặng 1 tới 21:30 · DJ Minh", href: "k2.html", icon: "🎧", mau: "#F2F2F7", rgb: "242,242,247" },
+  { ten: "Extra Happy Hour", quan: "K2", lich: "Thứ 4 · Mua 1 tặng 1 tới 21:30", href: "k2.html", icon: "🎧", mau: "#F2F2F7", rgb: "242,242,247" },
   { ten: "Extra Happy Hour", quan: "K5", lich: "Chủ nhật · Mua 1 tặng 1 tới 21:30 · DJ Minh", href: "k5.html", icon: "🎧", mau: "#BF5AF2", rgb: "191,90,242" },
-  { ten: "Extra Happy Hour", quan: "K9", lich: "Thứ 7 · Mua 1 tặng 1 tới 21:30 · DJ Minh", href: "k9.html", icon: "🎧", mau: "#FF453A", rgb: "255,69,58" },
+  { ten: "Extra Happy Hour", quan: "K9", lich: "Thứ 7 · Mua 1 tặng 1 tới 21:30", href: "k9.html", icon: "🎧", mau: "#FF453A", rgb: "255,69,58" },
   { ten: "Happy Hour", quan: "K1 · K2 · K5 · K9", lich: "Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round", href: "#venue-list-home", icon: "🥂", mau: "#30D158", rgb: "48,209,88" },
   { ten: "Pornstar Martini 69.000đ", quan: "K1 · K2 · K5 · K9", lich: "Mỗi ngày · Đồng giá tất cả các quán", href: "#venue-list-home", icon: "🍹", mau: "#FF375F", rgb: "255,55,95" }
 ];
