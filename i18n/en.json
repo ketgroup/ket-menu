@@ -108,7 +108,9 @@
 "Choose your cocktail": "",
 "Choose your free item": "",
 "Anything else? (optional)": "",
-"Your details": ""
+"Your details": "",
+"Đơn đặt sau 12:00 trưa thứ 4/thứ 6 cho chính ngày đó có thể không kịp chuẩn bị.": "Orders placed after 12:00 noon on Wednesday/Friday for the same day may not be ready in time.",
+"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "You are ordering after 12:00 noon for tonight — the venue may not be able to fully prepare. Please call 089 6789768 to confirm."
 },
 "p": {
 "gift": "{a}/{b} free items chosen",

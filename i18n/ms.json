@@ -104,7 +104,9 @@
 "Xóa file": "Buang fail",
 "Đã gửi đơn ứng tuyển": "Permohonan dihantar",
 "Cảm ơn bạn đã quan tâm đến Kết Group. Chúng tôi sẽ liên hệ khi có vị trí phù hợp.": "Terima kasih kerana berminat dengan Kết Group. Kami akan hubungi apabila ada jawatan sesuai.",
-"File CV vượt quá 5MB. Vui lòng chọn file nhỏ hơn.": "Fail CV melebihi 5MB. Pilih fail lebih kecil."
+"File CV vượt quá 5MB. Vui lòng chọn file nhỏ hơn.": "Fail CV melebihi 5MB. Pilih fail lebih kecil.",
+"Đơn đặt sau 12:00 trưa thứ 4/thứ 6 cho chính ngày đó có thể không kịp chuẩn bị.": "Tempahan selepas 12:00 tengah hari Rabu/Jumaat untuk hari yang sama mungkin tidak sempat disediakan.",
+"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "Anda menempah selepas 12:00 tengah hari untuk malam ini — kami mungkin tidak sempat menyediakan sepenuhnya. Sila hubungi 089 6789768 untuk pengesahan."
 },
 "p": {
 "gift": "{a}/{b} item percuma dipilih",

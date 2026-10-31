@@ -104,7 +104,9 @@
 "Xóa file": "फ़ाइल हटाएँ",
 "Đã gửi đơn ứng tuyển": "आवेदन भेजा गया",
 "Cảm ơn bạn đã quan tâm đến Kết Group. Chúng tôi sẽ liên hệ khi có vị trí phù hợp.": "Kết Group में रुचि के लिए धन्यवाद। उपयुक्त पद होने पर हम संपर्क करेंगे।",
-"File CV vượt quá 5MB. Vui lòng chọn file nhỏ hơn.": "CV फ़ाइल 5MB से बड़ी है। छोटी फ़ाइल चुनें।"
+"File CV vượt quá 5MB. Vui lòng chọn file nhỏ hơn.": "CV फ़ाइल 5MB से बड़ी है। छोटी फ़ाइल चुनें।",
+"Đơn đặt sau 12:00 trưa thứ 4/thứ 6 cho chính ngày đó có thể không kịp chuẩn bị.": "बुधवार/शुक्रवार को 12:00 बजे के बाद उसी दिन के ऑर्डर समय पर तैयार न हो पाएँ।",
+"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "आप आज रात के लिए 12:00 बजे के बाद ऑर्डर कर रहे हैं — हो सकता है हम पूरी तैयारी न कर पाएँ। पुष्टि के लिए कृपया 089 6789768 पर कॉल करें।"
 },
 "p": {
 "gift": "{a}/{b} मुफ़्त आइटम चुने",

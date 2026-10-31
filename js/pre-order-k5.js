@@ -118,6 +118,11 @@
       if (w === 3 || w === 5) h += '<option value="' + iso(d) + '">' + (w === 3 ? "Thứ 4" : "Thứ 6") + ", " + pad(d.getUTCDate()) + "/" + pad(d.getUTCMonth() + 1) + "/" + d.getUTCFullYear() + (i === 0 ? " (hôm nay)" : "") + "</option>"; }
     sel.innerHTML = h;
   })();
+  // Cảnh báo đặt sau 12:00 trưa (giờ VN) cho chính hôm nay
+  function vnHour() { return new Date(Date.now() + 7 * 3600e3).getUTCHours(); }
+  function checkLate() { var v = document.getElementById("po_ngay").value, w = document.getElementById("po_ngay_warn");
+    if (w) w.hidden = !(v && v === iso(vnToday()) && vnHour() >= 12); }
+  document.getElementById("po_ngay").addEventListener("change", checkLate); checkLate();
   function val(id) { return (document.getElementById(id).value || "").trim(); }
   function pad(n) { return (n < 10 ? "0" : "") + n; }
   function makeId() {
