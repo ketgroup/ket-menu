@@ -1602,3 +1602,38 @@ body[data-apply] .apply-submit:active { transform: scale(.95) !important; }
 
 /* Header trang quán bám trên đầu khi cuộn */
 .kg-nav { position: sticky !important; top: 0 !important; z-index: 100; }
+
+/* —— Chọn ngôn ngữ —— */
+html.kg-i18n-wait body { visibility: hidden; }
+.kg-lang { display: inline-flex; align-items: center; justify-content: center; gap: 3px; border: none; cursor: pointer;
+  font-family: var(--font-ui); font-size: 11px; font-weight: 700; letter-spacing: .02em; line-height: 1;
+  color: var(--venue-accent, #ff9f0a); background: rgba(var(--venue-accent-rgb, 255,159,10), 0.18); -webkit-tap-highlight-color: transparent; }
+.ios-nav-bar .kg-lang.ios-nav-code { width: auto !important; min-width: 34px; height: 34px; padding: 0 9px !important; border-radius: 17px !important; }
+.kg-lang svg { width: 14px; height: 14px; flex: none; }
+.kg-lang:active { transform: scale(.94); }
+body[data-venue-light-accent="true"] .kg-lang { color: #000; background: rgba(255,255,255,.9); }
+.home-hero { position: relative; }
+.kg-lang--home { position: absolute; top: calc(10px + var(--safe-top, 0px)); right: calc(14px + var(--safe-right, 0px)); height: 32px; padding: 0 11px; border-radius: 16px;
+  color: #fff; background: rgba(255,255,255,.14); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); font-size: 12px; }
+[dir="rtl"] .kg-lang--home { right: auto; left: calc(14px + var(--safe-left, 0px)); }
+.kg-lang-sheet { position: fixed; inset: 0; z-index: 1000; }
+.kg-lang-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.45); opacity: 0; transition: opacity .25s; }
+.kg-lang-panel { position: absolute; left: 0; right: 0; bottom: 0; max-height: 82vh; display: flex; flex-direction: column;
+  background: #1c1c1e; border-radius: 14px 14px 0 0; padding: 6px 0 calc(10px + env(safe-area-inset-bottom, 0px));
+  transform: translateY(100%); transition: transform .28s cubic-bezier(.2,.9,.25,1); box-shadow: 0 -8px 30px rgba(0,0,0,.5); }
+.kg-lang-sheet.open .kg-lang-backdrop { opacity: 1; }
+.kg-lang-sheet.open .kg-lang-panel { transform: none; }
+.kg-lang-grab { display: block; width: 36px; height: 5px; border-radius: 3px; background: rgba(235,235,245,.3); margin: 0 auto 6px; }
+.kg-lang-head { display: flex; align-items: center; justify-content: space-between; padding: 4px 16px 10px; }
+.kg-lang-head b { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-ui); font-size: 17px; font-weight: 600; color: #fff; }
+.kg-lang-head b svg { width: 18px; height: 18px; }
+.kg-lang-close { width: 30px; height: 30px; border: none; border-radius: 50%; background: rgba(118,118,128,.24); color: rgba(235,235,245,.6); font-size: 13px; cursor: pointer; }
+.kg-lang-list { list-style: none; margin: 0 16px; padding: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; background: #2c2c2e; }
+.kg-lang-list li + li { border-top: .5px solid rgba(84,84,88,.6); }
+.kg-lang-list button { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 46px; padding: 0 16px;
+  border: none; background: none; color: #fff; font-size: 17px; text-align: start; cursor: pointer; font-family: var(--font-ui), system-ui, sans-serif; }
+.kg-lang-list button:active { background: rgba(255,255,255,.08); }
+.kg-lang-list button[aria-current] { color: #ff9f0a; font-weight: 600; }
+.kg-lang-list i { font-style: normal; color: #ff9f0a; font-weight: 700; }
+[dir="rtl"] .ios-btn--back svg, [dir="rtl"] .venue-row-chevron { transform: scaleX(-1); display: inline-block; }
+[dir="rtl"] .po-honey { left: auto !important; right: auto !important; clip: rect(0 0 0 0); clip-path: inset(50%); overflow: hidden; }
