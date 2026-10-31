@@ -1,7 +1,7 @@
 (function () {
   "use strict";
   // Nối app Kết: đặt URL vào đây. Lỗi mạng/404/khác 2xx => dự phòng FormSubmit.
-  var USE_API = true; // Bật nối app Kết (sếp Lan 31/10 22:13). API lỗi -> FormSubmit dự phòng.
+  var USE_API = true; // Chỉ gửi về app Kết. Đã bỏ FormSubmit (31/10 22:30).
   var PREORDER_ENDPOINT = USE_API ? "https://ket-app.vercel.app/api/pre-order" : "";
   var MENU_ENDPOINT = "https://ket-app.vercel.app/api/menu?quan=K5";
   var MENU_FALLBACK = "data/menu-k5.json?v=20261031n";
@@ -128,18 +128,6 @@
   function phoneOk(p) { p = p.replace(/[\s.\-()]/g, "").replace(/^\+84/, "0").replace(/^84(?=\d{9}$)/, "0"); return /^0(3|5|7|8|9)\d{8}$/.test(p) ? p : null; }
   function fail(id, msg) { window.alert(msg); var el = document.getElementById(id); if (el) el.focus(); return false; }
 
-  function fallback(data) {
-    var add = function (k, v) { var i = document.createElement("input"); i.type = "hidden"; i.name = k; i.value = v; form.appendChild(i); };
-    add("Mã đơn", data.id); add("Quán", "K5"); add("Tên khách", data.ten); add("SĐT", data.sdt); add("Email", data.email || "");
-    add("Sự kiện", data.su_kien); add("Ngày giờ đến", data.ngay_gio_den); add("Số người", data.so_nguoi);
-    var line = function (m) { return m.so_luong + " × " + m.ten + " [" + m.ma + "]" + (m.gia != null ? " (" + money(m.gia) + ")" : ""); };
-    add("Bước 1 - Cocktail", data.mon.filter(function (m) { return m.buoc === 1; }).map(line).join("\n") || "(không)");
-    add("Bước 2 - Món free", data.mon_tang.map(function (g) { return g.so_luong + " × " + g.ten + " (free, giá gốc " + (g.gia_goc != null ? money(g.gia_goc) : "chưa có") + " → 0đ)"; }).join("\n") || "(không)");
-    add("Bước 3 - Món khác", data.mon.filter(function (m) { return m.buoc === 3; }).map(line).join("\n") || "(không)");
-    add("Ghi chú", data.ghi_chu); add("JSON", JSON.stringify(data));
-    form.submit();
-  }
-
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     if (form._honey && form._honey.value) return;
@@ -160,7 +148,6 @@
     if (USE_API && !email || email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return fail("po_email", "Vui lòng nhập email để quán xác nhận đơn.");
     if (!data.mon.length) return fail("po_menu_top", "Vui lòng chọn ít nhất 1 món.");
     btn.disabled = true; btn.textContent = "Đang gửi…";
-    if (!PREORDER_ENDPOINT || !fromApi) return fallback(data);
     var tangMa = data.mon_tang.filter(function (g) { return g.ma && menu.some(function (m) { return m.ma === g.ma; }); }).slice(0, 10);
     var tang = data.mon_tang.filter(function (g) { return tangMa.indexOf(g) < 0; }).map(function (g) { return g.so_luong + " × " + g.ten; }).join(", ");
     var tom = function (b) { return data.mon.filter(function (m) { return m.buoc === b; }).map(function (m) { return m.so_luong + "×" + m.ten; }).join(", ") || "-"; };
@@ -170,14 +157,17 @@
       mon: data.mon.slice(0, 40).map(function (m) { return { ma: m.ma, so_luong: m.so_luong, buoc: m.buoc }; }).concat(tangMa.map(function (g) { return { ma: g.ma, so_luong: g.so_luong, tang: true, buoc: 2 }; })),
       ghi_chu: (tomTat + (tang ? " | Free chưa có mã: " + tang : "") + (data.ghi_chu ? " · " + data.ghi_chu : "")).slice(0, 500),
       website: form._honey ? form._honey.value : "" };
-    function again(msg) { btn.disabled = false; btn.textContent = "Gửi đặt món"; window.alert(msg); }
+    var errBox = document.getElementById("po_err"), doneBox = document.getElementById("po_done");
+    errBox.hidden = true;
+    function again(msg) { btn.disabled = false; btn.textContent = "Gửi đặt món"; errBox.innerHTML = esc(msg) + ' <a href="tel:0896789768">Gọi 089 6789768</a>'; errBox.hidden = false; errBox.scrollIntoView({ block: "center", behavior: "smooth" }); }
+    function done(ma) { form.hidden = true; doneBox.innerHTML = '<h2>Cảm ơn bạn! 💃</h2><p>Quán đã nhận đơn pre-order. Mã đơn: <b>' + esc(ma) + '</b></p><p>Quán sẽ gọi lại xác nhận. Cần gấp gọi <a href="tel:0896789768">089 6789768</a>.</p>'; doneBox.hidden = false; window.scrollTo(0, 0); }
     Promise.race([fetch(PREORDER_ENDPOINT, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(api) }), timeout(8000)])
       .then(function (r) {
-        if (r.status === 201 || r.ok) return r.json().catch(function () { return {}; }).then(function (j) { location.href = THANKS + "?ma=" + encodeURIComponent(j.id || data.id); });
-        if (r.status === 429) return again("Bạn đã gửi quá nhiều lần. Vui lòng thử lại sau khoảng 10 phút hoặc gọi 089 6789768.");
+        if (r.status === 201 || r.ok) return r.json().catch(function () { return {}; }).then(function (j) { done(j.id || data.id); });
+        if (r.status === 429) return again("Bạn đã gửi quá nhiều lần. Vui lòng thử lại sau khoảng 10 phút hoặc gọi quán.");
         if (r.status === 400) return r.json().then(function (j) { again(j.error || "Thông tin chưa hợp lệ, bạn kiểm tra lại nhé."); }, function () { again("Thông tin chưa hợp lệ, bạn kiểm tra lại nhé."); });
         throw new Error("HTTP " + r.status);
       })
-      .catch(function () { fallback(data); });
+      .catch(function () { again("Chưa gửi được đơn (lỗi mạng). Bạn thử lại sau ít phút hoặc gọi quán."); });
   });
 })();

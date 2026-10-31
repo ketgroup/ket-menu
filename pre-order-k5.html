@@ -9,13 +9,13 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="icon" type="image/png" href="img/logos/favicon.png">
 <link rel="apple-touch-icon" href="img/logos/apple-touch-icon.png">
-<link rel="stylesheet" href="css/app.css?v=20261031y"><script src="js/i18n.js?v=20261031y"></script>
-<script src="js/venues.js?v=20261031y"></script>
-<link rel="stylesheet" href="css/song-dong.css?v=20261031y">
-<link rel="stylesheet" href="css/bay-vao.css?v=20261031y">
-<link rel="stylesheet" href="css/pre-order.css?v=20261031y">
-<script src="js/song-dong.js?v=20261031y" defer></script>
-<script src="js/bay-vao.js?v=20261031y" defer></script>
+<link rel="stylesheet" href="css/app.css?v=20261031z"><script src="js/i18n.js?v=20261031z"></script>
+<script src="js/venues.js?v=20261031z"></script>
+<link rel="stylesheet" href="css/song-dong.css?v=20261031z">
+<link rel="stylesheet" href="css/bay-vao.css?v=20261031z">
+<link rel="stylesheet" href="css/pre-order.css?v=20261031z">
+<script src="js/song-dong.js?v=20261031z" defer></script>
+<script src="js/bay-vao.js?v=20261031z" defer></script>
 </head>
 <body data-apply data-preorder data-current-venue="k5" class="page-static">
 <header class="ios-nav kg-nav"><div class="ios-nav-bar">
@@ -25,11 +25,7 @@
 <main class="apply-shell">
 <p class="po-event-badge">💃 LATIN DANCE · THỨ 4 &amp; THỨ 6 · KẾT FAI</p>
 <p class="apply-intro">Pre-order chỉ dành cho sự kiện <b>Latin Dance</b> tối thứ 4 và thứ 6 tại Kết Fai — quán sẽ gọi lại xác nhận. Món sẽ được chuẩn bị khi bạn đến.</p>
-<form id="po-form" class="apply-form" action="https://formsubmit.co/ketcocktail@gmail.com" method="POST" novalidate>
-<input type="hidden" name="_subject" value="Pre-order Kết Fai (K5)">
-<input type="hidden" name="_template" value="box">
-<input type="hidden" name="_captcha" value="true">
-<input type="hidden" name="_next" value="https://ketgroup.github.io/ket-menu/pre-order-k5-thanh-cong.html">
+<form id="po-form" class="apply-form" action="javascript:void(0)" novalidate>
 <input type="text" name="_honey" class="po-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
 <p class="po-promo-title">PLEASE SELECT YOUR PRE-ORDER SO WE CAN PREPARE BETTER FOR YOU</p>
 <section class="form-section po-step" id="po_step1"><h2 class="po-step-title"><span class="po-step-no">1</span><span>Chọn cocktail <small>Choose your cocktail</small></span></h2>
@@ -61,11 +57,13 @@
 <div class="field"><textarea class="field-control" id="po_ghichu" placeholder="Dị ứng, chỗ ngồi, dịp đặc biệt…"></textarea></div>
 </div></section>
 <p class="apply-hint">Sau khi gửi, bạn có thể được chuyển qua bước xác minh chống spam.</p>
+<div id="po_err" class="po-err" role="alert" hidden></div>
 <button type="submit" class="apply-submit" id="po_submit">Gửi đặt món</button>
 </form>
+<div id="po_done" class="po-done" role="status" hidden></div>
 </main>
 <nav class="ios-tab-bar" aria-label="Điều hướng quán"><a class="tab-item" href="./" data-venue="home"><span class="tab-icon tab-icon--home" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 10.5L12 4l8 6.5V20a1 1 0 01-1 1h-5v-6H10v6H5a1 1 0 01-1-1v-9.5z"/></svg></span><span class="tab-label">Trang chủ</span></a><a class="tab-item" href="k1.html" data-venue="k1"><img class="tab-icon tab-icon--logo" src="img/logos/k1.png" alt="" width="26" height="26"><span class="tab-label">Bar</span></a><a class="tab-item" href="k2.html" data-venue="k2"><img class="tab-icon tab-icon--logo" src="img/logos/k2.png" alt="" width="26" height="26"><span class="tab-label">High</span></a><a class="tab-item" href="k5.html" data-venue="k5"><img class="tab-icon tab-icon--logo" src="img/logos/k5.png" alt="" width="26" height="26"><span class="tab-label">Fai</span></a><a class="tab-item" href="k9.html" data-venue="k9"><img class="tab-icon tab-icon--logo" src="img/logos/k9.png" alt="" width="26" height="26"><span class="tab-label">Underground</span></a></nav>
-<script src="js/app.js?v=20261031y" defer></script>
-<script src="js/pre-order-k5.js?v=20261031y" defer></script>
+<script src="js/app.js?v=20261031z" defer></script>
+<script src="js/pre-order-k5.js?v=20261031z" defer></script>
 </body>
 </html>
