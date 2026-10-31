@@ -106,7 +106,27 @@
 "Cảm ơn bạn đã quan tâm đến Kết Group. Chúng tôi sẽ liên hệ khi có vị trí phù hợp.": "Terima kasih atas minat Anda pada Kết Group. Kami akan menghubungi jika ada posisi yang cocok.",
 "File CV vượt quá 5MB. Vui lòng chọn file nhỏ hơn.": "File CV lebih dari 5MB. Pilih file yang lebih kecil.",
 "Đơn đặt sau 12:00 trưa thứ 4/thứ 6 cho chính ngày đó có thể không kịp chuẩn bị.": "Pesanan setelah pukul 12:00 siang Rabu/Jumat untuk hari yang sama mungkin tidak sempat disiapkan.",
-"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "Anda memesan setelah pukul 12:00 siang untuk malam ini — kami mungkin tidak sempat menyiapkan semuanya. Silakan hubungi 089 6789768 untuk konfirmasi."
+"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "Anda memesan setelah pukul 12:00 siang untuk malam ini — kami mungkin tidak sempat menyiapkan semuanya. Silakan hubungi 089 6789768 untuk konfirmasi.",
+"Từ một kho hoa cũ và nhỏ.": "Dari sebuah gudang bunga tua yang kecil.",
+"Ngày 2/11/2022, Kết được hình thành — mang theo một ước mơ mới và lớn.": "Pada 2/11/2022, Kết lahir — membawa mimpi baru yang besar.",
+"Lấy con người làm gốc.": "Manusia yang utama.",
+"Một đội ngũ hạnh phúc và được tôn trọng sẽ tạo ra trải nghiệm tuyệt vời cho khách hàng.": "Tim yang bahagia dan dihargai menciptakan pengalaman luar biasa bagi tamu.",
+"Phục vụ bằng sự tử tế.": "Melayani dengan ketulusan.",
+"Chúng tôi không chỉ bán đồ uống. Chúng tôi mang đến sự dễ chịu, thoải mái và cảm giác được chào đón.": "Kami tidak hanya menjual minuman. Kami menghadirkan kenyamanan, kelegaan, dan rasa disambut.",
+"Tư duy làm chủ.": "Pola pikir pemilik.",
+"Quan sát. Cải thiện. Tiết kiệm. Phát triển quán tốt hơn mỗi ngày.": "Amati. Perbaiki. Hemat. Kembangkan tempat ini lebih baik setiap hari.",
+"Mỗi chi tiết nhỏ.": "Setiap detail kecil.",
+"Sự nhất quán, chất lượng và trải nghiệm khác biệt — nơi mỗi chi tiết nhỏ đều góp phần xây dựng niềm tin và cảm xúc của khách hàng.": "Konsistensi, kualitas, dan pengalaman yang berbeda — setiap detail kecil membangun kepercayaan dan perasaan tamu.",
+"Kết không tìm người hoàn hảo.": "Kết tidak mencari orang yang sempurna.",
+"Kết tìm người muốn tốt lên mỗi ngày. Ai cũng có thể bắt đầu từ con số 0 — nhưng không ai phải dừng lại ở đó.": "Kết mencari orang yang ingin lebih baik setiap hari. Siapa pun bisa mulai dari nol — tapi tak seorang pun harus berhenti di sana.",
+"Tử tế. Công bằng. Trách nhiệm.": "Tulus. Adil. Bertanggung jawab.",
+"Để ai ở lại cũng cảm thấy mình thuộc về.": "Agar setiap yang tinggal merasa menjadi bagian.",
+"Điền form bên dưới — đội ngũ Kết Group sẽ liên hệ khi có vị trí phù hợp. Thông tin chỉ dùng cho mục đích tuyển dụng.": "Isi formulir di bawah — tim Kết Group akan menghubungi Anda bila ada posisi yang sesuai. Data hanya untuk keperluan rekrutmen.",
+"Điều hướng chính": "Navigasi utama",
+"Điều hướng quán": "Navigasi tempat",
+"Mã QR đánh giá": "Kode QR ulasan",
+"Đã gửi": "Terkirim",
+"Đã đặt món": "Pesanan dibuat"
 },
 "p": {
 "gift": "{a}/{b} item gratis dipilih",
@@ -119,6 +139,8 @@
 "late": "larut",
 "today": "hari ini",
 "reviewon": "Ulas di {x}",
-"language": "Bahasa"
+"language": "Bahasa",
+"channels": "Kanal {x}",
+"page": "{x} – halaman {n}"
 }
 }

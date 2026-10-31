@@ -106,7 +106,27 @@
 "Cảm ơn bạn đã quan tâm đến Kết Group. Chúng tôi sẽ liên hệ khi có vị trí phù hợp.": "Obrigado pelo interesse na Kết Group. Entraremos em contacto quando houver uma vaga adequada.",
 "File CV vượt quá 5MB. Vui lòng chọn file nhỏ hơn.": "O CV excede 5MB. Escolha um ficheiro menor.",
 "Đơn đặt sau 12:00 trưa thứ 4/thứ 6 cho chính ngày đó có thể không kịp chuẩn bị.": "Pedidos feitos após as 12:00 de quarta/sexta para o mesmo dia podem não ficar prontos a tempo.",
-"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "Você está pedindo após as 12:00 para hoje à noite — o local pode não conseguir preparar tudo. Ligue para 089 6789768 para confirmar."
+"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "Você está pedindo após as 12:00 para hoje à noite — o local pode não conseguir preparar tudo. Ligue para 089 6789768 para confirmar.",
+"Từ một kho hoa cũ và nhỏ.": "De um pequeno e antigo armazém de flores.",
+"Ngày 2/11/2022, Kết được hình thành — mang theo một ước mơ mới và lớn.": "Em 2/11/2022 nasceu o Kết — trazendo um sonho novo e grande.",
+"Lấy con người làm gốc.": "Pessoas em primeiro lugar.",
+"Một đội ngũ hạnh phúc và được tôn trọng sẽ tạo ra trải nghiệm tuyệt vời cho khách hàng.": "Uma equipe feliz e respeitada cria experiências incríveis para os clientes.",
+"Phục vụ bằng sự tử tế.": "Servir com gentileza.",
+"Chúng tôi không chỉ bán đồ uống. Chúng tôi mang đến sự dễ chịu, thoải mái và cảm giác được chào đón.": "Não vendemos apenas bebidas. Oferecemos bem-estar, conforto e a sensação de ser bem-vindo.",
+"Tư duy làm chủ.": "Mentalidade de dono.",
+"Quan sát. Cải thiện. Tiết kiệm. Phát triển quán tốt hơn mỗi ngày.": "Observar. Melhorar. Economizar. Fazer a casa crescer a cada dia.",
+"Mỗi chi tiết nhỏ.": "Cada pequeno detalhe.",
+"Sự nhất quán, chất lượng và trải nghiệm khác biệt — nơi mỗi chi tiết nhỏ đều góp phần xây dựng niềm tin và cảm xúc của khách hàng.": "Consistência, qualidade e uma experiência diferente — cada pequeno detalhe constrói a confiança e a emoção dos clientes.",
+"Kết không tìm người hoàn hảo.": "O Kết não procura pessoas perfeitas.",
+"Kết tìm người muốn tốt lên mỗi ngày. Ai cũng có thể bắt đầu từ con số 0 — nhưng không ai phải dừng lại ở đó.": "O Kết procura pessoas que querem melhorar a cada dia. Qualquer um pode começar do zero — mas ninguém precisa ficar lá.",
+"Tử tế. Công bằng. Trách nhiệm.": "Gentileza. Justiça. Responsabilidade.",
+"Để ai ở lại cũng cảm thấy mình thuộc về.": "Para que todos que ficam sintam que pertencem.",
+"Điền form bên dưới — đội ngũ Kết Group sẽ liên hệ khi có vị trí phù hợp. Thông tin chỉ dùng cho mục đích tuyển dụng.": "Preencha o formulário abaixo — a equipe Kết Group entrará em contato quando houver uma vaga adequada. Os dados são usados só para recrutamento.",
+"Điều hướng chính": "Navegação principal",
+"Điều hướng quán": "Navegação da casa",
+"Mã QR đánh giá": "QR code de avaliação",
+"Đã gửi": "Enviado",
+"Đã đặt món": "Pedido feito"
 },
 "p": {
 "gift": "{a}/{b} artigos grátis escolhidos",
@@ -119,6 +139,8 @@
 "late": "tarde",
 "today": "hoje",
 "reviewon": "Avaliar no {x}",
-"language": "Idioma"
+"language": "Idioma",
+"channels": "Canais de {x}",
+"page": "{x} – página {n}"
 }
 }

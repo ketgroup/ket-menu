@@ -43,6 +43,9 @@
     if ((m = s.match(/^TB ~(\S+)\/ly$/))) return fill(P.avg, { x: m[1] });
     if ((m = s.match(/^Đánh giá trên (.+)$/))) return fill(P.reviewon, { x: m[1] });
     if ((m = s.match(/^(Thứ [2-7]|Chủ nhật), (\d\d\/\d\d\/\d{4})( \(hôm nay\))?$/))) return (D[m[1]] || m[1]) + ", " + m[2] + (m[3] ? " (" + P.today + ")" : "");
+    if ((m = s.match(/^Kênh của (.+)$/)) && P.channels) return fill(P.channels, { x: m[1] });
+    if ((m = s.match(/^(Menu .+?) – (?:(Đồ uống|Bếp) )?trang (\d+)$/)) && P.page) return fill(P.page, { x: m[1] + (m[2] ? " – " + D[m[2]] : ""), n: m[3] });
+    if ((m = s.match(/^(.+) – (Kết .+)$/)) && D[m[1]]) return D[m[1]] + " – " + m[2];
     if ((m = s.match(/^Mỗi ngày (\d.*)$/))) return D["Mỗi ngày"] + " " + m[1];
     if ((m = s.match(/^(.+) \((Đồ uống|Bếp)\)$/)) && D[m[1]]) return D[m[1]] + " (" + D[m[2]] + ")";
     if (/– khuya/.test(s)) return s.replace(/– khuya/g, "– " + P.late);
@@ -72,7 +75,7 @@
       n.nodeValue = r; done.set(n, r);
     } else done.set(n, v);
   }
-  var ATTRS = ["placeholder", "aria-label", "title"];
+  var ATTRS = ["placeholder", "aria-label", "title", "alt"];
   function doEl(el) {
     for (var i = 0; i < ATTRS.length; i++) {
       var a = el.getAttribute && el.getAttribute(ATTRS[i]); if (!a) continue;
@@ -91,6 +94,7 @@
   }
   function startTranslate() {
     walk(document.body);
+    var tt = tr(document.title); if (tt != null) document.title = tt;
     new MutationObserver(function (ms) {
       ms.forEach(function (m) {
         if (m.type === "characterData") walk(m.target);

@@ -106,7 +106,27 @@
 "Cảm ơn bạn đã quan tâm đến Kết Group. Chúng tôi sẽ liên hệ khi có vị trí phù hợp.": "Kết Group'a ilginiz için teşekkürler. Uygun bir pozisyon olduğunda size ulaşacağız.",
 "File CV vượt quá 5MB. Vui lòng chọn file nhỏ hơn.": "CV dosyası 5MB'ı aşıyor. Daha küçük bir dosya seçin.",
 "Đơn đặt sau 12:00 trưa thứ 4/thứ 6 cho chính ngày đó có thể không kịp chuẩn bị.": "Çarşamba/Cuma 12:00'den sonra aynı gün için verilen siparişler zamanında hazırlanamayabilir.",
-"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "Bu akşam için 12:00'den sonra sipariş veriyorsunuz — mekân her şeyi hazırlayamayabilir. Onaylamak için lütfen 089 6789768 numarasını arayın."
+"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "Bu akşam için 12:00'den sonra sipariş veriyorsunuz — mekân her şeyi hazırlayamayabilir. Onaylamak için lütfen 089 6789768 numarasını arayın.",
+"Từ một kho hoa cũ và nhỏ.": "Küçük, eski bir çiçek deposundan.",
+"Ngày 2/11/2022, Kết được hình thành — mang theo một ước mơ mới và lớn.": "2/11/2022'de Kết doğdu — yeni ve büyük bir hayalle.",
+"Lấy con người làm gốc.": "Önce insan.",
+"Một đội ngũ hạnh phúc và được tôn trọng sẽ tạo ra trải nghiệm tuyệt vời cho khách hàng.": "Mutlu ve saygı gören bir ekip, misafirler için harika deneyimler yaratır.",
+"Phục vụ bằng sự tử tế.": "İyilikle hizmet.",
+"Chúng tôi không chỉ bán đồ uống. Chúng tôi mang đến sự dễ chịu, thoải mái và cảm giác được chào đón.": "Sadece içecek satmıyoruz. Rahatlık, huzur ve hoş karşılanma hissi sunuyoruz.",
+"Tư duy làm chủ.": "Sahiplik bakışı.",
+"Quan sát. Cải thiện. Tiết kiệm. Phát triển quán tốt hơn mỗi ngày.": "Gözlemle. Geliştir. Tasarruf et. Mekânı her gün daha iyi yap.",
+"Mỗi chi tiết nhỏ.": "Her küçük ayrıntı.",
+"Sự nhất quán, chất lượng và trải nghiệm khác biệt — nơi mỗi chi tiết nhỏ đều góp phần xây dựng niềm tin và cảm xúc của khách hàng.": "Tutarlılık, kalite ve farklı bir deneyim — her küçük ayrıntı misafirlerin güvenini ve duygularını inşa eder.",
+"Kết không tìm người hoàn hảo.": "Kết mükemmel insanlar aramıyor.",
+"Kết tìm người muốn tốt lên mỗi ngày. Ai cũng có thể bắt đầu từ con số 0 — nhưng không ai phải dừng lại ở đó.": "Kết her gün daha iyi olmak isteyenleri arıyor. Herkes sıfırdan başlayabilir — ama kimse orada kalmak zorunda değil.",
+"Tử tế. Công bằng. Trách nhiệm.": "Nazik. Adil. Sorumlu.",
+"Để ai ở lại cũng cảm thấy mình thuộc về.": "Kalan herkes buraya ait olduğunu hissetsin diye.",
+"Điền form bên dưới — đội ngũ Kết Group sẽ liên hệ khi có vị trí phù hợp. Thông tin chỉ dùng cho mục đích tuyển dụng.": "Aşağıdaki formu doldurun — uygun bir pozisyon açıldığında Kết Group ekibi sizinle iletişime geçecek. Bilgiler yalnızca işe alım için kullanılır.",
+"Điều hướng chính": "Ana gezinme",
+"Điều hướng quán": "Mekân gezinmesi",
+"Mã QR đánh giá": "Değerlendirme QR kodu",
+"Đã gửi": "Gönderildi",
+"Đã đặt món": "Sipariş verildi"
 },
 "p": {
 "gift": "{a}/{b} ücretsiz ürün seçildi",
@@ -119,6 +139,8 @@
 "late": "geç",
 "today": "bugün",
 "reviewon": "{x}'da değerlendir",
-"language": "Dil"
+"language": "Dil",
+"channels": "{x} kanalları",
+"page": "{x} – sayfa {n}"
 }
 }

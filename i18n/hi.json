@@ -106,7 +106,27 @@
 "Cảm ơn bạn đã quan tâm đến Kết Group. Chúng tôi sẽ liên hệ khi có vị trí phù hợp.": "Kết Group में रुचि के लिए धन्यवाद। उपयुक्त पद होने पर हम संपर्क करेंगे।",
 "File CV vượt quá 5MB. Vui lòng chọn file nhỏ hơn.": "CV फ़ाइल 5MB से बड़ी है। छोटी फ़ाइल चुनें।",
 "Đơn đặt sau 12:00 trưa thứ 4/thứ 6 cho chính ngày đó có thể không kịp chuẩn bị.": "बुधवार/शुक्रवार को 12:00 बजे के बाद उसी दिन के ऑर्डर समय पर तैयार न हो पाएँ।",
-"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "आप आज रात के लिए 12:00 बजे के बाद ऑर्डर कर रहे हैं — हो सकता है हम पूरी तैयारी न कर पाएँ। पुष्टि के लिए कृपया 089 6789768 पर कॉल करें।"
+"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "आप आज रात के लिए 12:00 बजे के बाद ऑर्डर कर रहे हैं — हो सकता है हम पूरी तैयारी न कर पाएँ। पुष्टि के लिए कृपया 089 6789768 पर कॉल करें।",
+"Từ một kho hoa cũ và nhỏ.": "एक छोटे, पुराने फूलों के गोदाम से।",
+"Ngày 2/11/2022, Kết được hình thành — mang theo một ước mơ mới và lớn.": "2/11/2022 को Kết का जन्म हुआ — एक नए और बड़े सपने के साथ।",
+"Lấy con người làm gốc.": "इंसान सबसे पहले।",
+"Một đội ngũ hạnh phúc và được tôn trọng sẽ tạo ra trải nghiệm tuyệt vời cho khách hàng.": "एक खुश और सम्मानित टीम मेहमानों के लिए शानदार अनुभव बनाती है।",
+"Phục vụ bằng sự tử tế.": "दयालुता से सेवा।",
+"Chúng tôi không chỉ bán đồ uống. Chúng tôi mang đến sự dễ chịu, thoải mái và cảm giác được chào đón.": "हम सिर्फ़ ड्रिंक्स नहीं बेचते। हम सुकून, आराम और स्वागत का एहसास देते हैं।",
+"Tư duy làm chủ.": "मालिक जैसी सोच।",
+"Quan sát. Cải thiện. Tiết kiệm. Phát triển quán tốt hơn mỗi ngày.": "देखें। सुधारें। बचाएँ। हर दिन जगह को बेहतर बनाएँ।",
+"Mỗi chi tiết nhỏ.": "हर छोटी बात।",
+"Sự nhất quán, chất lượng và trải nghiệm khác biệt — nơi mỗi chi tiết nhỏ đều góp phần xây dựng niềm tin và cảm xúc của khách hàng.": "निरंतरता, गुणवत्ता और अलग अनुभव — हर छोटी बात मेहमानों का भरोसा और भावनाएँ बनाती है।",
+"Kết không tìm người hoàn hảo.": "Kết परफ़ेक्ट लोगों की तलाश नहीं करता।",
+"Kết tìm người muốn tốt lên mỗi ngày. Ai cũng có thể bắt đầu từ con số 0 — nhưng không ai phải dừng lại ở đó.": "Kết ऐसे लोगों की तलाश करता है जो हर दिन बेहतर होना चाहते हैं। कोई भी शून्य से शुरू कर सकता है — पर किसी को वहीं रुकना नहीं पड़ता।",
+"Tử tế. Công bằng. Trách nhiệm.": "दयालु। निष्पक्ष। ज़िम्मेदार।",
+"Để ai ở lại cũng cảm thấy mình thuộc về.": "ताकि जो भी रुके, उसे अपनापन महसूस हो।",
+"Điền form bên dưới — đội ngũ Kết Group sẽ liên hệ khi có vị trí phù hợp. Thông tin chỉ dùng cho mục đích tuyển dụng.": "नीचे फ़ॉर्म भरें — उपयुक्त पद खुलने पर Kết Group की टीम आपसे संपर्क करेगी। जानकारी केवल भर्ती के लिए उपयोग होती है।",
+"Điều hướng chính": "मुख्य नेविगेशन",
+"Điều hướng quán": "वेन्यू नेविगेशन",
+"Mã QR đánh giá": "रिव्यू QR कोड",
+"Đã gửi": "भेजा गया",
+"Đã đặt món": "ऑर्डर हो गया"
 },
 "p": {
 "gift": "{a}/{b} मुफ़्त आइटम चुने",
@@ -119,6 +139,8 @@
 "late": "देर रात",
 "today": "आज",
 "reviewon": "{x} पर समीक्षा",
-"language": "भाषा"
+"language": "भाषा",
+"channels": "{x} के चैनल",
+"page": "{x} – पेज {n}"
 }
 }

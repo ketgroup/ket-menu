@@ -106,7 +106,27 @@
 "Cảm ơn bạn đã quan tâm đến Kết Group. Chúng tôi sẽ liên hệ khi có vị trí phù hợp.": "شكرًا لاهتمامك بـ Kết Group. سنتواصل معك عند توفر وظيفة مناسبة.",
 "File CV vượt quá 5MB. Vui lòng chọn file nhỏ hơn.": "ملف السيرة الذاتية أكبر من 5MB. اختر ملفًا أصغر.",
 "Đơn đặt sau 12:00 trưa thứ 4/thứ 6 cho chính ngày đó có thể không kịp chuẩn bị.": "قد لا تكون الطلبات المقدمة بعد الساعة 12:00 ظهرًا يوم الأربعاء/الجمعة لنفس اليوم جاهزة في الوقت المناسب.",
-"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "أنت تطلب بعد الساعة 12:00 ظهرًا لهذه الليلة — قد لا يتمكن المكان من التحضير بالكامل. يرجى الاتصال بالرقم 089 6789768 للتأكيد."
+"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "أنت تطلب بعد الساعة 12:00 ظهرًا لهذه الليلة — قد لا يتمكن المكان من التحضير بالكامل. يرجى الاتصال بالرقم 089 6789768 للتأكيد.",
+"Từ một kho hoa cũ và nhỏ.": "من مستودع زهور صغير وقديم.",
+"Ngày 2/11/2022, Kết được hình thành — mang theo một ước mơ mới và lớn.": "في 2/11/2022 وُلد Kết — حاملًا حلمًا جديدًا وكبيرًا.",
+"Lấy con người làm gốc.": "الإنسان أولًا.",
+"Một đội ngũ hạnh phúc và được tôn trọng sẽ tạo ra trải nghiệm tuyệt vời cho khách hàng.": "فريق سعيد ومحترم يصنع تجارب رائعة لضيوفنا.",
+"Phục vụ bằng sự tử tế.": "نخدم بلطف.",
+"Chúng tôi không chỉ bán đồ uống. Chúng tôi mang đến sự dễ chịu, thoải mái và cảm giác được chào đón.": "نحن لا نبيع المشروبات فقط. نحن نقدم الراحة والاسترخاء والشعور بالترحيب.",
+"Tư duy làm chủ.": "عقلية المالك.",
+"Quan sát. Cải thiện. Tiết kiệm. Phát triển quán tốt hơn mỗi ngày.": "راقب. حسّن. وفّر. طوّر المكان كل يوم.",
+"Mỗi chi tiết nhỏ.": "كل تفصيل صغير.",
+"Sự nhất quán, chất lượng và trải nghiệm khác biệt — nơi mỗi chi tiết nhỏ đều góp phần xây dựng niềm tin và cảm xúc của khách hàng.": "الثبات والجودة وتجربة مختلفة — كل تفصيل صغير يبني ثقة الضيوف ومشاعرهم.",
+"Kết không tìm người hoàn hảo.": "Kết لا يبحث عن أشخاص مثاليين.",
+"Kết tìm người muốn tốt lên mỗi ngày. Ai cũng có thể bắt đầu từ con số 0 — nhưng không ai phải dừng lại ở đó.": "Kết يبحث عن أشخاص يريدون أن يصبحوا أفضل كل يوم. يمكن لأي شخص أن يبدأ من الصفر — لكن لا أحد مضطر للبقاء هناك.",
+"Tử tế. Công bằng. Trách nhiệm.": "لطف. عدل. مسؤولية.",
+"Để ai ở lại cũng cảm thấy mình thuộc về.": "ليشعر كل من يبقى بأنه ينتمي.",
+"Điền form bên dưới — đội ngũ Kết Group sẽ liên hệ khi có vị trí phù hợp. Thông tin chỉ dùng cho mục đích tuyển dụng.": "املأ النموذج أدناه — سيتواصل فريق Kết Group معك عند توفر وظيفة مناسبة. تُستخدم المعلومات لأغراض التوظيف فقط.",
+"Điều hướng chính": "التنقل الرئيسي",
+"Điều hướng quán": "التنقل في المكان",
+"Mã QR đánh giá": "رمز QR للتقييم",
+"Đã gửi": "تم الإرسال",
+"Đã đặt món": "تم الطلب"
 },
 "p": {
 "gift": "تم اختيار {a}/{b} من العناصر المجانية",
@@ -119,6 +139,8 @@
 "late": "وقت متأخر",
 "today": "اليوم",
 "reviewon": "قيّم على {x}",
-"language": "اللغة"
+"language": "اللغة",
+"channels": "قنوات {x}",
+"page": "{x} – صفحة {n}"
 }
 }

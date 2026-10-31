@@ -106,7 +106,27 @@
 "Cảm ơn bạn đã quan tâm đến Kết Group. Chúng tôi sẽ liên hệ khi có vị trí phù hợp.": "感谢您关注 Kết Group，有合适职位时我们会联系您。",
 "File CV vượt quá 5MB. Vui lòng chọn file nhỏ hơn.": "简历文件超过 5MB，请选择更小的文件。",
 "Đơn đặt sau 12:00 trưa thứ 4/thứ 6 cho chính ngày đó có thể không kịp chuẩn bị.": "周三/周五 12:00 后预订当天的订单可能来不及准备。",
-"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "您在中午 12:00 后预订今晚 — 店里可能来不及完全准备。请致电 089 6789768 确认。"
+"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "您在中午 12:00 后预订今晚 — 店里可能来不及完全准备。请致电 089 6789768 确认。",
+"Từ một kho hoa cũ và nhỏ.": "始于一间小小的旧花仓。",
+"Ngày 2/11/2022, Kết được hình thành — mang theo một ước mơ mới và lớn.": "2022年11月2日，Kết 诞生了——带着一个崭新而远大的梦想。",
+"Lấy con người làm gốc.": "以人为本。",
+"Một đội ngũ hạnh phúc và được tôn trọng sẽ tạo ra trải nghiệm tuyệt vời cho khách hàng.": "一支快乐且受尊重的团队，会为顾客带来美好的体验。",
+"Phục vụ bằng sự tử tế.": "以善意服务。",
+"Chúng tôi không chỉ bán đồ uống. Chúng tôi mang đến sự dễ chịu, thoải mái và cảm giác được chào đón.": "我们不只是卖饮品。我们带来惬意、舒适和宾至如归的感觉。",
+"Tư duy làm chủ.": "主人翁思维。",
+"Quan sát. Cải thiện. Tiết kiệm. Phát triển quán tốt hơn mỗi ngày.": "观察。改进。节约。让店铺每天变得更好。",
+"Mỗi chi tiết nhỏ.": "每一个小细节。",
+"Sự nhất quán, chất lượng và trải nghiệm khác biệt — nơi mỗi chi tiết nhỏ đều góp phần xây dựng niềm tin và cảm xúc của khách hàng.": "一致、品质与与众不同的体验——每一个小细节都在建立顾客的信任与情感。",
+"Kết không tìm người hoàn hảo.": "Kết 不寻找完美的人。",
+"Kết tìm người muốn tốt lên mỗi ngày. Ai cũng có thể bắt đầu từ con số 0 — nhưng không ai phải dừng lại ở đó.": "Kết 寻找每天都想变得更好的人。每个人都可以从零开始——但没有人必须停留在那里。",
+"Tử tế. Công bằng. Trách nhiệm.": "善良。公平。负责。",
+"Để ai ở lại cũng cảm thấy mình thuộc về.": "让每个留下的人都感到归属。",
+"Điền form bên dưới — đội ngũ Kết Group sẽ liên hệ khi có vị trí phù hợp. Thông tin chỉ dùng cho mục đích tuyển dụng.": "请填写下方表格——有合适职位时，Kết Group 团队会与您联系。信息仅用于招聘。",
+"Điều hướng chính": "主导航",
+"Điều hướng quán": "店铺导航",
+"Mã QR đánh giá": "评价二维码",
+"Đã gửi": "已发送",
+"Đã đặt món": "已下单"
 },
 "p": {
 "gift": "已选 {a}/{b} 份免费品",
@@ -119,6 +139,8 @@
 "late": "深夜",
 "today": "今天",
 "reviewon": "在 {x} 上评价",
-"language": "语言"
+"language": "语言",
+"channels": "{x} 的频道",
+"page": "{x} – 第 {n} 页"
 }
 }

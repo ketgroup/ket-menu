@@ -106,7 +106,27 @@
 "Cảm ơn bạn đã quan tâm đến Kết Group. Chúng tôi sẽ liên hệ khi có vị trí phù hợp.": "Bedankt voor je interesse in Kết Group. We nemen contact op zodra er een passende functie is.",
 "File CV vượt quá 5MB. Vui lòng chọn file nhỏ hơn.": "Cv groter dan 5 MB. Kies een kleiner bestand.",
 "Đơn đặt sau 12:00 trưa thứ 4/thứ 6 cho chính ngày đó có thể không kịp chuẩn bị.": "Bestellingen na 12:00 uur op woensdag/vrijdag voor dezelfde dag zijn mogelijk niet op tijd klaar.",
-"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "Je bestelt na 12:00 uur voor vanavond — de zaak kan mogelijk niet alles voorbereiden. Bel 089 6789768 om te bevestigen."
+"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "Je bestelt na 12:00 uur voor vanavond — de zaak kan mogelijk niet alles voorbereiden. Bel 089 6789768 om te bevestigen.",
+"Từ một kho hoa cũ và nhỏ.": "Uit een klein, oud bloemenpakhuis.",
+"Ngày 2/11/2022, Kết được hình thành — mang theo một ước mơ mới và lớn.": "Op 2/11/2022 werd Kết geboren — met een nieuwe, grote droom.",
+"Lấy con người làm gốc.": "Mensen eerst.",
+"Một đội ngũ hạnh phúc và được tôn trọng sẽ tạo ra trải nghiệm tuyệt vời cho khách hàng.": "Een gelukkig, gerespecteerd team zorgt voor geweldige ervaringen voor gasten.",
+"Phục vụ bằng sự tử tế.": "Met vriendelijkheid dienen.",
+"Chúng tôi không chỉ bán đồ uống. Chúng tôi mang đến sự dễ chịu, thoải mái và cảm giác được chào đón.": "We verkopen niet alleen drankjes. We brengen ontspanning, comfort en het gevoel welkom te zijn.",
+"Tư duy làm chủ.": "Ondernemersmentaliteit.",
+"Quan sát. Cải thiện. Tiết kiệm. Phát triển quán tốt hơn mỗi ngày.": "Observeren. Verbeteren. Besparen. De zaak elke dag beter maken.",
+"Mỗi chi tiết nhỏ.": "Elk klein detail.",
+"Sự nhất quán, chất lượng và trải nghiệm khác biệt — nơi mỗi chi tiết nhỏ đều góp phần xây dựng niềm tin và cảm xúc của khách hàng.": "Consistentie, kwaliteit en een unieke ervaring — elk klein detail bouwt aan het vertrouwen en gevoel van gasten.",
+"Kết không tìm người hoàn hảo.": "Kết zoekt geen perfecte mensen.",
+"Kết tìm người muốn tốt lên mỗi ngày. Ai cũng có thể bắt đầu từ con số 0 — nhưng không ai phải dừng lại ở đó.": "Kết zoekt mensen die elke dag beter willen worden. Iedereen kan bij nul beginnen — maar niemand hoeft daar te blijven.",
+"Tử tế. Công bằng. Trách nhiệm.": "Vriendelijk. Eerlijk. Verantwoordelijk.",
+"Để ai ở lại cũng cảm thấy mình thuộc về.": "Zodat iedereen die blijft het gevoel heeft erbij te horen.",
+"Điền form bên dưới — đội ngũ Kết Group sẽ liên hệ khi có vị trí phù hợp. Thông tin chỉ dùng cho mục đích tuyển dụng.": "Vul het formulier hieronder in — het team van Kết Group neemt contact op als er een passende functie is. Gegevens worden alleen voor werving gebruikt.",
+"Điều hướng chính": "Hoofdnavigatie",
+"Điều hướng quán": "Navigatie zaak",
+"Mã QR đánh giá": "QR-code voor review",
+"Đã gửi": "Verzonden",
+"Đã đặt món": "Besteld"
 },
 "p": {
 "gift": "{a}/{b} gratis items gekozen",
@@ -119,6 +139,8 @@
 "late": "laat",
 "today": "vandaag",
 "reviewon": "Review op {x}",
-"language": "Taal"
+"language": "Taal",
+"channels": "Kanalen van {x}",
+"page": "{x} – pagina {n}"
 }
 }

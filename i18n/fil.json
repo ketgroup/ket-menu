@@ -106,7 +106,27 @@
 "Cảm ơn bạn đã quan tâm đến Kết Group. Chúng tôi sẽ liên hệ khi có vị trí phù hợp.": "Salamat sa interes sa Kết Group. Kokontakin ka namin kapag may angkop na posisyon.",
 "File CV vượt quá 5MB. Vui lòng chọn file nhỏ hơn.": "Lampas 5MB ang CV. Pumili ng mas maliit na file.",
 "Đơn đặt sau 12:00 trưa thứ 4/thứ 6 cho chính ngày đó có thể không kịp chuẩn bị.": "Ang mga order pagkalipas ng 12:00 tanghali ng Miyerkules/Biyernes para sa parehong araw ay maaaring hindi maihanda sa oras.",
-"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "Nag-o-order ka pagkalipas ng 12:00 tanghali para ngayong gabi — maaaring hindi lubos na makapaghanda ang venue. Pakitawagan ang 089 6789768 para kumpirmahin."
+"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "Nag-o-order ka pagkalipas ng 12:00 tanghali para ngayong gabi — maaaring hindi lubos na makapaghanda ang venue. Pakitawagan ang 089 6789768 para kumpirmahin.",
+"Từ một kho hoa cũ và nhỏ.": "Mula sa isang maliit at lumang bodega ng bulaklak.",
+"Ngày 2/11/2022, Kết được hình thành — mang theo một ước mơ mới và lớn.": "Noong 2/11/2022, isinilang ang Kết — dala ang isang bago at malaking pangarap.",
+"Lấy con người làm gốc.": "Tao ang una.",
+"Một đội ngũ hạnh phúc và được tôn trọng sẽ tạo ra trải nghiệm tuyệt vời cho khách hàng.": "Ang masaya at iginagalang na koponan ay lumilikha ng magandang karanasan para sa mga bisita.",
+"Phục vụ bằng sự tử tế.": "Maglingkod nang may kabaitan.",
+"Chúng tôi không chỉ bán đồ uống. Chúng tôi mang đến sự dễ chịu, thoải mái và cảm giác được chào đón.": "Hindi lang kami nagbebenta ng inumin. Nagdadala kami ng ginhawa, kapanatagan at pakiramdam na welcome ka.",
+"Tư duy làm chủ.": "Pag-iisip ng may-ari.",
+"Quan sát. Cải thiện. Tiết kiệm. Phát triển quán tốt hơn mỗi ngày.": "Magmasid. Magpabuti. Magtipid. Paunlarin ang lugar araw-araw.",
+"Mỗi chi tiết nhỏ.": "Bawat maliit na detalye.",
+"Sự nhất quán, chất lượng và trải nghiệm khác biệt — nơi mỗi chi tiết nhỏ đều góp phần xây dựng niềm tin và cảm xúc của khách hàng.": "Pagkakapare-pareho, kalidad at kakaibang karanasan — bawat maliit na detalye ay bumubuo ng tiwala at damdamin ng bisita.",
+"Kết không tìm người hoàn hảo.": "Hindi naghahanap ang Kết ng perpektong tao.",
+"Kết tìm người muốn tốt lên mỗi ngày. Ai cũng có thể bắt đầu từ con số 0 — nhưng không ai phải dừng lại ở đó.": "Naghahanap ang Kết ng taong gustong gumaling araw-araw. Kahit sino ay puwedeng magsimula sa zero — pero walang kailangang manatili roon.",
+"Tử tế. Công bằng. Trách nhiệm.": "Mabait. Patas. Responsable.",
+"Để ai ở lại cũng cảm thấy mình thuộc về.": "Para maramdaman ng bawat nananatili na kabilang sila.",
+"Điền form bên dưới — đội ngũ Kết Group sẽ liên hệ khi có vị trí phù hợp. Thông tin chỉ dùng cho mục đích tuyển dụng.": "Punan ang form sa ibaba — makikipag-ugnayan ang Kết Group kapag may angkop na posisyon. Para lang sa recruitment ang impormasyon.",
+"Điều hướng chính": "Pangunahing nabigasyon",
+"Điều hướng quán": "Nabigasyon ng venue",
+"Mã QR đánh giá": "QR code para sa review",
+"Đã gửi": "Naipadala",
+"Đã đặt món": "Na-order na"
 },
 "p": {
 "gift": "{a}/{b} libreng item ang napili",
@@ -119,6 +139,8 @@
 "late": "hatinggabi",
 "today": "ngayon",
 "reviewon": "Mag-review sa {x}",
-"language": "Wika"
+"language": "Wika",
+"channels": "Mga channel ng {x}",
+"page": "{x} – pahina {n}"
 }
 }

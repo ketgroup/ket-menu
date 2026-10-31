@@ -106,7 +106,27 @@
 "Cảm ơn bạn đã quan tâm đến Kết Group. Chúng tôi sẽ liên hệ khi có vị trí phù hợp.": "Kết Group にご関心をいただきありがとうございます。適したポジションがあればご連絡します。",
 "File CV vượt quá 5MB. Vui lòng chọn file nhỏ hơn.": "履歴書ファイルが5MBを超えています。小さいファイルを選んでください。",
 "Đơn đặt sau 12:00 trưa thứ 4/thứ 6 cho chính ngày đó có thể không kịp chuẩn bị.": "水曜/金曜の12:00以降の当日注文は準備が間に合わない場合があります。",
-"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "12:00以降に今夜の注文をしています — 店舗で十分に準備できない場合があります。089 6789768 にお電話でご確認ください。"
+"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "12:00以降に今夜の注文をしています — 店舗で十分に準備できない場合があります。089 6789768 にお電話でご確認ください。",
+"Từ một kho hoa cũ và nhỏ.": "小さく古い花の倉庫から。",
+"Ngày 2/11/2022, Kết được hình thành — mang theo một ước mơ mới và lớn.": "2022年11月2日、Kếtは誕生しました — 新しく大きな夢を抱いて。",
+"Lấy con người làm gốc.": "人を第一に。",
+"Một đội ngũ hạnh phúc và được tôn trọng sẽ tạo ra trải nghiệm tuyệt vời cho khách hàng.": "幸せで尊重されるチームが、お客様に素晴らしい体験をつくります。",
+"Phục vụ bằng sự tử tế.": "思いやりでおもてなし。",
+"Chúng tôi không chỉ bán đồ uống. Chúng tôi mang đến sự dễ chịu, thoải mái và cảm giác được chào đón.": "私たちはドリンクを売るだけではありません。心地よさ、くつろぎ、そして歓迎される気持ちをお届けします。",
+"Tư duy làm chủ.": "オーナーシップの精神。",
+"Quan sát. Cải thiện. Tiết kiệm. Phát triển quán tốt hơn mỗi ngày.": "観察し、改善し、節約し、毎日お店をより良くします。",
+"Mỗi chi tiết nhỏ.": "一つひとつの小さなこだわり。",
+"Sự nhất quán, chất lượng và trải nghiệm khác biệt — nơi mỗi chi tiết nhỏ đều góp phần xây dựng niềm tin và cảm xúc của khách hàng.": "一貫性、品質、そして特別な体験 — 小さなこだわりの一つひとつが、お客様の信頼と感動を築きます。",
+"Kết không tìm người hoàn hảo.": "Kếtは完璧な人を求めていません。",
+"Kết tìm người muốn tốt lên mỗi ngày. Ai cũng có thể bắt đầu từ con số 0 — nhưng không ai phải dừng lại ở đó.": "Kếtは毎日成長したい人を求めています。誰でもゼロから始められます — でも、そこに留まる必要はありません。",
+"Tử tế. Công bằng. Trách nhiệm.": "思いやり。公正。責任。",
+"Để ai ở lại cũng cảm thấy mình thuộc về.": "ここに残る誰もが、居場所だと感じられるように。",
+"Điền form bên dưới — đội ngũ Kết Group sẽ liên hệ khi có vị trí phù hợp. Thông tin chỉ dùng cho mục đích tuyển dụng.": "下のフォームにご記入ください — 適したポジションが空き次第、Kết Groupのチームからご連絡します。情報は採用目的にのみ使用します。",
+"Điều hướng chính": "メインナビゲーション",
+"Điều hướng quán": "店舗ナビゲーション",
+"Mã QR đánh giá": "レビュー用QRコード",
+"Đã gửi": "送信済み",
+"Đã đặt món": "注文完了"
 },
 "p": {
 "gift": "無料アイテム {a}/{b} 選択済み",
@@ -119,6 +139,8 @@
 "late": "深夜",
 "today": "今日",
 "reviewon": "{x} でレビュー",
-"language": "言語"
+"language": "言語",
+"channels": "{x} のチャンネル",
+"page": "{x} – {n}ページ"
 }
 }

@@ -110,7 +110,27 @@
 "Anything else? (optional)": "",
 "Your details": "",
 "Đơn đặt sau 12:00 trưa thứ 4/thứ 6 cho chính ngày đó có thể không kịp chuẩn bị.": "Orders placed after 12:00 noon on Wednesday/Friday for the same day may not be ready in time.",
-"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "You are ordering after 12:00 noon for tonight — the venue may not be able to fully prepare. Please call 089 6789768 to confirm."
+"Bạn đang đặt sau 12:00 trưa cho tối nay — quán có thể không kịp chuẩn bị đầy đủ. Vui lòng gọi 089 6789768 để xác nhận.": "You are ordering after 12:00 noon for tonight — the venue may not be able to fully prepare. Please call 089 6789768 to confirm.",
+"Từ một kho hoa cũ và nhỏ.": "From a small, old flower warehouse.",
+"Ngày 2/11/2022, Kết được hình thành — mang theo một ước mơ mới và lớn.": "On 2/11/2022, Kết was born — carrying a new and big dream.",
+"Lấy con người làm gốc.": "People first.",
+"Một đội ngũ hạnh phúc và được tôn trọng sẽ tạo ra trải nghiệm tuyệt vời cho khách hàng.": "A happy, respected team creates wonderful experiences for our guests.",
+"Phục vụ bằng sự tử tế.": "Serve with kindness.",
+"Chúng tôi không chỉ bán đồ uống. Chúng tôi mang đến sự dễ chịu, thoải mái và cảm giác được chào đón.": "We don't just sell drinks. We bring ease, comfort and the feeling of being welcome.",
+"Tư duy làm chủ.": "An owner's mindset.",
+"Quan sát. Cải thiện. Tiết kiệm. Phát triển quán tốt hơn mỗi ngày.": "Observe. Improve. Save. Make the venue better every day.",
+"Mỗi chi tiết nhỏ.": "Every small detail.",
+"Sự nhất quán, chất lượng và trải nghiệm khác biệt — nơi mỗi chi tiết nhỏ đều góp phần xây dựng niềm tin và cảm xúc của khách hàng.": "Consistency, quality and a distinctive experience — where every small detail helps build our guests' trust and emotions.",
+"Kết không tìm người hoàn hảo.": "Kết isn't looking for perfect people.",
+"Kết tìm người muốn tốt lên mỗi ngày. Ai cũng có thể bắt đầu từ con số 0 — nhưng không ai phải dừng lại ở đó.": "Kết looks for people who want to get better every day. Anyone can start from zero — but no one has to stay there.",
+"Tử tế. Công bằng. Trách nhiệm.": "Kind. Fair. Responsible.",
+"Để ai ở lại cũng cảm thấy mình thuộc về.": "So everyone who stays feels they belong.",
+"Điền form bên dưới — đội ngũ Kết Group sẽ liên hệ khi có vị trí phù hợp. Thông tin chỉ dùng cho mục đích tuyển dụng.": "Fill in the form below — the Kết Group team will contact you when a suitable position opens. Your information is used for recruitment only.",
+"Điều hướng chính": "Main navigation",
+"Điều hướng quán": "Venue navigation",
+"Mã QR đánh giá": "Review QR code",
+"Đã gửi": "Sent",
+"Đã đặt món": "Order placed"
 },
 "p": {
 "gift": "{a}/{b} free items chosen",
@@ -123,6 +143,8 @@
 "late": "late",
 "today": "today",
 "reviewon": "Review on {x}",
-"language": "Language"
+"language": "Language",
+"channels": "{x} channels",
+"page": "{x} – page {n}"
 }
 }

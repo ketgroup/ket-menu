@@ -79,8 +79,8 @@
   function render() {
     var groups = {}, order = [];
     menu.forEach(function (m) { if (!groups[m.nhom]) { groups[m.nhom] = []; order.push(m.nhom); } groups[m.nhom].push(m); });
-    function html(list, open) { return list.map(function (g) {
-      return '<details class="po-group"' + (open ? " open" : "") + '><summary>' + esc(g) + ' <small>' + groups[g].length + '</small></summary>' +
+    function html(list) { return list.map(function (g, i) {
+      return '<details class="po-group" data-nhom="' + esc(g) + '"' + (i === 0 ? " open" : "") + '><summary aria-expanded="' + (i === 0) + '"><span class="po-g-name">' + esc(g) + '</span><span class="po-g-right"><b class="po-g-badge" hidden>0</b><small>' + groups[g].length + '</small><i class="po-g-chev" aria-hidden="true"></i></span></summary>' +
         groups[g].map(function (m) {
           return '<div class="po-item" data-ma="' + esc(m.ma) + '"><div class="po-item-meta"><b>' + esc(m.ten) + '</b><span>' + (m.gia == null ? "Giá theo quán" : money(m.gia)) + '</span></div>' +
             '<div class="po-stepper"><button type="button" data-d="-1" aria-label="Bớt">−</button><output>0</output><button type="button" data-d="1" aria-label="Thêm">+</button></div></div>';
@@ -88,8 +88,16 @@
     }).join(""); }
     var top = order.filter(function (g) { return COCKTAIL_GROUPS.test(g); });
     var rest = order.filter(function (g) { return !COCKTAIL_GROUPS.test(g); });
-    document.getElementById("po_menu_top").innerHTML = html(top, true);
-    box.innerHTML = html(rest, false);
+    document.getElementById("po_menu_top").innerHTML = html(top);
+    box.innerHTML = html(rest);
+    document.querySelectorAll(".po-group").forEach(function (d) { d.addEventListener("toggle", function () { d.querySelector("summary").setAttribute("aria-expanded", String(d.open)); }); });
+    updateBadges();
+  }
+  function updateBadges() {
+    document.querySelectorAll(".po-group[data-nhom]").forEach(function (d) {
+      var n = 0; d.querySelectorAll(".po-item[data-ma]").forEach(function (r) { n += qty[r.getAttribute("data-ma")] || 0; });
+      var b = d.querySelector(".po-g-badge"); b.textContent = n; b.hidden = !n;
+    });
   }
   function updateTotal() {
     var n = 0, sum = 0, unknown = false;
@@ -100,7 +108,7 @@
     var b = e.target.closest("button[data-d]"); if (!b) return;
     var row = b.closest(".po-item"), ma = row.getAttribute("data-ma");
     var q = Math.max(0, Math.min(99, (qty[ma] || 0) + Number(b.getAttribute("data-d"))));
-    qty[ma] = q; row.querySelector("output").textContent = q; row.classList.toggle("is-picked", q > 0); updateTotal(); syncGifts();
+    qty[ma] = q; row.querySelector("output").textContent = q; row.classList.toggle("is-picked", q > 0); updateBadges(); updateTotal(); syncGifts();
   };
   box.addEventListener("click", poClick); document.getElementById("po_menu_top").addEventListener("click", poClick);
   (USE_API ? getJSON(MENU_ENDPOINT) : Promise.reject(0)).then(norm).then(function (m) { if (!m.length) throw 0; fromApi = true; return m; })
