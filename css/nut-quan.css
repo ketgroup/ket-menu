@@ -72,3 +72,4 @@
 .event-btn-icon { font-size:22px; flex:none; }
 .event-btn b { display:block; font-size:16px; font-weight:600; letter-spacing:-.3px; color:var(--label-primary); white-space:normal; overflow-wrap:anywhere; line-height:1.2; }
 .event-btn small { display:block; font-size:13px; color:var(--c); margin-top:3px; white-space:normal; overflow-wrap:anywhere; line-height:1.25; }
+.event-strip .event-btn:last-child:nth-child(odd) { grid-column:1 / -1; }
