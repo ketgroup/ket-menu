@@ -144,7 +144,8 @@
 "Đêm Giáng sinh an lành 🎄": "Selamat Malam Natal 🎄",
 "Merry Christmas 🎄": "Selamat Natal 🎄",
 "Chỉ đường": "Petunjuk arah",
-"Mở Google Maps": "Buka Google Maps"
+"Mở Google Maps": "Buka Google Maps",
+"Sự kiện hôm nay": "Acara hari ini"
 },
 "p": {"gift": "{a}/{b} item gratis dipilih", "left": "Masih bisa pilih {n} item gratis.", "total": "{n} item · subtotal {x}", "plusvenue": " + item harga di tempat", "call": "Telepon {x}", "from": "Dari {a} – {b}", "avg": "rata-rata ~{x}/gelas", "late": "larut", "today": "hari ini", "reviewon": "Ulas di {x}", "language": "Bahasa", "channels": "Kanal {x}", "page": "{x} – halaman {n}"}
 }

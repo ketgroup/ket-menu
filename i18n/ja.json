@@ -144,7 +144,8 @@
 "Đêm Giáng sinh an lành 🎄": "メリークリスマスイブ 🎄",
 "Merry Christmas 🎄": "メリークリスマス 🎄",
 "Chỉ đường": "経路案内",
-"Mở Google Maps": "Google マップを開く"
+"Mở Google Maps": "Google マップを開く",
+"Sự kiện hôm nay": "本日のイベント"
 },
 "p": {"gift": "無料アイテム {a}/{b} 選択済み", "left": "あと {n} 個の無料アイテムを選べます。", "total": "{n} 品 · 小計 {x}", "plusvenue": " + 店頭価格の品", "call": "電話 {x}", "from": "{a}～{b}", "avg": "平均 ~{x}/杯", "late": "深夜", "today": "今日", "reviewon": "{x} でレビュー", "language": "言語", "channels": "{x} のチャンネル", "page": "{x} – {n}ページ"}
 }

@@ -144,7 +144,8 @@
 "Đêm Giáng sinh an lành 🎄": "Joyeux réveillon de Noël 🎄",
 "Merry Christmas 🎄": "Joyeux Noël 🎄",
 "Chỉ đường": "Itinéraire",
-"Mở Google Maps": "Ouvrir Google Maps"
+"Mở Google Maps": "Ouvrir Google Maps",
+"Sự kiện hôm nay": "Événements du jour"
 },
 "p": {"gift": "{a}/{b} articles offerts choisis", "left": "Il vous reste {n} article(s) offert(s).", "total": "{n} article(s) · sous-total {x}", "plusvenue": " + articles au prix sur place", "call": "Appeler {x}", "from": "De {a} à {b}", "avg": "moy. ~{x}/verre", "late": "tard", "today": "aujourd’hui", "reviewon": "Avis sur {x}", "language": "Langue", "channels": "Chaînes de {x}", "page": "{x} – page {n}"}
 }

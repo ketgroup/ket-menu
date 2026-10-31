@@ -144,7 +144,8 @@
 "Đêm Giáng sinh an lành 🎄": "Fijne kerstavond 🎄",
 "Merry Christmas 🎄": "Vrolijk kerstfeest 🎄",
 "Chỉ đường": "Route",
-"Mở Google Maps": "Google Maps openen"
+"Mở Google Maps": "Google Maps openen",
+"Sự kiện hôm nay": "Evenementen vandaag"
 },
 "p": {"gift": "{a}/{b} gratis items gekozen", "left": "Je kunt nog {n} gratis item(s) kiezen.", "total": "{n} item(s) · subtotaal {x}", "plusvenue": " + items met prijs ter plaatse", "call": "Bel {x}", "from": "Van {a} tot {b}", "avg": "gem. ~{x}/glas", "late": "laat", "today": "vandaag", "reviewon": "Review op {x}", "language": "Taal", "channels": "Kanalen van {x}", "page": "{x} – pagina {n}"}
 }
