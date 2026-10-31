@@ -144,7 +144,25 @@
 "Đêm Giáng sinh an lành 🎄": "메리 크리스마스 이브 🎄",
 "Merry Christmas 🎄": "메리 크리스마스 🎄",
 "Chỉ đường": "길찾기",
-"Mở Google Maps": "Google 지도 열기"
+"Mở Google Maps": "Google 지도 열기",
+"Bước 1 – Cocktail": "1단계 – 칵테일",
+"Bước 2 – Món free": "2단계 – 무료 메뉴",
+"Bước 3 – Món khác": "3단계 – 기타 메뉴",
+"Free": "무료"
 },
-"p": {"gift": "무료 메뉴 {a}/{b} 선택", "left": "무료 메뉴 {n}개를 더 고를 수 있습니다.", "total": "{n}개 · 소계 {x}", "plusvenue": " + 매장 가격 메뉴", "call": "전화 {x}", "from": "{a} – {b}", "avg": "평균 ~{x}/잔", "late": "늦게까지", "today": "오늘", "reviewon": "{x} 리뷰", "language": "언어", "channels": "{x} 채널", "page": "{x} – {n}페이지"}
+"p": {
+"gift": "무료 메뉴 {a}/{b} 선택",
+"left": "무료 메뉴 {n}개를 더 고를 수 있습니다.",
+"total": "{n}개 · 소계 {x}",
+"plusvenue": " + 매장 가격 메뉴",
+"call": "전화 {x}",
+"from": "{a} – {b}",
+"avg": "평균 ~{x}/잔",
+"late": "늦게까지",
+"today": "오늘",
+"reviewon": "{x} 리뷰",
+"language": "언어",
+"channels": "{x} 채널",
+"page": "{x} – {n}페이지"
+}
 }

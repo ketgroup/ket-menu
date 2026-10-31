@@ -148,7 +148,25 @@
 "Đêm Giáng sinh an lành 🎄": "Merry Christmas Eve 🎄",
 "Merry Christmas 🎄": "Merry Christmas 🎄",
 "Chỉ đường": "Directions",
-"Mở Google Maps": "Open Google Maps"
+"Mở Google Maps": "Open Google Maps",
+"Bước 1 – Cocktail": "Step 1 – Cocktails",
+"Bước 2 – Món free": "Step 2 – Free items",
+"Bước 3 – Món khác": "Step 3 – Other items",
+"Free": "Free"
 },
-"p": {"gift": "{a}/{b} free items chosen", "left": "You can still choose {n} free item(s).", "total": "{n} item(s) · subtotal {x}", "plusvenue": " + items priced at venue", "call": "Call {x}", "from": "From {a} – {b}", "avg": "avg ~{x}/glass", "late": "late", "today": "today", "reviewon": "Review on {x}", "language": "Language", "channels": "{x} channels", "page": "{x} – page {n}"}
+"p": {
+"gift": "{a}/{b} free items chosen",
+"left": "You can still choose {n} free item(s).",
+"total": "{n} item(s) · subtotal {x}",
+"plusvenue": " + items priced at venue",
+"call": "Call {x}",
+"from": "From {a} – {b}",
+"avg": "avg ~{x}/glass",
+"late": "late",
+"today": "today",
+"reviewon": "Review on {x}",
+"language": "Language",
+"channels": "{x} channels",
+"page": "{x} – page {n}"
+}
 }

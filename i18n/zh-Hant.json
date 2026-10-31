@@ -144,7 +144,25 @@
 "Đêm Giáng sinh an lành 🎄": "平安夜快樂 🎄",
 "Merry Christmas 🎄": "聖誕快樂 🎄",
 "Chỉ đường": "路線",
-"Mở Google Maps": "開啟 Google 地圖"
+"Mở Google Maps": "開啟 Google 地圖",
+"Bước 1 – Cocktail": "第1步 – 雞尾酒",
+"Bước 2 – Món free": "第2步 – 免費品",
+"Bước 3 – Món khác": "第3步 – 其他",
+"Free": "免費"
 },
-"p": {"gift": "已選 {a}/{b} 份免費品", "left": "還可選 {n} 份免費品。", "total": "{n} 項 · 小計 {x}", "plusvenue": " + 部分價格以店內為準", "call": "致電 {x}", "from": "{a} – {b}", "avg": "均價 ~{x}/杯", "late": "深夜", "today": "今天", "reviewon": "在 {x} 上評價", "language": "語言", "channels": "{x} 的頻道", "page": "{x} – 第 {n} 頁"}
+"p": {
+"gift": "已選 {a}/{b} 份免費品",
+"left": "還可選 {n} 份免費品。",
+"total": "{n} 項 · 小計 {x}",
+"plusvenue": " + 部分價格以店內為準",
+"call": "致電 {x}",
+"from": "{a} – {b}",
+"avg": "均價 ~{x}/杯",
+"late": "深夜",
+"today": "今天",
+"reviewon": "在 {x} 上評價",
+"language": "語言",
+"channels": "{x} 的頻道",
+"page": "{x} – 第 {n} 頁"
+}
 }

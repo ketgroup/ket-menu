@@ -144,7 +144,25 @@
 "Đêm Giáng sinh an lành 🎄": "Feliz Véspera de Natal 🎄",
 "Merry Christmas 🎄": "Feliz Natal 🎄",
 "Chỉ đường": "Como chegar",
-"Mở Google Maps": "Abrir Google Maps"
+"Mở Google Maps": "Abrir Google Maps",
+"Bước 1 – Cocktail": "Passo 1 – Coquetéis",
+"Bước 2 – Món free": "Passo 2 – Grátis",
+"Bước 3 – Món khác": "Passo 3 – Outros",
+"Free": "Grátis"
 },
-"p": {"gift": "{a}/{b} artigos grátis escolhidos", "left": "Ainda pode escolher {n} artigo(s) grátis.", "total": "{n} artigo(s) · subtotal {x}", "plusvenue": " + artigos com preço no local", "call": "Ligar {x}", "from": "De {a} a {b}", "avg": "média ~{x}/copo", "late": "tarde", "today": "hoje", "reviewon": "Avaliar no {x}", "language": "Idioma", "channels": "Canais de {x}", "page": "{x} – página {n}"}
+"p": {
+"gift": "{a}/{b} artigos grátis escolhidos",
+"left": "Ainda pode escolher {n} artigo(s) grátis.",
+"total": "{n} artigo(s) · subtotal {x}",
+"plusvenue": " + artigos com preço no local",
+"call": "Ligar {x}",
+"from": "De {a} a {b}",
+"avg": "média ~{x}/copo",
+"late": "tarde",
+"today": "hoje",
+"reviewon": "Avaliar no {x}",
+"language": "Idioma",
+"channels": "Canais de {x}",
+"page": "{x} – página {n}"
+}
 }

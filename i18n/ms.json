@@ -144,7 +144,25 @@
 "Đêm Giáng sinh an lành 🎄": "Selamat Malam Krismas 🎄",
 "Merry Christmas 🎄": "Selamat Hari Krismas 🎄",
 "Chỉ đường": "Arah",
-"Mở Google Maps": "Buka Google Maps"
+"Mở Google Maps": "Buka Google Maps",
+"Bước 1 – Cocktail": "Langkah 1 – Koktel",
+"Bước 2 – Món free": "Langkah 2 – Percuma",
+"Bước 3 – Món khác": "Langkah 3 – Lain-lain",
+"Free": "Percuma"
 },
-"p": {"gift": "{a}/{b} item percuma dipilih", "left": "Masih boleh pilih {n} item percuma.", "total": "{n} item · jumlah kecil {x}", "plusvenue": " + item harga di premis", "call": "Hubungi {x}", "from": "Dari {a} – {b}", "avg": "purata ~{x}/gelas", "late": "lewat malam", "today": "hari ini", "reviewon": "Ulas di {x}", "language": "Bahasa", "channels": "Saluran {x}", "page": "{x} – halaman {n}"}
+"p": {
+"gift": "{a}/{b} item percuma dipilih",
+"left": "Masih boleh pilih {n} item percuma.",
+"total": "{n} item · jumlah kecil {x}",
+"plusvenue": " + item harga di premis",
+"call": "Hubungi {x}",
+"from": "Dari {a} – {b}",
+"avg": "purata ~{x}/gelas",
+"late": "lewat malam",
+"today": "hari ini",
+"reviewon": "Ulas di {x}",
+"language": "Bahasa",
+"channels": "Saluran {x}",
+"page": "{x} – halaman {n}"
+}
 }

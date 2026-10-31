@@ -144,7 +144,25 @@
 "Đêm Giáng sinh an lành 🎄": "Joyeux réveillon de Noël 🎄",
 "Merry Christmas 🎄": "Joyeux Noël 🎄",
 "Chỉ đường": "Itinéraire",
-"Mở Google Maps": "Ouvrir Google Maps"
+"Mở Google Maps": "Ouvrir Google Maps",
+"Bước 1 – Cocktail": "Étape 1 – Cocktails",
+"Bước 2 – Món free": "Étape 2 – Offerts",
+"Bước 3 – Món khác": "Étape 3 – Autres",
+"Free": "Offert"
 },
-"p": {"gift": "{a}/{b} articles offerts choisis", "left": "Il vous reste {n} article(s) offert(s).", "total": "{n} article(s) · sous-total {x}", "plusvenue": " + articles au prix sur place", "call": "Appeler {x}", "from": "De {a} à {b}", "avg": "moy. ~{x}/verre", "late": "tard", "today": "aujourd’hui", "reviewon": "Avis sur {x}", "language": "Langue", "channels": "Chaînes de {x}", "page": "{x} – page {n}"}
+"p": {
+"gift": "{a}/{b} articles offerts choisis",
+"left": "Il vous reste {n} article(s) offert(s).",
+"total": "{n} article(s) · sous-total {x}",
+"plusvenue": " + articles au prix sur place",
+"call": "Appeler {x}",
+"from": "De {a} à {b}",
+"avg": "moy. ~{x}/verre",
+"late": "tard",
+"today": "aujourd’hui",
+"reviewon": "Avis sur {x}",
+"language": "Langue",
+"channels": "Chaînes de {x}",
+"page": "{x} – page {n}"
+}
 }

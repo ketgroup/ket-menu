@@ -68,3 +68,16 @@ body[data-preorder] .ios-btn--tinted{color:var(--po)}
 .po-g-chev{width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .2s;opacity:.7;margin:0 2px}
 [dir=rtl] .po-g-chev{transform:rotate(135deg)}
 .po-group[open] .po-g-chev{transform:rotate(45deg)}
+
+.po-recap{margin:12px 0 0;padding:4px 14px;border-radius:14px;background:var(--surface,rgba(127,127,127,.08));border:1px solid rgba(127,127,127,.18)}
+.po-recap-g{padding:8px 0;border-bottom:1px solid rgba(127,127,127,.18)}
+.po-recap-g:last-child{border-bottom:0}
+.po-recap-h{margin:0 0 4px;font-size:12px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;opacity:.65}
+.po-recap-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:3px 0;font-size:14px}
+.po-recap-name{min-width:0;overflow-wrap:anywhere}
+.po-recap-name b{font-weight:500}
+.po-recap-q{opacity:.7;white-space:nowrap}
+.po-recap-p{flex:none;white-space:nowrap;text-align:end}
+.po-recap-p .po-old{opacity:.55;font-size:12px}
+.po-recap-tag{font-style:normal;font-size:11px;font-weight:700;padding:1px 6px;border-radius:999px;background:var(--po);color:#fff;margin-inline-start:4px}
+.po-recap[hidden]{display:none}

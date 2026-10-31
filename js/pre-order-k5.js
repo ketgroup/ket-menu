@@ -54,7 +54,7 @@
     var b = e.target.closest("button[data-g]"); if (!b || b.disabled) return;
     var k = b.closest(".po-item").getAttribute("data-g-key"), d = Number(b.getAttribute("data-g"));
     if (d > 0 && giftTotal() >= cocktailQty()) return;
-    gq[k] = Math.max(0, (gq[k] || 0) + d); syncGifts();
+    gq[k] = Math.max(0, (gq[k] || 0) + d); syncGifts(); renderRecap();
   });
   function giftData() {
     return GIFTS.filter(function (g) { return gq[g.key] > 0; }).map(function (g) { return { ma: g.ma || null, ten: g.ten, so_luong: gq[g.key], gia_goc: giftPrice(g), gia: 0 }; });
@@ -103,12 +103,31 @@
     var n = 0, sum = 0, unknown = false;
     menu.forEach(function (m) { var q = qty[m.ma] || 0; if (q) { n += q; if (m.gia == null) unknown = true; else sum += q * m.gia; } });
     totalEl.textContent = n ? (n + " món · tạm tính " + money(sum) + (unknown ? " + món giá theo quán" : "")) : "Chưa chọn món";
+    renderRecap();
+  }
+  // Danh sách món đã chọn theo Bước 1/2/3 (chỉ hiển thị, không đổi tính giá/dữ liệu gửi)
+  var recapEl = document.getElementById("po_recap");
+  function renderRecap() {
+    if (!recapEl) return;
+    var b1 = [], b3 = [], b2 = [];
+    menu.forEach(function (m) { var q = qty[m.ma] || 0; if (q) (COCKTAIL_GROUPS.test(m.nhom) ? b1 : b3).push({ ten: m.ten, q: q, gia: m.gia == null ? null : q * m.gia }); });
+    GIFTS.forEach(function (g) { var q = gq[g.key] || 0; if (q) b2.push({ ten: g.ten, q: q, goc: g.gia_goc == null ? null : q * g.gia_goc, free: true }); });
+    function grp(title, list) {
+      if (!list.length) return "";
+      return '<div class="po-recap-g"><p class="po-recap-h">' + title + '</p>' + list.map(function (r) {
+        var price = r.free ? ((r.goc != null ? '<s class="po-old">' + money(r.goc) + '</s> ' : '') + '<span class="po-free">0đ</span> <em class="po-recap-tag">Free</em>')
+          : (r.gia == null ? '<span>Giá theo quán</span>' : '<span>' + money(r.gia) + '</span>');
+        return '<div class="po-recap-row"><span class="po-recap-name"><b>' + esc(r.ten) + '</b> <span class="po-recap-q">× ' + r.q + '</span></span><span class="po-recap-p">' + price + '</span></div>';
+      }).join("") + '</div>';
+    }
+    var h = grp("Bước 1 – Cocktail", b1) + grp("Bước 2 – Món free", b2) + grp("Bước 3 – Món khác", b3);
+    recapEl.innerHTML = h; recapEl.hidden = !h;
   }
   var poClick = function (e) {
     var b = e.target.closest("button[data-d]"); if (!b) return;
     var row = b.closest(".po-item"), ma = row.getAttribute("data-ma");
     var q = Math.max(0, Math.min(99, (qty[ma] || 0) + Number(b.getAttribute("data-d"))));
-    qty[ma] = q; row.querySelector("output").textContent = q; row.classList.toggle("is-picked", q > 0); updateBadges(); updateTotal(); syncGifts();
+    qty[ma] = q; row.querySelector("output").textContent = q; row.classList.toggle("is-picked", q > 0); updateBadges(); syncGifts(); updateTotal();
   };
   box.addEventListener("click", poClick); document.getElementById("po_menu_top").addEventListener("click", poClick);
   (USE_API ? getJSON(MENU_ENDPOINT) : Promise.reject(0)).then(norm).then(function (m) { if (!m.length) throw 0; fromApi = true; return m; })
