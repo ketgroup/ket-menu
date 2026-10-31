@@ -1,0 +1,583 @@
+{
+ "quan": "K5",
+ "nguon": "Ảnh menu img/k5-douong-*.jpg, img/k5-bep-*.jpg (OCR + đối chiếu ảnh, 31/10/2026)",
+ "ghi_chu": "Mã món tạm K5-xxx; sẽ thay bằng mã từ app Kết.",
+ "mon": [
+  {
+   "ma": "K5-001",
+   "ten": "Baked Mashed Potato",
+   "gia": 79000,
+   "nhom": "Starter"
+  },
+  {
+   "ma": "K5-002",
+   "ten": "Chip Guacamole",
+   "gia": 89000,
+   "nhom": "Starter"
+  },
+  {
+   "ma": "K5-003",
+   "ten": "Chip Beef Taco",
+   "gia": 129000,
+   "nhom": "Starter"
+  },
+  {
+   "ma": "K5-004",
+   "ten": "Salad Ceasar Bacon",
+   "gia": 109000,
+   "nhom": "Starter"
+  },
+  {
+   "ma": "K5-005",
+   "ten": "Salad Ceasar Chicken",
+   "gia": 125000,
+   "nhom": "Starter"
+  },
+  {
+   "ma": "K5-006",
+   "ten": "Lasagna",
+   "gia": 219000,
+   "nhom": "Pasta"
+  },
+  {
+   "ma": "K5-007",
+   "ten": "Spaghetti Bolonese",
+   "gia": 149000,
+   "nhom": "Pasta"
+  },
+  {
+   "ma": "K5-008",
+   "ten": "Spaghetti Pesto Chicken",
+   "gia": 139000,
+   "nhom": "Pasta"
+  },
+  {
+   "ma": "K5-009",
+   "ten": "Stuffed Chicken",
+   "gia": 189000,
+   "nhom": "Main"
+  },
+  {
+   "ma": "K5-010",
+   "ten": "Steak - TenderLoin Hokube (150 gram)",
+   "gia": 329000,
+   "nhom": "Main"
+  },
+  {
+   "ma": "K5-011",
+   "ten": "Steak - TenderLoin Hokube (100 gram)",
+   "gia": 269000,
+   "nhom": "Main"
+  },
+  {
+   "ma": "K5-012",
+   "ten": "Steak - TenderLoin Australian (150 gram)",
+   "gia": 279000,
+   "nhom": "Main"
+  },
+  {
+   "ma": "K5-013",
+   "ten": "Steak - TenderLoin Australian (100 gram)",
+   "gia": 229000,
+   "nhom": "Main"
+  },
+  {
+   "ma": "K5-014",
+   "ten": "Pizza Peperoni",
+   "gia": 169000,
+   "nhom": "Pizza"
+  },
+  {
+   "ma": "K5-015",
+   "ten": "Pizza Garden",
+   "gia": 159000,
+   "nhom": "Pizza"
+  },
+  {
+   "ma": "K5-016",
+   "ten": "Pizza Beef Waygu Pesto",
+   "gia": 279000,
+   "nhom": "Pizza"
+  },
+  {
+   "ma": "K5-017",
+   "ten": "Pizza Three Cheeese",
+   "gia": 169000,
+   "nhom": "Pizza"
+  },
+  {
+   "ma": "K5-018",
+   "ten": "Pizza Chicken BBQ",
+   "gia": 179000,
+   "nhom": "Pizza"
+  },
+  {
+   "ma": "K5-019",
+   "ten": "Half and Half Pizza",
+   "gia": null,
+   "nhom": "Pizza"
+  },
+  {
+   "ma": "K5-020",
+   "ten": "Egg Benedict Classic",
+   "gia": 139000,
+   "nhom": "Brunch"
+  },
+  {
+   "ma": "K5-021",
+   "ten": "Avocado Toast Bacon",
+   "gia": 135000,
+   "nhom": "Brunch"
+  },
+  {
+   "ma": "K5-022",
+   "ten": "Avocado Toast",
+   "gia": 99000,
+   "nhom": "Brunch"
+  },
+  {
+   "ma": "K5-023",
+   "ten": "SandWich Club",
+   "gia": 135000,
+   "nhom": "Brunch"
+  },
+  {
+   "ma": "K5-024",
+   "ten": "Good Morning Muffin",
+   "gia": 129000,
+   "nhom": "Brunch"
+  },
+  {
+   "ma": "K5-025",
+   "ten": "Black Lemon Radler",
+   "gia": 59000,
+   "nhom": "Non-alcoholic"
+  },
+  {
+   "ma": "K5-026",
+   "ten": "Watermelon Sparkling Crown",
+   "gia": 109000,
+   "nhom": "Non-alcoholic"
+  },
+  {
+   "ma": "K5-027",
+   "ten": "Salted Almond Cloud",
+   "gia": 69000,
+   "nhom": "Non-alcoholic"
+  },
+  {
+   "ma": "K5-028",
+   "ten": "Espresso (Single/Double)",
+   "gia": 49000,
+   "nhom": "Espresso Bar"
+  },
+  {
+   "ma": "K5-029",
+   "ten": "Americano (Hot/Cold)",
+   "gia": 59000,
+   "nhom": "Espresso Bar"
+  },
+  {
+   "ma": "K5-030",
+   "ten": "Latte (Hot/Cold)",
+   "gia": 69000,
+   "nhom": "Espresso Bar"
+  },
+  {
+   "ma": "K5-031",
+   "ten": "Capuchino",
+   "gia": 69000,
+   "nhom": "Espresso Bar"
+  },
+  {
+   "ma": "K5-032",
+   "ten": "Bac Xiu Coffee",
+   "gia": 49000,
+   "nhom": "Vietnamese Coffee"
+  },
+  {
+   "ma": "K5-033",
+   "ten": "Saigon Milk Coffee (Black/Milk)",
+   "gia": 49000,
+   "nhom": "Vietnamese Coffee"
+  },
+  {
+   "ma": "K5-034",
+   "ten": "Vietnamese Phin Coffee",
+   "gia": 49000,
+   "nhom": "Vietnamese Coffee"
+  },
+  {
+   "ma": "K5-035",
+   "ten": "Vietnamese Creamy Salted Coffee",
+   "gia": 49000,
+   "nhom": "Vietnamese Coffee"
+  },
+  {
+   "ma": "K5-036",
+   "ten": "Vietnamese Coconut Coffee",
+   "gia": 59000,
+   "nhom": "Vietnamese Coffee"
+  },
+  {
+   "ma": "K5-037",
+   "ten": "Matcha Latte",
+   "gia": 49000,
+   "nhom": "Matcha · Smoothie · Juice"
+  },
+  {
+   "ma": "K5-038",
+   "ten": "Lime Matcha",
+   "gia": 39000,
+   "nhom": "Matcha · Smoothie · Juice"
+  },
+  {
+   "ma": "K5-039",
+   "ten": "Penut Butter Banana Smothies",
+   "gia": 69000,
+   "nhom": "Matcha · Smoothie · Juice"
+  },
+  {
+   "ma": "K5-040",
+   "ten": "Coconut",
+   "gia": 59000,
+   "nhom": "Matcha · Smoothie · Juice"
+  },
+  {
+   "ma": "K5-041",
+   "ten": "Orange",
+   "gia": 49000,
+   "nhom": "Matcha · Smoothie · Juice"
+  },
+  {
+   "ma": "K5-042",
+   "ten": "Whistea",
+   "gia": 189000,
+   "nhom": "Signature Cocktail"
+  },
+  {
+   "ma": "K5-043",
+   "ten": "BobCorn",
+   "gia": 179000,
+   "nhom": "Signature Cocktail"
+  },
+  {
+   "ma": "K5-044",
+   "ten": "Umeee",
+   "gia": 179000,
+   "nhom": "Signature Cocktail"
+  },
+  {
+   "ma": "K5-045",
+   "ten": "Mango Tango",
+   "gia": 189000,
+   "nhom": "Signature Cocktail"
+  },
+  {
+   "ma": "K5-046",
+   "ten": "Tom & Jelly",
+   "gia": 199000,
+   "nhom": "Signature Cocktail"
+  },
+  {
+   "ma": "K5-047",
+   "ten": "Alexer",
+   "gia": null,
+   "nhom": "Signature Cocktail"
+  },
+  {
+   "ma": "K5-048",
+   "ten": "Backyard of Memory",
+   "gia": 209000,
+   "nhom": "Signature Cocktail"
+  },
+  {
+   "ma": "K5-049",
+   "ten": "Phê Rita",
+   "gia": 199000,
+   "nhom": "Signature Cocktail"
+  },
+  {
+   "ma": "K5-050",
+   "ten": "Dry Martini",
+   "gia": 159000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-051",
+   "ten": "Margarita",
+   "gia": 159000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-052",
+   "ten": "Tequila Sunrise",
+   "gia": 159000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-053",
+   "ten": "Mojito",
+   "gia": 159000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-054",
+   "ten": "Old Fashion",
+   "gia": 159000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-055",
+   "ten": "God Father",
+   "gia": 169000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-056",
+   "ten": "Negroni",
+   "gia": 159000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-057",
+   "ten": "Manhatan",
+   "gia": 159000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-058",
+   "ten": "Boulevarder",
+   "gia": 169000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-059",
+   "ten": "Black Russian",
+   "gia": 149000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-060",
+   "ten": "White Russian",
+   "gia": 149000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-061",
+   "ten": "Whisky Sour",
+   "gia": 169000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-062",
+   "ten": "Espesso Martini",
+   "gia": 159000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-063",
+   "ten": "Side Car",
+   "gia": 159000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-064",
+   "ten": "South Side Fizz",
+   "gia": 149000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-065",
+   "ten": "Porn Star Martini",
+   "gia": 159000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-066",
+   "ten": "Midori Sour",
+   "gia": 159000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-067",
+   "ten": "Pina Colada",
+   "gia": 159000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-068",
+   "ten": "Mexican Susnet",
+   "gia": 169000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-069",
+   "ten": "Maitai",
+   "gia": 159000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-070",
+   "ten": "Grass Hopper",
+   "gia": 169000,
+   "nhom": "Classic Cocktail"
+  },
+  {
+   "ma": "K5-071",
+   "ten": "Tequila sprite",
+   "gia": 149000,
+   "nhom": "Mix Drink"
+  },
+  {
+   "ma": "K5-072",
+   "ten": "Whisky Highball",
+   "gia": 149000,
+   "nhom": "Mix Drink"
+  },
+  {
+   "ma": "K5-073",
+   "ten": "Rum coke",
+   "gia": 149000,
+   "nhom": "Mix Drink"
+  },
+  {
+   "ma": "K5-074",
+   "ten": "Umeshu Tonic",
+   "gia": 149000,
+   "nhom": "Mix Drink"
+  },
+  {
+   "ma": "K5-075",
+   "ten": "Gin tonic",
+   "gia": 149000,
+   "nhom": "Mix Drink"
+  },
+  {
+   "ma": "K5-076",
+   "ten": "JagerBoom",
+   "gia": 149000,
+   "nhom": "Mix Drink"
+  },
+  {
+   "ma": "K5-077",
+   "ten": "Vieux Papes Brut Sparkling Wine (Glass)",
+   "gia": 129000,
+   "nhom": "Wine"
+  },
+  {
+   "ma": "K5-078",
+   "ten": "Vieux Papes Brut Sparkling Wine (Carafe)",
+   "gia": 759000,
+   "nhom": "Wine"
+  },
+  {
+   "ma": "K5-079",
+   "ten": "Citra Spumante Bianco (Glass)",
+   "gia": 129000,
+   "nhom": "Wine"
+  },
+  {
+   "ma": "K5-080",
+   "ten": "Citra Spumante Bianco (Carafe)",
+   "gia": 709000,
+   "nhom": "Wine"
+  },
+  {
+   "ma": "K5-081",
+   "ten": "Claire De Jour Cabernet Sauvvignon (Glass)",
+   "gia": 109000,
+   "nhom": "Wine"
+  },
+  {
+   "ma": "K5-082",
+   "ten": "Claire De Jour Cabernet Sauvvignon (Carafe)",
+   "gia": 609000,
+   "nhom": "Wine"
+  },
+  {
+   "ma": "K5-083",
+   "ten": "Citra Montepulciano Dabruzzo (Glass)",
+   "gia": 119000,
+   "nhom": "Wine"
+  },
+  {
+   "ma": "K5-084",
+   "ten": "Citra Montepulciano Dabruzzo (Carafe)",
+   "gia": 659000,
+   "nhom": "Wine"
+  },
+  {
+   "ma": "K5-085",
+   "ten": "Valle Nevado Cab Sau (Glass)",
+   "gia": 159000,
+   "nhom": "Wine"
+  },
+  {
+   "ma": "K5-086",
+   "ten": "Valle Nevado Cab Sau (Carafe)",
+   "gia": 959000,
+   "nhom": "Wine"
+  },
+  {
+   "ma": "K5-087",
+   "ten": "Claire De Jour Sauvignon Blanc (Glass)",
+   "gia": 109000,
+   "nhom": "Wine"
+  },
+  {
+   "ma": "K5-088",
+   "ten": "Claire De Jour Sauvignon Blanc (Carafe)",
+   "gia": 609000,
+   "nhom": "Wine"
+  },
+  {
+   "ma": "K5-089",
+   "ten": "Citra Pinot Grigio (Glass)",
+   "gia": 119000,
+   "nhom": "Wine"
+  },
+  {
+   "ma": "K5-090",
+   "ten": "Citra Pinot Grigio (Carafe)",
+   "gia": 659000,
+   "nhom": "Wine"
+  },
+  {
+   "ma": "K5-091",
+   "ten": "Valle Nevado Sau Blanc (Glass)",
+   "gia": 159000,
+   "nhom": "Wine"
+  },
+  {
+   "ma": "K5-092",
+   "ten": "Valle Nevado Sau Blanc (Carafe)",
+   "gia": 959000,
+   "nhom": "Wine"
+  },
+  {
+   "ma": "K5-093",
+   "ten": "Huda Bottle",
+   "gia": 59000,
+   "nhom": "Beer"
+  },
+  {
+   "ma": "K5-094",
+   "ten": "Tiger Bottle",
+   "gia": 69000,
+   "nhom": "Beer"
+  },
+  {
+   "ma": "K5-095",
+   "ten": "Blanc 1664",
+   "gia": 79000,
+   "nhom": "Beer"
+  },
+  {
+   "ma": "K5-096",
+   "ten": "Corona Bottle",
+   "gia": 79000,
+   "nhom": "Beer"
+  }
+ ]
+}

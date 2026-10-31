@@ -1,0 +1,24 @@
+body[data-preorder]{--po:#d84cff;--po-rgb:216,76,255}
+body[data-preorder] .apply-submit{background:linear-gradient(135deg,#d84cff,#8a3dff)!important;color:#fff!important}
+body[data-preorder] .ios-btn--tinted{color:var(--po)}
+.po-honey{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+.po-check{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.35;padding:4px 2px;color:inherit}
+.po-check input{width:22px;height:22px;accent-color:var(--po);flex:none;margin-top:1px}
+.po-menu{display:flex;flex-direction:column;gap:10px}
+.po-group{background:rgba(255,255,255,.06);border-radius:14px;overflow:hidden;border:1px solid rgba(var(--po-rgb),.25)}
+.po-group summary{list-style:none;cursor:pointer;padding:13px 16px;font-weight:600;font-size:16px;display:flex;justify-content:space-between;color:var(--po)}
+.po-group summary::-webkit-details-marker{display:none}
+.po-group summary small{opacity:.7;font-weight:400;color:#bbb}
+.po-item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 16px;border-top:1px solid rgba(255,255,255,.07)}
+.po-item.is-picked{background:rgba(var(--po-rgb),.12)}
+.po-item-meta{display:flex;flex-direction:column;min-width:0}
+.po-item-meta b{font-weight:500;font-size:15px}
+.po-item-meta span{font-size:13px;opacity:.65}
+.po-stepper{display:flex;align-items:center;gap:6px;flex:none}
+.po-stepper button{width:32px;height:32px;border-radius:50%;border:0;background:rgba(var(--po-rgb),.2);color:var(--po);font-size:20px;line-height:1;font-weight:600}
+.po-stepper button:active{transform:scale(.9)}
+.po-stepper output{min-width:22px;text-align:center;font-variant-numeric:tabular-nums}
+.po-total{margin:12px 2px 0;font-weight:600;color:var(--po)}
+.po-loading{opacity:.7;padding:8px 2px}
+.k5-preorder-btn{display:flex;align-items:center;justify-content:center;gap:8px;margin:12px 16px;padding:14px;border-radius:14px;background:linear-gradient(135deg,#d84cff,#8a3dff);color:#fff!important;font-weight:600;font-size:17px;text-decoration:none;box-shadow:0 6px 20px rgba(216,76,255,.35)}
+.k5-preorder-btn:active{transform:scale(.97)}
