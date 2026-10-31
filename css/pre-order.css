@@ -22,3 +22,14 @@ body[data-preorder] .ios-btn--tinted{color:var(--po)}
 .po-loading{opacity:.7;padding:8px 2px}
 .k5-preorder-btn{display:flex;align-items:center;justify-content:center;gap:8px;margin:12px 16px;padding:14px;border-radius:14px;background:linear-gradient(135deg,#d84cff,#8a3dff);color:#fff!important;font-weight:600;font-size:17px;text-decoration:none;box-shadow:0 6px 20px rgba(216,76,255,.35)}
 .k5-preorder-btn:active{transform:scale(.97)}
+
+.po-promo{margin:0 0 14px;padding:14px;border-radius:16px;background:linear-gradient(160deg,rgba(216,76,255,.22),rgba(138,61,255,.14));border:1px solid rgba(var(--po-rgb),.55);opacity:1!important}
+.po-promo-title{margin:0 0 8px;font-weight:800;font-size:15px;letter-spacing:.02em;line-height:1.3;color:#fff}
+.po-promo-sub{margin:0 0 10px;font-weight:700;font-size:14px;color:var(--po)}
+.po-gifts{display:flex;flex-direction:column;border-radius:12px;overflow:hidden;background:rgba(0,0,0,.25)}
+.po-gifts .po-item:first-child{border-top:0}
+.po-old{text-decoration:line-through;opacity:.6;margin-right:6px}
+.po-free{color:#7dff9a;font-weight:700}
+.po-gifts.is-locked .po-stepper button[data-g="1"]{opacity:.35}
+.po-gift-count{margin:10px 2px 0;font-weight:600}
+.po-gift-hint{margin:4px 2px 0;font-size:13px;opacity:.75}

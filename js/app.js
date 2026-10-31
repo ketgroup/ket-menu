@@ -44,6 +44,13 @@
         priceHtml +
         "</div>" +
         '<span class="venue-row-chevron" aria-hidden="true">›</span></a>';
+      if (id === "k5") {
+        html +=
+          '<a class="home-preorder" href="pre-order-k5.html">' +
+          '<span class="home-preorder-icon" aria-hidden="true">🍸</span>' +
+          '<span class="home-preorder-text"><b>Pre-order K5</b><span>Đặt món trước · Mua 1 cocktail tặng 1 món</span></span>' +
+          '<span class="home-preorder-chevron" aria-hidden="true">›</span></a>';
+      }
     });
     root.innerHTML = html;
   }

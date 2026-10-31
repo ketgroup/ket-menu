@@ -3,7 +3,7 @@
   // Nối app Kết: đặt URL vào đây. Lỗi mạng/404/khác 2xx => dự phòng FormSubmit.
   var PREORDER_ENDPOINT = "https://ket-app.vercel.app/api/pre-order";
   var MENU_ENDPOINT = "https://ket-app.vercel.app/api/menu?quan=K5";
-  var MENU_FALLBACK = "data/menu-k5.json?v=20261031a";
+  var MENU_FALLBACK = "data/menu-k5.json?v=20261031c";
   var THANKS = "pre-order-k5-thanh-cong.html";
 
   var form = document.getElementById("po-form");
@@ -11,6 +11,49 @@
   var box = document.getElementById("po_menu"), totalEl = document.getElementById("po_total");
   var btn = document.getElementById("po_submit");
   var menu = [], qty = {};
+  // Món tặng: mua 1 cocktail/mocktail tặng 1 món. Giá gốc lấy từ menu K5 theo mã (null = menu chưa có giá).
+  var GIFTS = [
+    { key: "wine", ten: "Wine", ma: "K5-077", nhan: "ly Vieux Papes Brut" },
+    { key: "coconut", ten: "Coconut", ma: "K5-040" },
+    { key: "soft", ten: "Soft Drink", ma: null },
+    { key: "beer", ten: "Beer", ma: "K5-093", nhan: "Huda" },
+    { key: "water", ten: "3 Bottles of Water", ma: null, x: 3 }
+  ];
+  var gq = {};
+  var COCKTAIL_GROUPS = /cocktail|non-alcoholic|mocktail/i;
+  var giftBox = document.getElementById("po_gifts"), giftCount = document.getElementById("po_gift_count"), giftHint = document.getElementById("po_gift_hint");
+  function giftPrice(g) {
+    if (!g.ma) return null;
+    var m = menu.filter(function (x) { return x.ma === g.ma; })[0];
+    return m && m.gia != null ? m.gia * (g.x || 1) : null;
+  }
+  function cocktailQty() { var n = 0; menu.forEach(function (m) { if (COCKTAIL_GROUPS.test(m.nhom)) n += qty[m.ma] || 0; }); return n; }
+  function giftTotal() { var n = 0; GIFTS.forEach(function (g) { n += gq[g.key] || 0; }); return n; }
+  function renderGifts() {
+    giftBox.innerHTML = GIFTS.map(function (g) {
+      var p = giftPrice(g);
+      return '<div class="po-item" data-g-key="' + g.key + '"><div class="po-item-meta"><b>' + esc(g.ten) + '</b><span>' + (p != null ? '<s class="po-old">' + money(p) + '</s>' : '') + '<span class="po-free">0đ</span></span></div>' +
+        '<div class="po-stepper"><button type="button" data-g="-1" aria-label="Bớt">−</button><output>0</output><button type="button" data-g="1" aria-label="Thêm">+</button></div></div>';
+    }).join("");
+  }
+  function syncGifts() {
+    var max = cocktailQty(), t = giftTotal();
+    for (var i = GIFTS.length - 1; i >= 0 && t > max; i--) { var k = GIFTS[i].key; while ((gq[k] || 0) > 0 && t > max) { gq[k]--; t--; } }
+    GIFTS.forEach(function (g) { var row = giftBox.querySelector('[data-g-key="' + g.key + '"]'); if (!row) return; row.querySelector("output").textContent = gq[g.key] || 0; row.classList.toggle("is-picked", (gq[g.key] || 0) > 0); });
+    giftBox.classList.toggle("is-locked", t >= max);
+    giftBox.querySelectorAll('button[data-g="1"]').forEach(function (b) { b.disabled = t >= max; });
+    giftCount.textContent = "Đã chọn " + t + "/" + max + " món tặng";
+    giftHint.textContent = max ? (t < max ? "Bạn còn " + (max - t) + " món tặng có thể chọn." : "Đã đủ số món tặng.") : "Chọn cocktail hoặc mocktail bên dưới để mở món tặng.";
+  }
+  giftBox.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-g]"); if (!b || b.disabled) return;
+    var k = b.closest(".po-item").getAttribute("data-g-key"), d = Number(b.getAttribute("data-g"));
+    if (d > 0 && giftTotal() >= cocktailQty()) return;
+    gq[k] = Math.max(0, (gq[k] || 0) + d); syncGifts();
+  });
+  function giftData() {
+    return GIFTS.filter(function (g) { return gq[g.key] > 0; }).map(function (g) { return { ten: g.ten, so_luong: gq[g.key], gia_goc: giftPrice(g), gia: 0 }; });
+  }
 
   function money(n) { return n == null ? "" : n.toLocaleString("vi-VN").replace(/,/g, ".") + "đ"; }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
@@ -47,11 +90,11 @@
     var b = e.target.closest("button[data-d]"); if (!b) return;
     var row = b.closest(".po-item"), ma = row.getAttribute("data-ma");
     var q = Math.max(0, Math.min(99, (qty[ma] || 0) + Number(b.getAttribute("data-d"))));
-    qty[ma] = q; row.querySelector("output").textContent = q; row.classList.toggle("is-picked", q > 0); updateTotal();
+    qty[ma] = q; row.querySelector("output").textContent = q; row.classList.toggle("is-picked", q > 0); updateTotal(); syncGifts();
   });
   getJSON(MENU_ENDPOINT).then(norm).then(function (m) { if (!m.length) throw 0; return m; })
     .catch(function () { return getJSON(MENU_FALLBACK).then(norm); })
-    .then(function (m) { menu = m; render(); updateTotal(); })
+    .then(function (m) { menu = m; render(); renderGifts(); updateTotal(); syncGifts(); })
     .catch(function () { box.innerHTML = '<p class="po-loading">Không tải được menu, bạn ghi món vào ô Ghi chú nhé.</p>'; });
 
   function val(id) { return (document.getElementById(id).value || "").trim(); }
@@ -69,6 +112,7 @@
     add("Mã đơn", data.id); add("Quán", "K5"); add("Tên khách", data.ten); add("SĐT", data.sdt); add("Email", data.email || "");
     add("Đồng ý nhận KM", data.dong_y_km ? "Có" : "Không"); add("Ngày giờ đến", data.ngay_gio_den); add("Số người", data.so_nguoi);
     add("Món", data.mon.map(function (m) { return m.so_luong + " × " + m.ten + " [" + m.ma + "]" + (m.gia != null ? " (" + money(m.gia) + ")" : ""); }).join("\n") || "(chưa chọn)");
+    add("Món tặng", data.mon_tang.map(function (g) { return g.so_luong + " × " + g.ten + " (tặng, giá gốc " + (g.gia_goc != null ? money(g.gia_goc) : "chưa có") + " → 0đ)"; }).join("\n") || "(không)");
     add("Ghi chú", data.ghi_chu); add("JSON", JSON.stringify(data));
     form.submit();
   }
@@ -86,6 +130,7 @@
       id: makeId(), tao_luc: new Date().toISOString(), quan: "K5", ten: ten, sdt: sdt, email: email,
       dong_y_km: document.getElementById("po_km").checked, ngay_gio_den: den, so_nguoi: nguoi,
       mon: menu.filter(function (m) { return qty[m.ma] > 0; }).map(function (m) { return { ma: m.ma, ten: m.ten, so_luong: qty[m.ma], gia: m.gia }; }),
+      mon_tang: giftData(),
       ghi_chu: val("po_ghichu")
     };
     btn.disabled = true; btn.textContent = "Đang gửi…";
