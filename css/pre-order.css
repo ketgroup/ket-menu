@@ -50,3 +50,9 @@ body[data-preorder] .ios-btn--tinted{color:var(--po)}
 .po-step.is-locked .po-promo{opacity:.45!important;filter:grayscale(.6)}
 .po-step.is-locked .po-step-no{background:#555}
 .po-stepper button:disabled{opacity:.3}
+
+/* iOS Safari: canh giữa dọc ô Ngày đến / Giờ đến, cao bằng ô Số người */
+#po_ngay,#po_gio,#po_nguoi{height:52px;min-height:52px;line-height:50px;padding-top:0;padding-bottom:0}
+#po_ngay,#po_gio{-webkit-appearance:none;appearance:none;box-sizing:border-box;display:flex;align-items:center}
+#po_ngay::-webkit-date-and-time-value,#po_gio::-webkit-date-and-time-value{text-align:left;margin:0;line-height:inherit;min-height:1.2em}
+#po_ngay::-webkit-datetime-edit,#po_gio::-webkit-datetime-edit{padding:0}
