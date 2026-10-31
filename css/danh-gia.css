@@ -45,3 +45,10 @@
 @keyframes dg-down { to { transform: translateY(100%); } }
 @keyframes dg-pop { from { transform: scale(.7); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .review-row, .review-row::before, .review-btn::after, .qr-panel, .qr-img, .qr-backdrop { animation: none !important; } }
+
+.review-btns { gap: 6px; align-items: center; }
+.review-btn { text-decoration: none; }
+.review-qr { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; padding: 0; border: 1px solid rgba(var(--rgb),.45); border-radius: 10px; background: rgba(var(--rgb),.12); color: var(--c); cursor: pointer; }
+.review-qr svg { width: 18px; height: 18px; }
+.review-qr:active { transform: scale(.9); }
+.review-btns .review-qr + .review-btn { margin-left: 4px; }
