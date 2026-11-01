@@ -13,7 +13,7 @@
   var box = document.getElementById("po_menu"), totalEl = document.getElementById("po_total");
   var btn = document.getElementById("po_submit");
   var menu = [], qty = {}, fromApi = false;
-  // Món tặng: mua 1 cocktail/mocktail tặng 1 món. Giá gốc lấy từ menu K5 theo mã (null = menu chưa có giá).
+  // Món tặng: mua 1 cocktail (Signature/Classic) tặng 1 món. Giá gốc lấy từ menu K5 theo mã (null = menu chưa có giá).
   // ma = mã món trong API (chỉ map khi chắc chắn). Món chưa có ma ghi vào ghi_chu.
   // Giá gốc đặt cứng ở đây cho dễ sửa (null = chưa có giá, chỉ hiện 0đ).
   // Wine: app nói CSB (Citra Spumante Bianco) hoặc SW (Vieux Papes Brut), CHƯA CHỐT -> null = ghi vào ghi_chu.
@@ -145,10 +145,10 @@
       if (w === 3 || w === 5) h += '<option value="' + iso(d) + '">' + (w === 3 ? "Thứ 4" : "Thứ 6") + ", " + pad(d.getUTCDate()) + "/" + pad(d.getUTCMonth() + 1) + "/" + d.getUTCFullYear() + (i === 0 ? " (hôm nay)" : "") + "</option>"; }
     sel.innerHTML = h;
   })();
-  // Cảnh báo đặt sau 12:00 trưa (giờ VN) cho chính hôm nay
+  // Cảnh báo đặt sau 16:00 chiều (giờ VN) cho chính hôm nay
   function vnHour() { return new Date(Date.now() + 7 * 3600e3).getUTCHours(); }
   function checkLate() { var v = document.getElementById("po_ngay").value, w = document.getElementById("po_ngay_warn");
-    if (w) w.hidden = !(v && v === iso(vnToday()) && vnHour() >= 12); }
+    if (w) w.hidden = !(v && v === iso(vnToday()) && vnHour() >= 16); }
   document.getElementById("po_ngay").addEventListener("change", checkLate); checkLate();
   function val(id) { return (document.getElementById(id).value || "").trim(); }
   function pad(n) { return (n < 10 ? "0" : "") + n; }
