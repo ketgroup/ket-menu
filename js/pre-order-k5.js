@@ -167,12 +167,12 @@
     if (!ten) return fail("po_ten", "Vui lòng nhập tên.");
     if (!sdt) return fail("po_sdt", "Số điện thoại chưa đúng (VD 0896789768).");
     if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return fail("po_email", "Email chưa đúng.");
-    if (!val("po_ngay") || !okDay(val("po_ngay"))) return fail("po_ngay", "Pre-order chỉ nhận ngày thứ 4 hoặc thứ 6 (sự kiện Latin Dance) từ hôm nay.");
+    if (!val("po_ngay") || !okDay(val("po_ngay"))) return fail("po_ngay", "Pre-order chỉ nhận ngày thứ 4 hoặc thứ 6 (sự kiện KET FAI Social Dance Night) từ hôm nay.");
     if (!val("po_gio")) return fail("po_gio", "Vui lòng chọn giờ đến.");
     if (!(nguoi >= 1)) return fail("po_nguoi", "Số người tối thiểu là 1.");
     var data = {
       id: makeId(), tao_luc: new Date().toISOString(), quan: "K5", ten: ten, sdt: sdt, email: email,
-      su_kien: "Latin Dance", ngay_gio_den: den, so_nguoi: nguoi,
+      su_kien: "KET FAI Social Dance Night", ngay_gio_den: den, so_nguoi: nguoi,
       mon: menu.filter(function (m) { return qty[m.ma] > 0; }).map(function (m) { return { ma: m.ma, ten: m.ten, so_luong: qty[m.ma], gia: m.gia, buoc: COCKTAIL_GROUPS.test(m.nhom) ? 1 : 3 }; }),
       mon_tang: giftData(),
       ghi_chu: val("po_ghichu")
@@ -183,7 +183,7 @@
     var tangMa = data.mon_tang.filter(function (g) { return g.ma && menu.some(function (m) { return m.ma === g.ma; }); }).slice(0, 10);
     var tang = data.mon_tang.filter(function (g) { return tangMa.indexOf(g) < 0; }).map(function (g) { return g.so_luong + " × " + g.ten; }).join(", ");
     var tom = function (b) { return data.mon.filter(function (m) { return m.buoc === b; }).map(function (m) { return m.so_luong + "×" + m.ten; }).join(", ") || "-"; };
-    var tomTat = "Latin Dance | B1 Cocktail: " + tom(1) + " | B2 Free: " + (data.mon_tang.map(function (g) { return g.so_luong + "×" + g.ten; }).join(", ") || "-") + " | B3 Khác: " + tom(3);
+    var tomTat = "KET FAI Social Dance Night | B1 Cocktail: " + tom(1) + " | B2 Free: " + (data.mon_tang.map(function (g) { return g.so_luong + "×" + g.ten; }).join(", ") || "-") + " | B3 Khác: " + tom(3);
     var api = { quan: "K5", ten_khach: ten.slice(0, 80), email: email, dong_y_nhan_tin: false, sdt: sdt,
       ngay_den: val("po_ngay"), gio_den: val("po_gio"), so_khach: Math.min(50, nguoi),
       mon: data.mon.slice(0, 40).map(function (m) { return { ma: m.ma, so_luong: m.so_luong, buoc: m.buoc }; }).concat(tangMa.map(function (g) { return { ma: g.ma, so_luong: g.so_luong, tang: true, buoc: 2 }; })),
