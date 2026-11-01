@@ -46,3 +46,4 @@
 @keyframes dg-pop { from { transform: scale(.7); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .review-row, .review-row::before, .review-btn::after, .qr-panel, .qr-img, .qr-backdrop { animation: none !important; } }
 .page-home main .inset-group { padding: 0; margin-top: 28px; } .page-home main .inset-group + .home-section-title { margin-top: 28px; }
+.about-review .inset-group { padding: 0 16px; margin: 28px 0; }
