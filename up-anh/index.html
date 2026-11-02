@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"><title>Kết · Up ảnh món</title><link rel="icon" href="../img/logos/favicon.png?v=20261103d"><link rel="apple-touch-icon" href="../img/logos/apple-touch-icon.png?v=20261103d">
+<html lang="vi"><head><meta charset="utf-8"><title>Kết · Up ảnh món</title><link rel="icon" href="../img/logos/favicon.png?v=20261103e"><link rel="apple-touch-icon" href="../img/logos/apple-touch-icon.png?v=20261103e">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>(function(){var t=localStorage.getItem("ketTheme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t})()</script>
@@ -47,7 +47,7 @@ html[data-theme=dark] .row.hot{animation-name:hotd}
 .theme{border:0;background:none;font-size:20px;padding:4px 6px;cursor:pointer}
 </style></head><body>
 <header>
- <div class="top"><img src="../img/logos/ket-logo-mau.png?v=20261103d" alt="Kết"><div><h1>Ảnh món e-menu</h1><div class="sub" id="sub">Đang tải menu…</div></div><button class="who" id="who"></button><button class="theme" id="theme" aria-label="Sáng/Tối"></button></div>
+ <div class="top"><img src="../img/logos/ket-logo-mau.png?v=20261103e" alt="Kết"><div><h1>Ảnh món e-menu</h1><div class="sub" id="sub">Đang tải menu…</div></div><button class="who" id="who"></button><button class="theme" id="theme" aria-label="Sáng/Tối"></button></div>
  <div class="seg" id="quan"></div>
  <div class="seg f" id="loc"><button data-v="thieu" class="on">Chưa có hình</button><button data-v="co">Có hình rồi</button><button data-v="all">Tất cả</button></div>
  <input class="search" id="q" placeholder="Tìm món…" type="search">
@@ -70,7 +70,7 @@ function jget(u){return fetch(u,{cache:'no-store'}).then(function(r){return r.js
 function list(){return jget(API+'?api=list&k='+encodeURIComponent(tok())+'&t='+Date.now()).then(function(x){if(!x||!x.ok||!x.photos)throw 0;SRV=true;return x}).catch(function(){SRV=false;return {photos:{K1:{},K2:{},K5:{},K9:{}},hot:{}}})}
 var MENU=null;
 function run(fn){var a=[].slice.call(arguments,1);
- if(fn==='getData')return Promise.all([MENU?Promise.resolve(MENU):jget('../data/emenu/menu.json?v=20261103d').then(function(m){return MENU=m}),list()]).then(function(r){if(!SRV)toast(tok()?'Chưa kết nối được máy chủ ảnh (mã sai hoặc đang cập nhật)':'Chưa có mã up ảnh – mở link quản lý gửi hoặc bấm «Chụp / chọn» để nhập mã',6000);return merge({menu:JSON.parse(JSON.stringify(r[0])),photos:r[1].photos,hot:r[1].hot})});
+ if(fn==='getData')return Promise.all([MENU?Promise.resolve(MENU):jget('../data/emenu/menu.json?v=20261103e').then(function(m){return MENU=m}),list()]).then(function(r){if(!SRV)toast(tok()?'Chưa kết nối được máy chủ ảnh (mã sai hoặc đang cập nhật)':'Chưa có mã up ảnh – mở link quản lý gửi hoặc bấm «Chụp / chọn» để nhập mã',6000);return merge({menu:JSON.parse(JSON.stringify(r[0])),photos:r[1].photos,hot:r[1].hot})});
  if(fn==='getThumbs')return SRV?jget(API+'?api=thumbs&k='+encodeURIComponent(tok())+'&ids='+a[0].join(',')).then(function(x){return (x&&x.thumbs)||{}}).catch(function(){return {}}):Promise.resolve({});
  if(fn==='uploadPhoto'){var q=a[0],ma=a[1];if(q==='ALL'){q=ma.split('~')[0];ma=ma.split('~')[1]}if(!tok()&&!askTok())return Promise.reject(new Error('Chưa có mã up ảnh'));
   return fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({k:tok(),src:location.origin,quan:q,ma:ma,data:a[3],nguoi:a[4]})}).then(function(r){return r.json()}).catch(function(){return null})
@@ -88,7 +88,7 @@ document.addEventListener('click',function(e){var b=e.target.closest('.seg butto
 $('#q').oninput=function(){render();loadThumbs()};
 function render(){var q=$('#q').value.trim().toLowerCase(),items=D.menu[Q],ph=D.photos[Q],hot=(D.hot||{})[Q]||{};
  var co=items.filter(function(i){return ph[i.ma]}).length;$('#pbar').style.width=(100*co/items.length)+'%';$('#ptxt').textContent=co+'/'+items.length+' món có hình';
- $('#sub').textContent=Q+' · '+items.length+' món · thiếu '+(items.length-co);
+ $('#sub').textContent=(Q==='ALL'?'Tất cả 4 quán':Q)+' · '+items.length+' món · thiếu '+(items.length-co);
  var g={},order=[];items.forEach(function(i){var has=!!ph[i.ma];if(LOC==='thieu'&&has||LOC==='co'&&!has)return;if(q&&(i.ten+' '+i.nhom).toLowerCase().indexOf(q)<0)return;if(!g[i.nhom]){g[i.nhom]=[];order.push(i.nhom)}g[i.nhom].push(i)});
  order.sort(function(a,b){return g[b].some(function(i){return hot[i.ma]})-g[a].some(function(i){return hot[i.ma]})});
  $('#main').innerHTML=order.length?order.map(function(n){return '<div class="grp">'+esc(n)+' · '+g[n].length+'</div><div class="list">'+g[n].map(function(i){var p=ph[i.ma],h=hot[i.ma];
