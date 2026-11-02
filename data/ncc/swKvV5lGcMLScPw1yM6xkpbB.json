@@ -1,21 +1,5 @@
 {
  "ncc": "Vinamilk",
  "ma_ncc": "vinamilk",
- "items": [
-  {
-   "ma": "DC-039",
-   "ten": "Sữa tươi không đường",
-   "quy_cach": "hộp/lốc (ghi dung tích)"
-  },
-  {
-   "ma": "DC-053",
-   "ten": "Dalat milk",
-   "quy_cach": "hộp/lốc (ghi dung tích)"
-  },
-  {
-   "ma": "DC-055",
-   "ten": "sữa đặc",
-   "quy_cach": "hộp/lốc (ghi dung tích)"
-  }
- ]
+ "items": []
 }

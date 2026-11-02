@@ -13,16 +13,6 @@
    "chua_chac": ""
   },
   {
-   "ma": "TU-017",
-   "ten": "Nước dừa (Coconut Water)",
-   "quy_cach": "kg (hoặc trái)",
-   "gia": 34000,
-   "dv": "lon",
-   "ngay": "31/10",
-   "nguon": "HĐ ảnh Zalo",
-   "chua_chac": ""
-  },
-  {
    "ma": "DC-018",
    "ten": "Bơ trái",
    "quy_cach": "kg (hoặc trái)",
@@ -63,16 +53,6 @@
    "chua_chac": ""
   },
   {
-   "ma": "DC-085",
-   "ten": "nước dừa",
-   "quy_cach": "kg (hoặc trái)",
-   "gia": 34000,
-   "dv": "lon",
-   "ngay": "31/10",
-   "nguon": "HĐ ảnh Zalo",
-   "chua_chac": ""
-  },
-  {
    "ma": "DC-094",
    "ten": "Chanh vàng",
    "quy_cach": "kg (hoặc trái)",
@@ -94,23 +74,13 @@
   },
   {
    "ma": "TU-002",
-   "ten": "Coconut Cream",
+   "ten": "Cốt dừa lon (Coconut Cream)",
    "quy_cach": "kg (hoặc trái)",
    "gia": 33000,
    "dv": "lon",
    "ngay": "02/11",
    "nguon": "HĐ ảnh Zalo (ghi «Cốt dừa»)",
    "chua_chac": "HĐ ghi cốt dừa, chưa chắc là coconut cream"
-  },
-  {
-   "ma": "DC-069",
-   "ten": "cốt dừa lon",
-   "quy_cach": "kg (hoặc trái)",
-   "gia": 33000,
-   "dv": "lon",
-   "ngay": "02/11",
-   "nguon": "HĐ ảnh Zalo",
-   "chua_chac": ""
   },
   {
    "ma": "DC-100",
@@ -160,7 +130,7 @@
    "dv": "kg",
    "ngay": "02/11",
    "nguon": "HĐ ảnh Zalo",
-   "chua_chac": "đọc không chắc; 25/10 ghi 24.000/kg"
+   "chua_chac": "gộp «Đường» DC-027 (25.000đ 22/10); giữ giá mới 02/11"
   },
   {
    "ma": "DC-013",
@@ -183,16 +153,6 @@
    "chua_chac": ""
   },
   {
-   "ma": "DC-027",
-   "ten": "Đường",
-   "quy_cach": "kg (hoặc trái)",
-   "gia": 25000,
-   "dv": "kg",
-   "ngay": "22/10",
-   "nguon": "HĐ ảnh Zalo",
-   "chua_chac": ""
-  },
-  {
    "ma": "DC-076",
    "ten": "Cần tây",
    "quy_cach": "kg (hoặc trái)",
@@ -211,16 +171,6 @@
    "ngay": "02/11",
    "nguon": "HĐ ảnh Zalo",
    "chua_chac": "SL đọc không chắc; 29/10 ghi 200.000/kg"
-  },
-  {
-   "ma": "DC-055",
-   "ten": "sữa đặc",
-   "quy_cach": "kg (hoặc trái)",
-   "gia": 70000,
-   "dv": "hộp",
-   "ngay": "23/10",
-   "nguon": "HĐ ảnh Zalo",
-   "chua_chac": ""
   },
   {
    "ma": "DC-073",

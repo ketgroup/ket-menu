@@ -123,38 +123,8 @@
    "chua_chac": ""
   },
   {
-   "ma": "DC-063",
-   "ten": "syrup hạnh nhân",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)",
-   "gia": 210000,
-   "dv": "chai 700ml",
-   "ngay": "02/11",
-   "nguon": "Monin đồng giá (Cloud Mart, sếp báo; đã gồm VAT 8%)",
-   "chua_chac": ""
-  },
-  {
-   "ma": "DC-131",
-   "ten": "Syrup popcorn Monin",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)",
-   "gia": 210000,
-   "dv": "chai 700ml",
-   "ngay": "02/11",
-   "nguon": "Monin đồng giá (Cloud Mart, sếp báo; đã gồm VAT 8%)",
-   "chua_chac": ""
-  },
-  {
    "ma": "DC-133",
    "ten": "Syrup green apple Monin",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)",
-   "gia": 210000,
-   "dv": "chai 700ml",
-   "ngay": "02/11",
-   "nguon": "Monin đồng giá (Cloud Mart, sếp báo; đã gồm VAT 8%)",
-   "chua_chac": ""
-  },
-  {
-   "ma": "DC-136",
-   "ten": "Syrup elderflower",
    "quy_cach": "chai (ghi dung tích, hãng Monin/khác)",
    "gia": 210000,
    "dv": "chai 700ml",
@@ -171,101 +141,6 @@
    "ngay": "02/11",
    "nguon": "Monin đồng giá (Cloud Mart, sếp báo; đã gồm VAT 8%)",
    "chua_chac": ""
-  },
-  {
-   "ma": "DC-056",
-   "ten": "rich",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-053",
-   "ten": "Dalat milk",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-054",
-   "ten": "Oatside",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-057",
-   "ten": "bột matcha Ami",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-058",
-   "ten": "chunky ổi hồng",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-059",
-   "ten": "bodua ổi hồng",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-060",
-   "ten": "chunky dâu",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-061",
-   "ten": "trà lài",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-065",
-   "ten": "cacao heshey",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-066",
-   "ten": "bột frappe",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-067",
-   "ten": "bột salt vanila",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-068",
-   "ten": "sốt chôclate",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-070",
-   "ten": "hạt granola",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-071",
-   "ten": "cafe hạt arabica",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-072",
-   "ten": "cafe bột robusta",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-082",
-   "ten": "cacao nguyên chất",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-114",
-   "ten": "Kem béo sữa dừa nhất hương",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-119",
-   "ten": "Bột khoai môn",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
-  },
-  {
-   "ma": "DC-172",
-   "ten": "chunky yuzu(bưởi)",
-   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
   }
  ]
 }

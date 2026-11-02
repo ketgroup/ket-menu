@@ -113,18 +113,8 @@
    "quy_cach": "cái/gói/hộp/chai"
   },
   {
-   "ma": "DC-140",
-   "ten": "Ống hút",
-   "quy_cach": "cái/gói/hộp/chai"
-  },
-  {
    "ma": "DC-141",
    "ten": "Túi zip",
-   "quy_cach": "cái/gói/hộp/chai"
-  },
-  {
-   "ma": "DC-142",
-   "ten": "Bao rác",
    "quy_cach": "cái/gói/hộp/chai"
   },
   {
@@ -140,11 +130,6 @@
   {
    "ma": "DC-145",
    "ten": "Giấy ăn",
-   "quy_cach": "cái/gói/hộp/chai"
-  },
-  {
-   "ma": "DC-146",
-   "ten": "Giấy vệ sinh",
    "quy_cach": "cái/gói/hộp/chai"
   },
   {
@@ -193,11 +178,6 @@
    "quy_cach": "cái/gói/hộp/chai"
   },
   {
-   "ma": "DC-156",
-   "ten": "Nước rửa chén",
-   "quy_cach": "cái/gói/hộp/chai"
-  },
-  {
    "ma": "DC-157",
    "ten": "Nước lau kính",
    "quy_cach": "cái/gói/hộp/chai"
@@ -218,16 +198,6 @@
    "quy_cach": "cái/gói/hộp/chai"
   },
   {
-   "ma": "DC-161",
-   "ten": "Cây lau nhà",
-   "quy_cach": "cái/gói/hộp/chai"
-  },
-  {
-   "ma": "DC-162",
-   "ten": "Cây chổi",
-   "quy_cach": "cái/gói/hộp/chai"
-  },
-  {
    "ma": "DC-163",
    "ten": "Bẫy chuột",
    "quy_cach": "cái/gói/hộp/chai"
@@ -235,11 +205,6 @@
   {
    "ma": "DC-164",
    "ten": "Bàn chải đánh răng",
-   "quy_cach": "cái/gói/hộp/chai"
-  },
-  {
-   "ma": "DC-165",
-   "ten": "Băng vệ sinh",
    "quy_cach": "cái/gói/hộp/chai"
   },
   {
@@ -276,6 +241,64 @@
    "ma": "DC-172",
    "ten": "chunky yuzu(bưởi)",
    "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-039",
+   "ten": "Sữa tươi không đường",
+   "quy_cach": "hộp/lốc (ghi dung tích)"
+  },
+  {
+   "ma": "DC-053",
+   "ten": "Dalat milk",
+   "quy_cach": "hộp/lốc (ghi dung tích)"
+  },
+  {
+   "ma": "DC-055",
+   "ten": "sữa đặc",
+   "quy_cach": "kg (hoặc trái)",
+   "gia": 70000,
+   "dv": "hộp",
+   "ngay": "23/10",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": ""
+  },
+  {
+   "ma": "TU-017",
+   "ten": "Nước dừa (Coconut Water)",
+   "quy_cach": "kg (hoặc trái)",
+   "gia": 34000,
+   "dv": "lon",
+   "ngay": "31/10",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": ""
+  },
+  {
+   "ma": "DC-106",
+   "ten": "Hoa hồng",
+   "quy_cach": "cây",
+   "gia": 10000,
+   "dv": "cây",
+   "ngay": "02/11",
+   "nguon": "Gia Bảo 16:51 nhóm Online/Chợ lẻ"
+  },
+  {
+   "ma": "DC-108",
+   "ten": "Hoa sen",
+   "quy_cach": "cây",
+   "gia": 15000,
+   "dv": "cây",
+   "ngay": "02/11",
+   "nguon": "Gia Bảo 16:51 nhóm Online/Chợ lẻ"
+  },
+  {
+   "ma": "",
+   "ten": "Lá dương xỉ",
+   "quy_cach": "bó",
+   "gia": 50000,
+   "dv": "bó",
+   "ngay": "02/11",
+   "nguon": "Gia Bảo 16:51 nhóm Online/Chợ lẻ",
+   "chua_chac": ""
   }
  ]
 }
