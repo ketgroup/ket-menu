@@ -82,10 +82,6 @@
   function visible(m) {
     if ((hasCT(m) ? "co" : "chua") !== sec) return false;
     if (quan !== "all" && m.q !== quan) return false;
-    var k = status(m);
-    if (filt === "todo" && k === "done") return false;
-    if (filt === "empty" && k !== "empty") return false;
-    if (filt === "done" && k !== "done") return false;
     return !q || norm(m.ten + " " + m.ma + " " + m.nhom).indexOf(q) >= 0;
   }
   function render() {
@@ -116,7 +112,6 @@
       touch(it, m);
     });
     $("ct-q").addEventListener("input", function () { q = norm(this.value.trim()); render(); });
-    $("ct-filter").addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; filt = b.dataset.f; [].forEach.call(this.children, function (c) { c.classList.toggle("on", c === b); }); render(); });
     $("ct-quan").addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; quan = b.dataset.q; [].forEach.call(this.children, function (c) { c.classList.toggle("on", c === b); }); render(); });
     $("ct-tabs").addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; sec = b.dataset.s; [].forEach.call(this.children, function (c) { c.classList.toggle("on", c === b); }); render(); });
     $("ct-name").addEventListener("input", save);
