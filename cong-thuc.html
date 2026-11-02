@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Công thức món – Kết Group</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="origin">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="img/logos/favicon.png">
+<link rel="apple-touch-icon" href="img/logos/apple-touch-icon.png">
+<link rel="stylesheet" href="css/app.css?v=20261102e">
+<link rel="stylesheet" href="css/ncc-gia.css?v=20261102e">
+<link rel="stylesheet" href="css/cong-thuc.css?v=20261102a">
+<script src="js/cong-thuc.js?v=20261102a" defer></script>
+</head>
+<body class="page-site page-static page-ncc page-ct">
+<header class="ios-nav"><div class="ios-nav-bar">
+<img class="ncc-logo" src="img/logos/apple-touch-icon.png" alt="Kết Group">
+<div class="ios-nav-title-group"><h1 class="ios-nav-title">Công thức món</h1></div>
+<span class="ios-nav-code" aria-hidden="true">KG</span>
+</div></header>
+<main class="apply-shell">
+<div id="ct-loading" class="apply-intro">Đang tải danh sách món…</div>
+<div id="ct-error" class="inset-card ncc-error" hidden><h2>Link không hợp lệ</h2><p>Link không đúng hoặc đã hết hạn. Liên hệ Kết Group.</p></div>
+<div id="ct-app" hidden>
+<div class="ncc-hero inset-card">
+<p class="ncc-kicker">Kết Group · Bảng công thức</p>
+<h2>Chào <span id="ct-who">Minh</span> 👋</h2>
+<p>Món nào Kết đã có định lượng thì đã <b>điền sẵn</b>, em kiểm tra và sửa nếu sai. Món «Chưa có» thì điền nguyên liệu + định lượng (ml/g) cho <b>1 ly/1 phần</b>. Bấm <b>Xong</b> rồi <b>Gửi món này</b>, hoặc cuối trang bấm <b>Gửi tất cả</b>. Trang tự lưu nháp trên máy này.</p>
+<p class="ncc-progress"><span id="ct-done">0</span>/<span id="ct-total">0</span> món đã xong · <span id="ct-sent">0</span> đã gửi</p>
+<div class="ct-bar"><i id="ct-barfill"></i></div>
+</div>
+<div class="ct-tools">
+<input id="ct-q" class="field-control" type="search" placeholder="🔍 Tìm món…" autocomplete="off">
+<div class="ct-chips" id="ct-quan"></div>
+<div class="ct-chips" id="ct-filter">
+<button type="button" data-f="all" class="on">Tất cả</button><button type="button" data-f="todo">Chưa xong</button><button type="button" data-f="empty">Chưa có CT</button><button type="button" data-f="done">Đã xong</button>
+</div>
+</div>
+<div id="ct-list"></div>
+<p id="ct-empty" class="apply-intro" hidden>Không thấy món nào.</p>
+<section class="form-section ct-send">
+<label class="field"><span class="field-label">Tên người điền *</span><input class="field-control" id="ct-name" autocomplete="name"></label>
+<p id="ct-msg" class="ncc-msg" role="alert"></p>
+<button type="button" class="apply-submit" id="ct-sendall">Gửi tất cả món đã sửa</button>
+<p class="ncc-foot">Công thức chỉ gửi riêng cho Kết Group, không công khai.</p>
+</section>
+</div>
+</main>
+<datalist id="ct-nl"></datalist>
+</body>
+</html>
