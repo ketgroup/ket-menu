@@ -1,0 +1,86 @@
+{
+ "ncc": "Syrup",
+ "ma_ncc": "syrup",
+ "items": [
+  {
+   "ma": "SY-003",
+   "ten": "Tiramisu",
+   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
+  },
+  {
+   "ma": "SY-004",
+   "ten": "Almon",
+   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
+  },
+  {
+   "ma": "SY-006",
+   "ten": "Caramel",
+   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
+  },
+  {
+   "ma": "SY-009",
+   "ten": "Elder flower",
+   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
+  },
+  {
+   "ma": "SY-013",
+   "ten": "Lemon",
+   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
+  },
+  {
+   "ma": "SY-015",
+   "ten": "Wartermelon",
+   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
+  },
+  {
+   "ma": "SY-017",
+   "ten": "Chocolate",
+   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
+  },
+  {
+   "ma": "SY-019",
+   "ten": "Popcorn",
+   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
+  },
+  {
+   "ma": "SY-020",
+   "ten": "Blood orange",
+   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
+  },
+  {
+   "ma": "SY-021",
+   "ten": "Kiwi",
+   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
+  },
+  {
+   "ma": "SY-022",
+   "ten": "Cherry Blossom",
+   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
+  },
+  {
+   "ma": "SY-024",
+   "ten": "Strawberry",
+   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
+  },
+  {
+   "ma": "DC-063",
+   "ten": "syrup hạnh nhân",
+   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
+  },
+  {
+   "ma": "DC-131",
+   "ten": "Syrup popcorn Monin",
+   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
+  },
+  {
+   "ma": "DC-133",
+   "ten": "Syrup green apple Monin",
+   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
+  },
+  {
+   "ma": "DC-136",
+   "ten": "Syrup elderflower",
+   "quy_cach": "chai (ghi dung tích, hãng Monin/khác)"
+  }
+ ]
+}

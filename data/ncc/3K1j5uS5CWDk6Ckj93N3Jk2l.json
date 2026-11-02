@@ -1,0 +1,96 @@
+{
+ "ncc": "Trái cây",
+ "ma_ncc": "trai-cay",
+ "items": [
+  {
+   "ma": "DC-010",
+   "ten": "Chanh xanh có hạt",
+   "quy_cach": "kg (hoặc trái)"
+  },
+  {
+   "ma": "TU-017",
+   "ten": "Nước dừa (Coconut Water)",
+   "quy_cach": "kg (hoặc trái)"
+  },
+  {
+   "ma": "DC-018",
+   "ten": "Bơ trái",
+   "quy_cach": "kg (hoặc trái)"
+  },
+  {
+   "ma": "DC-073",
+   "ten": "Xoài",
+   "quy_cach": "kg (hoặc trái)"
+  },
+  {
+   "ma": "DC-074",
+   "ten": "dâu",
+   "quy_cach": "kg (hoặc trái)"
+  },
+  {
+   "ma": "DC-075",
+   "ten": "Ổi",
+   "quy_cach": "kg (hoặc trái)"
+  },
+  {
+   "ma": "DC-077",
+   "ten": "táo xanh",
+   "quy_cach": "kg (hoặc trái)"
+  },
+  {
+   "ma": "DC-078",
+   "ten": "chuối",
+   "quy_cach": "kg (hoặc trái)"
+  },
+  {
+   "ma": "DC-079",
+   "ten": "Dừa trái",
+   "quy_cach": "kg (hoặc trái)"
+  },
+  {
+   "ma": "DC-080",
+   "ten": "tắc",
+   "quy_cach": "kg (hoặc trái)"
+  },
+  {
+   "ma": "DC-081",
+   "ten": "Cam xanh",
+   "quy_cach": "kg (hoặc trái)"
+  },
+  {
+   "ma": "DC-083",
+   "ten": "Cam vàng",
+   "quy_cach": "kg (hoặc trái)"
+  },
+  {
+   "ma": "DC-085",
+   "ten": "nước dừa",
+   "quy_cach": "kg (hoặc trái)"
+  },
+  {
+   "ma": "DC-094",
+   "ten": "Chanh vàng",
+   "quy_cach": "kg (hoặc trái)"
+  },
+  {
+   "ma": "DC-095",
+   "ten": "Chanh dây",
+   "quy_cach": "kg (hoặc trái)"
+  },
+  {
+   "ma": "DC-096",
+   "ten": "Dứa",
+   "quy_cach": "kg (hoặc trái)"
+  },
+  {
+   "ma": "DC-098",
+   "ten": "Dưa hấu",
+   "quy_cach": "kg (hoặc trái)"
+  },
+  {
+   "ma": "DC-099",
+   "ten": "Dưa lưới",
+   "quy_cach": "kg (hoặc trái)"
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "ncc": "Hoa",
+ "ma_ncc": "hoa",
+ "items": [
+  {
+   "ma": "DC-088",
+   "ten": "hoa",
+   "quy_cach": "hộp/bó"
+  },
+  {
+   "ma": "DC-106",
+   "ten": "Hoa hồng",
+   "quy_cach": "hộp/bó"
+  },
+  {
+   "ma": "DC-107",
+   "ten": "Hoa viola",
+   "quy_cach": "hộp/bó"
+  },
+  {
+   "ma": "DC-108",
+   "ten": "Hoa sen",
+   "quy_cach": "hộp/bó"
+  }
+ ]
+}

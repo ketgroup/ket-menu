@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Báo giá nguyên vật liệu – Kết Group</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="img/logos/favicon.png">
+<link rel="apple-touch-icon" href="img/logos/apple-touch-icon.png">
+<link rel="stylesheet" href="css/app.css?v=20261102c">
+<link rel="stylesheet" href="css/ncc-gia.css?v=20261102c">
+<script src="js/ncc-gia.js?v=20261102c" defer></script>
+</head>
+<body class="page-site page-static page-ncc">
+<header class="ios-nav">
+<div class="ios-nav-bar">
+<img class="ncc-logo" src="img/logos/apple-touch-icon.png" alt="Kết Group">
+<div class="ios-nav-title-group"><h1 class="ios-nav-title">Báo giá NVL</h1></div>
+<span class="ios-nav-code" aria-hidden="true">KG</span>
+</div>
+</header>
+<main class="apply-shell">
+<div id="ncc-loading" class="apply-intro">Đang tải danh sách món…</div>
+<div id="ncc-error" class="inset-card ncc-error" hidden><h2>Link không hợp lệ</h2><p>Link báo giá không đúng hoặc đã hết hạn. Anh/chị vui lòng liên hệ Kết Group qua số 089 6789768.</p></div>
+<form id="ncc-form" class="apply-form" action="https://formsubmit.co/ketcocktail@gmail.com" method="POST" enctype="multipart/form-data" hidden>
+<input type="hidden" name="_subject" id="f-subject" value="Báo giá NVL">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_next" value="https://ketgroup.github.io/ket-menu/ncc-gia-thanh-cong.html">
+<input type="hidden" name="nha_cung_cap" id="f-ncc">
+<input type="hidden" name="so_mon_da_bao_gia" id="f-count">
+<input type="hidden" name="thoi_gian" id="f-time">
+<textarea name="bang_gia_csv" id="f-csv" hidden></textarea>
+<input type="file" name="attachment" id="f-file" hidden>
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+<div class="ncc-hero inset-card">
+<p class="ncc-kicker">Kết Group · Bảng hỏi giá</p>
+<h2 id="ncc-name">Nhà cung cấp</h2>
+<p>Kết đang cập nhật bảng đơn giá nguyên vật liệu. Anh/chị điền giúp <b>đơn giá hiện tại</b> cho các món dưới đây (VNĐ, theo đơn vị bán). Món nào không có thì để trống và ghi «không có» ở ghi chú. Cảm ơn anh/chị!</p>
+<p class="ncc-progress"><span id="ncc-done">0</span>/<span id="ncc-total">0</span> món đã điền giá</p>
+</div>
+
+<section class="form-section">
+<h2 class="form-section-title">Các món cần báo giá</h2>
+<ol id="ncc-items" class="ncc-items"></ol>
+</section>
+
+<section class="form-section">
+<h2 class="form-section-title">Thông tin chung</h2>
+<div class="form-stack">
+<label class="field"><span class="field-label">VAT</span>
+<span class="field-select-wrap"><select class="field-control" name="vat" id="f-vat">
+<option value="">— Chọn —</option><option>Giá đã gồm VAT</option><option>Giá chưa gồm VAT</option><option>Không xuất hoá đơn VAT</option>
+</select></span></label>
+<label class="field"><span class="field-label">Tên người báo giá *</span><input class="field-control" name="nguoi_bao_gia" id="f-name" required autocomplete="name"></label>
+<label class="field"><span class="field-label">Số điện thoại</span><input class="field-control" name="sdt" id="f-phone" type="tel" inputmode="tel" autocomplete="tel"></label>
+<label class="field"><span class="field-label">Ghi chú chung</span><textarea class="field-control" name="ghi_chu_chung" rows="3" placeholder="Ví dụ: giá áp dụng đến hết tháng, phí giao hàng…"></textarea></label>
+</div>
+</section>
+<p id="ncc-msg" class="ncc-msg" role="alert"></p>
+<button type="submit" class="apply-submit" id="ncc-submit">Gửi báo giá cho Kết</button>
+<p class="ncc-foot">Giá chỉ gửi riêng cho Kết Group, không hiển thị công khai.</p>
+</form>
+</main>
+</body>
+</html>

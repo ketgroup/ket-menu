@@ -1,0 +1,46 @@
+{
+ "ncc": "Chợ – Snack",
+ "ma_ncc": "cho-snack",
+ "items": [
+  {
+   "ma": "DC-086",
+   "ten": "Snack",
+   "quy_cach": "gói/kg"
+  },
+  {
+   "ma": "DC-109",
+   "ten": "Hạt sen",
+   "quy_cach": "gói/kg"
+  },
+  {
+   "ma": "DC-111",
+   "ten": "Bò khô",
+   "quy_cach": "gói/kg"
+  },
+  {
+   "ma": "DC-112",
+   "ten": "Gà khô",
+   "quy_cach": "gói/kg"
+  },
+  {
+   "ma": "DC-113",
+   "ten": "Hươu khô",
+   "quy_cach": "gói/kg"
+  },
+  {
+   "ma": "DC-120",
+   "ten": "Bánh tráng nướng",
+   "quy_cach": "gói/kg"
+  },
+  {
+   "ma": "DC-121",
+   "ten": "Bánh tráng sữa",
+   "quy_cach": "gói/kg"
+  },
+  {
+   "ma": "DC-122",
+   "ten": "Kẹo bông gòn",
+   "quy_cach": "gói/kg"
+  }
+ ]
+}

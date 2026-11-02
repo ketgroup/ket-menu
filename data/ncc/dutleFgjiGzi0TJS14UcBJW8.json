@@ -1,0 +1,281 @@
+{
+ "ncc": "Online / Chợ lẻ",
+ "ma_ncc": "online-cho-le",
+ "items": [
+  {
+   "ma": "DC-056",
+   "ten": "rich",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-049",
+   "ten": "Hộp giấy mang về",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-050",
+   "ten": "Hộp nhựa sốt mang về",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-051",
+   "ten": "Hộp Pizza",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-052",
+   "ten": "Bao ni lông mang về",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-054",
+   "ten": "Oatside",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-057",
+   "ten": "bột matcha Ami",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-058",
+   "ten": "chunky ổi hồng",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-059",
+   "ten": "bodua ổi hồng",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-060",
+   "ten": "chunky dâu",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-061",
+   "ten": "trà lài",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-065",
+   "ten": "cacao heshey",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-066",
+   "ten": "bột frappe",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-067",
+   "ten": "bột salt vanila",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-068",
+   "ten": "sốt chôclate",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-070",
+   "ten": "hạt granola",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-071",
+   "ten": "cafe hạt arabica",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-072",
+   "ten": "cafe bột robusta",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-082",
+   "ten": "cacao nguyên chất",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-084",
+   "ten": "khăn lau bàn",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-114",
+   "ten": "Kem béo sữa dừa nhất hương",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-119",
+   "ten": "Bột khoai môn",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-140",
+   "ten": "Ống hút",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-141",
+   "ten": "Túi zip",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-142",
+   "ten": "Bao rác",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-143",
+   "ten": "Giấy in logo",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-144",
+   "ten": "Giấy in bill",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-145",
+   "ten": "Giấy ăn",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-146",
+   "ten": "Giấy vệ sinh",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-147",
+   "ten": "Hộp nhựa tròn bột pizza",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-148",
+   "ten": "Bình nhựa tương ớt",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-149",
+   "ten": "Ly cup",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-150",
+   "ten": "Ly martini",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-151",
+   "ten": "Xiên decor",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-152",
+   "ten": "Dĩa nhỏ",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-153",
+   "ten": "Jigger",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-154",
+   "ten": "Gas quẹt khò",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-155",
+   "ten": "Khăn lau ly",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-156",
+   "ten": "Nước rửa chén",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-157",
+   "ten": "Nước lau kính",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-158",
+   "ten": "Nước lau nhà",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-159",
+   "ten": "Xịt phòng",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-160",
+   "ten": "Xịt côn trùng",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-161",
+   "ten": "Cây lau nhà",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-162",
+   "ten": "Cây chổi",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-163",
+   "ten": "Bẫy chuột",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-164",
+   "ten": "Bàn chải đánh răng",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-165",
+   "ten": "Băng vệ sinh",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-166",
+   "ten": "Dao bào",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-167",
+   "ten": "Ổ điện",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-168",
+   "ten": "Ô che mưa",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-169",
+   "ten": "Kéo",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-170",
+   "ten": "Dây xích",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-171",
+   "ten": "Ca thủy tinh",
+   "quy_cach": "cái/gói/hộp/chai"
+  },
+  {
+   "ma": "DC-172",
+   "ten": "chunky yuzu(bưởi)",
+   "quy_cach": "cái/gói/hộp/chai"
+  }
+ ]
+}

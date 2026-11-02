@@ -1,0 +1,19 @@
+.page-ncc .ncc-logo{width:32px;height:32px;border-radius:8px}
+.ncc-hero{padding:18px 16px;margin-bottom:22px}
+.ncc-hero h2{margin:4px 0 8px;font-size:24px;line-height:1.2}
+.ncc-hero p{margin:0 0 8px;font-size:15px;line-height:1.5;color:var(--label-secondary)}
+.ncc-kicker{font-size:12px!important;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent,#0a84ff)!important}
+.ncc-progress{font-weight:600;color:var(--label-primary)!important;margin:4px 0 0!important}
+.ncc-items{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.ncc-item{padding:12px;display:flex;flex-direction:column;gap:8px}
+.ncc-item-head{display:flex;gap:10px;align-items:flex-start}
+.ncc-no{flex:none;min-width:26px;height:26px;border-radius:13px;background:rgba(255,255,255,.1);font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;color:var(--label-secondary)}
+.ncc-item-name{margin:0;font-size:16px;font-weight:600;line-height:1.3}
+.ncc-item-qc{margin:2px 0 0;font-size:13px;color:var(--label-secondary);line-height:1.35}
+.ncc-price{position:relative;display:block}
+.ncc-price input{font-size:20px;font-weight:600;padding-right:36px;font-variant-numeric:tabular-nums}
+.ncc-price span{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--label-secondary);font-size:16px}
+.ncc-note{min-height:44px!important;font-size:15px!important}
+.ncc-msg{color:#ff453a;font-size:15px;min-height:1em}
+.ncc-foot{text-align:center;font-size:13px;color:var(--label-secondary);margin:12px 0 40px}
+.ncc-error{padding:18px 16px}

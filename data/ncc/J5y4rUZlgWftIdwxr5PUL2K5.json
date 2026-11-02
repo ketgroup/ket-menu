@@ -1,0 +1,221 @@
+{
+ "ncc": "Rượu Hải Gia Cát",
+ "ma_ncc": "ruou-hai-gia-cat",
+ "items": [
+  {
+   "ma": "HP-004",
+   "ten": "Jose Cruevo Reposado",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "HP-009",
+   "ten": "Vodka HaNoi",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-001",
+   "ten": "Belvedere",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-003",
+   "ten": "Absolute Extrakt",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-004",
+   "ten": "Absolute Mango",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-005",
+   "ten": "Svedka Vanilla",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-006",
+   "ten": "Zubrowka",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-007",
+   "ten": "Grey Goose",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-013",
+   "ten": "1800 Blanco",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-015",
+   "ten": "1800 Reposado",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-016",
+   "ten": "Sampan",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-017",
+   "ten": "Bacadi",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-020",
+   "ten": "Havana 7YO",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-021",
+   "ten": "Flo De Cana 4",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-022",
+   "ten": "Bulldog",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-024",
+   "ten": "Roku Gin",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-025",
+   "ten": "Monkey 47",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-026",
+   "ten": "Tanqueray",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-027",
+   "ten": "Ophir",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-030",
+   "ten": "Lady Trieu spice",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-034",
+   "ten": "Highland Park 12YO",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-035",
+   "ten": "Talisker 10YO",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-038",
+   "ten": "Galavulin 16YO",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-040",
+   "ten": "Johnny Walker Gold Lable",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-041",
+   "ten": "Ballantine's Finest",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-043",
+   "ten": "Even Wiliam",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-044",
+   "ten": "Wild Turkey 101",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-046",
+   "ten": "Bulleit Bourbon",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-047",
+   "ten": "Gentleman Jack",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-050",
+   "ten": "Ritten House",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-052",
+   "ten": "Bushmills black",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-053",
+   "ten": "Bushmills white",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-054",
+   "ten": "Bullet's bourbon",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "SP-055",
+   "ten": "Marker's Mark",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "LQ-001",
+   "ten": "Aperol",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "LQ-003",
+   "ten": "Grand Marnier",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "LQ-005",
+   "ten": "Dom",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "LQ-015",
+   "ten": "Cherry brandy",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "LQ-018",
+   "ten": "Creme de cassic",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "LQ-020",
+   "ten": "Disaronno",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "LQ-022",
+   "ten": "Frangelico",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "LQ-029",
+   "ten": "Dry vermouth",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  },
+  {
+   "ma": "(mới)",
+   "ten": "Peychaud Bitter",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
+  }
+ ]
+}

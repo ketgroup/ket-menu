@@ -1,0 +1,326 @@
+{
+ "ncc": "Chị Hồng Chợ Hàn",
+ "ma_ncc": "chi-hong-cho-han",
+ "items": [
+  {
+   "ma": "TU-002",
+   "ten": "Coconut Cream",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-069",
+   "ten": "cốt dừa lon",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-097",
+   "ten": "Dưa chuột",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-093",
+   "ten": "Gừng tươi",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-101",
+   "ten": "Lá dill",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-100",
+   "ten": "Lá mint",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-104",
+   "ten": "Lá shiso nhật",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-033",
+   "ten": "Mayonaise",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-026",
+   "ten": "Muối",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-029",
+   "ten": "Mật Ong Tam Đảo",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-105",
+   "ten": "Rau ngổ",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-004",
+   "ten": "Trứng Gà",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "TU-027",
+   "ten": "Wasabi",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "TU-029",
+   "ten": "Đường trắng (White Sugar)",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-005",
+   "ten": "Cá Hồi Nguyên Con",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-006",
+   "ten": "Xúc Xich Heo Nấm",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-007",
+   "ten": "Rocket",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-008",
+   "ten": "Salad romance",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-009",
+   "ten": "Cà chua baby",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-011",
+   "ten": "Cà rốt baby",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-012",
+   "ten": "Ớt chuông",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-013",
+   "ten": "Khoai tây",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-014",
+   "ten": "Búp lơ xanh",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-015",
+   "ten": "Búp lơ trắng",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-016",
+   "ten": "Bắp Mỹ",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-017",
+   "ten": "Nấm đùi gà",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-019",
+   "ten": "Ngò rí",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-020",
+   "ten": "Cà chua việt nam",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-021",
+   "ten": "Lá Bay Leaf",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-022",
+   "ten": "Bột Thì Là Ai Cập",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-023",
+   "ten": "Bột Parika",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-024",
+   "ten": "Bột bánh số 13",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-025",
+   "ten": "Men nở",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-027",
+   "ten": "Đường",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-028",
+   "ten": "Tiêu",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-030",
+   "ten": "Liquid Smoke",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-031",
+   "ten": "Dấm Coroli",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-032",
+   "ten": "Mù Tạt Vàng",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-034",
+   "ten": "Tương Ớt",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-035",
+   "ten": "Tương Cà",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-036",
+   "ten": "Tobasco",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-038",
+   "ten": "Xốt HP",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-040",
+   "ten": "Oliu Trái",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-041",
+   "ten": "Nụ bạch Hoa",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-042",
+   "ten": "Cheddar Cheese",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-045",
+   "ten": "Bơ Lạc Anchor",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-046",
+   "ten": "Sourdough",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-047",
+   "ten": "English Muffin",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-048",
+   "ten": "Tortilla",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-076",
+   "ten": "Cần tây",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-092",
+   "ten": "Hành tây",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-102",
+   "ten": "Lá basil",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-103",
+   "ten": "Lá pandan",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-115",
+   "ten": "Đường cát trắng",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-116",
+   "ten": "Đường đen",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-117",
+   "ten": "Bột mì số 11",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-118",
+   "ten": "Bột semola",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-149",
+   "ten": "Bột mỳ thường đa dụng",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-150",
+   "ten": "Lá oregano",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-151",
+   "ten": "Bột hành, tỏi",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-152",
+   "ten": "Giấm Anh",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-155",
+   "ten": "Mỳ lá lasgna",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-157",
+   "ten": "Peperoni",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  },
+  {
+   "ma": "DC-158",
+   "ten": "Sandwich",
+   "quy_cach": "kg / hộp / gói (ghi trọng lượng)"
+  }
+ ]
+}
