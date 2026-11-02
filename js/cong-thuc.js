@@ -4,7 +4,8 @@
   var t = (P.get("t") || "").trim(), TEST = P.get("test") === "1";
   var $ = function (id) { return document.getElementById(id); };
   var KEY = "ket_ct_" + t, URL_FS = "https://formsubmit.co/ajax/ketcocktail@gmail.com";
-  var DATA, ST = {}, quan = "all", filt = "all", q = "";
+  var DATA, ST = {}, quan = "all", filt = "all", q = "", sec = "chua";
+  function hasCT(m) { return st(m).done || m.nl.some(function (x) { return x.t && String(x.dl).trim() !== ""; }); }
   var UNITS = ["ml", "g", "gr", "dash", "giọt", "lát", "quả", "cái", "muỗng", "phần", "shot"];
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d"); }
@@ -75,9 +76,11 @@
   function counts() {
     var all = DATA.mon, d = 0, se = 0; all.forEach(function (m) { if (st(m).done) d++; if (st(m).sent) se++; });
     $("ct-done").textContent = d; $("ct-total").textContent = all.length; $("ct-sent").textContent = se;
+    var nc = 0; all.forEach(function (m) { if (hasCT(m)) nc++; }); $("ct-n-co").textContent = nc; $("ct-n-chua").textContent = all.length - nc;
     $("ct-barfill").style.width = (all.length ? d * 100 / all.length : 0) + "%";
   }
   function visible(m) {
+    if ((hasCT(m) ? "co" : "chua") !== sec) return false;
     if (quan !== "all" && m.q !== quan) return false;
     var k = status(m);
     if (filt === "todo" && k === "done") return false;
@@ -103,7 +106,7 @@
       if (e.target.closest(".ct-head")) { if (!it.classList.contains("open")) b.innerHTML = bodyHtml(m); it.classList.toggle("open"); return; }
       if (e.target.closest(".ct-add")) { s.nl.push({ t: "", dl: "", dv: "ml" }); var r = b.querySelector(".ct-rows"); r.insertAdjacentHTML("beforeend", rowHtml(s.nl[s.nl.length - 1], s.nl.length - 1)); r.lastChild.querySelector(".nl").focus(); touch(it, m); return; }
       if (e.target.closest(".ct-del")) { var i = +e.target.closest(".ct-row").dataset.i; s.nl.splice(i, 1); b.innerHTML = bodyHtml(m); touch(it, m); return; }
-      if (e.target.closest(".ct-done-btn")) { s.done = !s.done; b.innerHTML = bodyHtml(m); touch(it, m); return; }
+      if (e.target.closest(".ct-done-btn")) { var was = hasCT(m); s.done = !s.done; b.innerHTML = bodyHtml(m); touch(it, m); if (hasCT(m) !== was) setTimeout(render, 600); return; }
       if (e.target.closest(".ct-send-btn")) { send([m], e.target.closest(".ct-send-btn")).then(function () { setTimeout(function () { it.querySelector(".ct-head").innerHTML = headHtml(m); counts(); }, 1300); }, function () {}); }
     });
     list.addEventListener("input", function (e) {
@@ -115,6 +118,7 @@
     $("ct-q").addEventListener("input", function () { q = norm(this.value.trim()); render(); });
     $("ct-filter").addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; filt = b.dataset.f; [].forEach.call(this.children, function (c) { c.classList.toggle("on", c === b); }); render(); });
     $("ct-quan").addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; quan = b.dataset.q; [].forEach.call(this.children, function (c) { c.classList.toggle("on", c === b); }); render(); });
+    $("ct-tabs").addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; sec = b.dataset.s; [].forEach.call(this.children, function (c) { c.classList.toggle("on", c === b); }); render(); });
     $("ct-name").addEventListener("input", save);
     $("ct-sendall").addEventListener("click", function () {
       var L = DATA.mon.filter(function (m) { var s = st(m); return s.dirty || (s.done && !s.sent); });

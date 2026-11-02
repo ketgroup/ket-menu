@@ -33,3 +33,8 @@
 .ct-send-btn{background:#fff;color:#000}
 .ct-send-btn:disabled{opacity:.5}
 .ct-send{margin-top:24px}
+.ct-tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:12px 0 4px}
+.ct-tabs button{border:1px solid rgba(255,255,255,.18);background:transparent;color:var(--label-secondary);border-radius:12px;padding:10px 8px;font-size:15px;font-weight:600}
+.ct-tabs button b{display:inline-block;margin-left:4px;padding:1px 8px;border-radius:10px;background:rgba(255,255,255,.12)}
+.ct-tabs button.on{background:#fff;color:#000;border-color:#fff}
+.ct-tabs button.on b{background:rgba(0,0,0,.12)}
