@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"><title>Kết · Up ảnh món</title><link rel="icon" href="../img/logos/favicon.png?v=20261103b"><link rel="apple-touch-icon" href="../img/logos/apple-touch-icon.png?v=20261103b">
+<html lang="vi"><head><meta charset="utf-8"><title>Kết · Up ảnh món</title><link rel="icon" href="../img/logos/favicon.png?v=20261103c"><link rel="apple-touch-icon" href="../img/logos/apple-touch-icon.png?v=20261103c">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <style>
@@ -37,7 +37,7 @@ main{padding:4px 16px 60px}
 .empty{text-align:center;color:var(--sub);padding:40px 0}
 </style></head><body>
 <header>
- <div class="top"><img src="../img/logos/ket-logo-mau.png?v=20261103b" alt="Kết"><div><h1>Ảnh món e-menu</h1><div class="sub" id="sub">Đang tải menu…</div></div><button class="who" id="who"></button></div>
+ <div class="top"><img src="../img/logos/ket-logo-mau.png?v=20261103c" alt="Kết"><div><h1>Ảnh món e-menu</h1><div class="sub" id="sub">Đang tải menu…</div></div><button class="who" id="who"></button></div>
  <div class="seg" id="quan"></div>
  <div class="seg f" id="loc"><button data-v="thieu" class="on">Chưa có hình</button><button data-v="co">Có hình rồi</button><button data-v="all">Tất cả</button></div>
  <input class="search" id="q" placeholder="Tìm món…" type="search">
@@ -47,18 +47,24 @@ main{padding:4px 16px 60px}
 <input type="file" id="file" accept="image/*" hidden>
 <div class="toast" id="toast"></div>
 <script>
-var API='https://script.google.com/macros/s/AKfycbzm-H___UuyyEowOE_y359i6l3MJHeXmMJP3LCGzr3imR8ZNeUQDkXhRDL2-FDZROCy/exec', D=null, Q='K1', LOC='thieu', thumbs={}, cur=null, SRV=true;
+var API='https://script.google.com/macros/s/AKfycbzm-H___UuyyEowOE_y359i6l3MJHeXmMJP3LCGzr3imR8ZNeUQDkXhRDL2-FDZROCy/exec', D=null, Q='ALL', LOC='thieu', thumbs={}, cur=null, SRV=true;
 var $=function(s){return document.querySelector(s)};
 function toast(t,ms){var e=$('#toast');e.textContent=t;e.style.display='block';clearTimeout(e._t);e._t=setTimeout(function(){e.style.display='none'},ms||2500)}
+(function(){var m=location.search.match(/[?&]k=([^&#]+)/);if(m){localStorage.setItem('ketUpK',decodeURIComponent(m[1]));history.replaceState(null,'',location.pathname+location.hash)}})();
+function tok(){return localStorage.getItem('ketUpK')||''}
+function askTok(){var v=prompt('Nhập mã up ảnh (hỏi quản lý):','');if(v&&v.trim()){localStorage.setItem('ketUpK',v.trim());return true}return false}
+function merge(d){var A=[],P={},H={};Object.keys(d.menu).forEach(function(q){(d.menu[q]||[]).forEach(function(i){var k=q+'~'+i.ma;A.push({ma:k,ten:i.ten,gia:i.gia,dvt:q+(i.dvt?' · '+i.dvt:''),nhom:q+' · '+i.nhom});
+ var p=(d.photos[q]||{})[i.ma];if(p)P[k]=p;var h=((d.hot||{})[q]||{})[i.ma];if(h)H[k]=h})});
+ var m={ALL:A},ph={ALL:P},ho={ALL:H};for(var q in d.menu){m[q]=d.menu[q];ph[q]=d.photos[q]||{};ho[q]=(d.hot||{})[q]||{}}d.menu=m;d.photos=ph;d.hot=ho;return d}
 function jget(u){return fetch(u,{cache:'no-store'}).then(function(r){return r.json()})}
-function list(){return jget(API+'?api=list&t='+Date.now()).then(function(x){if(!x||!x.ok||!x.photos)throw 0;SRV=true;return x}).catch(function(){SRV=false;return {photos:{K1:{},K2:{},K5:{},K9:{}},hot:{}}})}
+function list(){return jget(API+'?api=list&k='+encodeURIComponent(tok())+'&t='+Date.now()).then(function(x){if(!x||!x.ok||!x.photos)throw 0;SRV=true;return x}).catch(function(){SRV=false;return {photos:{K1:{},K2:{},K5:{},K9:{}},hot:{}}})}
 var MENU=null;
 function run(fn){var a=[].slice.call(arguments,1);
- if(fn==='getData')return Promise.all([MENU?Promise.resolve(MENU):jget('../data/emenu/menu.json?v=20261103b').then(function(m){return MENU=m}),list()]).then(function(r){if(!SRV)toast('Chưa kết nối được máy chủ ảnh – đang chờ cập nhật',6000);return {menu:r[0],photos:r[1].photos,hot:r[1].hot}});
- if(fn==='getThumbs')return SRV?jget(API+'?api=thumbs&ids='+a[0].join(',')).then(function(x){return (x&&x.thumbs)||{}}).catch(function(){return {}}):Promise.resolve({});
- if(fn==='uploadPhoto'){var q=a[0],ma=a[1];
-  return fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({src:location.origin,quan:q,ma:ma,data:a[3],nguoi:a[4]})}).then(function(r){return r.json()}).catch(function(){return null})
-  .then(function(x){if(x&&x.ok===false)throw new Error(x.error);return list().then(function(l){var p=l.photos[q]&&l.photos[q][ma];if(!p)throw new Error('Máy chủ chưa xác nhận ảnh, thử lại');return {id:p.id,name:p.name}})})}
+ if(fn==='getData')return Promise.all([MENU?Promise.resolve(MENU):jget('../data/emenu/menu.json?v=20261103c').then(function(m){return MENU=m}),list()]).then(function(r){if(!SRV)toast(tok()?'Chưa kết nối được máy chủ ảnh (mã sai hoặc đang cập nhật)':'Chưa có mã up ảnh – mở link quản lý gửi hoặc bấm «Chụp / chọn» để nhập mã',6000);return merge({menu:JSON.parse(JSON.stringify(r[0])),photos:r[1].photos,hot:r[1].hot})});
+ if(fn==='getThumbs')return SRV?jget(API+'?api=thumbs&k='+encodeURIComponent(tok())+'&ids='+a[0].join(',')).then(function(x){return (x&&x.thumbs)||{}}).catch(function(){return {}}):Promise.resolve({});
+ if(fn==='uploadPhoto'){var q=a[0],ma=a[1];if(q==='ALL'){q=ma.split('~')[0];ma=ma.split('~')[1]}if(!tok()&&!askTok())return Promise.reject(new Error('Chưa có mã up ảnh'));
+  return fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({k:tok(),src:location.origin,quan:q,ma:ma,data:a[3],nguoi:a[4]})}).then(function(r){return r.json()}).catch(function(){return null})
+  .then(function(x){if(x&&x.ok===false){if(/quyền/.test(x.error))localStorage.removeItem('ketUpK');throw new Error(x.error)}return list().then(function(l){var p=l.photos[q]&&l.photos[q][ma];if(!p)throw new Error('Máy chủ chưa xác nhận ảnh, thử lại');return {id:p.id,name:p.name}})})}
  return Promise.reject(new Error(fn))}
 function who(){return localStorage.getItem('ketWho')||''}
 function setWho(){var v=prompt('Tên người chụp (vd: Captain Thắng, Trâm MKT):',who());if(v!==null){localStorage.setItem('ketWho',v.trim());$('#who').textContent=v.trim()||'Đặt tên'}}
@@ -66,7 +72,7 @@ $('#who').textContent=who()||'Đặt tên';$('#who').onclick=setWho;
 function vnd(n){return n?n.toLocaleString('vi-VN')+'đ':''}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function load(){run('getData').then(function(d){D=d;segs();render();loadThumbs()}).catch(function(e){$('#main').innerHTML='<div class="empty">Lỗi: '+esc(e.message)+'</div>'})}
-function segs(){$('#quan').innerHTML=Object.keys(D.menu).map(function(q){var n=D.menu[q].filter(function(i){return !D.photos[q][i.ma]}).length;return '<button data-v="'+q+'" class="'+(q===Q?'on':'')+'">'+q+(n?' · '+n:'')+'</button>'}).join('')}
+function segs(){$('#quan').innerHTML=Object.keys(D.menu).map(function(q){var n=D.menu[q].filter(function(i){return !D.photos[q][i.ma]}).length;return '<button data-v="'+q+'" class="'+(q===Q?'on':'')+'">'+(q==='ALL'?'Tất cả':q)+(n?' · '+n:'')+'</button>'}).join('')}
 document.addEventListener('click',function(e){var b=e.target.closest('.seg button');if(b){if(b.parentNode.id==='quan')Q=b.dataset.v;else LOC=b.dataset.v;[].forEach.call(b.parentNode.children,function(x){x.classList.toggle('on',x===b)});render();loadThumbs();window.scrollTo(0,0)}
  var u=e.target.closest('[data-up]');if(u){if(!who()){setWho();if(!who())return}cur=JSON.parse(u.dataset.up);$('#file').value='';$('#file').click()}});
 $('#q').oninput=function(){render();loadThumbs()};
