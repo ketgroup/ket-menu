@@ -11,7 +11,7 @@
   function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d"); }
   function save() { try { localStorage.setItem(KEY, JSON.stringify({ st: ST, name: $("ct-name").value })); } catch (e) {} }
   function st(m) {
-    if (!ST[m.id]) ST[m.id] = { nl: m.nl.map(function (x) { return { t: x.t, dl: x.dl, dv: x.dv }; }), ly: "", gar: "", cach: "", note: "", done: false, sent: false, dirty: false };
+    if (!ST[m.id]) ST[m.id] = { nl: m.nl.map(function (x) { return { t: x.t, dl: x.dl, dv: x.dv }; }), ly: m.ly || "", gar: m.gar || "", cach: m.cach || "", note: m.note || "", done: false, sent: false, dirty: false };
     return ST[m.id];
   }
   function filled(s) { return s.nl.some(function (x) { return x.t && String(x.dl).trim() !== ""; }); }
@@ -51,7 +51,7 @@
     return fetch(URL_FS, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(body), signal: ac ? ac.signal : undefined })
       .finally(function () { clearTimeout(to); })
       .then(function (r) { return r.json().then(function (j) { if (!r.ok || String(j.success) !== "true") throw j; }); })
-      .then(function () { list.forEach(function (m) { st(m).sent = true; st(m).dirty = false; }); save(); btn.textContent = "Đã gửi ✓"; setTimeout(function () { btn.disabled = false; btn.textContent = old; render(); }, 1200); })
+      .then(function () { list.forEach(function (m) { st(m).sent = true; st(m).dirty = false; }); save(); btn.textContent = "Đã gửi ✓"; $("ct-msg").textContent = "✅ Đã gửi thành công " + list.length + " món. Cảm ơn!"; setTimeout(function () { btn.disabled = false; btn.textContent = old; render(); }, 1200); })
       .catch(function (e) { btn.disabled = false; btn.textContent = old; $("ct-msg").textContent = "Máy chủ nhận form đang chậm, có thể chưa gửi được. Đợi 1 phút rồi bấm gửi lại (gửi trùng không sao). " + ((e && e.message) || ""); throw e; });
   }
   function rowHtml(x, i) {
