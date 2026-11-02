@@ -3,13 +3,18 @@
  "ma_ncc": "ruou-hai-gia-cat",
  "items": [
   {
-   "ma": "HP-004",
-   "ten": "Jose Cruevo Reposado",
-   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
-  },
-  {
    "ma": "HP-009",
    "ten": "Vodka HaNoi",
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
+   "gia": 69000,
+   "dv": "chai 700ml",
+   "ngay": "01/11",
+   "nguon": "HĐ Hải Gia Cát (Vodka Hà Nội Năm Sao 700ml)",
+   "chua_chac": ""
+  },
+  {
+   "ma": "HP-004",
+   "ten": "Jose Cruevo Reposado",
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
   },
   {
@@ -213,7 +218,7 @@
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
   },
   {
-   "ma": "(mới)",
+   "ma": "",
    "ten": "Peychaud Bitter",
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)"
   }

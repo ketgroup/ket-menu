@@ -3,6 +3,26 @@
  "ma_ncc": "nuoc-ngot",
  "items": [
   {
+   "ma": "SD-005",
+   "ten": "Soda",
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "gia": 152000,
+   "dv": "thùng",
+   "ngay": "02/11",
+   "nguon": "HĐ ảnh Zalo (Kiều Đặng)",
+   "chua_chac": ""
+  },
+  {
+   "ma": "SD-006",
+   "ten": "Tonic",
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "gia": 170000,
+   "dv": "thùng",
+   "ngay": "02/11",
+   "nguon": "HĐ ảnh Zalo (Kiều Đặng)",
+   "chua_chac": ""
+  },
+  {
    "ma": "SD-001",
    "ten": "Ginger Ale",
    "quy_cach": "lon/chai và thùng (ghi số lon/thùng)"
@@ -20,16 +40,6 @@
   {
    "ma": "SD-004",
    "ten": "Sprite",
-   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)"
-  },
-  {
-   "ma": "SD-005",
-   "ten": "Soda",
-   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)"
-  },
-  {
-   "ma": "SD-006",
-   "ten": "Tonic",
    "quy_cach": "lon/chai và thùng (ghi số lon/thùng)"
   },
   {

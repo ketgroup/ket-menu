@@ -3,6 +3,16 @@
  "ma_ncc": "hoa",
  "items": [
   {
+   "ma": "DC-107",
+   "ten": "Hoa viola",
+   "quy_cach": "hộp/bó",
+   "gia": 60000,
+   "dv": "hộp",
+   "ngay": "02/11",
+   "nguon": "Phiếu xuất kho 110152",
+   "chua_chac": ""
+  },
+  {
    "ma": "DC-088",
    "ten": "hoa",
    "quy_cach": "hộp/bó"
@@ -10,11 +20,6 @@
   {
    "ma": "DC-106",
    "ten": "Hoa hồng",
-   "quy_cach": "hộp/bó"
-  },
-  {
-   "ma": "DC-107",
-   "ten": "Hoa viola",
    "quy_cach": "hộp/bó"
   },
   {

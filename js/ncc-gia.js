@@ -17,8 +17,8 @@
     $("ncc-total").textContent = data.items.length;
     $("ncc-items").innerHTML = data.items.map(function (it, i) {
       return '<li class="ncc-item inset-card"><div class="ncc-item-head"><span class="ncc-no">' + (i + 1) + '</span><div><p class="ncc-item-name">' + esc(it.ten) +
-        '</p><p class="ncc-item-qc">' + esc(it.quy_cach) + '</p></div></div>' +
-        '<label class="ncc-price"><input class="field-control ncc-price-input" data-i="' + i + '" type="text" inputmode="numeric" pattern="[0-9.]*" autocomplete="off" placeholder="Đơn giá" aria-label="Đơn giá ' + esc(it.ten) + '"><span>đ</span></label>' +
+        '</p><p class="ncc-item-qc">' + esc(it.quy_cach) + '</p>' + (it.gia ? '<p class="ncc-item-ket">Giá Kết đang ghi: ' + fmt(it.gia) + 'đ/' + esc(it.dv || "") + ' (' + esc(it.ngay || "") + ')' + (it.chua_chac ? ' – đọc chưa chắc' : '') + '</p>' : '<p class="ncc-item-ket ncc-missing">Chưa có giá</p>') + '</div></div>' +
+        '<label class="ncc-price"><input class="field-control ncc-price-input" data-i="' + i + '" type="text" inputmode="numeric" pattern="[0-9.]*" autocomplete="off" placeholder="Đơn giá" value="' + (it.gia ? fmt(it.gia) : '') + '" aria-label="Đơn giá ' + esc(it.ten) + '"><span>đ</span></label>' +
         '<input class="field-control ncc-note" data-i="' + i + '" type="text" placeholder="Ghi chú (quy cách, hãng, «không có»…)" aria-label="Ghi chú ' + esc(it.ten) + '"></li>';
     }).join("");
     $("ncc-loading").hidden = true; $("ncc-form").hidden = false;
@@ -42,14 +42,19 @@
       var ts = now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" + pad(now.getDate()) + " " + pad(now.getHours()) + ":" + pad(now.getMinutes());
       var who = $("f-name").value.trim() + ($("f-phone").value.trim() ? " (" + $("f-phone").value.trim() + ")" : "");
       var vat = $("f-vat").value;
-      var rows = [["ncc", "ma", "ten_mon", "quy_cach", "don_vi", "don_gia", "ghi_chu", "nguoi_bao_gia", "thoi_gian"]];
+      var rows = [["ncc", "ma", "ten_mon", "quy_cach", "don_vi", "don_gia", "gia_ket_dang_ghi", "trang_thai", "ghi_chu", "nguoi_bao_gia", "thoi_gian"]];
+      var changed = [];
       data.items.forEach(function (it, i) {
         var qc = splitQC(it.quy_cach), note = notes[i].value.trim();
         if (vat) note = note ? note + "; " + vat : vat;
-        rows.push([data.ncc, it.ma, it.ten, qc[1] || qc[0], qc[0], digits(prices[i].value), note, who, ts]);
+        var v = digits(prices[i].value), old = it.gia ? String(Math.round(it.gia)) : "", st;
+        if (old) st = !v ? "NCC XOÁ GIÁ" : (v === old ? "giữ nguyên" : "NCC SỬA");
+        else st = v ? "NCC ĐIỀN MỚI" : "chưa có giá";
+        if (st !== "giữ nguyên" && st !== "chưa có giá") changed.push(it.ten + ": " + (old ? fmt(old) : "trống") + " → " + (v ? fmt(v) : "xoá"));
+        rows.push([data.ncc, it.ma, it.ten, qc[1] || qc[0], it.dv || qc[0], v, old, st, note, who, ts]);
       });
       var csv = rows.map(function (r) { return r.map(csvCell).join(","); }).join("\r\n");
-      $("f-csv").value = csv; $("f-count").value = n + "/" + data.items.length; $("f-time").value = ts;
+      $("f-csv").value = csv; $("f-changed").value = changed.length ? changed.join("\n") : "Không sửa giá nào (giữ nguyên giá Kết đang ghi)"; $("f-count").value = n + "/" + data.items.length; $("f-time").value = ts;
       try {
         var file = new File(["\uFEFF" + csv], "bao-gia-" + data.ma_ncc + "-" + ts.replace(/\D/g, "") + ".csv", { type: "text/csv" });
         var dt = new DataTransfer(); dt.items.add(file); $("f-file").files = dt.files;

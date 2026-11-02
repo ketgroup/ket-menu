@@ -9,9 +9,9 @@
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/png" href="img/logos/favicon.png">
 <link rel="apple-touch-icon" href="img/logos/apple-touch-icon.png">
-<link rel="stylesheet" href="css/app.css?v=20261102d">
-<link rel="stylesheet" href="css/ncc-gia.css?v=20261102d">
-<script src="js/ncc-gia.js?v=20261102d" defer></script>
+<link rel="stylesheet" href="css/app.css?v=20261102e">
+<link rel="stylesheet" href="css/ncc-gia.css?v=20261102e">
+<script src="js/ncc-gia.js?v=20261102e" defer></script>
 </head>
 <body class="page-site page-static page-ncc">
 <header class="ios-nav">
@@ -32,6 +32,7 @@
 <input type="hidden" name="nha_cung_cap" id="f-ncc">
 <input type="hidden" name="so_mon_da_bao_gia" id="f-count">
 <input type="hidden" name="thoi_gian" id="f-time">
+<textarea name="mon_ncc_da_sua" id="f-changed" hidden></textarea>
 <textarea name="bang_gia_csv" id="f-csv" hidden></textarea>
 <input type="file" name="attachment" id="f-file" hidden>
 <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
@@ -39,7 +40,7 @@
 <div class="ncc-hero inset-card">
 <p class="ncc-kicker">Kết Group · Bảng hỏi giá</p>
 <h2 id="ncc-name">Nhà cung cấp</h2>
-<p>Kết đang cập nhật bảng đơn giá nguyên vật liệu. Anh/chị điền giúp <b>đơn giá hiện tại</b> cho các món dưới đây (VNĐ, theo đơn vị bán). Món nào không có thì để trống và ghi «không có» ở ghi chú. Cảm ơn anh/chị!</p>
+<p>Kết đang cập nhật bảng đơn giá nguyên vật liệu. Kết đã điền sẵn giá đang ghi nhận, anh/chị kiểm tra và <b>sửa trực tiếp</b> nếu sai, điền giúp các món «Chưa có giá» (VNĐ, theo đơn vị bán). Món nào không có thì để trống và ghi «không có» ở ghi chú. Cảm ơn anh/chị!</p>
 <p class="ncc-progress"><span id="ncc-done">0</span>/<span id="ncc-total">0</span> món đã điền giá</p>
 </div>
 

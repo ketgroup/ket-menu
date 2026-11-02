@@ -5,12 +5,12 @@
   {
    "ma": "DC-086",
    "ten": "Snack",
-   "quy_cach": "gói/kg"
-  },
-  {
-   "ma": "DC-109",
-   "ten": "Hạt sen",
-   "quy_cach": "gói/kg"
+   "quy_cach": "gói/kg",
+   "gia": 50000,
+   "dv": "kg",
+   "ngay": "02/11",
+   "nguon": "Đức Huy/Nhành xác nhận Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "DC-111",

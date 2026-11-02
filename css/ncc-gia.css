@@ -17,3 +17,5 @@
 .ncc-msg{color:#ff453a;font-size:15px;min-height:1em}
 .ncc-foot{text-align:center;font-size:13px;color:var(--label-secondary);margin:12px 0 40px}
 .ncc-error{padding:18px 16px}
+.ncc-item-ket{margin:2px 0 0;font-size:12px;opacity:.75}
+.ncc-item-ket.ncc-missing{color:#d9534f;opacity:1;font-weight:600}
