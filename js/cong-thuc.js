@@ -3,7 +3,7 @@
   var P = new URLSearchParams(location.search);
   var t = (P.get("t") || "").trim(), TEST = P.get("test") === "1";
   var $ = function (id) { return document.getElementById(id); };
-  var KEY = "ket_ct_" + t, URL_FS = "https://formsubmit.co/ajax/ketcocktail@gmail.com";
+  var KEY = "ket_ct_" + t, URL_FS = "https://formsubmit.co/ketcocktail@gmail.com";
   var DATA, ST = {}, quan = "all", filt = "all", q = "";
   var UNITS = ["ml", "g", "gr", "dash", "giọt", "lát", "quả", "cái", "muỗng", "phần", "shot"];
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
@@ -45,8 +45,17 @@
     };
     if (TEST) body.TEST = "ĐÂY LÀ TIN GỬI THỬ – BỎ QUA";
     var old = btn.textContent; btn.disabled = true; btn.textContent = "Đang gửi…"; $("ct-msg").textContent = "";
-    return fetch(URL_FS, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(body) })
-      .then(function (r) { return r.json().then(function (j) { if (!r.ok || String(j.success) !== "true") throw j; }); })
+    return new Promise(function (ok, bad) {
+      var ifr = $("ct-ifr"); if (!ifr) { ifr = document.createElement("iframe"); ifr.name = ifr.id = "ct-ifr"; ifr.hidden = true; document.body.appendChild(ifr); }
+      var f = document.createElement("form"); f.method = "POST"; f.action = URL_FS; f.target = "ct-ifr"; f.hidden = true;
+      body._next = "https://ketgroup.github.io/ket-menu/ncc-gia-thanh-cong.html";
+      Object.keys(body).forEach(function (k) { var i = document.createElement("textarea"); i.name = k; i.value = body[k]; f.appendChild(i); });
+      document.body.appendChild(f);
+      var done = false, to = setTimeout(function () { if (done) return; done = true; f.remove(); bad({ message: "(mạng chậm quá 2 phút)" }); }, 120000);
+      ifr.onload = function () { if (done) return; done = true; clearTimeout(to); f.remove(); ok(); };
+      btn.textContent = "Đang gửi… (có thể mất ~1 phút)";
+      f.submit();
+    })
       .then(function () { list.forEach(function (m) { st(m).sent = true; st(m).dirty = false; }); save(); btn.textContent = "Đã gửi ✓"; setTimeout(function () { btn.disabled = false; btn.textContent = old; render(); }, 1200); })
       .catch(function (e) { btn.disabled = false; btn.textContent = old; $("ct-msg").textContent = "Gửi chưa được, kiểm tra mạng rồi thử lại. " + ((e && e.message) || ""); throw e; });
   }
