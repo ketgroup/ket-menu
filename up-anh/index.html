@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"><title>Kết · Up ảnh món</title><link rel="icon" href="../img/logos/favicon.png?v=20261103c"><link rel="apple-touch-icon" href="../img/logos/apple-touch-icon.png?v=20261103c">
+<html lang="vi"><head><meta charset="utf-8"><title>Kết · Up ảnh món</title><link rel="icon" href="../img/logos/favicon.png?v=20261103d"><link rel="apple-touch-icon" href="../img/logos/apple-touch-icon.png?v=20261103d">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>(function(){var t=localStorage.getItem("ketTheme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t})()</script>
 <style>
 :root{--bg:#f2f2f7;--card:#fff;--txt:#1c1c1e;--sub:#8e8e93;--sep:#e5e5ea;--acc:#b8862b;--red:#ff3b30;--green:#34c759}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -35,9 +36,18 @@ main{padding:4px 16px 60px}
 .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translateX(-50%);background:rgba(28,28,30,.92);color:#fff;padding:10px 16px;border-radius:14px;font-size:14px;display:none;max-width:90%}
 .who{margin-left:auto;font-size:12px;color:var(--acc);border:0;background:none;font-family:inherit}
 .empty{text-align:center;color:var(--sub);padding:40px 0}
+html[data-theme=dark]{--bg:#000;--card:#1c1c1e;--txt:#f2f2f7;--sub:#98989f;--sep:#38383a;color-scheme:dark}
+html[data-theme=dark] header{background:rgba(0,0,0,.85);border-color:#38383a}
+html[data-theme=dark] .seg,html[data-theme=dark] .search,html[data-theme=dark] .bar{background:#2c2c2e;color:var(--txt)}
+html[data-theme=dark] .seg button.on{background:#636366}
+html[data-theme=dark] .ph{background-color:#2c2c2e;color:#636366}
+html[data-theme=dark] .btn.thay{background:#3a3220}
+html[data-theme=dark] .row.hot{animation-name:hotd}
+@keyframes hotd{0%,100%{background:#1c1c1e}50%{background:#5c1a16}}
+.theme{border:0;background:none;font-size:20px;padding:4px 6px;cursor:pointer}
 </style></head><body>
 <header>
- <div class="top"><img src="../img/logos/ket-logo-mau.png?v=20261103c" alt="Kết"><div><h1>Ảnh món e-menu</h1><div class="sub" id="sub">Đang tải menu…</div></div><button class="who" id="who"></button></div>
+ <div class="top"><img src="../img/logos/ket-logo-mau.png?v=20261103d" alt="Kết"><div><h1>Ảnh món e-menu</h1><div class="sub" id="sub">Đang tải menu…</div></div><button class="who" id="who"></button><button class="theme" id="theme" aria-label="Sáng/Tối"></button></div>
  <div class="seg" id="quan"></div>
  <div class="seg f" id="loc"><button data-v="thieu" class="on">Chưa có hình</button><button data-v="co">Có hình rồi</button><button data-v="all">Tất cả</button></div>
  <input class="search" id="q" placeholder="Tìm món…" type="search">
@@ -60,7 +70,7 @@ function jget(u){return fetch(u,{cache:'no-store'}).then(function(r){return r.js
 function list(){return jget(API+'?api=list&k='+encodeURIComponent(tok())+'&t='+Date.now()).then(function(x){if(!x||!x.ok||!x.photos)throw 0;SRV=true;return x}).catch(function(){SRV=false;return {photos:{K1:{},K2:{},K5:{},K9:{}},hot:{}}})}
 var MENU=null;
 function run(fn){var a=[].slice.call(arguments,1);
- if(fn==='getData')return Promise.all([MENU?Promise.resolve(MENU):jget('../data/emenu/menu.json?v=20261103c').then(function(m){return MENU=m}),list()]).then(function(r){if(!SRV)toast(tok()?'Chưa kết nối được máy chủ ảnh (mã sai hoặc đang cập nhật)':'Chưa có mã up ảnh – mở link quản lý gửi hoặc bấm «Chụp / chọn» để nhập mã',6000);return merge({menu:JSON.parse(JSON.stringify(r[0])),photos:r[1].photos,hot:r[1].hot})});
+ if(fn==='getData')return Promise.all([MENU?Promise.resolve(MENU):jget('../data/emenu/menu.json?v=20261103d').then(function(m){return MENU=m}),list()]).then(function(r){if(!SRV)toast(tok()?'Chưa kết nối được máy chủ ảnh (mã sai hoặc đang cập nhật)':'Chưa có mã up ảnh – mở link quản lý gửi hoặc bấm «Chụp / chọn» để nhập mã',6000);return merge({menu:JSON.parse(JSON.stringify(r[0])),photos:r[1].photos,hot:r[1].hot})});
  if(fn==='getThumbs')return SRV?jget(API+'?api=thumbs&k='+encodeURIComponent(tok())+'&ids='+a[0].join(',')).then(function(x){return (x&&x.thumbs)||{}}).catch(function(){return {}}):Promise.resolve({});
  if(fn==='uploadPhoto'){var q=a[0],ma=a[1];if(q==='ALL'){q=ma.split('~')[0];ma=ma.split('~')[1]}if(!tok()&&!askTok())return Promise.reject(new Error('Chưa có mã up ảnh'));
   return fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({k:tok(),src:location.origin,quan:q,ma:ma,data:a[3],nguoi:a[4]})}).then(function(r){return r.json()}).catch(function(){return null})
@@ -90,5 +100,7 @@ function resize(f){return new Promise(function(ok,no){var img=new Image(),u=URL.
 $('#file').onchange=function(){var f=this.files[0],c=cur;if(!f||!c)return;toast('Đang tải ảnh '+c.ten+'…',60000);
  resize(f).then(function(d){thumbs['tmp-'+c.ma]=d;return run('uploadPhoto',Q,c.ma,c.ten,d,who()).then(function(r){thumbs[r.id]=d;D.photos[Q][c.ma]={id:r.id,name:r.name,t:Date.now()};if(D.hot&&D.hot[Q])delete D.hot[Q][c.ma];segs();render();toast('✓ Đã lưu: '+r.name)})}).catch(function(e){toast('Lỗi tải ảnh: '+e.message,5000)})};
 setInterval(function(){if(D)run('getData').then(function(d){var keep=thumbs;D.hot=d.hot;D.photos=d.photos;segs();render();loadThumbs()})},60000);
+function th(){var d=document.documentElement.dataset.theme==='dark';$('#theme').textContent=d?'☀️':'🌙'}th();
+$('#theme').onclick=function(){var t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;localStorage.setItem('ketTheme',t);th()};
 load();
 </script></body></html>
