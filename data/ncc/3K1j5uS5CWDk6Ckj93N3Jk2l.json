@@ -63,6 +63,16 @@
    "chua_chac": "chữ khó đọc; 26/10 ghi 27.000/kg"
   },
   {
+   "ma": "DC-095",
+   "ten": "Chanh dây",
+   "quy_cach": "kg (hoặc trái)",
+   "gia": 30000,
+   "dv": "kg",
+   "ngay": "03/11",
+   "nguon": "Gia Bảo báo Zalo 10:04 03/11",
+   "chua_chac": "NCC báo có chanh dây 09:49 03/11; giá tham khảo, nhờ NCC xác nhận"
+  },
+  {
    "ma": "DC-096",
    "ten": "Dứa",
    "quy_cach": "kg (hoặc trái)",
