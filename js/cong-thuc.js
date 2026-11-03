@@ -1,8 +1,7 @@
 (function () {
   "use strict";
   var P = new URLSearchParams(location.search);
-  var DEF_T = "LRguj0fCXWn26leb3SlR5XSF"; // sếp 03/11 22:15: bỏ mã truy cập, không có ?t= thì dùng bảng mặc định
-  var t = (P.get("t") || "").trim() || DEF_T, TEST = P.get("test") === "1";
+  var t = (P.get("t") || "").trim(), TEST = P.get("test") === "1";
   var $ = function (id) { return document.getElementById(id); };
   var KEY = "ket_ct_" + t, URL_FS = "https://formsubmit.co/ajax/ketcocktail@gmail.com";
   var DATA, ST = {}, quan = "all", filt = "all", q = "", sec = "chua";
