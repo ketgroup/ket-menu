@@ -52,7 +52,16 @@
       .finally(function () { clearTimeout(to); })
       .then(function (r) { return r.json().then(function (j) { if (!r.ok || String(j.success) !== "true") throw j; }); })
       .then(function () { list.forEach(function (m) { st(m).sent = true; st(m).dirty = false; }); save(); btn.textContent = "Đã gửi ✓"; $("ct-msg").textContent = "✅ Đã gửi thành công " + list.length + " món. Cảm ơn!"; setTimeout(function () { btn.disabled = false; btn.textContent = old; render(); }, 1200); })
-      .catch(function (e) { btn.disabled = false; btn.textContent = old; $("ct-msg").textContent = "Máy chủ nhận form đang chậm, có thể chưa gửi được. Đợi 1 phút rồi bấm gửi lại (gửi trùng không sao). " + ((e && e.message) || ""); throw e; });
+      .catch(function (e) { btn.disabled = false; btn.textContent = old; fallback(body, e); throw e; });
+  }
+  function fallback(body, e) {
+    var txt = "Người điền: " + body.nguoi_dien + "\nThời gian: " + body.thoi_gian + "\nSố món: " + body.so_mon + "\n\n" + body.cong_thuc;
+    var mail = "mailto:ketcocktail@gmail.com?subject=" + encodeURIComponent(body._subject) + "&body=" + encodeURIComponent(txt);
+    var m = $("ct-msg");
+    m.innerHTML = "Máy chủ nhận form đang lỗi, CHƯA gửi được (" + esc((e && e.message) || "lỗi mạng") + "). Bản đã điền vẫn lưu trên máy này. Bấm <b>Gửi qua ứng dụng Mail</b> (gửi tới ketcocktail@gmail.com) hoặc đợi vài phút rồi bấm gửi lại.<br>" +
+      '<a class="apply-submit" style="display:inline-block;margin-top:8px;text-decoration:none" href="' + esc(mail) + '">Gửi qua ứng dụng Mail</a> ' +
+      '<button type="button" class="apply-submit" style="margin-top:8px" id="ct-copy">Sao chép nội dung</button>';
+    $("ct-copy").onclick = function () { var b = this; (navigator.clipboard ? navigator.clipboard.writeText(body._subject + "\n\n" + txt) : Promise.reject()).then(function () { b.textContent = "Đã chép ✓ – dán vào Zalo/Mail"; }, function () { b.textContent = "Không chép được"; }); };
   }
   function rowHtml(x, i) {
     var opts = UNITS.slice(); if (x.dv && opts.indexOf(x.dv) < 0) opts.unshift(x.dv);
@@ -124,9 +133,10 @@
   }
   if (!/^[A-Za-z0-9]{16,40}$/.test(t)) { $("ct-loading").hidden = true; $("ct-error").hidden = false; return; }
   fetch("data/cong-thuc/" + t + ".json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
-    d.mon = (d.mon || []).filter(function (m) { return !m.an; }); // chỉ hiện món đang bán trong CukCuk (an=true là ẩn)
-    DATA = d;
     try { var sv = JSON.parse(localStorage.getItem(KEY) || "{}"); ST = sv.st || {}; Object.keys(ST).forEach(function (id) { var x = ST[id]; if (!x || (!x.dirty && !x.done && !x.sent)) delete ST[id]; }); $("ct-name").value = sv.name || ""; } catch (e) { $("ct-name").value = ""; }
+    // ẩn món an=true (không bán/không phải đồ ăn uống), trừ khi máy này còn bản đã sửa chưa gửi của món đó
+    d.mon = (d.mon || []).filter(function (m) { var x = ST[m.id]; return !m.an || (x && (x.dirty || (x.done && !x.sent))); });
+    DATA = d;
     var qs = []; d.mon.forEach(function (m) { if (qs.indexOf(m.q) < 0) qs.push(m.q); });
     $("ct-quan").innerHTML = '<button type="button" data-q="all" class="on">4 quán</button>' + qs.map(function (x) { return '<button type="button" data-q="' + x + '">' + x + "</button>"; }).join("");
     var nls = {}; d.mon.forEach(function (m) { m.nl.forEach(function (x) { if (x.t) nls[x.t] = 1; }); });
