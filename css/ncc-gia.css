@@ -31,3 +31,8 @@
 .ncc-edited{margin:0;font-size:13px;font-weight:600;color:#ff9f0a}
 .ncc-vat-prev{margin:4px 2px 0;font-size:12px;color:var(--label-secondary)}
 .ncc-warn{margin:4px 0 0;font-size:13px;font-weight:600;color:#ffd60a}
+/* 20261104f: form đơn giản ?ncc=<slug> */
+.page-ncc .ncc-item{padding:12px 14px}
+.page-ncc .ncc-item-name small{opacity:.65;font-weight:400}
+.page-ncc .ncc-extra{margin:16px 0}
+.page-ncc .ncc-fb{display:block;width:100%;margin-top:10px;text-align:center;text-decoration:none;box-sizing:border-box}

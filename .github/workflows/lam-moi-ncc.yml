@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Gọi API ket-app, ghi file data/ncc khi hợp lệ
+      - name: Gọi API ket-app, ghi data/ncc/<slug>.json khi hợp lệ
         env:
           NCC_TOKENS: ${{ secrets.NCC_TOKENS }}
         run: |
