@@ -6,67 +6,111 @@
    "ma": "DC-140",
    "ten": "Ống hút",
    "quy_cach": "kg / hộp / gói (ghi trọng lượng)",
-   "dv": "gói"
+   "gia": 25000,
+   "dv": "gói",
+   "ngay": "02/11",
+   "nguon": "Chị Hồng báo Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "DC-142",
    "ten": "Bao rác",
    "quy_cach": "kg / hộp / gói (ghi trọng lượng)",
-   "dv": "kg"
+   "gia": 35000,
+   "dv": "kg",
+   "ngay": "02/11",
+   "nguon": "Chị Hồng báo Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "DC-156",
    "ten": "Nước rửa chén",
    "quy_cach": "kg / hộp / gói (ghi trọng lượng)",
-   "dv": "can"
+   "gia": 130000,
+   "dv": "can",
+   "ngay": "02/11",
+   "nguon": "Chị Hồng báo Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "",
    "ten": "Nước lau sàn",
    "quy_cach": "kg / hộp / gói (ghi trọng lượng)",
-   "dv": "can"
+   "gia": 90000,
+   "dv": "can",
+   "ngay": "02/11",
+   "nguon": "Chị Hồng báo Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "",
    "ten": "Giấy rút",
    "quy_cach": "kg / hộp / gói (ghi trọng lượng)",
-   "dv": "(chưa ghi ĐVT)"
+   "gia": 90000,
+   "dv": "(chưa ghi ĐVT)",
+   "ngay": "02/11",
+   "nguon": "Chị Hồng báo Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "",
    "ten": "Túi giấy lớn",
    "quy_cach": "kg / hộp / gói (ghi trọng lượng)",
-   "dv": "(chưa ghi ĐVT)"
+   "gia": 40000,
+   "dv": "(chưa ghi ĐVT)",
+   "ngay": "02/11",
+   "nguon": "Chị Hồng báo Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "",
    "ten": "Giấy vệ sinh cuộn lớn",
    "quy_cach": "kg / hộp / gói (ghi trọng lượng)",
-   "dv": "xách"
+   "gia": 40000,
+   "dv": "xách",
+   "ngay": "02/11",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "",
    "ten": "Băng vệ sinh",
    "quy_cach": "kg / hộp / gói (ghi trọng lượng)",
-   "dv": "gói"
+   "gia": 25000,
+   "dv": "gói",
+   "ngay": "02/11",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "",
    "ten": "Chổi quét",
    "quy_cach": "kg / hộp / gói (ghi trọng lượng)",
-   "dv": "cây"
+   "gia": 50000,
+   "dv": "cây",
+   "ngay": "22/10",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "",
    "ten": "Cây lau sàn",
    "quy_cach": "kg / hộp / gói (ghi trọng lượng)",
-   "dv": "cây"
+   "gia": 85000,
+   "dv": "cây",
+   "ngay": "22/10",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "",
    "ten": "Giấy lau tay wc",
    "quy_cach": "kg / hộp / gói (ghi trọng lượng)",
-   "dv": "lốc"
+   "gia": 90000,
+   "dv": "lốc",
+   "ngay": "22/10",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": ""
   }
  ]
 }

@@ -6,13 +6,21 @@
    "ma": "SD-005",
    "ten": "Soda",
    "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
-   "dv": "thùng"
+   "gia": 152000,
+   "dv": "thùng",
+   "ngay": "02/11",
+   "nguon": "HĐ ảnh Zalo (Kiều Đặng)",
+   "chua_chac": ""
   },
   {
    "ma": "SD-006",
    "ten": "Tonic",
    "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
-   "dv": "thùng"
+   "gia": 170000,
+   "dv": "thùng",
+   "ngay": "02/11",
+   "nguon": "HĐ ảnh Zalo (Kiều Đặng)",
+   "chua_chac": ""
   },
   {
    "ma": "SD-001",

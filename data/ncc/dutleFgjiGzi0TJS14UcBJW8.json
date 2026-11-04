@@ -256,31 +256,49 @@
    "ma": "DC-055",
    "ten": "sữa đặc",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "hộp"
+   "gia": 70000,
+   "dv": "hộp",
+   "ngay": "23/10",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "TU-017",
    "ten": "Nước dừa (Coconut Water)",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "lon"
+   "gia": 34000,
+   "dv": "lon",
+   "ngay": "31/10",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "DC-106",
    "ten": "Hoa hồng",
    "quy_cach": "cây",
-   "dv": "cây"
+   "gia": 10000,
+   "dv": "cây",
+   "ngay": "02/11",
+   "nguon": "Gia Bảo 16:51 nhóm Online/Chợ lẻ"
   },
   {
    "ma": "DC-108",
    "ten": "Hoa sen",
    "quy_cach": "cây",
-   "dv": "cây"
+   "gia": 15000,
+   "dv": "cây",
+   "ngay": "02/11",
+   "nguon": "Gia Bảo 16:51 nhóm Online/Chợ lẻ"
   },
   {
    "ma": "",
    "ten": "Lá dương xỉ",
    "quy_cach": "bó",
-   "dv": "bó"
+   "gia": 50000,
+   "dv": "bó",
+   "ngay": "02/11",
+   "nguon": "Gia Bảo 16:51 nhóm Online/Chợ lẻ",
+   "chua_chac": ""
   }
  ]
 }

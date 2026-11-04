@@ -6,108 +6,177 @@
    "ma": "DC-010",
    "ten": "Chanh xanh có hạt",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": 30000,
+   "dv": "kg",
+   "ngay": "02/11",
+   "nguon": "HĐ ảnh Zalo (ghi «Chanh»)",
+   "chua_chac": ""
   },
   {
    "ma": "DC-018",
    "ten": "Bơ trái",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": 50000,
+   "dv": "kg",
+   "ngay": "25/10",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "DC-078",
    "ten": "chuối",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "nải"
+   "gia": 54000,
+   "dv": "nải",
+   "ngay": "29/10",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": "đơn giá tính theo nải (phiếu ghi 2.7)"
   },
   {
    "ma": "DC-079",
    "ten": "Dừa trái",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "trái"
+   "gia": 22000,
+   "dv": "trái",
+   "ngay": "23/10",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "DC-083",
    "ten": "Cam vàng",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": 70000,
+   "dv": "kg",
+   "ngay": "30/10",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "DC-094",
    "ten": "Chanh vàng",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "quả"
+   "gia": 20000,
+   "dv": "quả",
+   "ngay": "02/11",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": "chữ khó đọc; 26/10 ghi 27.000/kg"
   },
   {
    "ma": "DC-095",
    "ten": "Chanh dây",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": 30000,
+   "dv": "kg",
+   "ngay": "03/11",
+   "nguon": "Gia Bảo báo Zalo 10:04 03/11",
+   "chua_chac": "NCC báo có chanh dây 09:49 03/11; giá tham khảo, nhờ NCC xác nhận"
   },
   {
    "ma": "DC-096",
    "ten": "Dứa",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": 22000,
+   "dv": "kg",
+   "ngay": "31/10",
+   "nguon": "HĐ ảnh Zalo (ghi «Thơm»)",
+   "chua_chac": ""
   },
   {
    "ma": "TU-002",
    "ten": "Cốt dừa lon (Coconut Cream)",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "lon"
+   "gia": 33000,
+   "dv": "lon",
+   "ngay": "02/11",
+   "nguon": "HĐ ảnh Zalo (ghi «Cốt dừa»)",
+   "chua_chac": "HĐ ghi cốt dừa, chưa chắc là coconut cream"
   },
   {
    "ma": "DC-100",
    "ten": "Lá mint",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "bó"
+   "gia": 25000,
+   "dv": "bó",
+   "ngay": "29/10",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "DC-029",
    "ten": "Mật Ong Tam Đảo",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "chai"
+   "gia": 46000,
+   "dv": "chai",
+   "ngay": "22/10",
+   "nguon": "HĐ ảnh Zalo (ghi «Mật ong»)",
+   "chua_chac": "HĐ không ghi hãng"
   },
   {
    "ma": "DC-105",
    "ten": "Rau ngổ",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "hộp"
+   "gia": 10000,
+   "dv": "hộp",
+   "ngay": "02/11",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": "thứ tự cột tiền suy luận"
   },
   {
    "ma": "DC-004",
    "ten": "Trứng Gà",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "vỉ"
+   "gia": 27000,
+   "dv": "vỉ",
+   "ngay": "02/11",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "TU-029",
    "ten": "Đường trắng",
-   "quy_cach": "kg (hoặc trái)"
+   "quy_cach": "kg (hoặc trái)",
+   "chua_chac": ""
   },
   {
    "ma": "DC-013",
    "ten": "Khoai tây",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": 25000,
+   "dv": "kg",
+   "ngay": "29/10",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "DC-016",
    "ten": "Bắp Mỹ",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": 12000,
+   "dv": "kg",
+   "ngay": "29/10",
+   "nguon": "HĐ ảnh Zalo (ghi «Bắp»)",
+   "chua_chac": ""
   },
   {
    "ma": "DC-076",
    "ten": "Cần tây",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": 40000,
+   "dv": "kg",
+   "ngay": "29/10",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": ""
   },
   {
    "ma": "DC-102",
    "ten": "Lá basil",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": 160000,
+   "dv": "kg",
+   "ngay": "02/11",
+   "nguon": "HĐ ảnh Zalo",
+   "chua_chac": "SL đọc không chắc; 29/10 ghi 200.000/kg"
   },
   {
    "ma": "DC-073",
