@@ -1,0 +1,18 @@
+{
+ "ncc": "Hoa",
+ "ma_ncc": "HOA",
+ "items": [
+  {
+   "ma": "DC-107",
+   "ten": "Hoa viola",
+   "quy_cach": "hộp/bó",
+   "dv": "hộp"
+  },
+  {
+   "ma": "DC-088",
+   "ten": "hoa",
+   "quy_cach": "hộp/bó",
+   "dv": ""
+  }
+ ]
+}

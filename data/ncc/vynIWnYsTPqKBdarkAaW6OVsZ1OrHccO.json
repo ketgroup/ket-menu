@@ -1,0 +1,66 @@
+{
+ "ncc": "Nước ngọt",
+ "ma_ncc": null,
+ "items": [
+  {
+   "ma": "SD-005",
+   "ten": "Soda",
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "dv": "thùng"
+  },
+  {
+   "ma": "SD-006",
+   "ten": "Tonic",
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "dv": "thùng"
+  },
+  {
+   "ma": "SD-001",
+   "ten": "Ginger Ale",
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "dv": "lon/chai và thùng"
+  },
+  {
+   "ma": "SD-002",
+   "ten": "Red bull",
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "dv": ""
+  },
+  {
+   "ma": "SD-003",
+   "ten": "Coca cola",
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "dv": "lon/chai và thùng"
+  },
+  {
+   "ma": "SD-004",
+   "ten": "Sprite",
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "dv": "lon/chai và thùng"
+  },
+  {
+   "ma": "DC-124",
+   "ten": "Coca",
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "dv": ""
+  },
+  {
+   "ma": "DC-125",
+   "ten": "Bò húc",
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "dv": ""
+  },
+  {
+   "ma": "DC-129",
+   "ten": "Nước cam hộp",
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "dv": ""
+  },
+  {
+   "ma": "DC-130",
+   "ten": "Nước ép lựu",
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "dv": ""
+  }
+ ]
+}
