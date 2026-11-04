@@ -10,8 +10,8 @@
 <link rel="icon" type="image/png" href="img/logos/favicon.png">
 <link rel="apple-touch-icon" href="img/logos/apple-touch-icon.png">
 <link rel="stylesheet" href="css/app.css?v=20261103i">
-<link rel="stylesheet" href="css/ncc-gia.css?v=20261103i">
-<script src="js/ncc-gia.js?v=20261103i" defer></script>
+<link rel="stylesheet" href="css/ncc-gia.css?v=20261104c">
+<script src="js/ncc-gia.js?v=20261104c" defer></script>
 </head>
 <body class="page-site page-static page-ncc">
 <header class="ios-nav">
@@ -32,6 +32,8 @@
 <input type="hidden" name="nha_cung_cap" id="f-ncc">
 <input type="hidden" name="so_mon_da_bao_gia" id="f-count">
 <input type="hidden" name="thoi_gian" id="f-time">
+<input type="hidden" name="gia_khong_doi" id="f-nochange" value="0">
+<input type="hidden" name="so_mon_da_sua" id="f-nedit">
 <textarea name="mon_ncc_da_sua" id="f-changed" hidden></textarea>
 <textarea name="bang_gia_csv" id="f-csv" hidden></textarea>
 <input type="file" name="attachment" id="f-file" hidden>
@@ -40,8 +42,13 @@
 <div class="ncc-hero inset-card">
 <p class="ncc-kicker">Kết Group · Bảng hỏi giá</p>
 <h2 id="ncc-name">Nhà cung cấp</h2>
-<p>Kết đang cập nhật bảng đơn giá nguyên vật liệu. Kết đã điền sẵn giá đang ghi nhận, anh/chị kiểm tra và <b>sửa trực tiếp</b> nếu sai, điền giúp các món «Chưa có giá» (VNĐ, theo đơn vị bán). Món nào không có thì để trống và ghi «không có» ở ghi chú. Cảm ơn anh/chị!</p>
-<p class="ncc-progress"><span id="ncc-done">0</span>/<span id="ncc-total">0</span> món đã điền giá</p>
+<p>Kết đã điền sẵn giá anh/chị gửi lần trước (nếu có). Anh/chị chỉ cần <b>sửa món nào đổi giá</b>, điền giúp các món «Chưa có giá» (VNĐ, theo đơn vị bán). Món nào không có thì để trống và ghi «không có» ở ghi chú. Cảm ơn anh/chị!</p>
+<p id="ncc-last" class="ncc-last" hidden></p>
+<p class="ncc-progress"><span id="ncc-done">0</span>/<span id="ncc-total">0</span> món đã điền giá<span id="ncc-edcount" class="ncc-edcount"></span></p>
+<div id="ncc-confirm-box" class="ncc-confirm-box" hidden>
+<button type="button" class="ncc-confirm" id="ncc-confirm">✅ Giá không đổi – xác nhận tất cả</button>
+<p class="ncc-confirm-hint">Bấm là gửi lại toàn bộ giá cũ với ngày hôm nay (cần tên người báo giá ở cuối trang).</p>
+</div>
 </div>
 
 <section class="form-section">
@@ -56,9 +63,10 @@
 <span class="field-select-wrap"><select class="field-control" name="vat" id="f-vat">
 <option value="">— Chọn —</option><option>Giá đã gồm VAT</option><option>Giá chưa gồm VAT</option><option>Không xuất hoá đơn VAT</option>
 </select></span></label>
+<p id="ncc-vat-prev" class="ncc-vat-prev" hidden></p>
 <label class="field"><span class="field-label">Tên người báo giá *</span><input class="field-control" name="nguoi_bao_gia" id="f-name" required autocomplete="name"></label>
 <label class="field"><span class="field-label">Số điện thoại</span><input class="field-control" name="sdt" id="f-phone" type="tel" inputmode="tel" autocomplete="tel"></label>
-<label class="field"><span class="field-label">Ghi chú chung</span><textarea class="field-control" name="ghi_chu_chung" rows="3" placeholder="Ví dụ: giá áp dụng đến hết tháng, phí giao hàng…"></textarea></label>
+<label class="field"><span class="field-label">Ghi chú chung</span><textarea class="field-control" name="ghi_chu_chung" id="f-note" rows="3" placeholder="Ví dụ: giá áp dụng đến hết tháng, phí giao hàng…"></textarea></label>
 </div>
 </section>
 <p id="ncc-msg" class="ncc-msg" role="alert"></p>
