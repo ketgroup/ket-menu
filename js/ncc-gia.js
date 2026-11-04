@@ -2,7 +2,7 @@
   "use strict";
   // Link cố định mỗi NCC: ncc-gia.html?ncc=<slug>. Ai mở cũng điền được, không mã, không mật khẩu, không captcha (anh Lan 20:45–20:49 04/11).
   // Đường gửi chính: Google Apps Script web app (ghi vào Google Sheet của Kết). Để trống = chỉ dùng nút Gửi qua Mail/Sao chép.
-  var ENDPOINT = "";
+  var ENDPOINT = window.KET_FORM_ENDPOINT || "";
   var MAIL = "ketcocktail@gmail.com", LS = "ketNccGia2:", QUEUE = "ketNccGiaHang";
   // Link cũ ?t=/?token= (đã gửi ra, token đã lộ, anh Lan bỏ mã) → chuyển sang ?ncc=<slug>.
   var CU = {"3K1j5uS5CWDk6Ckj93N3Jk2l": "trai-cay", "7GJuEBH8PUIjilGtCDVnOzUq": "cho-snack", "Gz5xbvTtrIkssnaKRv9VpCq9y1wtuxF7": "cho-le", "J5y4rUZlgWftIdwxr5PUL2K5": "hai-gia-cat", "MeXqBX7NzcBLxJGCnxNlTq720KKgn4m1": "cho-snack", "XB8csaR7hFvBzlmNDshM22zFcz6u8Pv5": "hai-gia-cat", "dutleFgjiGzi0TJS14UcBJW8": "cho-le", "gSqouxt0u7BL6lZOsqOLURtZ": "bia-huda", "lFqIvAUg3qzzNcSC9xAH1FsT": "hoa", "npCrsTBvbFKBr7XdvM56IwUg9yOpsh7A": "hoa", "qYu8kUP5LfI8ymGBYTmO1tJdBq8487Bd": "trai-cay", "swKvV5lGcMLScPw1yM6xkpbB": "vinamilk", "vynIWnYsTPqKBdarkAaW6OVsZ1OrHccO": "nuoc-ngot", "xf76ewqBfRzOvvlqRk6MP5qe": "nuoc-ngot", "zcx5tjaOyrqaXxM8qjJG8yzk": "syrup", "zxg1XkJ0vwKvWyKveY4YMh7R": "chi-hong"};
