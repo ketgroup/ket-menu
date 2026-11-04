@@ -1,48 +1,110 @@
 {
+ "v": 1,
  "ncc": "Chợ – Snack",
  "ma_ncc": "SNACK",
- "items": [
+ "cap_nhat": "2026-11-04T10:51:31+07:00",
+ "trang_thai": "chua_gui",
+ "ngay_bao_gan_nhat": null,
+ "vat": "khong_ro",
+ "vat_chu": null,
+ "mon": [
   {
    "ma": "DC-086",
    "ten": "Snack",
+   "don_vi": "kg",
    "quy_cach": "gói/kg",
-   "dv": "kg"
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-111",
    "ten": "Bò khô",
+   "don_vi": null,
    "quy_cach": "gói/kg",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-112",
    "ten": "Gà khô",
+   "don_vi": null,
    "quy_cach": "gói/kg",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-113",
    "ten": "Hươu khô",
+   "don_vi": null,
    "quy_cach": "gói/kg",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-120",
    "ten": "Bánh tráng nướng",
+   "don_vi": null,
    "quy_cach": "gói/kg",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-121",
    "ten": "Bánh tráng sữa",
+   "don_vi": null,
    "quy_cach": "gói/kg",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-122",
    "ten": "Kẹo bông gòn",
+   "don_vi": null,
    "quy_cach": "gói/kg",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   }
  ]
 }

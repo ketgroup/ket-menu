@@ -1,0 +1,26 @@
+name: Làm mới file dự phòng ncc-gia
+on:
+  schedule:
+    - cron: "*/20 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: lam-moi-ncc
+  cancel-in-progress: false
+jobs:
+  lam-moi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gọi API ket-app, ghi file data/ncc khi hợp lệ
+        run: python3 .github/scripts/lam-moi-ncc.py
+      - name: Commit nếu có thay đổi
+        run: |
+          if git diff --quiet -- data/ncc; then echo "Không có thay đổi"; exit 0; fi
+          git config user.name "Kết Web Menu"
+          git config user.email "ketcocktail@gmail.com"
+          git add data/ncc
+          git commit -q -m "Tự làm mới giá file dự phòng data/ncc từ ket-app"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          exit 1

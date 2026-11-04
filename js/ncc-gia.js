@@ -147,8 +147,8 @@
   document.addEventListener("DOMContentLoaded", function () {
     var form = $("ncc-form"), mode = "thuong";
     getApi().then(function (d) { viaApi = true; return [d, d.prev]; }, function () {
-      // Dự phòng (API lỗi/timeout): file danh sách món cũ data/ncc/<token>.json như trước, không điền giá.
-      return getJSON("data/ncc/" + t + ".json").then(function (d) { return [d, null]; });
+      // Dự phòng (API lỗi/timeout): file data/ncc/<token>.json cùng định dạng API (Action lam-moi-ncc làm mới), điền giá như API; file kiểu cũ thì không điền giá.
+      return getJSON("data/ncc/" + t + ".json").then(function (d) { var a = fromApi(d); return a ? [a, a.prev] : [d, null]; });
     }).then(function (r) { data = r[0]; buildBase(r[1], loadLocal()); render(); }).catch(fail);
 
     form.addEventListener("input", function (e) {

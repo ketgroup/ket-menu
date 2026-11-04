@@ -1,276 +1,642 @@
 {
+ "v": 1,
  "ncc": "Trái cây",
  "ma_ncc": "TRAICAY",
- "items": [
+ "cap_nhat": "2026-11-04T10:51:31+07:00",
+ "trang_thai": "chua_gui",
+ "ngay_bao_gan_nhat": null,
+ "vat": "chua_gom_vat",
+ "vat_chu": "Giá chưa gồm VAT",
+ "mon": [
   {
    "ma": "DC-010",
    "ten": "Chanh xanh có hạt",
+   "don_vi": "kg",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-018",
    "ten": "Bơ trái",
+   "don_vi": "kg",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-078",
    "ten": "chuối",
+   "don_vi": "nải",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "nải"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-079",
    "ten": "Dừa trái",
+   "don_vi": "trái",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "trái"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-083",
    "ten": "Cam vàng",
+   "don_vi": "kg",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-094",
    "ten": "Chanh vàng",
+   "don_vi": "quả",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "quả"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-095",
    "ten": "Chanh dây",
+   "don_vi": "kg",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-096",
    "ten": "Dứa",
+   "don_vi": "kg",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "TU-002",
    "ten": "Cốt dừa lon (Coconut Cream)",
+   "don_vi": "lon",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "lon"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-100",
    "ten": "Lá mint",
+   "don_vi": "bó",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "bó"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-029",
    "ten": "Mật Ong Tam Đảo",
+   "don_vi": "chai",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "chai"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-105",
    "ten": "Rau ngổ",
+   "don_vi": "hộp",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "hộp"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-004",
    "ten": "Trứng Gà",
+   "don_vi": "vỉ",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "vỉ"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "TU-029",
    "ten": "Đường trắng",
+   "don_vi": "kg",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-013",
    "ten": "Khoai tây",
+   "don_vi": "kg",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-016",
    "ten": "Bắp Mỹ",
+   "don_vi": "kg",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-076",
    "ten": "Cần tây",
+   "don_vi": "kg",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-102",
    "ten": "Lá basil",
+   "don_vi": "kg",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-073",
    "ten": "Xoài",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-074",
    "ten": "dâu",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-075",
    "ten": "Ổi",
+   "don_vi": "kg",
    "quy_cach": "kg (hoặc trái)",
-   "dv": "kg"
+   "gia": null,
+   "ngay": "2026-11-02",
+   "vat": "Giá chưa gồm VAT",
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": true,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-077",
    "ten": "táo xanh",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-080",
    "ten": "tắc",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-081",
    "ten": "Cam xanh",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-098",
    "ten": "Dưa hấu",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-099",
    "ten": "Dưa lưới",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-097",
    "ten": "Dưa chuột",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-093",
    "ten": "Gừng tươi",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-101",
    "ten": "Lá dill",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-104",
    "ten": "Lá shiso nhật",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-026",
    "ten": "Muối",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-007",
    "ten": "Rocket",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-008",
    "ten": "Salad romance",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-009",
    "ten": "Cà chua baby",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-011",
    "ten": "Cà rốt baby",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-012",
    "ten": "Ớt chuông",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-014",
    "ten": "Búp lơ xanh",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-015",
    "ten": "Búp lơ trắng",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-017",
    "ten": "Nấm đùi gà",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-019",
    "ten": "Ngò rí",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-020",
    "ten": "Cà chua việt nam",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-092",
    "ten": "Hành tây",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-103",
    "ten": "Lá pandan",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-116",
    "ten": "Đường đen",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-109",
    "ten": "Hạt sen",
+   "don_vi": null,
    "quy_cach": "kg (hoặc trái)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   }
  ]
 }

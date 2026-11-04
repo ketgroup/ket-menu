@@ -1,66 +1,152 @@
 {
+ "v": 1,
  "ncc": "Nước ngọt",
- "ma_ncc": "nuoc-ngot",
- "items": [
+ "ma_ncc": null,
+ "cap_nhat": "2026-11-04T10:51:31+07:00",
+ "trang_thai": "da_gui",
+ "ngay_bao_gan_nhat": "2026-11-03",
+ "vat": "khong_ro",
+ "vat_chu": null,
+ "mon": [
   {
    "ma": "SD-005",
    "ten": "Soda",
+   "don_vi": "thùng",
    "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
    "gia": 152000,
-   "dv": "thùng",
-   "ngay": "02/11",
-   "nguon": "HĐ ảnh Zalo (Kiều Đặng)",
-   "chua_chac": ""
+   "ngay": "2026-11-03",
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SD-006",
    "ten": "Tonic",
+   "don_vi": "thùng",
    "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
    "gia": 170000,
-   "dv": "thùng",
-   "ngay": "02/11",
-   "nguon": "HĐ ảnh Zalo (Kiều Đặng)",
-   "chua_chac": ""
+   "ngay": "2026-11-03",
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SD-001",
    "ten": "Ginger Ale",
-   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)"
+   "don_vi": "lon/chai và thùng",
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "gia": 202000,
+   "ngay": "2026-11-03",
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SD-002",
    "ten": "Red bull",
-   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)"
+   "don_vi": null,
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SD-003",
    "ten": "Coca cola",
-   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)"
+   "don_vi": "lon/chai và thùng",
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "gia": 200000,
+   "ngay": "2026-11-03",
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SD-004",
    "ten": "Sprite",
-   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)"
+   "don_vi": "lon/chai và thùng",
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "gia": 167000,
+   "ngay": "2026-11-03",
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-124",
    "ten": "Coca",
-   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)"
+   "don_vi": null,
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-125",
    "ten": "Bò húc",
-   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)"
+   "don_vi": null,
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-129",
    "ten": "Nước cam hộp",
-   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)"
+   "don_vi": null,
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-130",
    "ten": "Nước ép lựu",
-   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)"
+   "don_vi": null,
+   "quy_cach": "lon/chai và thùng (ghi số lon/thùng)",
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   }
  ]
 }

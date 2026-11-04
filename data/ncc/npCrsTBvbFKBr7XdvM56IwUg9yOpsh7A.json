@@ -1,18 +1,40 @@
 {
+ "v": 1,
  "ncc": "Hoa",
  "ma_ncc": "HOA",
- "items": [
+ "cap_nhat": "2026-11-04T10:51:31+07:00",
+ "trang_thai": "chua_gui",
+ "ngay_bao_gan_nhat": null,
+ "vat": "khong_ro",
+ "vat_chu": null,
+ "mon": [
   {
    "ma": "DC-107",
    "ten": "Hoa viola",
+   "don_vi": "hộp",
    "quy_cach": "hộp/bó",
-   "dv": "hộp"
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-088",
    "ten": "hoa",
+   "don_vi": null,
    "quy_cach": "hộp/bó",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   }
  ]
 }

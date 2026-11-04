@@ -1,264 +1,614 @@
 {
+ "v": 1,
  "ncc": "Rượu Hải Gia Cát",
  "ma_ncc": "HGC",
- "items": [
+ "cap_nhat": "2026-11-04T10:51:31+07:00",
+ "trang_thai": "chua_gui",
+ "ngay_bao_gan_nhat": null,
+ "vat": "khong_ro",
+ "vat_chu": null,
+ "mon": [
   {
    "ma": "HP-009",
    "ten": "Vodka HaNoi",
+   "don_vi": "chai 700ml",
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": "chai 700ml"
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": 69000
   },
   {
    "ma": "HP-004",
    "ten": "Jose Cruevo Reposado",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-001",
    "ten": "Belvedere",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-003",
    "ten": "Absolute Extrakt",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-004",
    "ten": "Absolute Mango",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-005",
    "ten": "Svedka Vanilla",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-006",
    "ten": "Zubrowka",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-007",
    "ten": "Grey Goose",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-013",
    "ten": "1800 Blanco",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-015",
    "ten": "1800 Reposado",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-016",
    "ten": "Sampan",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-017",
    "ten": "Bacadi",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-020",
    "ten": "Havana 7YO",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-021",
    "ten": "Flo De Cana 4",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-022",
    "ten": "Bulldog",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-024",
    "ten": "Roku Gin",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-025",
    "ten": "Monkey 47",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-026",
    "ten": "Tanqueray",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-027",
    "ten": "Ophir",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-030",
    "ten": "Lady Trieu spice",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-034",
    "ten": "Highland Park 12YO",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-035",
    "ten": "Talisker 10YO",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-038",
    "ten": "Galavulin 16YO",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-040",
    "ten": "Johnny Walker Gold Lable",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-041",
    "ten": "Ballantine's Finest",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-043",
    "ten": "Even Wiliam",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-044",
    "ten": "Wild Turkey 101",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-046",
    "ten": "Bulleit Bourbon",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-047",
    "ten": "Gentleman Jack",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-050",
    "ten": "Ritten House",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-052",
    "ten": "Bushmills black",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-053",
    "ten": "Bushmills white",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-054",
    "ten": "Bullet's bourbon",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-055",
    "ten": "Marker's Mark",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "LQ-001",
    "ten": "Aperol",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "LQ-003",
    "ten": "Grand Marnier",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "LQ-005",
    "ten": "Dom",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "LQ-015",
    "ten": "Cherry brandy",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "LQ-018",
    "ten": "Creme de cassic",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "LQ-020",
    "ten": "Disaronno",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "LQ-022",
    "ten": "Frangelico",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "LQ-029",
    "ten": "Dry vermouth",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "",
    "ten": "Peychaud Bitter",
+   "don_vi": null,
    "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "dv": ""
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
   }
  ]
 }
