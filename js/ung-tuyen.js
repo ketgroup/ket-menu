@@ -107,9 +107,25 @@
       return;
     }
     updateSubject();
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.textContent = "Đang gửi…";
+    var EP = window.KET_FORM_ENDPOINT || "";
+    if (!EP) { if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Đang gửi…"; } return; } // dự phòng: form cũ
+    e.preventDefault();
+    function v(id) { var el = document.getElementById(id); return el ? (el.value || "").trim() : ""; }
+    var f = { ho_ten: v("full_name"), so_zalo: v("phone"), nam_sinh: v("birth_year"), quan: v("venue"), vi_tri: v("position"), thoi_gian: v("schedule"), kinh_nghiem: v("experience"), link_cv: v("profile_link") };
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Đã gửi ✓"; }
+    var done = false;
+    function go() { if (done) return; done = true; location.href = "ung-tuyen-thanh-cong.html"; }
+    function post(body, mode) { return fetch(EP, { method: "POST", mode: mode, redirect: "follow", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: body }); }
+    function run(body, n) {
+      post(body, "cors").then(function (r) { return r.json(); }, function () { return post(body, "no-cors"); })
+        .then(go, function () {
+          if (n < 3) return setTimeout(function () { run(body, n + 1); }, [3000, 10000, 30000][n]);
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = "Gửi lại"; }
+          showError("Mạng lỗi, chưa gửi được. Vui lòng bấm Gửi lại hoặc nhắn Zalo cho quán.");
+        });
     }
+    function start(fileObj) { run(JSON.stringify({ form: "ung-tuyen", f: f, file: fileObj }), 0); }
+    if (file) { var rd = new FileReader(); rd.onload = function () { start({ name: file.name, type: file.type, data: String(rd.result).split(",")[1] }); }; rd.onerror = function () { start(null); }; rd.readAsDataURL(file); }
+    else start(null);
   });
 })();

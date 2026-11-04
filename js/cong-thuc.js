@@ -3,7 +3,7 @@
   var P = new URLSearchParams(location.search);
   var t = (P.get("t") || "").trim(), TEST = P.get("test") === "1";
   var $ = function (id) { return document.getElementById(id); };
-  var KEY = "ket_ct_" + t, URL_FS = "https://formsubmit.co/ajax/ketcocktail@gmail.com";
+  var KEY = "ket_ct_" + t, ENDPOINT = window.KET_FORM_ENDPOINT || ""; // Apps Script /exec «Kết – Form web» (js/form-endpoint.js)
   var DATA, ST = {}, quan = "all", filt = "all", q = "", sec = "chua";
   function hasCT(m) { return st(m).done || m.nl.some(function (x) { return x.t && String(x.dl).trim() !== ""; }); }
   var UNITS = ["ml", "g", "gr", "dash", "giọt", "lát", "quả", "cái", "muỗng", "phần", "shot"];
@@ -39,26 +39,44 @@
     var pre = TEST ? "[TEST] " : "";
     var body = {
       _subject: pre + "Công thức món – " + name + " – " + (list.length === 1 ? list[0].q + " " + list[0].ten : list.length + " món"),
-      _template: "table", _captcha: "false",
       nguoi_dien: name, so_mon: list.length, thoi_gian: new Date().toLocaleString("vi-VN"),
-      cong_thuc: list.map(function (m) { return "【" + m.q + "】 " + m.ten + (m.ma ? " (" + m.ma + ")" : "") + (st(m).done ? " ✔" : "") + "\n" + recipeText(m, st(m)); }).join("\n\n"),
-      bang_csv: csvRows(list)
+      cong_thuc: list.map(function (m) { return "【" + m.q + "】 " + m.ten + (m.ma ? " (" + m.ma + ")" : "") + (st(m).done ? " ✔" : "") + "\n" + recipeText(m, st(m)); }).join("\n\n")
     };
-    if (TEST) body.TEST = "ĐÂY LÀ TIN GỬI THỬ – BỎ QUA";
-    var old = btn.textContent; btn.disabled = true; btn.textContent = "Đang gửi…"; $("ct-msg").textContent = "";
-    btn.textContent = "Đang gửi… (có thể mất ~1 phút)";
-    var ac = window.AbortController ? new AbortController() : null, to = setTimeout(function () { if (ac) ac.abort(); }, 150000);
-    return fetch(URL_FS, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(body), signal: ac ? ac.signal : undefined })
-      .finally(function () { clearTimeout(to); })
-      .then(function (r) { return r.json().then(function (j) { if (!r.ok || String(j.success) !== "true") throw j; }); })
-      .then(function () { list.forEach(function (m) { st(m).sent = true; st(m).dirty = false; }); save(); btn.textContent = "Đã gửi ✓"; $("ct-msg").textContent = "✅ Đã gửi thành công " + list.length + " món. Cảm ơn!"; setTimeout(function () { btn.disabled = false; btn.textContent = old; render(); }, 1200); })
-      .catch(function (e) { btn.disabled = false; btn.textContent = old; fallback(body, e); throw e; });
+    var job = { id: Date.now() + "-" + Math.random().toString(36).slice(2, 6), ids: list.map(function (m) { return m.id; }), body: body,
+      payload: JSON.stringify({ form: "cong-thuc", nguoi: name, thoi_gian: body.thoi_gian, trang: location.pathname, test: TEST || undefined,
+        mon: list.map(function (m) { var x = st(m); return { q: m.q, ma: m.ma, ten: m.ten, nhom: m.nhom, nl: x.nl, ly: x.ly, gar: x.gar, cach: x.cach, note: pre + x.note, done: x.done }; }) }) };
+    // Bấm là xong: báo «Đã gửi ✓» ngay, gửi chạy nền, nháp giữ trong hàng chờ localStorage tới khi gửi được.
+    list.forEach(function (m) { st(m).sent = true; st(m).dirty = false; }); save();
+    var Q = qLoad(); Q.push(job); qSave(Q);
+    var old = btn.textContent; btn.textContent = "Đã gửi ✓"; $("ct-msg").textContent = "✅ Đã gửi " + list.length + " món. Cảm ơn!";
+    setTimeout(function () { btn.textContent = old; render(); }, 1200);
+    runJob(job, 0);
+    return Promise.resolve();
+  }
+  var QKEY = KEY + "_q";
+  function qLoad() { try { return JSON.parse(localStorage.getItem(QKEY) || "[]"); } catch (e) { return []; } }
+  function qSave(Q) { try { localStorage.setItem(QKEY, JSON.stringify(Q)); } catch (e) {} }
+  function qDone(job) { qSave(qLoad().filter(function (j) { return j.id !== job.id; })); }
+  function post(job, mode) { return fetch(ENDPOINT, { method: "POST", mode: mode, redirect: "follow", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: job.payload, keepalive: job.payload.length < 60000 }); }
+  var WAIT = [3000, 10000, 30000, 60000];
+  function runJob(job, n) {
+    if (!ENDPOINT) return failJob(job, { message: "chưa cấu hình máy chủ nhận" });
+    post(job, "cors").then(function (r) { return r.json().then(function (j) { if (!j || j.ok !== true) throw { hard: true, message: (j && j.loi) || "máy chủ từ chối" }; }); },
+      function () { return post(job, "no-cors"); })
+      .then(function () { qDone(job); }, function (e) {
+        if (n < WAIT.length && !(e && e.hard)) setTimeout(function () { runJob(job, n + 1); }, WAIT[n]); else failJob(job, e);
+      });
+  }
+  function failJob(job, e) {
+    qDone(job);
+    job.ids.forEach(function (id) { var x = ST[id]; if (x) { x.sent = false; x.dirty = true; } }); save(); if (DATA) render();
+    fallback(job.body, e);
   }
   function fallback(body, e) {
     var txt = "Người điền: " + body.nguoi_dien + "\nThời gian: " + body.thoi_gian + "\nSố món: " + body.so_mon + "\n\n" + body.cong_thuc;
     var mail = "mailto:ketcocktail@gmail.com?subject=" + encodeURIComponent(body._subject) + "&body=" + encodeURIComponent(txt);
     var m = $("ct-msg");
-    m.innerHTML = "Máy chủ nhận form đang lỗi, CHƯA gửi được (" + esc((e && e.message) || "lỗi mạng") + "). Bản đã điền vẫn lưu trên máy này. Bấm <b>Gửi qua ứng dụng Mail</b> (gửi tới ketcocktail@gmail.com) hoặc đợi vài phút rồi bấm gửi lại.<br>" +
+    m.innerHTML = "Gửi nền nhiều lần không được, CHƯA tới nơi (" + esc((e && e.message) || "lỗi mạng") + "). Bản đã điền vẫn lưu trên máy này. Bấm <b>Gửi qua ứng dụng Mail</b> (gửi tới ketcocktail@gmail.com) hoặc bấm «Gửi tất cả món đã sửa» lại sau.<br>" +
       '<a class="apply-submit" style="display:inline-block;margin-top:8px;text-decoration:none" href="' + esc(mail) + '">Gửi qua ứng dụng Mail</a> ' +
       '<button type="button" class="apply-submit" style="margin-top:8px" id="ct-copy">Sao chép nội dung</button>';
     $("ct-copy").onclick = function () { var b = this; (navigator.clipboard ? navigator.clipboard.writeText(body._subject + "\n\n" + txt) : Promise.reject()).then(function () { b.textContent = "Đã chép ✓ – dán vào Zalo/Mail"; }, function () { b.textContent = "Không chép được"; }); };
@@ -141,6 +159,6 @@
     $("ct-quan").innerHTML = '<button type="button" data-q="all" class="on">4 quán</button>' + qs.map(function (x) { return '<button type="button" data-q="' + x + '">' + x + "</button>"; }).join("");
     var nls = {}; d.mon.forEach(function (m) { m.nl.forEach(function (x) { if (x.t) nls[x.t] = 1; }); });
     $("ct-nl").innerHTML = Object.keys(nls).sort().map(function (x) { return '<option value="' + esc(x) + '">'; }).join("");
-    $("ct-loading").hidden = true; $("ct-app").hidden = false; bind(); render();
+    $("ct-loading").hidden = true; $("ct-app").hidden = false; bind(); render(); qLoad().forEach(function (j) { runJob(j, 0); });
   }).catch(function () { $("ct-loading").hidden = true; $("ct-error").hidden = false; });
 })();
