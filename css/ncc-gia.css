@@ -19,3 +19,15 @@
 .ncc-error{padding:18px 16px}
 .ncc-item-ket{margin:2px 0 0;font-size:12px;opacity:.75}
 .ncc-item-ket.ncc-missing{color:#d9534f;opacity:1;font-weight:600}
+.ncc-last{font-size:14px!important;color:var(--label-primary)!important;background:rgba(10,132,255,.12);border-radius:10px;padding:8px 10px;margin:4px 0 8px!important}
+.ncc-edcount{color:#ff9f0a}
+.ncc-confirm-box{margin-top:12px}
+.ncc-confirm{display:block;width:100%;min-height:50px;border:0;border-radius:12px;background:#30d158;color:#000;font-size:17px;font-weight:700;cursor:pointer}
+.ncc-confirm:disabled{opacity:.6}
+.ncc-confirm-hint{font-size:12px!important;margin:6px 0 0!important;text-align:center}
+.ncc-item-ket.ncc-prev{opacity:.95;font-size:13px}
+.ncc-vat-tag{display:inline-block;margin-left:6px;padding:1px 6px;border-radius:6px;background:rgba(255,255,255,.1);font-size:11px}
+.ncc-item.is-edited{box-shadow:inset 0 0 0 2px #ff9f0a}
+.ncc-edited{margin:0;font-size:13px;font-weight:600;color:#ff9f0a}
+.ncc-vat-prev{margin:4px 2px 0;font-size:12px;color:var(--label-secondary)}
+.ncc-warn{margin:4px 0 0;font-size:13px;font-weight:600;color:#ffd60a}
