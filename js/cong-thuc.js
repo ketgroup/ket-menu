@@ -124,6 +124,7 @@
   }
   if (!/^[A-Za-z0-9]{16,40}$/.test(t)) { $("ct-loading").hidden = true; $("ct-error").hidden = false; return; }
   fetch("data/cong-thuc/" + t + ".json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
+    d.mon = (d.mon || []).filter(function (m) { return !m.an; }); // chỉ hiện món đang bán trong CukCuk (an=true là ẩn)
     DATA = d;
     try { var sv = JSON.parse(localStorage.getItem(KEY) || "{}"); ST = sv.st || {}; Object.keys(ST).forEach(function (id) { var x = ST[id]; if (!x || (!x.dirty && !x.done && !x.sent)) delete ST[id]; }); $("ct-name").value = sv.name || ""; } catch (e) { $("ct-name").value = ""; }
     var qs = []; d.mon.forEach(function (m) { if (qs.indexOf(m.q) < 0) qs.push(m.q); });
