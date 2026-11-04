@@ -16,6 +16,12 @@
   // "2026-11-03" | "2026-11-03 10:11" → "03/11/2026" (+ giờ)
   function vnDate(s) { var m = /^(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{2}:\d{2}))?/.exec(s || ""); return m ? m[3] + "/" + m[2] + "/" + m[1] + (m[4] ? " " + m[4] : "") : (s || ""); }
   function getJSON(u, opt) { return fetch(u, opt || { cache: "no-store" }).then(function (r) { if (!r.ok) throw r.status; return r.json(); }); }
+  function sha16(s) {
+    if (!(window.crypto && crypto.subtle && window.TextEncoder)) return Promise.resolve("");
+    return crypto.subtle.digest("SHA-256", new TextEncoder().encode(s)).then(function (b) {
+      return Array.prototype.map.call(new Uint8Array(b), function (x) { return ("0" + x.toString(16)).slice(-2); }).join("").slice(0, 16);
+    }).catch(function () { return ""; });
+  }
   function getApi() {
     var ctl = window.AbortController ? new AbortController() : null, timer;
     var p = getJSON(API_BASE + "?" + API_PARAM + "=" + encodeURIComponent(t), { cache: "no-store", mode: "cors", credentials: "omit", signal: ctl ? ctl.signal : undefined });
@@ -147,8 +153,15 @@
   document.addEventListener("DOMContentLoaded", function () {
     var form = $("ncc-form"), mode = "thuong";
     getApi().then(function (d) { viaApi = true; return [d, d.prev]; }, function () {
-      // Dự phòng (API lỗi/timeout): file data/ncc/<token>.json cùng định dạng API (Action lam-moi-ncc làm mới), điền giá như API; file kiểu cũ thì không điền giá.
-      return getJSON("data/ncc/" + t + ".json").then(function (d) { var a = fromApi(d); return a ? [a, a.prev] : [d, null]; });
+      // Dự phòng (API lỗi/timeout): file data/ncc/<sha256(token) 16 hex>.json (token mới, repo không chứa token), nếu không có thì data/ncc/<token>.json (kiểu cũ).
+      // File định dạng API (Action lam-moi-ncc làm mới) → điền giá như API; file kiểu cũ (items) → không điền giá.
+      function useFile(d) {
+        var a = fromApi(d); if (a) return [a, a.prev];
+        d.items = (d.items || []).map(function (it) { return { ma: it.ma || "", ten: it.ten, quy_cach: it.quy_cach || it.don_vi || "", dv: it.don_vi || it.dv || "", gia: it.gia, ngay: it.ngay, chua_chac: it.chua_chac }; });
+        return [d, null];
+      }
+      function byToken() { return getJSON("data/ncc/" + t + ".json"); }
+      return sha16(t).then(function (h) { return h ? getJSON("data/ncc/" + h + ".json").catch(byToken) : byToken(); }).then(useFile);
     }).then(function (r) { data = r[0]; buildBase(r[1], loadLocal()); render(); }).catch(fail);
 
     form.addEventListener("input", function (e) {

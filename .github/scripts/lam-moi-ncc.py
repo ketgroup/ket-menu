@@ -1,11 +1,20 @@
 #!/usr/bin/env python3
 """Làm mới file dự phòng data/ncc/<token>.json từ API ket-app (giá mới nhất).
 Tên file = token. Không in token ra log. API lỗi/404/dữ liệu không hợp lệ -> giữ file cũ."""
-import json, glob, os, urllib.request, urllib.parse
+import json, glob, os, re, hashlib, urllib.request, urllib.parse
 API = "https://ket-app.vercel.app/api/ncc/gia-gan-nhat?token="
 ok = keep = changed = 0
-for i, f in enumerate(sorted(glob.glob("data/ncc/*.json")), 1):
-    tk = os.path.basename(f)[:-5]
+jobs = []
+# Chế độ 1: file tên = token (kiểu cũ). Bỏ qua file tên băm 16 hex.
+for f in sorted(glob.glob("data/ncc/*.json")):
+    name = os.path.basename(f)[:-5]
+    if not re.fullmatch(r"[0-9a-f]{16}", name): jobs.append((name, f))
+# Chế độ 2: token trong secret NCC_TOKENS (mỗi dòng 1 token) → file data/ncc/<sha256(token)[:16]>.json, chỉ làm mới file băm đã có.
+for tk in os.environ.get("NCC_TOKENS", "").split():
+    f = "data/ncc/" + hashlib.sha256(tk.encode()).hexdigest()[:16] + ".json"
+    if os.path.exists(f): jobs.append((tk, f))
+print(f"Số file cần làm mới: {len(jobs)}")
+for i, (tk, f) in enumerate(jobs, 1):
     try:
         req = urllib.request.Request(API + urllib.parse.quote(tk), headers={"Accept": "application/json", "User-Agent": "ket-menu-lam-moi-ncc"})
         with urllib.request.urlopen(req, timeout=20) as r:
