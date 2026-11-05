@@ -1100,6 +1100,21 @@
    "nhom_goc": "hai-gia-cat"
   },
   {
+   "ma": "",
+   "ten": "Peychaud Bitter",
+   "don_vi": null,
+   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": null,
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null,
+   "nhom_goc": "hai-gia-cat"
+  },
+  {
    "ma": "DC-073",
    "ten": "Xoài",
    "don_vi": null,
@@ -1488,21 +1503,6 @@
    "nghi_sai": null,
    "gia_ket_dang_ghi": null,
    "nhom_goc": "trai-cay"
-  },
-  {
-   "ma": "",
-   "ten": "Peychaud Bitter",
-   "don_vi": null,
-   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "gia": null,
-   "ngay": null,
-   "vat": null,
-   "vat_chu": null,
-   "ghi_chu": null,
-   "la_thu_thu": false,
-   "nghi_sai": null,
-   "gia_ket_dang_ghi": null,
-   "nhom_goc": "hai-gia-cat"
   }
  ],
  "slug": "cho-le"
