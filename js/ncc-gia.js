@@ -39,7 +39,13 @@
         it.gia_cu = g; it.ngay = x.ngay || x.thoi_gian || it.ngay;
         var el = $("ncc-old-" + i); if (el) { el.innerHTML = oldHtml(it); el.classList.remove("ncc-missing"); }
       });
+      demGiaCu();
     }).catch(function () {});
+  }
+  // Đếm lại MỌI món đang hiện giá cũ (file + Sheet, mọi ngày) — sửa lỗi 05/11 hộp chỉ đếm giá từ file.
+  function demGiaCu() {
+    var n = items.filter(function (it) { return it.gia_cu; }).length, el = $("ncc-last");
+    if (n) { el.textContent = n + "/" + items.length + " món đã có giá cũ."; el.hidden = false; } else el.hidden = true;
   }
   function saveDraft() {
     var d = { name: $("f-name").value, note: $("f-note").value, gia: {} };
@@ -47,17 +53,16 @@
     lsSet(LS + slug, d);
   }
   function render() {
-    var dr = lsGet(LS + slug, {}), n = 0;
+    var dr = lsGet(LS + slug, {});
     $("ncc-name").textContent = data.ncc;
     document.title = "Báo giá – " + data.ncc + " – Kết Group";
     $("ncc-items").innerHTML = items.map(function (it, i) {
-      if (it.gia_cu) n++;
       var v = (dr.gia || {})[key(it)] || "";
       return '<li class="ncc-item inset-card"><p class="ncc-item-name">' + esc(it.ten) + (it.dv ? ' <small>(' + esc(it.dv) + ')</small>' : '') + '</p>' +
         '<p class="ncc-item-ket' + (it.gia_cu ? '' : ' ncc-missing') + '" id="ncc-old-' + i + '">' + oldHtml(it) + '</p>' +
         '<label class="ncc-price"><input class="field-control ncc-price-input" data-i="' + i + '" type="text" inputmode="numeric" autocomplete="off" placeholder="Giá mới (trống = không đổi)" value="' + fmt(v) + '" aria-label="Giá mới ' + esc(it.ten) + '"><span>đ</span></label></li>';
     }).join("");
-    if (n) { $("ncc-last").textContent = n + "/" + items.length + " món đã có giá cũ."; $("ncc-last").hidden = false; }
+    demGiaCu();
     if (dr.name) $("f-name").value = dr.name;
     if (dr.note) $("f-note").value = dr.note;
     $("ncc-loading").hidden = true; $("ncc-form").hidden = false;
