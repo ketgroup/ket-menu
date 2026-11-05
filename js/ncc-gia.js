@@ -21,7 +21,10 @@
   function key(m) { return m.ma || String(m.ten).trim().toLowerCase(); }
   function lsGet(k, d) { try { return JSON.parse(localStorage.getItem(k) || "null") || d; } catch (e) { return d; } }
   function lsSet(k, v) { try { if (v == null) localStorage.removeItem(k); else localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
-  function oldHtml(it) { return it.gia_cu ? 'Giá cũ: <b>' + fmt(it.gia_cu) + 'đ' + (it.dv && !/[\/ ]/.test(it.dv) ? '/' + esc(it.dv) : '') + '</b>' + (it.ngay ? ' · ' + esc(vnDate(it.ngay)) : '') + (it.nguon ? ' · ' + esc(it.nguon) : '') : 'Chưa có giá'; }
+  // Giá cũ giữ ĐÚNG đơn vị lúc ghi giá (dvg), không đổi theo ô chọn đơn vị (anh Lan 13:37 05/11).
+  function oldHtml(it) { return it.gia_cu ? 'Giá cũ: <b>' + fmt(it.gia_cu) + 'đ</b>' + (it.dvg ? '<span class="ncc-u">/' + esc(it.dvg) + '</span>' : '') + (it.ngay ? ' · <span class="ncc-ng">' + esc(vnDate(it.ngay)) + '</span>' : '') : '<span class="ncc-chua">«chưa có giá»</span>'; }
+  var UNITS = ["kg", "g", "quả", "trái", "nải", "chai", "lon", "gói", "hộp", "cuộn", "lốc", "thùng", "bó", "cái", "lít", "ml"];
+  function hang(it) { return !it.gia_cu ? 0 : (String(it.ngay || "").slice(0, 10) < cuoi30() ? 1 : 2); }
 
   // Giá cũ hiện ngay từ data/ncc/<slug>.json (Action làm mới mỗi 20 phút từ ket-app); Sheet (GET ENDPOINT) chỉ cập nhật ngầm sau.
   function fromFile(f) {
@@ -34,6 +37,8 @@
       var m = list[i], c = [[num(m.gia_sheet), m.ngay_sheet, "NCC báo"], [m.la_thu_thu ? 0 : num(m.gia), m.ngay, "NCC báo"], [num(m.gia_kho), m.ngay_kho, m.nguon_kho || "Bảng giá kho"]], b = null;
       c.forEach(function (x) { if (x[0] && (!b || String(x[1] || "") > String(b[1] || ""))) b = x; });
       if (b) { it.gia_cu = b[0]; it.ngay = b[1] || ""; it.nguon = b[2]; } else it.gia_cu = num(m.gia_ket_dang_ghi);
+      it.dvg = (b === c[0] && m.don_vi_sheet) || it.dv; // đơn vị của giá cũ
+      it.dvc = /^chanh(?! dây)/i.test(String(it.ten).trim()) ? "kg" : it.dv; // đơn vị mặc định ô chọn; chanh bán theo kg (anh Lan 13:36)
       return it; });
   }
   function sheetUpdate() {
@@ -44,12 +49,13 @@
         var x = by[key(it)], g = x && num(x.gia_moi || x.gia); if (!g) return;
         var nd = String(x.ngay || x.gio_vn || x.thoi_gian || "").slice(0, 10); if (it.gia_cu && nd && nd < String(it.ngay || "")) return; // giá trong file mới hơn thì giữ
         it.gia_cu = g; it.ngay = nd || it.ngay; it.nguon = "NCC báo";
-        var el0 = $("ncc-old-" + i); if (!it.dv && x.don_vi && el0) { it.dv = String(x.don_vi); var nm = el0.closest("li") && el0.closest("li").querySelector(".ncc-item-name"); if (nm) nm.innerHTML = esc(it.ten) + ' <small>(' + esc(it.dv) + ')</small>'; } // ô đơn vị trống → lấy đơn vị bản giá Sheet mới nhất
-        var el = $("ncc-old-" + i); if (el) { el.innerHTML = oldHtml(it); el.classList.remove("ncc-missing"); }
+        if (x.don_vi) { it.dvg = String(x.don_vi); it.dvc = String(x.don_vi); if (!it.dv) it.dv = it.dvc; } // bản gửi mới nhất thắng: giá cũ theo đơn vị đã gửi, ô chọn mặc định đơn vị đó
+        else if (!it.dvg) it.dvg = it.dv;
+        var el = $("ncc-old-" + i); if (el) { el.innerHTML = oldHtml(it); el.className = "ncc-item-ket"; }
       });
       demGiaCu();
       var ae = document.activeElement, dangGo = ae && ae.classList && ae.classList.contains("ncc-price-input");
-      if (!dangGo) { saveDraft(); if (sapXep()) render(); } // giá Sheet về sau → xếp lại (giữ giá đang nhập qua nháp)
+      if (!dangGo) { saveDraft(); sapXep(); render(); } // giá Sheet về sau → xếp lại (giữ giá đang nhập qua nháp)
     }).catch(function () {});
   }
   // Đếm lại MỌI món đang hiện giá cũ (file + Sheet, mọi ngày) — sửa lỗi 05/11 hộp chỉ đếm giá từ file.
@@ -69,6 +75,7 @@
   function saveDraft() {
     var d = { name: $("f-name").value, note: $("f-note").value, gia: {} };
     document.querySelectorAll(".ncc-price-input").forEach(function (el) { var v = digits(el.value); if (v) d.gia[key(items[+el.dataset.i])] = v; });
+    d.dv = {}; document.querySelectorAll(".ncc-dv").forEach(function (el) { var it = items[+el.dataset.i]; if (el.value !== it.dvc) d.dv[key(it)] = el.value; });
     lsSet(LS + slug, d);
   }
   function render() {
@@ -76,10 +83,12 @@
     $("ncc-name").textContent = data.ncc;
     document.title = "Báo giá – " + data.ncc + " – Kết Group";
     $("ncc-items").innerHTML = items.map(function (it, i) {
-      var v = (dr.gia || {})[key(it)] || "";
-      return '<li class="ncc-item inset-card"><p class="ncc-item-name">' + esc(it.ten) + (it.dv ? ' <small>(' + esc(it.dv) + ')</small>' : '') + '</p>' +
-        '<p class="ncc-item-ket' + (it.gia_cu ? '' : ' ncc-missing') + '" id="ncc-old-' + i + '">' + oldHtml(it) + '</p>' +
-        '<label class="ncc-price"><input class="field-control ncc-price-input" data-i="' + i + '" type="text" inputmode="numeric" autocomplete="off" placeholder="Giá mới (trống = không đổi)" value="' + fmt(v) + '" aria-label="Giá mới ' + esc(it.ten) + '"><span>đ</span></label></li>';
+      var v = (dr.gia || {})[key(it)] || "", h = hang(it), dv = (dr.dv || {})[key(it)] || it.dvc || "";
+      var opts = UNITS.slice(); if (dv && opts.indexOf(dv) < 0) opts.unshift(dv); if (!dv) opts.unshift("");
+      return '<li class="ncc-item ncc-st' + h + '"><p class="ncc-item-name">' + esc(it.ten) + ' <span class="ncc-badge">' + ["Chưa có giá", "Giá cũ >30 ngày", "Giá mới"][h] + '</span></p>' +
+        '<p class="ncc-item-ket" id="ncc-old-' + i + '">' + oldHtml(it) + '</p>' +
+        '<div class="ncc-row"><label class="ncc-price"><input class="field-control ncc-price-input" data-i="' + i + '" type="text" inputmode="numeric" autocomplete="off" placeholder="Giá mới" value="' + fmt(v) + '" aria-label="Giá mới ' + esc(it.ten) + '"><span>đ</span></label>' +
+        '<label class="ncc-dv-wrap"><span>/</span><select class="ncc-dv" data-i="' + i + '" aria-label="Đơn vị ' + esc(it.ten) + '">' + opts.map(function (u) { return '<option' + (u === dv ? ' selected' : '') + '>' + esc(u) + '</option>'; }).join("") + '</select></label></div></li>';
     }).join("") || ('<li class="ncc-item inset-card"><p class="ncc-item-name">Các món của nhóm này đã chuyển sang trang <a href="ncc-gia.html?ncc=' + esc(String(data.chuyen_het)) + '">Chợ lẻ</a>.</p></li>');
     $("ncc-submit").hidden = !items.length;
     demGiaCu();
@@ -89,7 +98,7 @@
   }
   function payload() {
     var out = [];
-    document.querySelectorAll(".ncc-price-input").forEach(function (el) { var it = items[+el.dataset.i]; out.push({ ma: it.ma, ten: it.ten, don_vi: it.dv, gia_cu: it.gia_cu || "", gia_moi: digits(el.value) ? +digits(el.value) : "" }); });
+    document.querySelectorAll(".ncc-price-input").forEach(function (el) { var it = items[+el.dataset.i]; var u = document.querySelector('.ncc-dv[data-i="' + el.dataset.i + '"]'); out.push({ ma: it.ma, ten: it.ten, don_vi: (u && u.value) || it.dv, gia_cu: it.gia_cu || "", gia_moi: digits(el.value) ? +digits(el.value) : "" }); });
     return { form: "ncc", ncc: data.ncc, ma_ncc: data.ma_ncc, slug: slug, nguoi: $("f-name").value.trim(), ghi_chu: $("f-note").value.trim(), thoi_gian: new Date().toLocaleString("vi-VN"), id: Date.now() + "-" + Math.random().toString(36).slice(2, 8), items: out };
   }
   function text(p) {

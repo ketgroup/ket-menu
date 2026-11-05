@@ -1,0 +1,68 @@
+/* Giấy trắng dùng chung ncc-gia + cong-thuc (anh Lan 13:37–13:40 05/11): nền trắng, chữ đậm, màu ở chữ/số/đơn vị. Tương phản AA trên nền trắng. */
+body.page-ncc, body.page-ct {
+  --gt-ten: #1a237e; --gt-giacu: #b45309; --gt-giamoi: #1d4ed8; --gt-dv: #7c3aed; --gt-ngay: #0f766e;
+  --gt-do: #b91c1c; --gt-vang: #a16207; --gt-xanh: #15803d; --gt-chu: #111827; --gt-phu: #4b5563; --gt-vien: #d1d5db;
+  --bg: #fff; --bg-grouped: #fff; --bg-secondary: #f3f4f6; --bg-tertiary: #e5e7eb; --fill-tertiary: #f3f4f6;
+  --separator: #d1d5db; --label-primary: #111827; --label-secondary: #4b5563; --label-tertiary: #6b7280;
+  background: #fff !important; color: var(--gt-chu) !important; font-size: 16px;
+}
+body.page-ncc .ios-nav, body.page-ct .ios-nav { background: #fff !important; border-bottom: 1px solid var(--gt-vien); }
+body.page-ncc .ios-nav-title, body.page-ct .ios-nav-title { color: var(--gt-ten) !important; }
+body.page-ncc .inset-card, body.page-ct .inset-card { background: #fff !important; border: 1px solid var(--gt-vien); box-shadow: 0 1px 3px rgba(0,0,0,.06); color: var(--gt-chu); }
+body.page-ncc p, body.page-ct p, body.page-ncc label, body.page-ct label { color: var(--gt-chu); }
+body.page-ncc .field-control, body.page-ct .field-control, body.page-ct input, body.page-ct select, body.page-ct textarea, body.page-ncc select {
+  background: #fff !important; color: var(--gt-chu) !important; border: 1.5px solid #9ca3af !important; border-radius: 10px; font-size: 16px;
+}
+body.page-ncc .field-label, body.page-ct .ct-lbl { color: var(--gt-phu) !important; font-weight: 600; }
+body.page-ncc .apply-submit, body.page-ct .apply-submit {
+  position: sticky; bottom: 10px; z-index: 5; display: block; width: 100%; min-height: 56px; font-size: 19px; font-weight: 800;
+  background: var(--gt-giamoi) !important; color: #fff !important; border: 0; border-radius: 14px; box-shadow: 0 4px 14px rgba(29,78,216,.35);
+}
+/* ncc-gia */
+.page-ncc .ncc-hero h2 { color: var(--gt-ten); }
+.page-ncc .ncc-kicker { color: var(--gt-giamoi) !important; }
+.page-ncc .ncc-last { background: #eff6ff !important; color: var(--gt-ten) !important; font-weight: 700; }
+.page-ncc .ncc-item { background: #fff; border: 1px solid var(--gt-vien); border-left: 5px solid var(--gt-xanh); border-radius: 12px; padding: 12px 14px; gap: 8px; }
+.page-ncc .ncc-item.ncc-st0 { border-left-color: var(--gt-do); }
+.page-ncc .ncc-item.ncc-st1 { border-left-color: #d97706; }
+.page-ncc .ncc-item-name { color: var(--gt-ten); font-size: 17px; font-weight: 800; }
+.page-ncc .ncc-badge { display: inline-block; margin-left: 4px; padding: 1px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; vertical-align: 2px; border: 1px solid currentColor; color: var(--gt-xanh); background: #f0fdf4; }
+.page-ncc .ncc-st0 .ncc-badge { color: var(--gt-do); background: #fef2f2; }
+.page-ncc .ncc-st1 .ncc-badge { color: var(--gt-vang); background: #fffbeb; }
+.page-ncc .ncc-item-ket { opacity: 1 !important; font-size: 15px !important; color: var(--gt-phu) !important; margin: 0; }
+.page-ncc .ncc-item-ket b { color: var(--gt-giacu); font-weight: 800; }
+.page-ncc .ncc-item-ket .ncc-u { color: var(--gt-dv); font-weight: 800; }
+.page-ncc .ncc-item-ket .ncc-ng { color: var(--gt-ngay); font-weight: 700; }
+.page-ncc .ncc-item-ket .ncc-chua { color: var(--gt-do); font-weight: 800; }
+.page-ncc .ncc-item-ket .ncc-gc { color: var(--gt-vang); font-weight: 600; }
+.page-ncc .ncc-row { display: flex; gap: 8px; align-items: center; }
+.page-ncc .ncc-row .ncc-price { flex: 1; min-width: 0; }
+.page-ncc .ncc-price input { color: var(--gt-giamoi) !important; font-size: 20px; font-weight: 800; }
+.page-ncc .ncc-price span { color: var(--gt-giamoi) !important; font-weight: 700; }
+.page-ncc .ncc-dv-wrap { display: flex; align-items: center; gap: 4px; flex: none; color: var(--gt-dv); font-weight: 800; }
+.page-ncc .ncc-dv { color: var(--gt-dv) !important; font-weight: 800; font-size: 17px; padding: 10px 6px; min-height: 48px; border: 1.5px solid #a78bfa !important; border-radius: 10px; background: #faf5ff !important; }
+.page-ncc .ncc-msg { color: var(--gt-do); font-weight: 700; }
+.page-ncc .ncc-foot { color: var(--gt-phu); }
+/* cong-thuc */
+.page-ct .ct-item { background: #fff; border: 1px solid var(--gt-vien); border-radius: 12px; }
+.page-ct .ct-head { color: var(--gt-chu); }
+.page-ct .ct-title b { color: var(--gt-ten); font-size: 17px; font-weight: 800; }
+.page-ct .ct-title small { color: var(--gt-phu); font-size: 14px; }
+.page-ct .ct-group { color: var(--gt-ngay); font-weight: 800; }
+.page-ct .ct-dot { background: var(--gt-do) !important; } .page-ct .ct-dot.part { background: #d97706 !important; } .page-ct .ct-dot.done { background: var(--gt-xanh) !important; }
+.page-ct .ct-row .nl { color: var(--gt-ten) !important; font-weight: 700; }
+.page-ct .ct-row .dl { color: var(--gt-giamoi) !important; font-weight: 800; }
+.page-ct .ct-row .dv { color: var(--gt-dv) !important; font-weight: 800; background: #faf5ff !important; border-color: #a78bfa !important; }
+.page-ct .ct-tabs button { color: var(--gt-phu); background: #fff; border: 1.5px solid var(--gt-vien); font-weight: 700; }
+.page-ct .ct-tabs button[data-s="co"] b { color: var(--gt-xanh); } .page-ct .ct-tabs button[data-s="chua"] b { color: var(--gt-do); }
+.page-ct .ct-tabs button.on { border-color: var(--gt-ten); color: var(--gt-ten); background: #eef2ff; }
+.page-ct .ct-chips button { color: var(--gt-ten); background: #fff; border: 1.5px solid var(--gt-vien); font-weight: 700; }
+.page-ct .ct-chips button.on { background: var(--gt-ten); color: #fff; border-color: var(--gt-ten); }
+.page-ct .ct-tag { color: var(--gt-vang); background: #fffbeb; border: 1px solid currentColor; }
+.page-ct .ct-tag.sent { color: var(--gt-xanh); background: #f0fdf4; }
+.page-ct .ncc-progress, .page-ct #ct-done, .page-ct #ct-total { color: var(--gt-ten) !important; }
+.page-ct .ct-bar { background: #e5e7eb; } .page-ct .ct-bar i { background: var(--gt-xanh); }
+.page-ct .ct-done-btn { color: var(--gt-xanh); border: 1.5px solid var(--gt-xanh); background: #fff; font-weight: 700; }
+.page-ct .ct-done-btn.on { background: var(--gt-xanh); color: #fff; }
+.page-ct .ct-send-btn { background: var(--gt-giamoi); color: #fff; border: 0; font-weight: 800; }
+.page-ct .ct-msg, .page-ct #ct-msg { color: var(--gt-xanh); font-weight: 700; }

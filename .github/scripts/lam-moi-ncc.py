@@ -5,14 +5,16 @@ Chỉ ghi khi API trả 200 + dữ liệu hợp lệ; lỗi/404 → giữ file c
 import json, os, glob, urllib.request, urllib.parse
 # Giá cũ từ kho (data/ncc/_kho-gia.json, bot Web Menu sinh từ Brain kho): trộn vào từng món dạng gia_kho/ngay_kho/nguon_kho.
 # JS chọn giá mới nhất theo ngày giữa giá NCC gửi (gia/ngay) và giá kho; bằng ngày thì giữ giá NCC gửi.
-KHO = DVB = {}
+KHO = DVB = DVG = {}
 try:
-    _k = json.load(open("data/ncc/_kho-gia.json", encoding="utf-8")); KHO = _k.get("ncc", {}); DVB = _k.get("don_vi_bo_sung", {})
+    _k = json.load(open("data/ncc/_kho-gia.json", encoding="utf-8")); KHO = _k.get("ncc", {}); DVB = _k.get("don_vi_bo_sung", {}); DVG = _k.get("don_vi_ghi_de", {})
 except Exception as e: print("Không đọc được _kho-gia.json:", type(e).__name__)
 def tron_kho(slug, root):
     k = KHO.get(slug, {}); dvb = DVB.get(slug, {})
     for m in root.get("mon", []):
         m.pop("don_vi_bo_sung", None)
+        g = DVG.get(slug, {}).get(m.get("ma") or m.get("ten"))
+        if g: m["don_vi"] = g  # đơn vị bắt buộc (anh Lan); API ket-app còn đơn vị cũ cũng không đè lại
         if not m.get("don_vi") and dvb.get(m.get("ma") or m.get("ten")): m["don_vi_bo_sung"] = dvb[m.get("ma") or m.get("ten")]
         for f in ("gia_kho", "ngay_kho", "nguon_kho"): m.pop(f, None)
         x = k.get(m.get("ma") or m.get("ten"))

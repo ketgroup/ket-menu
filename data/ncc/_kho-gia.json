@@ -774,7 +774,7 @@
     "gia": 20000,
     "ngay": "2026-11-02",
     "nguon": "Bảng giá kho",
-    "don_vi": "quả",
+    "don_vi": "kg",
     "loai": "kho"
    },
    "DC-095": {
@@ -857,6 +857,12 @@
     "don_vi": "kg",
     "loai": "kho"
    }
+  }
+ },
+ "don_vi_ghi_de": {
+  "_ghi_chu": "Đơn vị bắt buộc, ghi đè đơn vị API ket-app (anh Lan 13:36 05/11: chanh bán theo kg)",
+  "trai-cay": {
+   "DC-094": "kg"
   }
  },
  "don_vi_bo_sung": {
