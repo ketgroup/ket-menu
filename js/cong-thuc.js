@@ -8,7 +8,7 @@
   // Luật anh Lan 11:09 05/11: hoàn thành = có nguyên liệu + định lượng; bỏ món tặng (nhóm «Make You Happy», mã W…) và món ẩn khỏi số đếm.
   function hasCT(m) { return filled(st(m)); }
   function tang(m) { return /^make you happy$/i.test(String(m.nhom || "").trim()); }
-  var UNITS = ["ml", "g", "gr", "dash", "giọt", "lát", "quả", "cái", "muỗng", "phần", "shot"];
+  var UNITS = ["ml", "g", "gr", "dash", "giọt", "lát", "quả", "cái", "muỗng", "phần", "shot", "chai", "lon", "gói"];
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d"); }
   function save() { try { localStorage.setItem(KEY, JSON.stringify({ st: ST, name: $("ct-name").value })); } catch (e) {} }
