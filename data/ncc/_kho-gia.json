@@ -1,0 +1,862 @@
+{
+ "ghi_chu": "Giá cũ từ kho Kết (bang-gia-nvl-hien-hanh; HGC ưu tiên hoá đơn gần nhất). Script lam-moi-ncc trộn vào data/ncc/<slug>.json.",
+ "ncc": {
+  "bia-huda": {},
+  "chi-hong": {
+   "DC-140": {
+    "ten": "Ống hút",
+    "gia": 25000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "gói",
+    "loai": "kho"
+   },
+   "DC-142": {
+    "ten": "Bao rác",
+    "gia": 35000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "kg",
+    "loai": "kho"
+   },
+   "DC-156": {
+    "ten": "Nước rửa chén",
+    "gia": 130000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "can",
+    "loai": "kho"
+   },
+   "Nước lau sàn": {
+    "ten": "Nước lau sàn",
+    "gia": 90000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "can",
+    "loai": "kho"
+   },
+   "Giấy rút": {
+    "ten": "Giấy rút",
+    "gia": 90000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "",
+    "loai": "kho"
+   },
+   "Túi giấy lớn": {
+    "ten": "Túi giấy lớn",
+    "gia": 40000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "",
+    "loai": "kho"
+   },
+   "Giấy vệ sinh cuộn lớn": {
+    "ten": "Giấy vệ sinh cuộn lớn",
+    "gia": 40000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "xách",
+    "loai": "kho"
+   },
+   "Băng vệ sinh": {
+    "ten": "Băng vệ sinh",
+    "gia": 25000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "gói",
+    "loai": "kho"
+   },
+   "Chổi quét": {
+    "ten": "Chổi quét",
+    "gia": 50000,
+    "ngay": "2026-10-22",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cây",
+    "loai": "kho"
+   },
+   "Cây lau sàn": {
+    "ten": "Cây lau sàn",
+    "gia": 85000,
+    "ngay": "2026-10-22",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cây",
+    "loai": "kho"
+   },
+   "Giấy lau tay wc": {
+    "ten": "Giấy lau tay wc",
+    "gia": 90000,
+    "ngay": "2026-10-22",
+    "nguon": "Bảng giá kho",
+    "don_vi": "lốc",
+    "loai": "kho"
+   }
+  },
+  "cho-le": {
+   "DC-049": {
+    "ten": "Hộp giấy mang về",
+    "gia": 2600,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cái/gói/hộp/chai",
+    "loai": "kho"
+   },
+   "DC-050": {
+    "ten": "Hộp nhựa sốt mang về",
+    "gia": 17000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cái/gói/hộp/chai",
+    "loai": "kho"
+   },
+   "DC-051": {
+    "ten": "Hộp Pizza",
+    "gia": 3100,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cái/gói/hộp/chai",
+    "loai": "kho"
+   },
+   "DC-052": {
+    "ten": "Bao ni lông mang về",
+    "gia": 25000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cái/gói/hộp/chai",
+    "loai": "kho"
+   },
+   "DC-057": {
+    "ten": "bột matcha Ami",
+    "gia": 90000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "gói",
+    "loai": "kho"
+   },
+   "DC-061": {
+    "ten": "trà lài",
+    "gia": 100000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cái/gói/hộp/chai",
+    "loai": "kho"
+   },
+   "DC-144": {
+    "ten": "Giấy in bill",
+    "gia": 15000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cái/gói/hộp/chai",
+    "loai": "kho"
+   },
+   "DC-147": {
+    "ten": "Hộp nhựa tròn bột pizza",
+    "gia": 10000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cái/gói/hộp/chai",
+    "loai": "kho"
+   },
+   "DC-151": {
+    "ten": "Xiên decor",
+    "gia": 40000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cái/gói/hộp/chai",
+    "loai": "kho"
+   },
+   "DC-163": {
+    "ten": "Bẫy chuột",
+    "gia": 15000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cái/gói/hộp/chai",
+    "loai": "kho"
+   },
+   "DC-164": {
+    "ten": "Bàn chải đánh răng",
+    "gia": 20000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cái/gói/hộp/chai",
+    "loai": "kho"
+   },
+   "DC-166": {
+    "ten": "Dao bào",
+    "gia": 30000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cái/gói/hộp/chai",
+    "loai": "kho"
+   },
+   "DC-169": {
+    "ten": "Kéo",
+    "gia": 20000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cái/gói/hộp/chai",
+    "loai": "kho"
+   },
+   "DC-170": {
+    "ten": "Dây xích",
+    "gia": 50000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cái/gói/hộp/chai",
+    "loai": "kho"
+   },
+   "DC-171": {
+    "ten": "Ca thủy tinh",
+    "gia": 150000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cái/gói/hộp/chai",
+    "loai": "kho"
+   },
+   "DC-055": {
+    "ten": "sữa đặc",
+    "gia": 70000,
+    "ngay": "2026-10-23",
+    "nguon": "Bảng giá kho",
+    "don_vi": "hộp",
+    "loai": "kho"
+   },
+   "TU-017": {
+    "ten": "Nước dừa (Coconut Water)",
+    "gia": 34000,
+    "ngay": "2026-10-31",
+    "nguon": "Bảng giá kho",
+    "don_vi": "lon",
+    "loai": "kho"
+   },
+   "DC-106": {
+    "ten": "Hoa hồng",
+    "gia": 10000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cây",
+    "loai": "kho"
+   },
+   "DC-108": {
+    "ten": "Hoa sen",
+    "gia": 15000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cây",
+    "loai": "kho"
+   },
+   "DC-162": {
+    "ten": "Cây chổi",
+    "gia": 20000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "cái",
+    "loai": "kho"
+   }
+  },
+  "cho-snack": {
+   "DC-086": {
+    "ten": "Snack",
+    "gia": 50000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "kg",
+    "loai": "kho"
+   }
+  },
+  "hai-gia-cat": {
+   "HP-009": {
+    "ten": "Vodka HaNoi",
+    "gia": 65250,
+    "ngay": "2026-11-03",
+    "nguon": "Hoá đơn HGC (gồm VAT)",
+    "don_vi": "chai",
+    "loai": "hd"
+   },
+   "HP-004": {
+    "ten": "Jose Cruevo Reposado",
+    "gia": 550000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-001": {
+    "ten": "Belvedere",
+    "gia": 1050000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-003": {
+    "ten": "Absolute Extrakt",
+    "gia": 520000,
+    "ngay": "2026-09-23",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-005": {
+    "ten": "Svedka Vanilla",
+    "gia": 250000,
+    "ngay": "2026-09-23",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-006": {
+    "ten": "Zubrowka",
+    "gia": 440000,
+    "ngay": "2026-09-23",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-007": {
+    "ten": "Grey Goose",
+    "gia": 990000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-013": {
+    "ten": "1800 Blanco",
+    "gia": 1000000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-015": {
+    "ten": "1800 Reposado",
+    "gia": 1000000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-017": {
+    "ten": "Bacadi",
+    "gia": 410000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-020": {
+    "ten": "Havana 7YO",
+    "gia": 750000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-021": {
+    "ten": "Flo De Cana 4",
+    "gia": 370000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-022": {
+    "ten": "Bulldog",
+    "gia": 420000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-024": {
+    "ten": "Roku Gin",
+    "gia": 810000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-025": {
+    "ten": "Monkey 47",
+    "gia": 1550000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-026": {
+    "ten": "Tanqueray",
+    "gia": 530000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-027": {
+    "ten": "Ophir",
+    "gia": 910000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-030": {
+    "ten": "Lady Trieu spice",
+    "gia": 750000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-034": {
+    "ten": "Highland Park 12YO",
+    "gia": 1990000,
+    "ngay": "2026-09-23",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-035": {
+    "ten": "Talisker 10YO",
+    "gia": 1600000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-038": {
+    "ten": "Galavulin 16YO",
+    "gia": 2900000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-040": {
+    "ten": "Johnny Walker Gold Lable",
+    "gia": 980000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-041": {
+    "ten": "Ballantine's Finest",
+    "gia": 350000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-044": {
+    "ten": "Wild Turkey 101",
+    "gia": 950000,
+    "ngay": "2026-09-23",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-046": {
+    "ten": "Bulleit Bourbon",
+    "gia": 650000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-047": {
+    "ten": "Gentleman Jack",
+    "gia": 1150000,
+    "ngay": "2026-09-23",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-050": {
+    "ten": "Ritten House",
+    "gia": 850000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-052": {
+    "ten": "Bushmills black",
+    "gia": 720000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-053": {
+    "ten": "Bushmills white",
+    "gia": 510000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SP-055": {
+    "ten": "Marker's Mark",
+    "gia": 810000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "LQ-001": {
+    "ten": "Aperol",
+    "gia": 880000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "LQ-003": {
+    "ten": "Grand Marnier",
+    "gia": 850000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "LQ-005": {
+    "ten": "Dom",
+    "gia": 1180000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "LQ-015": {
+    "ten": "Cherry brandy",
+    "gia": 400000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "LQ-018": {
+    "ten": "Creme de cassic",
+    "gia": 460000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "LQ-022": {
+    "ten": "Frangelico",
+    "gia": 860000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "LQ-029": {
+    "ten": "Dry vermouth",
+    "gia": 550000,
+    "ngay": "2026-11-04",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   }
+  },
+  "hoa": {
+   "DC-107": {
+    "ten": "Hoa viola",
+    "gia": 60000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "hộp",
+    "loai": "kho"
+   }
+  },
+  "nuoc-ngot": {
+   "SD-005": {
+    "ten": "Soda",
+    "gia": 152000,
+    "ngay": "2026-11-03",
+    "nguon": "Bảng giá kho",
+    "don_vi": "thùng",
+    "loai": "kho"
+   },
+   "SD-006": {
+    "ten": "Tonic",
+    "gia": 170000,
+    "ngay": "2026-11-03",
+    "nguon": "Bảng giá kho",
+    "don_vi": "thùng",
+    "loai": "kho"
+   },
+   "SD-001": {
+    "ten": "Ginger Ale",
+    "gia": 202000,
+    "ngay": "2026-11-03",
+    "nguon": "Bảng giá kho",
+    "don_vi": "thùng",
+    "loai": "kho"
+   },
+   "SD-003": {
+    "ten": "Coca cola",
+    "gia": 200000,
+    "ngay": "2026-11-03",
+    "nguon": "Bảng giá kho",
+    "don_vi": "thùng",
+    "loai": "kho"
+   },
+   "SD-004": {
+    "ten": "Sprite",
+    "gia": 167000,
+    "ngay": "2026-11-03",
+    "nguon": "Bảng giá kho",
+    "don_vi": "thùng",
+    "loai": "kho"
+   }
+  },
+  "syrup": {
+   "SY-003": {
+    "ten": "Tiramisu",
+    "gia": 210000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SY-004": {
+    "ten": "Almon",
+    "gia": 210000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SY-006": {
+    "ten": "Caramel",
+    "gia": 210000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SY-009": {
+    "ten": "Elder flower",
+    "gia": 210000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SY-013": {
+    "ten": "Lemon",
+    "gia": 210000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SY-015": {
+    "ten": "Wartermelon",
+    "gia": 210000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SY-017": {
+    "ten": "Chocolate",
+    "gia": 210000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SY-019": {
+    "ten": "Popcorn",
+    "gia": 210000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SY-020": {
+    "ten": "Blood orange",
+    "gia": 210000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SY-021": {
+    "ten": "Kiwi",
+    "gia": 210000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SY-022": {
+    "ten": "Cherry Blossom",
+    "gia": 210000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "SY-024": {
+    "ten": "Strawberry",
+    "gia": 210000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "DC-133": {
+    "ten": "Syrup green apple Monin",
+    "gia": 210000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "DC-091": {
+    "ten": "Syrup",
+    "gia": 210000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   }
+  },
+  "trai-cay": {
+   "DC-010": {
+    "ten": "Chanh xanh có hạt",
+    "gia": 30000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "kg",
+    "loai": "kho"
+   },
+   "DC-018": {
+    "ten": "Bơ trái",
+    "gia": 50000,
+    "ngay": "2026-10-25",
+    "nguon": "Bảng giá kho",
+    "don_vi": "kg",
+    "loai": "kho"
+   },
+   "DC-078": {
+    "ten": "chuối",
+    "gia": 54000,
+    "ngay": "2026-10-29",
+    "nguon": "Bảng giá kho",
+    "don_vi": "nải",
+    "loai": "kho"
+   },
+   "DC-079": {
+    "ten": "Dừa trái",
+    "gia": 22000,
+    "ngay": "2026-10-23",
+    "nguon": "Bảng giá kho",
+    "don_vi": "trái",
+    "loai": "kho"
+   },
+   "DC-083": {
+    "ten": "Cam vàng",
+    "gia": 70000,
+    "ngay": "2026-10-30",
+    "nguon": "Bảng giá kho",
+    "don_vi": "kg",
+    "loai": "kho"
+   },
+   "DC-094": {
+    "ten": "Chanh vàng",
+    "gia": 20000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "quả",
+    "loai": "kho"
+   },
+   "DC-095": {
+    "ten": "Chanh dây",
+    "gia": 30000,
+    "ngay": "2026-11-03",
+    "nguon": "Bảng giá kho",
+    "don_vi": "kg",
+    "loai": "kho"
+   },
+   "DC-096": {
+    "ten": "Dứa",
+    "gia": 22000,
+    "ngay": "2026-10-31",
+    "nguon": "Bảng giá kho",
+    "don_vi": "kg",
+    "loai": "kho"
+   },
+   "DC-100": {
+    "ten": "Lá mint",
+    "gia": 25000,
+    "ngay": "2026-10-29",
+    "nguon": "Bảng giá kho",
+    "don_vi": "bó",
+    "loai": "kho"
+   },
+   "DC-029": {
+    "ten": "Mật Ong Tam Đảo",
+    "gia": 46000,
+    "ngay": "2026-10-22",
+    "nguon": "Bảng giá kho",
+    "don_vi": "chai",
+    "loai": "kho"
+   },
+   "DC-105": {
+    "ten": "Rau ngổ",
+    "gia": 10000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "hộp",
+    "loai": "kho"
+   },
+   "DC-004": {
+    "ten": "Trứng Gà",
+    "gia": 27000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "vỉ",
+    "loai": "kho"
+   },
+   "DC-013": {
+    "ten": "Khoai tây",
+    "gia": 25000,
+    "ngay": "2026-10-29",
+    "nguon": "Bảng giá kho",
+    "don_vi": "kg",
+    "loai": "kho"
+   },
+   "DC-016": {
+    "ten": "Bắp Mỹ",
+    "gia": 12000,
+    "ngay": "2026-10-29",
+    "nguon": "Bảng giá kho",
+    "don_vi": "kg",
+    "loai": "kho"
+   },
+   "DC-076": {
+    "ten": "Cần tây",
+    "gia": 40000,
+    "ngay": "2026-10-29",
+    "nguon": "Bảng giá kho",
+    "don_vi": "kg",
+    "loai": "kho"
+   },
+   "DC-102": {
+    "ten": "Lá basil",
+    "gia": 160000,
+    "ngay": "2026-11-02",
+    "nguon": "Bảng giá kho",
+    "don_vi": "kg",
+    "loai": "kho"
+   }
+  }
+ }
+}

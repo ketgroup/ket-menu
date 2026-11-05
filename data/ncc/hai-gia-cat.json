@@ -20,7 +20,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": 69000
+   "gia_ket_dang_ghi": 69000,
+   "gia_kho": 65250,
+   "ngay_kho": "2026-11-03",
+   "nguon_kho": "Hoá đơn HGC (gồm VAT)"
   },
   {
    "ma": "HP-004",
@@ -34,7 +37,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 550000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-001",
@@ -48,7 +54,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 1050000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-003",
@@ -62,7 +71,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 520000,
+   "ngay_kho": "2026-09-23",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-004",
@@ -90,7 +102,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 250000,
+   "ngay_kho": "2026-09-23",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-006",
@@ -104,7 +119,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 440000,
+   "ngay_kho": "2026-09-23",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-007",
@@ -118,7 +136,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 990000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-013",
@@ -132,7 +153,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 1000000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-015",
@@ -146,7 +170,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 1000000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-016",
@@ -174,7 +201,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 410000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-020",
@@ -188,7 +218,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 750000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-021",
@@ -202,7 +235,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 370000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-022",
@@ -216,7 +252,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 420000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-024",
@@ -230,7 +269,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 810000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-025",
@@ -244,7 +286,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 1550000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-026",
@@ -258,7 +303,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 530000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-027",
@@ -272,7 +320,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 910000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-030",
@@ -286,7 +337,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 750000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-034",
@@ -300,7 +354,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 1990000,
+   "ngay_kho": "2026-09-23",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-035",
@@ -314,7 +371,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 1600000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-038",
@@ -328,7 +388,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 2900000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-040",
@@ -342,7 +405,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 980000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-041",
@@ -356,7 +422,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 350000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-043",
@@ -384,7 +453,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 950000,
+   "ngay_kho": "2026-09-23",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-046",
@@ -398,7 +470,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 650000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-047",
@@ -412,7 +487,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 1150000,
+   "ngay_kho": "2026-09-23",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-050",
@@ -426,7 +504,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 850000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-052",
@@ -440,7 +521,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 720000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-053",
@@ -454,7 +538,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 510000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SP-054",
@@ -482,7 +569,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 810000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "LQ-001",
@@ -496,7 +586,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 880000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "LQ-003",
@@ -510,7 +603,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 850000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "LQ-005",
@@ -524,7 +620,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 1180000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "LQ-015",
@@ -538,7 +637,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 400000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "LQ-018",
@@ -552,7 +654,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 460000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "LQ-020",
@@ -580,7 +685,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 860000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "LQ-029",
@@ -594,7 +702,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 550000,
+   "ngay_kho": "2026-11-04",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "",

@@ -20,7 +20,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 50000,
+   "ngay_kho": "2026-11-02",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-111",

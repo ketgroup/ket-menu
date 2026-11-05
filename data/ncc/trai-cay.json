@@ -20,7 +20,12 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 30000,
+   "ngay_kho": "2026-11-02",
+   "nguon_kho": "Bảng giá kho",
+   "gia_sheet": 30000,
+   "ngay_sheet": "2026-11-05"
   },
   {
    "ma": "DC-018",
@@ -34,7 +39,12 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 50000,
+   "ngay_kho": "2026-10-25",
+   "nguon_kho": "Bảng giá kho",
+   "gia_sheet": 50000,
+   "ngay_sheet": "2026-11-05"
   },
   {
    "ma": "DC-078",
@@ -48,7 +58,12 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 54000,
+   "ngay_kho": "2026-10-29",
+   "nguon_kho": "Bảng giá kho",
+   "gia_sheet": 50000,
+   "ngay_sheet": "2026-11-05"
   },
   {
    "ma": "DC-079",
@@ -62,7 +77,12 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 22000,
+   "ngay_kho": "2026-10-23",
+   "nguon_kho": "Bảng giá kho",
+   "gia_sheet": 25000,
+   "ngay_sheet": "2026-11-05"
   },
   {
    "ma": "DC-083",
@@ -76,7 +96,12 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 70000,
+   "ngay_kho": "2026-10-30",
+   "nguon_kho": "Bảng giá kho",
+   "gia_sheet": 70000,
+   "ngay_sheet": "2026-11-05"
   },
   {
    "ma": "DC-094",
@@ -90,7 +115,12 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 20000,
+   "ngay_kho": "2026-11-02",
+   "nguon_kho": "Bảng giá kho",
+   "gia_sheet": 50000,
+   "ngay_sheet": "2026-11-05"
   },
   {
    "ma": "DC-095",
@@ -104,7 +134,12 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 30000,
+   "ngay_kho": "2026-11-03",
+   "nguon_kho": "Bảng giá kho",
+   "gia_sheet": 50000,
+   "ngay_sheet": "2026-11-05"
   },
   {
    "ma": "DC-096",
@@ -118,7 +153,12 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 22000,
+   "ngay_kho": "2026-10-31",
+   "nguon_kho": "Bảng giá kho",
+   "gia_sheet": 40000,
+   "ngay_sheet": "2026-11-05"
   },
   {
    "ma": "TU-002",
@@ -132,7 +172,9 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_sheet": 25000,
+   "ngay_sheet": "2026-11-05"
   },
   {
    "ma": "DC-100",
@@ -146,7 +188,10 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 25000,
+   "ngay_kho": "2026-10-29",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-029",
@@ -160,7 +205,10 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 46000,
+   "ngay_kho": "2026-10-22",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-105",
@@ -174,7 +222,10 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 10000,
+   "ngay_kho": "2026-11-02",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-004",
@@ -188,7 +239,10 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 27000,
+   "ngay_kho": "2026-11-02",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "TU-029",
@@ -202,7 +256,9 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_sheet": 25000,
+   "ngay_sheet": "2026-11-05"
   },
   {
    "ma": "DC-013",
@@ -216,7 +272,10 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 25000,
+   "ngay_kho": "2026-10-29",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-016",
@@ -230,7 +289,10 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 12000,
+   "ngay_kho": "2026-10-29",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-076",
@@ -244,7 +306,10 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 40000,
+   "ngay_kho": "2026-10-29",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-102",
@@ -258,7 +323,10 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 160000,
+   "ngay_kho": "2026-11-02",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-073",
@@ -636,7 +704,9 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_sheet": 200000,
+   "ngay_sheet": "2026-11-05"
   }
  ],
  "slug": "trai-cay"

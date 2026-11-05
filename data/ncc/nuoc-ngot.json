@@ -20,7 +20,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 152000,
+   "ngay_kho": "2026-11-03",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SD-006",
@@ -34,7 +37,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 170000,
+   "ngay_kho": "2026-11-03",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SD-001",
@@ -48,7 +54,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 202000,
+   "ngay_kho": "2026-11-03",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SD-002",
@@ -62,7 +71,9 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_sheet": 240000,
+   "ngay_sheet": "2026-11-05"
   },
   {
    "ma": "SD-003",
@@ -76,7 +87,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 200000,
+   "ngay_kho": "2026-11-03",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "SD-004",
@@ -90,7 +104,10 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_kho": 167000,
+   "ngay_kho": "2026-11-03",
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-124",
@@ -104,7 +121,9 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_sheet": 200000,
+   "ngay_sheet": "2026-11-05"
   },
   {
    "ma": "DC-125",
@@ -118,7 +137,9 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_sheet": 240000,
+   "ngay_sheet": "2026-11-05"
   },
   {
    "ma": "DC-129",
@@ -132,7 +153,9 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_sheet": 60000,
+   "ngay_sheet": "2026-11-05"
   },
   {
    "ma": "DC-130",
@@ -146,7 +169,9 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null
+   "gia_ket_dang_ghi": null,
+   "gia_sheet": 55000,
+   "ngay_sheet": "2026-11-05"
   }
  ],
  "slug": "nuoc-ngot"
