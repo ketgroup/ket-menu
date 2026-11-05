@@ -48,12 +48,23 @@
         var el = $("ncc-old-" + i); if (el) { el.innerHTML = oldHtml(it); el.classList.remove("ncc-missing"); }
       });
       demGiaCu();
+      var ae = document.activeElement, dangGo = ae && ae.classList && ae.classList.contains("ncc-price-input");
+      if (!dangGo) { saveDraft(); if (sapXep()) render(); } // giá Sheet về sau → xếp lại (giữ giá đang nhập qua nháp)
     }).catch(function () {});
   }
   // Đếm lại MỌI món đang hiện giá cũ (file + Sheet, mọi ngày) — sửa lỗi 05/11 hộp chỉ đếm giá từ file.
   function demGiaCu() {
     var n = items.filter(function (it) { return it.gia_cu; }).length, el = $("ncc-last");
     if (n) { el.textContent = n + "/" + items.length + " món đã có giá cũ."; el.hidden = false; } else el.hidden = true;
+  }
+  // Thứ tự món (anh Lan 05/11): chưa có giá lên đầu → giá cũ hơn 30 ngày (cũ nhất trước) → giá mới; bằng nhau giữ thứ tự gốc.
+  function cuoi30() { var d = new Date(Date.now() - 30 * 864e5); return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2); }
+  function sapXep() {
+    var c = cuoi30(), truoc = items.map(key).join("|");
+    items = items.map(function (it, i) { var n = String(it.ngay || "").slice(0, 10), h = !it.gia_cu ? 0 : (n < c ? 1 : 2); return { it: it, h: h, n: n, i: i }; })
+      .sort(function (a, b) { return a.h - b.h || (a.h === 1 && a.n !== b.n ? (a.n < b.n ? -1 : 1) : 0) || a.i - b.i; })
+      .map(function (x) { return x.it; });
+    return items.map(key).join("|") !== truoc;
   }
   function saveDraft() {
     var d = { name: $("f-name").value, note: $("f-note").value, gia: {} };
@@ -117,7 +128,7 @@
   }
   document.addEventListener("DOMContentLoaded", function () {
     if (!/^[a-z0-9-]{2,40}$/.test(slug)) return fail();
-    getJSON("data/ncc/" + slug + ".json").then(function (f) { fromFile(f); render(); sheetUpdate(); }).catch(fail);
+    getJSON("data/ncc/" + slug + ".json").then(function (f) { fromFile(f); sapXep(); render(); sheetUpdate(); }).catch(fail);
     // Bản chưa gửi được lần trước (mất mạng, đóng trang) → gửi lại ngầm.
     if (ENDPOINT) queue().forEach(function (p) { deliver(p, WAIT.length - 1, null); });
     $("ncc-form").addEventListener("input", function (e) {
