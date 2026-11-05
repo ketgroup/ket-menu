@@ -2,7 +2,7 @@
  "v": 1,
  "ncc": "Trái cây",
  "ma_ncc": "TRAICAY",
- "cap_nhat": "2026-11-04T10:51:31+07:00",
+ "cap_nhat": "2026-11-05T13:58:16+07:00",
  "trang_thai": "chua_gui",
  "ngay_bao_gan_nhat": null,
  "vat": "chua_gom_vat",
@@ -62,8 +62,9 @@
    "gia_kho": 54000,
    "ngay_kho": "2026-10-29",
    "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 50000,
-   "ngay_sheet": "2026-11-05"
+   "gia_sheet": 20000,
+   "ngay_sheet": "2026-11-05",
+   "don_vi_sheet": "kg"
   },
   {
    "ma": "DC-079",
@@ -81,8 +82,9 @@
    "gia_kho": 22000,
    "ngay_kho": "2026-10-23",
    "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 25000,
-   "ngay_sheet": "2026-11-05"
+   "gia_sheet": 22000,
+   "ngay_sheet": "2026-11-05",
+   "don_vi_sheet": "trái"
   },
   {
    "ma": "DC-083",
@@ -112,15 +114,16 @@
    "ngay": "2026-11-02",
    "vat": "Giá chưa gồm VAT",
    "vat_chu": null,
-   "ghi_chu": null,
+   "ghi_chu": "Đổi đơn vị quả→kg 05/11 (anh Lan t779u «chanh bán theo kg»).",
    "la_thu_thu": true,
    "nghi_sai": null,
    "gia_ket_dang_ghi": null,
    "gia_kho": 20000,
    "ngay_kho": "2026-11-02",
    "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 50000,
-   "ngay_sheet": "2026-11-05"
+   "gia_sheet": 90000,
+   "ngay_sheet": "2026-11-05",
+   "don_vi_sheet": "kg"
   },
   {
    "ma": "DC-095",
@@ -138,8 +141,9 @@
    "gia_kho": 30000,
    "ngay_kho": "2026-11-03",
    "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 50000,
-   "ngay_sheet": "2026-11-05"
+   "gia_sheet": 30000,
+   "ngay_sheet": "2026-11-05",
+   "don_vi_sheet": "kg"
   },
   {
    "ma": "DC-096",
@@ -157,8 +161,9 @@
    "gia_kho": 22000,
    "ngay_kho": "2026-10-31",
    "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 40000,
-   "ngay_sheet": "2026-11-05"
+   "gia_sheet": 20000,
+   "ngay_sheet": "2026-11-05",
+   "don_vi_sheet": "quả"
   },
   {
    "ma": "TU-002",
@@ -173,8 +178,9 @@
    "la_thu_thu": true,
    "nghi_sai": null,
    "gia_ket_dang_ghi": null,
-   "gia_sheet": 25000,
-   "ngay_sheet": "2026-11-05"
+   "gia_sheet": 33000,
+   "ngay_sheet": "2026-11-05",
+   "don_vi_sheet": "lon"
   },
   {
    "ma": "DC-100",
@@ -225,7 +231,10 @@
    "gia_ket_dang_ghi": null,
    "gia_kho": 10000,
    "ngay_kho": "2026-11-02",
-   "nguon_kho": "Bảng giá kho"
+   "nguon_kho": "Bảng giá kho",
+   "gia_sheet": 40000,
+   "ngay_sheet": "2026-11-05",
+   "don_vi_sheet": "kg"
   },
   {
    "ma": "DC-004",
@@ -292,7 +301,10 @@
    "gia_ket_dang_ghi": null,
    "gia_kho": 12000,
    "ngay_kho": "2026-10-29",
-   "nguon_kho": "Bảng giá kho"
+   "nguon_kho": "Bảng giá kho",
+   "gia_sheet": 12000,
+   "ngay_sheet": "2026-11-05",
+   "don_vi_sheet": "quả"
   },
   {
    "ma": "DC-076",
