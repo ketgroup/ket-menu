@@ -94,11 +94,30 @@ for i, tk in enumerate(toks, 1):
     except Exception as e:
         keep += 1
         print(f"#{i}: giữ file cũ ({type(e).__name__} {e if 'slug' in str(e) else ''})")
-# Trộn kho cả vào file không làm mới được từ API (giữ file cũ nhưng vẫn có giá kho mới nhất).
-for f in sorted(glob.glob("data/ncc/*.json")):
-    slug = os.path.basename(f)[:-5]
-    if slug.startswith("_"): continue
-    old = open(f, encoding="utf-8").read(); root = tron_kho(slug, json.loads(old))
+# Chuyển nhóm NCC trên web (data/ncc/_chuyen-nhom.json): món rời trang cũ, sang trang mới (khớp mã NVL, không mã thì tên).
+# Áp sau MỖI lần làm mới nên API trả món về nhóm cũ cũng không làm món quay lại trang cũ.
+CN = []
+try: CN = json.load(open("data/ncc/_chuyen-nhom.json", encoding="utf-8")).get("chuyen", [])
+except Exception as e: print("Không đọc được _chuyen-nhom.json:", type(e).__name__)
+def kmon(m): return m.get("ma") or str(m.get("ten", "")).strip().lower()
+FILES = {os.path.basename(f)[:-5]: f for f in sorted(glob.glob("data/ncc/*.json")) if not os.path.basename(f).startswith("_")}
+OLD = {s: open(f, encoding="utf-8").read() for s, f in FILES.items()}
+DATA = {s: json.loads(t) for s, t in OLD.items()}
+mang = {}
+for c in CN:
+    k = c.get("ma") or c["ten"].strip().lower(); src = DATA.get(c["tu"]); dst = DATA.get(c["sang"])
+    if src is None or dst is None: continue
+    for m in [m for m in src.get("mon", []) if kmon(m) == k]:
+        src["mon"].remove(m); mang.setdefault(c["sang"], {})[k] = (m, c["tu"])
+    if src is not None and not src.get("mon"): src["chuyen_het"] = c["sang"]
+for s2, d in DATA.items():
+    if d.get("mon"): d.pop("chuyen_het", None)
+for sang, ms in mang.items():
+    have = {kmon(m) for m in DATA[sang].get("mon", [])}
+    for k, (m, tu) in ms.items():
+        if k not in have: m["nhom_goc"] = tu; DATA[sang]["mon"].append(m)
+for slug, f in FILES.items():
+    old = OLD[slug]; root = tron_kho(slug, DATA[slug])
     if slug not in SHEET: SHEET[slug] = doc_sheet(slug)
     tron_sheet(root, SHEET[slug])
     new = json.dumps(root, ensure_ascii=False, indent=1) + "\n"

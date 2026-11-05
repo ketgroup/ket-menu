@@ -26,8 +26,8 @@
   // Giá cũ hiện ngay từ data/ncc/<slug>.json (Action làm mới mỗi 20 phút từ ket-app); Sheet (GET ENDPOINT) chỉ cập nhật ngầm sau.
   function fromFile(f) {
     var list = (f && f.mon) || [];
-    if (!list.length) throw "empty";
-    data = { ncc: f.ncc || slug, ma_ncc: f.ma_ncc || slug };
+    if (!list.length && !(f && f.ncc && f.chuyen_het)) throw "empty"; // trang hết món (đã chuyển nhóm) vẫn mở được
+    data = { ncc: f.ncc || slug, ma_ncc: f.ma_ncc || slug, chuyen_het: f.chuyen_het || "" };
     items = list.map(function (m) { return { ma: m.ma || "", ten: m.ten, dv: m.don_vi || m.dv || m.don_vi_sheet || m.don_vi_bo_sung || "", gia_cu: 0, ngay: "", nguon: "" }; }).map(function (it, i) {
       // Giá cũ: giá NCC gửi (form) vs giá kho (bảng giá/hoá đơn) — lấy ngày mới hơn; bằng ngày giữ giá NCC gửi.
       // Ứng viên: Sheet form (gia_sheet), API (gia), kho (gia_kho) — ngày mới nhất thắng; bằng ngày ưu tiên theo thứ tự này.
@@ -69,7 +69,8 @@
       return '<li class="ncc-item inset-card"><p class="ncc-item-name">' + esc(it.ten) + (it.dv ? ' <small>(' + esc(it.dv) + ')</small>' : '') + '</p>' +
         '<p class="ncc-item-ket' + (it.gia_cu ? '' : ' ncc-missing') + '" id="ncc-old-' + i + '">' + oldHtml(it) + '</p>' +
         '<label class="ncc-price"><input class="field-control ncc-price-input" data-i="' + i + '" type="text" inputmode="numeric" autocomplete="off" placeholder="Giá mới (trống = không đổi)" value="' + fmt(v) + '" aria-label="Giá mới ' + esc(it.ten) + '"><span>đ</span></label></li>';
-    }).join("");
+    }).join("") || ('<li class="ncc-item inset-card"><p class="ncc-item-name">Các món của nhóm này đã chuyển sang trang <a href="ncc-gia.html?ncc=' + esc(String(data.chuyen_het)) + '">Chợ lẻ</a>.</p></li>');
+    $("ncc-submit").hidden = !items.length;
     demGiaCu();
     if (dr.name) $("f-name").value = dr.name;
     if (dr.note) $("f-note").value = dr.note;

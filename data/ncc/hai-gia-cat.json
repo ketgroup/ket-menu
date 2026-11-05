@@ -77,20 +77,6 @@
    "nguon_kho": "Bảng giá kho"
   },
   {
-   "ma": "SP-004",
-   "ten": "Absolute Mango",
-   "don_vi": null,
-   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "gia": null,
-   "ngay": null,
-   "vat": null,
-   "vat_chu": null,
-   "ghi_chu": null,
-   "la_thu_thu": false,
-   "nghi_sai": null,
-   "gia_ket_dang_ghi": null
-  },
-  {
    "ma": "SP-005",
    "ten": "Svedka Vanilla",
    "don_vi": null,
@@ -174,20 +160,6 @@
    "gia_kho": 1000000,
    "ngay_kho": "2026-11-04",
    "nguon_kho": "Bảng giá kho"
-  },
-  {
-   "ma": "SP-016",
-   "ten": "Sampan",
-   "don_vi": null,
-   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "gia": null,
-   "ngay": null,
-   "vat": null,
-   "vat_chu": null,
-   "ghi_chu": null,
-   "la_thu_thu": false,
-   "nghi_sai": null,
-   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-017",
@@ -428,20 +400,6 @@
    "nguon_kho": "Bảng giá kho"
   },
   {
-   "ma": "SP-043",
-   "ten": "Even Wiliam",
-   "don_vi": null,
-   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "gia": null,
-   "ngay": null,
-   "vat": null,
-   "vat_chu": null,
-   "ghi_chu": null,
-   "la_thu_thu": false,
-   "nghi_sai": null,
-   "gia_ket_dang_ghi": null
-  },
-  {
    "ma": "SP-044",
    "ten": "Wild Turkey 101",
    "don_vi": null,
@@ -542,20 +500,6 @@
    "gia_kho": 510000,
    "ngay_kho": "2026-11-04",
    "nguon_kho": "Bảng giá kho"
-  },
-  {
-   "ma": "SP-054",
-   "ten": "Bullet's bourbon",
-   "don_vi": null,
-   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "gia": null,
-   "ngay": null,
-   "vat": null,
-   "vat_chu": null,
-   "ghi_chu": null,
-   "la_thu_thu": false,
-   "nghi_sai": null,
-   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SP-055",
@@ -660,20 +604,6 @@
    "nguon_kho": "Bảng giá kho"
   },
   {
-   "ma": "LQ-020",
-   "ten": "Disaronno",
-   "don_vi": null,
-   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "gia": null,
-   "ngay": null,
-   "vat": null,
-   "vat_chu": null,
-   "ghi_chu": null,
-   "la_thu_thu": false,
-   "nghi_sai": null,
-   "gia_ket_dang_ghi": null
-  },
-  {
    "ma": "LQ-022",
    "ten": "Frangelico",
    "don_vi": null,
@@ -706,20 +636,6 @@
    "gia_kho": 550000,
    "ngay_kho": "2026-11-04",
    "nguon_kho": "Bảng giá kho"
-  },
-  {
-   "ma": "",
-   "ten": "Peychaud Bitter",
-   "don_vi": null,
-   "quy_cach": "chai (ghi dung tích 700ml/750ml/1L)",
-   "gia": null,
-   "ngay": null,
-   "vat": null,
-   "vat_chu": null,
-   "ghi_chu": null,
-   "la_thu_thu": false,
-   "nghi_sai": null,
-   "gia_ket_dang_ghi": null
   }
  ],
  "slug": "hai-gia-cat"
