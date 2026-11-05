@@ -858,5 +858,11 @@
     "loai": "kho"
    }
   }
+ },
+ "don_vi_bo_sung": {
+  "_ghi_chu": "Đơn vị cho món có ô đơn vị trống (nguồn: lời anh Lan)",
+  "cho-snack": {
+   "DC-111": "kg"
+  }
  }
 }

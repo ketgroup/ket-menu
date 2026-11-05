@@ -5,12 +5,15 @@ Chỉ ghi khi API trả 200 + dữ liệu hợp lệ; lỗi/404 → giữ file c
 import json, os, glob, urllib.request, urllib.parse
 # Giá cũ từ kho (data/ncc/_kho-gia.json, bot Web Menu sinh từ Brain kho): trộn vào từng món dạng gia_kho/ngay_kho/nguon_kho.
 # JS chọn giá mới nhất theo ngày giữa giá NCC gửi (gia/ngay) và giá kho; bằng ngày thì giữ giá NCC gửi.
-KHO = {}
-try: KHO = json.load(open("data/ncc/_kho-gia.json", encoding="utf-8")).get("ncc", {})
+KHO = DVB = {}
+try:
+    _k = json.load(open("data/ncc/_kho-gia.json", encoding="utf-8")); KHO = _k.get("ncc", {}); DVB = _k.get("don_vi_bo_sung", {})
 except Exception as e: print("Không đọc được _kho-gia.json:", type(e).__name__)
 def tron_kho(slug, root):
-    k = KHO.get(slug, {})
+    k = KHO.get(slug, {}); dvb = DVB.get(slug, {})
     for m in root.get("mon", []):
+        m.pop("don_vi_bo_sung", None)
+        if not m.get("don_vi") and dvb.get(m.get("ma") or m.get("ten")): m["don_vi_bo_sung"] = dvb[m.get("ma") or m.get("ten")]
         for f in ("gia_kho", "ngay_kho", "nguon_kho"): m.pop(f, None)
         x = k.get(m.get("ma") or m.get("ten"))
         if x and x.get("gia"): m["gia_kho"], m["ngay_kho"], m["nguon_kho"] = x["gia"], x.get("ngay"), x.get("nguon")
@@ -33,16 +36,18 @@ def doc_sheet(slug):
             try: g = int(float(str(g).replace(".", "").replace(",", "")))
             except ValueError: continue
             k = x.get("ma") or x.get("ten"); t = str(x.get("gio_vn") or x.get("ngay") or "")
-            if k and (k not in by or t >= by[k][2]): by[k] = (g, str(x.get("ngay") or t[:10]), t)
+            if k and (k not in by or t >= by[k][2]): by[k] = (g, str(x.get("ngay") or t[:10]), t, str(x.get("don_vi") or ""))
         return by
     except Exception as e:
         print(f"{slug}: không đọc được Sheet ({type(e).__name__}), giữ giá Sheet cũ"); return None
 def tron_sheet(root, by):
     if by is None: return root
     for m in root.get("mon", []):
-        for f in ("gia_sheet", "ngay_sheet"): m.pop(f, None)
+        for f in ("gia_sheet", "ngay_sheet", "don_vi_sheet"): m.pop(f, None)
         x = by.get(m.get("ma") or m.get("ten")) or by.get(m.get("ten"))
-        if x: m["gia_sheet"], m["ngay_sheet"] = x[0], x[1]
+        if x:
+            m["gia_sheet"], m["ngay_sheet"] = x[0], x[1]
+            if x[3]: m["don_vi_sheet"] = x[3]
     return root
 SHEET = {}
 API = "https://ket-app.vercel.app/api/ncc/gia-gan-nhat?token="
@@ -74,6 +79,7 @@ for i, tk in enumerate(toks, 1):
                 for m in root["mon"]:
                     o = om.get(m.get("ma") or m.get("ten"), {})
                     if o.get("gia_sheet"): m["gia_sheet"], m["ngay_sheet"] = o["gia_sheet"], o.get("ngay_sheet")
+                    if o.get("don_vi_sheet"): m["don_vi_sheet"] = o["don_vi_sheet"]
             except Exception: pass
         else: tron_sheet(root, SHEET[slug])
         f = f"data/ncc/{slug}.json"

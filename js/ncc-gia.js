@@ -21,14 +21,14 @@
   function key(m) { return m.ma || String(m.ten).trim().toLowerCase(); }
   function lsGet(k, d) { try { return JSON.parse(localStorage.getItem(k) || "null") || d; } catch (e) { return d; } }
   function lsSet(k, v) { try { if (v == null) localStorage.removeItem(k); else localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
-  function oldHtml(it) { return it.gia_cu ? 'Giá cũ: <b>' + fmt(it.gia_cu) + 'đ</b>' + (it.ngay ? ' · ' + esc(vnDate(it.ngay)) : '') + (it.nguon ? ' · ' + esc(it.nguon) : '') : 'Chưa có giá'; }
+  function oldHtml(it) { return it.gia_cu ? 'Giá cũ: <b>' + fmt(it.gia_cu) + 'đ' + (it.dv && !/[\/ ]/.test(it.dv) ? '/' + esc(it.dv) : '') + '</b>' + (it.ngay ? ' · ' + esc(vnDate(it.ngay)) : '') + (it.nguon ? ' · ' + esc(it.nguon) : '') : 'Chưa có giá'; }
 
   // Giá cũ hiện ngay từ data/ncc/<slug>.json (Action làm mới mỗi 20 phút từ ket-app); Sheet (GET ENDPOINT) chỉ cập nhật ngầm sau.
   function fromFile(f) {
     var list = (f && f.mon) || [];
     if (!list.length) throw "empty";
     data = { ncc: f.ncc || slug, ma_ncc: f.ma_ncc || slug };
-    items = list.map(function (m) { return { ma: m.ma || "", ten: m.ten, dv: m.don_vi || m.dv || "", gia_cu: 0, ngay: "", nguon: "" }; }).map(function (it, i) {
+    items = list.map(function (m) { return { ma: m.ma || "", ten: m.ten, dv: m.don_vi || m.dv || m.don_vi_sheet || m.don_vi_bo_sung || "", gia_cu: 0, ngay: "", nguon: "" }; }).map(function (it, i) {
       // Giá cũ: giá NCC gửi (form) vs giá kho (bảng giá/hoá đơn) — lấy ngày mới hơn; bằng ngày giữ giá NCC gửi.
       // Ứng viên: Sheet form (gia_sheet), API (gia), kho (gia_kho) — ngày mới nhất thắng; bằng ngày ưu tiên theo thứ tự này.
       var m = list[i], c = [[num(m.gia_sheet), m.ngay_sheet, "NCC báo"], [m.la_thu_thu ? 0 : num(m.gia), m.ngay, "NCC báo"], [num(m.gia_kho), m.ngay_kho, m.nguon_kho || "Bảng giá kho"]], b = null;
@@ -44,6 +44,7 @@
         var x = by[key(it)], g = x && num(x.gia_moi || x.gia); if (!g) return;
         var nd = String(x.ngay || x.gio_vn || x.thoi_gian || "").slice(0, 10); if (it.gia_cu && nd && nd < String(it.ngay || "")) return; // giá trong file mới hơn thì giữ
         it.gia_cu = g; it.ngay = nd || it.ngay; it.nguon = "NCC báo";
+        var el0 = $("ncc-old-" + i); if (!it.dv && x.don_vi && el0) { it.dv = String(x.don_vi); var nm = el0.closest("li") && el0.closest("li").querySelector(".ncc-item-name"); if (nm) nm.innerHTML = esc(it.ten) + ' <small>(' + esc(it.dv) + ')</small>'; } // ô đơn vị trống → lấy đơn vị bản giá Sheet mới nhất
         var el = $("ncc-old-" + i); if (el) { el.innerHTML = oldHtml(it); el.classList.remove("ncc-missing"); }
       });
       demGiaCu();
