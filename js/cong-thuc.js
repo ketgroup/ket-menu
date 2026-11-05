@@ -151,6 +151,23 @@
     });
     window.addEventListener("beforeunload", save);
   }
+  // Ghép bài công thức mới nhất từ Sheet «Kết – Form web» (Apps Script, cần đúng mã) lên dữ liệu file; lỗi thì giữ dữ liệu file (anh Lan duyệt 11:17 05/11).
+  function tuSheet() {
+    if (!ENDPOINT) return;
+    fetch(ENDPOINT + (ENDPOINT.indexOf("?") < 0 ? "?" : "&") + "form=cong-thuc&t=" + encodeURIComponent(t), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (s) {
+      if (!s || !s.ok || !s.mon || !s.mon.length) return;
+      var by = {}; s.mon.forEach(function (x) { by[x.q + "|" + x.ma] = x; });
+      var doi = 0;
+      DATA.mon.forEach(function (m) {
+        var x = by[m.q + "|" + m.ma]; if (!x || !x.nl || !x.nl.some(function (n) { return n.t; })) return;
+        m.nl = x.nl.map(function (n) { return { t: n.t, dl: n.dl, dv: n.dv }; });
+        ["ly", "gar", "cach", "note"].forEach(function (f) { if (x[f]) m[f] = String(x[f]); });
+        var y = ST[m.id]; if (y && !y.dirty) delete ST[m.id]; // món chưa sửa trên máy này → lấy bản Sheet
+        doi++;
+      });
+      if (doi) render();
+    }).catch(function () {});
+  }
   if (!/^[A-Za-z0-9]{16,40}$/.test(t)) { $("ct-loading").hidden = true; $("ct-error").hidden = false; return; }
   fetch("data/cong-thuc/" + t + ".json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
     try { var sv = JSON.parse(localStorage.getItem(KEY) || "{}"); ST = sv.st || {}; Object.keys(ST).forEach(function (id) { var x = ST[id]; if (!x || (!x.dirty && !x.done && !x.sent)) delete ST[id]; }); $("ct-name").value = sv.name || ""; } catch (e) { $("ct-name").value = ""; }
@@ -162,5 +179,6 @@
     var nls = {}; d.mon.forEach(function (m) { m.nl.forEach(function (x) { if (x.t) nls[x.t] = 1; }); });
     $("ct-nl").innerHTML = Object.keys(nls).sort().map(function (x) { return '<option value="' + esc(x) + '">'; }).join("");
     $("ct-loading").hidden = true; $("ct-app").hidden = false; bind(); render(); qLoad().forEach(function (j) { runJob(j, 0); });
+    tuSheet();
   }).catch(function () { $("ct-loading").hidden = true; $("ct-error").hidden = false; });
 })();
