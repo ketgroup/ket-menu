@@ -5,7 +5,9 @@
   var $ = function (id) { return document.getElementById(id); };
   var KEY = "ket_ct_" + t, ENDPOINT = window.KET_FORM_ENDPOINT || ""; // Apps Script /exec «Kết – Form web» (js/form-endpoint.js)
   var DATA, ST = {}, quan = "all", filt = "all", q = "", sec = "chua";
-  function hasCT(m) { return st(m).done || m.nl.some(function (x) { return x.t && String(x.dl).trim() !== ""; }); }
+  // Luật anh Lan 11:09 05/11: hoàn thành = có nguyên liệu + định lượng; bỏ món tặng (nhóm «Make You Happy», mã W…) và món ẩn khỏi số đếm.
+  function hasCT(m) { return filled(st(m)); }
+  function tang(m) { return /^make you happy$/i.test(String(m.nhom || "").trim()); }
   var UNITS = ["ml", "g", "gr", "dash", "giọt", "lát", "quả", "cái", "muỗng", "phần", "shot"];
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d"); }
@@ -101,7 +103,7 @@
       (s.sent && !s.dirty ? '<span class="ct-tag sent">Đã gửi</span>' : s.dirty ? '<span class="ct-tag">Đã sửa</span>' : "");
   }
   function counts() {
-    var all = DATA.mon, d = 0, se = 0; all.forEach(function (m) { if (st(m).done) d++; if (st(m).sent) se++; });
+    var all = DATA.mon.filter(function (m) { return !tang(m) && !m.an && (quan === "all" || m.q === quan); }), d = 0, se = 0; all.forEach(function (m) { if (st(m).done) d++; if (st(m).sent) se++; });
     $("ct-done").textContent = d; $("ct-total").textContent = all.length; $("ct-sent").textContent = se;
     var nc = 0; all.forEach(function (m) { if (hasCT(m)) nc++; }); $("ct-n-co").textContent = nc; $("ct-n-chua").textContent = all.length - nc;
     $("ct-barfill").style.width = (all.length ? d * 100 / all.length : 0) + "%";
