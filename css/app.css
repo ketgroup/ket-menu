@@ -446,6 +446,27 @@ body[data-current-venue] .segment-btn.is-active {
   margin-top: 4px;
 }
 
+.venue-info-block--promo {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 10px;
+  margin-top: 2px;
+}
+
+.venue-info-promo {
+  font-size: 13px;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.venue-info-promo + .venue-info-promo {
+  margin-top: 6px;
+}
+
+body[data-venue-light-accent="true"] .venue-info-promo {
+  color: rgba(0, 0, 0, 0.62);
+}
+
+
 .venue-info-link {
   display: block;
   font-family: var(--font-ui);

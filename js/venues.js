@@ -20,6 +20,11 @@ window.KET_VENUES = {
     accent: "#FF9F0A",
     accentRgb: "255, 159, 10",
     hours: ["19:00 – 02:30"],
+    promos: [
+      "Happy Hour · Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round",
+      "Thứ 3 · You are bartender · Vào quầy tự pha, giảm 50% ly đó",
+      "Giảm 15% cho phi công, tiếp viên, bartender"
+    ],
     address: "04 Phan Kế Bính, Thuận Phước, Hải Châu, Đà Nẵng",
     phone: window.KET_HOTLINE.phone,
     phoneDisplay: window.KET_HOTLINE.phoneDisplay,
@@ -38,6 +43,11 @@ window.KET_VENUES = {
     accentRgb: "242, 242, 247",
     lightAccent: true,
     hours: ["19:00 – 02:30"],
+    promos: [
+      "Happy Hour · Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round",
+      "Thứ 4 · Extra Happy Hour · Mua 1 tặng 1 tới 21:30 · DJ Minh",
+      "Giảm 15% cho phi công, tiếp viên, bartender"
+    ],
     address: "Tầng 3, 200 Bạch Đằng, Hải Châu, Đà Nẵng",
     phone: window.KET_HOTLINE.phone,
     phoneDisplay: window.KET_HOTLINE.phoneDisplay,
@@ -55,6 +65,12 @@ window.KET_VENUES = {
     accent: "#BF5AF2",
     accentRgb: "191, 90, 242",
     hours: ["Kitchen 10:30 – 14:00, 17:30 – 22:00", "Cocktail 18:00 – khuya"],
+    promos: [
+      "Happy Hour · Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round",
+      "Chủ nhật · Extra Happy Hour · Mua 1 tặng 1 tới 21:30 · DJ Minh",
+      "Thứ 4 · Latin dance · Mua 1 cocktail/mocktail tặng 1 wine / dừa / 3 nước suối / 1 Tiger",
+      "Giảm 15% cho phi công, tiếp viên, bartender"
+    ],
     address: "138 Đỗ Bá, An Thượng, Đà Nẵng",
     phone: window.KET_HOTLINE.phone,
     phoneDisplay: window.KET_HOTLINE.phoneDisplay,
@@ -71,7 +87,13 @@ window.KET_VENUES = {
     logo: "img/logos/k9.png",
     accent: "#FF453A",
     accentRgb: "255, 69, 58",
-    hours: ["19:30 – 02:30"],
+    hours: ["19:00 – 03:00"],
+    promos: [
+      "Happy Hour · Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round",
+      "Thứ 6 · Ladies night · Mua 1 tặng 1 cocktail · DJ Minh",
+      "Thứ 7 · Extra Happy Hour · Mua 1 tặng 1 tới 21:30 · DJ Minh",
+      "Giảm 15% cho phi công, tiếp viên, bartender"
+    ],
     address: "106 Bạch Đằng – 04 Hùng Vương",
     /* Link tìm kiếm Google Maps (chưa tìm được link listing riêng) */
     maps: "https://www.google.com/maps/search/?api=1&query=K%E1%BA%BFt+Underground+106+B%E1%BA%A1ch+%C4%90%E1%BA%B1ng+%C4%90%C3%A0+N%E1%BA%B5ng",

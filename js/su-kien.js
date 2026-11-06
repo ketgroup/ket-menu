@@ -4,12 +4,13 @@ window.KET_EVENTS = [
   { thu: [3,5], ten: "KET FAI Social Dance Night", quan: "Kết Fai", lich: "Thứ 4 & Thứ 6", href: "pre-order-k5.html", preorder: true, icon: "💃", mau: "#d84cff", rgb: "216,76,255" },
   { thu: [5], ten: "Ladies Night", quan: "Kết Underground", lich: "Thứ 6 · Mua 1 tặng 1 cocktail", href: "k9.html", icon: "💋", mau: "#FF453A", rgb: "255,69,58" },
   { thu: [2], ten: "You Are Bartender", quan: "Kết Bar", lich: "Thứ 3 · Vào quầy tự pha, giảm 50% ly đó", href: "k1.html", icon: "🍸", mau: "#FF9F0A", rgb: "255,159,10" },
-  { thu: [3], ten: "Extra Happy Hour", quan: "Kết High", lich: "Thứ 4 · Mua 1 tặng 1 tới 21:30", href: "k2.html", icon: "🎧", mau: "#F2F2F7", rgb: "242,242,247" },
+  { thu: [3], ten: "Extra Happy Hour", quan: "Kết High", lich: "Thứ 4 · Mua 1 tặng 1 tới 21:30 · DJ Minh", href: "k2.html", icon: "🎧", mau: "#F2F2F7", rgb: "242,242,247" },
   { thu: [0], ten: "Extra Happy Hour", quan: "Kết Fai", lich: "Chủ nhật · Mua 1 tặng 1 tới 21:30 · DJ Minh", href: "k5.html", icon: "🎧", mau: "#BF5AF2", rgb: "191,90,242" },
-  { thu: [6], ten: "Extra Happy Hour", quan: "Kết Underground", lich: "Thứ 7 · Mua 1 tặng 1 tới 21:30", href: "k9.html", icon: "🎧", mau: "#FF453A", rgb: "255,69,58" },
+  { thu: [3], ten: "Latin dance", quan: "Kết Fai", lich: "Thứ 4 · Mua 1 cocktail/mocktail tặng wine / dừa / 3 nước suối / 1 Tiger", href: "k5.html", icon: "💃", mau: "#BF5AF2", rgb: "191,90,242" },
+  { thu: [6], ten: "Extra Happy Hour", quan: "Kết Underground", lich: "Thứ 7 · Mua 1 tặng 1 tới 21:30 · DJ Minh", href: "k9.html", icon: "🎧", mau: "#FF453A", rgb: "255,69,58" },
   { thu: "moi", ten: "Happy Hour", quan: "Tất cả các quán", lich: "Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round", href: "#venue-list-home-wrap", icon: "🥂", mau: "#30D158", rgb: "48,209,88" },
-  { thu: "moi", ten: "Pornstar Martini 69.000đ", quan: "Tất cả các quán", lich: "Mỗi ngày · Đồng giá tất cả các quán", href: "#venue-list-home-wrap", icon: "🍹", mau: "#FF375F", rgb: "255,55,95" }
-];
+  { thu: "moi", ten: "Giảm 15%", quan: "Tất cả các quán", lich: "Mỗi ngày · Phi công / tiếp viên / bartender (xuất trình ID hoặc trang cá nhân)", href: "#venue-list-home-wrap", icon: "✈️", mau: "#64D2FF", rgb: "100,210,255" }
+];;
 (function(){
   function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
   function render(){

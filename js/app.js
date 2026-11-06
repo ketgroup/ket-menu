@@ -85,6 +85,14 @@
       });
       parts += "</div>";
     }
+    if (v.promos && v.promos.length) {
+      parts += '<div class="venue-info-block venue-info-block--promo">';
+      parts += '<p class="venue-info-label">Chương trình</p>';
+      v.promos.forEach(function (line) {
+        parts += '<p class="venue-info-value venue-info-promo">' + escapeHtml(line) + "</p>";
+      });
+      parts += "</div>";
+    }
     if (hasAddress) {
       var maps = (v.maps || window.KET_mapsUrl(v.address));
       parts += '<div class="venue-info-block">';
