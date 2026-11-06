@@ -1669,3 +1669,8 @@ body[data-venue-light-accent="true"] .kg-lang { color: #000; background: rgba(25
 [dir="rtl"] .vil-chev { transform:scaleX(-1); }
 .ios-btn--directions { width:100%; min-height:44px; margin-top:8px; gap:8px; }
 .ios-btn--directions .ios-btn-icon { width:18px; height:18px; }
+
+.event-tag--free {
+  background: rgba(48, 209, 88, 0.22);
+  color: #30D158;
+}

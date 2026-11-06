@@ -81,3 +81,14 @@ body[data-preorder] .ios-btn--tinted{color:var(--po)}
 .po-recap-p .po-old{opacity:.55;font-size:12px}
 .po-recap-tag{font-style:normal;font-size:11px;font-weight:700;padding:1px 6px;border-radius:999px;background:var(--po);color:#fff;margin-inline-start:4px}
 .po-recap[hidden]{display:none}
+
+.po-free-entry {
+  margin: 8px 0 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(48, 209, 88, 0.16);
+  color: #30D158;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
