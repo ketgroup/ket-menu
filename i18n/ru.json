@@ -166,8 +166,12 @@
     "Vào cửa miễn phí": "Вход бесплатный",
     "Free entry": "Free entry",
     "Social Dance Night": "Social Dance Night",
-    "Thứ 4 & Thứ 6 · Vào cửa miễn phí": "Ср и пт · Вход бесплатный",
-    "Thứ 4 & Thứ 6 · Social Dance Night · Vào cửa miễn phí": "Ср и пт · Social Dance Night · Вход бесплатный"
+    "Thứ 4 & Thứ 6 · Vào cửa miễn phí": "Пятница · Вход бесплатный",
+    "Thứ 4 & Thứ 6 · Social Dance Night · Vào cửa miễn phí": "Пятница · Social Dance Night · Вход бесплатный",
+    "Thứ 6 · Social Dance Night · Vào cửa miễn phí": "Пятница · Social Dance Night · Вход бесплатный",
+    "Thứ 6 · Vào cửa miễn phí": "Пятница · Вход бесплатный",
+    "Thứ 4 · Latin dance · Vào cửa miễn phí · Mua 1 cocktail/mocktail tặng 1 wine / dừa / 3 nước suối / 1 Tiger": "Среда · Latin dance · Вход бесплатный · Buy 1 cocktail/mocktail get 1 wine / coconut / 3 waters / 1 Tiger",
+    "KET FAI · Thứ 4 Latin dance · Thứ 6 Social Dance Night · Vào cửa miễn phí": "KET FAI · Среда Latin dance · Пятница Social Dance Night · Вход бесплатный"
   },
   "p": {
     "gift": "Выбрано {a}/{b} бесплатных",

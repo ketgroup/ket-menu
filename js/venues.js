@@ -67,9 +67,9 @@ window.KET_VENUES = {
     hours: ["Kitchen 10:30 – 14:00, 17:30 – 22:00", "Cocktail 18:00 – khuya"],
     promos: [
       "Happy Hour · Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round",
-      "Chủ nhật · Extra Happy Hour · Mua 1 tặng 1 tới 21:30 · DJ Minh",
-      "Thứ 4 & Thứ 6 · Social Dance Night · Vào cửa miễn phí",
       "Thứ 4 · Latin dance · Vào cửa miễn phí · Mua 1 cocktail/mocktail tặng 1 wine / dừa / 3 nước suối / 1 Tiger",
+      "Thứ 6 · Social Dance Night · Vào cửa miễn phí",
+      "Chủ nhật · Extra Happy Hour · Mua 1 tặng 1 tới 21:30 · DJ Minh",
       "Giảm 15% cho phi công, tiếp viên, bartender"
     ],
     address: "138 Đỗ Bá, An Thượng, Đà Nẵng",
