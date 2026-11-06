@@ -453,17 +453,14 @@ body[data-current-venue] .segment-btn.is-active {
 }
 
 .venue-info-promo {
-  font-size: 13px;
+  font-size: 15px;
+  font-weight: 400;
   line-height: 1.35;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--label-primary);
 }
 
 .venue-info-promo + .venue-info-promo {
   margin-top: 6px;
-}
-
-body[data-venue-light-accent="true"] .venue-info-promo {
-  color: rgba(0, 0, 0, 0.62);
 }
 
 
@@ -1676,10 +1673,8 @@ body[data-venue-light-accent="true"] .kg-lang { color: #000; background: rgba(25
 }
 
 .venue-info-price-note {
-  font-size: 13px;
+  font-size: 15px;
+  font-weight: 400;
   line-height: 1.35;
-  color: rgba(255, 255, 255, 0.78);
-}
-body[data-venue-light-accent="true"] .venue-info-price-note {
-  color: rgba(0, 0, 0, 0.62);
+  color: var(--label-primary);
 }
