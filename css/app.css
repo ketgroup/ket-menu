@@ -1674,3 +1674,12 @@ body[data-venue-light-accent="true"] .kg-lang { color: #000; background: rgba(25
   background: rgba(48, 209, 88, 0.22);
   color: #30D158;
 }
+
+.venue-info-price-note {
+  font-size: 13px;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.78);
+}
+body[data-venue-light-accent="true"] .venue-info-price-note {
+  color: rgba(0, 0, 0, 0.62);
+}

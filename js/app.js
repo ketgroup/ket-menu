@@ -85,6 +85,12 @@
       });
       parts += "</div>";
     }
+    if (v.priceNote) {
+      parts += '<div class="venue-info-block venue-info-block--price-note">';
+      parts += '<p class="venue-info-label">Giá</p>';
+      parts += '<p class="venue-info-value venue-info-price-note">' + escapeHtml(v.priceNote) + "</p>";
+      parts += "</div>";
+    }
     if (v.promos && v.promos.length) {
       parts += '<div class="venue-info-block venue-info-block--promo">';
       parts += '<p class="venue-info-label">Chương trình</p>';
