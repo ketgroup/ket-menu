@@ -49,8 +49,12 @@ window.KET_NGAY_DAC_BIET = [
     if (evs.length) {
       html += '<div class="teaser-ev"><div class="teaser-chips" role="list">' + evs.map(function (x) {
         var e = x[0];
-        return '<a role="listitem" class="teaser-chip" data-ev="' + x[1] + '" href="' + (e.preorder ? esc(e.href) : "#event-strip") + '" style="--c:' + esc(e.mau) + '">' +
-          '<span class="teaser-chip-ic" aria-hidden="true">' + esc(e.icon) + '</span><span class="teaser-chip-tx"><b>' + esc(e.ten) + '</b><small>' + esc(e.quan) + '</small></span>' +
+        var chipCls = "teaser-chip" + (e.teaserOnly ? " teaser-chip--detail" : "");
+        var chipHref = e.preorder ? esc(e.href) : (e.teaserOnly && e.href ? esc(e.href) : "#event-strip");
+        var sub = e.teaserOnly ? e.lich : e.quan;
+        var title = e.teaserOnly ? (e.ten + " · " + e.quan) : e.ten;
+        return '<a role="listitem" class="' + chipCls + '" data-ev="' + x[1] + '" href="' + chipHref + '" style="--c:' + esc(e.mau) + '">' +
+          '<span class="teaser-chip-ic" aria-hidden="true">' + esc(e.icon) + '</span><span class="teaser-chip-tx"><b>' + esc(title) + '</b><small>' + esc(sub) + '</small></span>' +
           (e.preorder ? '<span class="teaser-chip-po">Pre-order ›</span>' : '') + '</a>';
       }).join("") + '</div></div>';
     }
@@ -59,7 +63,7 @@ window.KET_NGAY_DAC_BIET = [
     var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
     box.addEventListener("click", function (ev) {
       var c = ev.target.closest(".teaser-chip"); if (!c) return;
-      var e = window.KET_EVENTS[+c.getAttribute("data-ev")]; if (e && e.preorder) return;
+      var e = window.KET_EVENTS[+c.getAttribute("data-ev")]; if (e && (e.preorder || e.teaserOnly)) return;
       var t = document.querySelector('.event-btn[data-ev="' + c.getAttribute("data-ev") + '"]'); if (!t) return;
       ev.preventDefault();
       t.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });

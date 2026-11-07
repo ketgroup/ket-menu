@@ -76,22 +76,38 @@
       return;
     }
 
+    var isMenuPage = document.querySelector(".menu-content") && !document.body.hasAttribute("data-preorder");
+
     var parts = '<div class="venue-info-card inset-card">';
-    if (hasHours) {
-      parts += '<div class="venue-info-block">';
+    if (hasHours && isMenuPage && v.priceNote) {
+      parts += '<div class="venue-info-block venue-info-block--hours-price">';
+      parts += '<div class="venue-info-hours-col">';
       parts += '<p class="venue-info-label">Giờ mở cửa</p>';
       v.hours.forEach(function (line) {
         parts += '<p class="venue-info-value">' + escapeHtml(line) + "</p>";
       });
       parts += "</div>";
-    }
-    if (v.priceNote) {
-      parts += '<div class="venue-info-block venue-info-block--price-note">';
+      parts += '<div class="venue-info-price-col">';
       parts += '<p class="venue-info-label">Giá</p>';
       parts += '<p class="venue-info-value venue-info-price-note">' + escapeHtml(v.priceNote) + "</p>";
-      parts += "</div>";
+      parts += "</div></div>";
+    } else {
+      if (hasHours) {
+        parts += '<div class="venue-info-block">';
+        parts += '<p class="venue-info-label">Giờ mở cửa</p>';
+        v.hours.forEach(function (line) {
+          parts += '<p class="venue-info-value">' + escapeHtml(line) + "</p>";
+        });
+        parts += "</div>";
+      }
+      if (v.priceNote) {
+        parts += '<div class="venue-info-block venue-info-block--price-note">';
+        parts += '<p class="venue-info-label">Giá</p>';
+        parts += '<p class="venue-info-value venue-info-price-note">' + escapeHtml(v.priceNote) + "</p>";
+        parts += "</div>";
+      }
     }
-    if (v.promos && v.promos.length) {
+    if (!isMenuPage && v.promos && v.promos.length) {
       parts += '<div class="venue-info-block venue-info-block--promo">';
       parts += '<p class="venue-info-label">Chương trình</p>';
       v.promos.forEach(function (line) {
