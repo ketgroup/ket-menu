@@ -49,23 +49,13 @@ window.KET_NGAY_DAC_BIET = [
     if (evs.length) {
       html += '<div class="teaser-ev"><div class="teaser-chips" role="list">' + evs.map(function (x) {
         var e = x[0];
-        return '<a role="listitem" class="teaser-chip" data-ev="' + x[1] + '" href="' + (e.preorder ? esc(e.href) : "#event-strip") + '" style="--c:' + esc(e.mau) + '">' +
+        return '<a role="listitem" class="teaser-chip" data-ev="' + x[1] + '" href="#" style="--c:' + esc(e.mau) + '">' +
           '<span class="teaser-chip-ic" aria-hidden="true">' + esc(e.icon) + '</span><span class="teaser-chip-tx"><b>' + esc(e.ten) + '</b><small>' + esc(e.quan) + '</small></span>' +
           (e.preorder ? '<span class="teaser-chip-po">Pre-order ›</span>' : '') + '</a>';
       }).join("") + '</div></div>';
     }
     box.innerHTML = html;
     h.appendChild(box);
-    var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-    box.addEventListener("click", function (ev) {
-      var c = ev.target.closest(".teaser-chip"); if (!c) return;
-      var e = window.KET_EVENTS[+c.getAttribute("data-ev")]; if (e && e.preorder) return;
-      var t = document.querySelector('.event-btn[data-ev="' + c.getAttribute("data-ev") + '"]'); if (!t) return;
-      ev.preventDefault();
-      t.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
-      t.classList.remove("ev-noi"); void t.offsetWidth; t.classList.add("ev-noi");
-      setTimeout(function () { t.classList.remove("ev-noi"); }, 2200);
-    });
   }
   /* Chạy sau su-kien.js (cần KET_EVENTS) */
   if (document.readyState === "complete") run(); else document.addEventListener("DOMContentLoaded", run);

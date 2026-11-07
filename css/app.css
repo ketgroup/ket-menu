@@ -1672,6 +1672,29 @@ body[data-venue-light-accent="true"] .kg-lang { color: #000; background: rgba(25
   color: #30D158;
 }
 
+.about-venue-actions,
+.venue-menu-cta {
+  flex: none;
+}
+.venue-menu-cta {
+  display: flex;
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  -webkit-tap-highlight-color: transparent;
+}
+.about-venue-tile .venue-social {
+  position: relative;
+  z-index: 2;
+}
+.venue-social-btn {
+  position: relative;
+  z-index: 2;
+}
+
 .venue-info-price-note {
   font-size: 15px;
   font-weight: 400;

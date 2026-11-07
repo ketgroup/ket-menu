@@ -1,0 +1,37 @@
+/* Sheet chi tiết sự kiện (trang chủ) */
+.ev-sheet { position: fixed; inset: 0; z-index: 1100; pointer-events: none; }
+.ev-sheet.open { pointer-events: auto; }
+.ev-sheet-backdrop {
+  position: absolute; inset: 0; background: rgba(0, 0, 0, 0.52);
+  opacity: 0; transition: opacity 0.28s ease;
+}
+.ev-sheet.open .ev-sheet-backdrop { opacity: 1; }
+.ev-sheet-panel {
+  position: absolute; left: 0; right: 0; bottom: 0; max-height: min(88vh, 640px);
+  display: flex; flex-direction: column; gap: 12px; padding: 14px 16px calc(16px + env(safe-area-inset-bottom));
+  border-radius: 20px 20px 0 0; background: var(--bg-grouped, #1c1c1e);
+  box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.45), inset 0 0 0 0.5px rgba(255, 255, 255, 0.08);
+  transform: translateY(105%); transition: transform 0.32s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.ev-sheet.open .ev-sheet-panel { transform: none; }
+.ev-sheet-close {
+  position: absolute; top: 10px; right: 12px; width: 36px; height: 36px; border: 0; border-radius: 50%;
+  font-size: 16px; line-height: 1; color: var(--label-secondary); background: rgba(255, 255, 255, 0.08);
+  -webkit-tap-highlight-color: transparent;
+}
+.ev-sheet-hero { padding-right: 40px; }
+.ev-sheet-icon { font-size: 28px; line-height: 1; display: block; margin-bottom: 4px; }
+.ev-sheet-venue { margin: 0; font-size: 13px; color: var(--c, #bf5af2); font-weight: 600; }
+.ev-sheet-title { margin: 2px 0 0; font-size: 20px; font-weight: 700; letter-spacing: -0.3px; line-height: 1.2; color: var(--label-primary); }
+.ev-sheet-list {
+  margin: 0; padding: 0 0 0 18px; overflow-y: auto; flex: 1 1 auto; min-height: 0;
+  font-size: 15px; line-height: 1.45; color: var(--label-primary);
+}
+.ev-sheet-list li { margin-bottom: 8px; overflow-wrap: anywhere; }
+.ev-sheet-list li:last-child { margin-bottom: 0; }
+.ev-sheet-actions { display: flex; flex-direction: column; gap: 8px; flex: none; }
+.ev-sheet-actions .ios-btn { width: 100%; min-height: 46px; justify-content: center; text-align: center; }
+@media (min-width: 520px) {
+  .ev-sheet-panel { left: 50%; right: auto; width: min(440px, calc(100% - 32px)); transform: translate(-50%, 105%); border-radius: 20px; bottom: max(16px, env(safe-area-inset-bottom)); }
+  .ev-sheet.open .ev-sheet-panel { transform: translate(-50%, 0); }
+}

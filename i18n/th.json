@@ -173,7 +173,11 @@
     "Thứ 4 · Latin dance · Vào cửa miễn phí · Mua 1 cocktail/mocktail tặng 1 wine / dừa / 3 nước suối / 1 Tiger": "วันพุธ · Latin dance · เข้าฟรี · Buy 1 cocktail/mocktail get 1 wine / coconut / 3 waters / 1 Tiger",
     "KET FAI · Thứ 4 Latin dance · Thứ 6 Social Dance Night · Vào cửa miễn phí": "KET FAI · วันพุธ Latin dance · วันศุกร์ Social Dance Night · เข้าฟรี",
     "Giá chưa gồm 5% phí dịch vụ": "ราคายังไม่รวมค่าบริการ 5%",
-    "Giá": "ราคา"
+    "Giá": "ราคา",
+    "Xem menu": "ดูเมนู",
+    "Chi tiết sự kiện": "รายละเอียดกิจกรรม",
+    "Đóng chi tiết": "ปิด",
+    "Chạm Xem menu hoặc kênh mạng xã hội bên dưới": "แตะดูเมนูหรือโซเชียลด้านล่าง"
   },
   "p": {
     "gift": "เลือกของฟรีแล้ว {a}/{b}",

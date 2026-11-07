@@ -91,7 +91,8 @@
       parts += '<p class="venue-info-value venue-info-price-note">' + escapeHtml(v.priceNote) + "</p>";
       parts += "</div>";
     }
-    if (v.promos && v.promos.length) {
+    var isMenuPage = document.querySelector(".menu-content") && !document.body.hasAttribute("data-preorder");
+    if (!isMenuPage && v.promos && v.promos.length) {
       parts += '<div class="venue-info-block venue-info-block--promo">';
       parts += '<p class="venue-info-label">Chương trình</p>';
       v.promos.forEach(function (line) {
