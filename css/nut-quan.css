@@ -56,11 +56,20 @@
 .event-btn small { display:block; font-size:13px; color:var(--c); margin-top:3px; white-space:normal; overflow-wrap:anywhere; line-height:1.25; }
 .event-strip .event-btn:last-child:nth-child(odd) { grid-column:1 / -1; }
 
-/* Nhãn Pre-order trên nút sự kiện */
-.event-btn.has-preorder { padding-top:30px !important; }
-.event-tag { position:absolute; top:8px; right:8px; display:inline-flex; align-items:center; gap:3px; padding:3px 8px; border-radius:999px;
-  font-family:var(--font-ui); font-size:11px; font-weight:700; letter-spacing:.2px; line-height:1.2; color:#fff; white-space:nowrap;
-  background:linear-gradient(135deg,#d84cff,#9b3bff); box-shadow:0 0 10px rgba(216,76,255,.6); }
+/* Nhãn Pre-order / miễn phí trên nút sự kiện */
+.event-btn.has-preorder,
+.event-btn.has-free { padding-top: 34px !important; }
+.event-btn.has-preorder.has-free { padding-top: 38px !important; }
+.event-btn-text { display: block; min-width: 0; flex: 1 1 auto; padding-right: 2px; }
+.event-tag { position: absolute; top: 8px; display: inline-flex; align-items: center; gap: 3px; padding: 3px 8px; border-radius: 999px;
+  font-family: var(--font-ui); font-size: 10px; font-weight: 700; letter-spacing: .2px; line-height: 1.2; white-space: nowrap; max-width: calc(50% - 12px); overflow: hidden; text-overflow: ellipsis; }
+.event-tag--po { right: 8px; left: auto; color: #fff;
+  background: linear-gradient(135deg,#d84cff,#9b3bff); box-shadow: 0 0 10px rgba(216,76,255,.6); }
+.event-tag--free { left: 8px; right: auto; }
+@media (max-width: 390px) {
+  .event-btn.has-preorder.has-free .event-btn-text b { font-size: 15px; }
+  .event-tag { font-size: 9px; padding: 2px 6px; max-width: calc(50% - 10px); }
+}
 
 /* Teaser ngày đặc biệt dưới chữ Kết Group (js/ngay-dac-biet.js) */
 .teaser-dac-biet { --c:#ff9f0a; --glow:rgba(255,159,10,.4); position:relative; isolation:isolate; display:flex; flex-direction:column; align-items:center; gap:4px;
