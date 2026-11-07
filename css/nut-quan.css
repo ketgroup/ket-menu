@@ -56,18 +56,27 @@
 .event-btn small { display:block; font-size:13px; color:var(--c); margin-top:3px; white-space:normal; overflow-wrap:anywhere; line-height:1.25; }
 .event-strip .event-btn:last-child:nth-child(odd) { grid-column:1 / -1; }
 
-/* Nhãn Pre-order trên nút sự kiện */
-.event-btn.has-preorder,
-.event-btn.has-fepo { padding-top:30px !important; }
-.event-tag { position:absolute; top:8px; right:8px; display:inline-flex; align-items:center; gap:3px; padding:3px 8px; border-radius:999px;
-  font-family:var(--font-ui); font-size:11px; font-weight:700; letter-spacing:.2px; line-height:1.2; color:#fff; white-space:nowrap;
-  background:linear-gradient(135deg,#d84cff,#9b3bff); box-shadow:0 0 10px rgba(216,76,255,.6); }
-.event-tag--fepo { top:8px; right:auto; left:8px; max-width:calc(100% - 52px); white-space:normal; text-align:left;
-  line-height:1.15; color:#fff; background:linear-gradient(135deg,#30d158,#d84cff); box-shadow:0 0 10px rgba(48,209,88,.35); }
+/* Nhãn Vào cửa miễn phí / Pre-order trên thẻ sự kiện (hàng riêng, không đè tiêu đề) */
+.event-btn.has-event-tags { padding-top:42px !important; }
+.event-tags {
+  position:absolute; top:8px; left:8px; right:8px; z-index:1;
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:flex-end; gap:4px 6px;
+  pointer-events:none;
+}
+.event-tags .event-tag {
+  position:static; display:inline-flex; align-items:center; gap:3px; padding:3px 8px; border-radius:999px;
+  font-family:var(--font-ui); font-size:10px; font-weight:700; letter-spacing:.15px; line-height:1.2;
+  color:#fff; white-space:nowrap; flex:0 0 auto; max-width:100%;
+  background:linear-gradient(135deg,#d84cff,#9b3bff); box-shadow:0 0 10px rgba(216,76,255,.6);
+}
+.event-btn-text { display:block; min-width:0; flex:1; position:relative; z-index:0; }
+.event-btn.has-event-tags .event-btn-text b { padding-right:0; }
+@media (max-width:430px){
+  .event-btn.has-event-tags { padding-top:46px !important; }
+  .event-tags .event-tag { font-size:9px; padding:3px 6px; }
+}
 @media (max-width:390px){
-  .event-btn.has-fepo { padding-top:34px !important; }
-  .event-tag--fepo { font-size:9px; padding:3px 7px; letter-spacing:0; max-width:calc(100% - 48px); }
-  .event-btn.has-fepo b { padding-right:2px; }
+  .event-btn.has-event-tags { padding-top:48px !important; }
 }
 
 /* Teaser ngày đặc biệt dưới chữ Kết Group (js/ngay-dac-biet.js) */

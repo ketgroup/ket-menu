@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"><title>Kết · Up ảnh món</title><link rel="icon" href="../img/logos/favicon.png?v=20261107f"><link rel="apple-touch-icon" href="../img/logos/apple-touch-icon.png?v=20261107f">
+<html lang="vi"><head><meta charset="utf-8"><title>Kết · Up ảnh món</title><link rel="icon" href="../img/logos/favicon.png?v=20261107g"><link rel="apple-touch-icon" href="../img/logos/apple-touch-icon.png?v=20261107g">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>(function(){var t=localStorage.getItem("ketTheme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t})()</script>
@@ -47,7 +47,7 @@ html[data-theme=dark] .row.hot{animation-name:hotd}
 .theme{border:0;background:none;font-size:20px;padding:4px 6px;cursor:pointer}
 </style></head><body>
 <header>
- <div class="top"><img src="../img/logos/ket-logo-mau.png?v=20261107f" alt="Kết"><div><h1>Ảnh món e-menu</h1><div class="sub" id="sub">Đang tải menu…</div></div><button class="who" id="who"></button><button class="theme" id="theme" aria-label="Sáng/Tối"></button></div>
+ <div class="top"><img src="../img/logos/ket-logo-mau.png?v=20261107g" alt="Kết"><div><h1>Ảnh món e-menu</h1><div class="sub" id="sub">Đang tải menu…</div></div><button class="who" id="who"></button><button class="theme" id="theme" aria-label="Sáng/Tối"></button></div>
  <div class="seg" id="quan"></div>
  <div class="seg f" id="loc"><button data-v="thieu" class="on">Chưa có hình</button><button data-v="co">Có hình rồi</button><button data-v="all">Tất cả</button></div>
  <input class="search" id="q" placeholder="Tìm món…" type="search">
@@ -69,8 +69,8 @@ function jget(u){return fetch(u,{cache:'no-store'}).then(function(r){return r.js
 function list(){return jget(API+'?api=list&k='+encodeURIComponent(tok())+'&t='+Date.now()).then(function(x){if(!x||!x.ok||!x.photos)throw 0;SRV=true;return x}).catch(function(){SRV=false;return {photos:{K1:{},K2:{},K5:{},K9:{}},hot:{}}})}
 var MENU=null,STAT=null;
 function run(fn){var a=[].slice.call(arguments,1);
- if(fn==='getData')return Promise.all([MENU?Promise.resolve(MENU):jget('../data/emenu/menu.json?v=20261107f').then(function(m){return MENU=m}),list(),STAT?Promise.resolve(STAT):jget('../data/emenu/co-anh.json?v=20261107f').then(function(x){return STAT=x}).catch(function(){return STAT={}})]).then(function(r){
- var ph={};['K1','K2','K5','K9'].forEach(function(q){ph[q]={};var st=r[2][q]||{};for(var m in st){var id='s:'+st[m].f;ph[q][m]={id:id,name:m,t:0,st:1};thumbs[id]='../data/emenu/'+st[m].f+'?v=20261107f'}var ap=(r[1].photos||{})[q]||{};for(var m2 in ap)ph[q][m2]=ap[m2]});r[1].photos=ph;if(!SRV)toast(tok()?'Chưa kết nối được máy chủ ảnh (mã sai hoặc đang cập nhật)':'Chưa có mã up ảnh – mở link quản lý gửi hoặc bấm «Chụp / chọn» để nhập mã',6000);return merge({menu:JSON.parse(JSON.stringify(r[0])),photos:r[1].photos,hot:r[1].hot})});
+ if(fn==='getData')return Promise.all([MENU?Promise.resolve(MENU):jget('../data/emenu/menu.json?v=20261107g').then(function(m){return MENU=m}),list(),STAT?Promise.resolve(STAT):jget('../data/emenu/co-anh.json?v=20261107g').then(function(x){return STAT=x}).catch(function(){return STAT={}})]).then(function(r){
+ var ph={};['K1','K2','K5','K9'].forEach(function(q){ph[q]={};var st=r[2][q]||{};for(var m in st){var id='s:'+st[m].f;ph[q][m]={id:id,name:m,t:0,st:1};thumbs[id]='../data/emenu/'+st[m].f+'?v=20261107g'}var ap=(r[1].photos||{})[q]||{};for(var m2 in ap)ph[q][m2]=ap[m2]});r[1].photos=ph;if(!SRV)toast(tok()?'Chưa kết nối được máy chủ ảnh (mã sai hoặc đang cập nhật)':'Chưa có mã up ảnh – mở link quản lý gửi hoặc bấm «Chụp / chọn» để nhập mã',6000);return merge({menu:JSON.parse(JSON.stringify(r[0])),photos:r[1].photos,hot:r[1].hot})});
  if(fn==='getThumbs')return SRV?jget(API+'?api=thumbs&k='+encodeURIComponent(tok())+'&ids='+a[0].join(',')).then(function(x){return (x&&x.thumbs)||{}}).catch(function(){return {}}):Promise.resolve({});
  if(fn==='uploadPhoto'){var q=a[0],ma=a[1];if(q==='ALL'){q=ma.split('~')[0];ma=ma.split('~')[1]}
   return fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({k:tok(),src:location.origin,quan:q,ma:ma,data:a[3],nguoi:a[4]})}).then(function(r){return r.json()}).catch(function(){return null})
