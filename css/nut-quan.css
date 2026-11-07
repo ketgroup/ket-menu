@@ -123,3 +123,5 @@
 .teaser-chip-tx small { -webkit-line-clamp:2; }
 .teaser-chip-ic { line-height:1.3; }
 .teaser-chip { flex-direction:column; flex-wrap:nowrap; gap:3px; }
+.teaser-chip--detail { max-width:100%; grid-column:1 / -1; }
+.teaser-chip--detail .teaser-chip-tx small { -webkit-line-clamp:4; color:var(--label-secondary); }

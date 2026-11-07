@@ -1427,6 +1427,50 @@ body {
   transform: scale(0.98);
 }
 
+.venue-menu-btn {
+  align-self: flex-start;
+  margin-left: 58px;
+  margin-top: -4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  min-height: 32px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-ui);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  color: rgb(var(--venue-rgb));
+  background: rgba(var(--venue-rgb), 0.18);
+  border: 1px solid rgba(var(--venue-rgb), 0.42);
+  box-shadow: 0 2px 8px rgba(var(--venue-rgb), 0.15);
+  transition: transform 0.15s ease, background 0.15s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.about-venue-tile--k2 .venue-menu-btn {
+  color: #1c1c1e;
+  background: rgba(242, 242, 247, 0.88);
+  border-color: rgba(242, 242, 247, 0.55);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.venue-menu-btn:active {
+  transform: scale(0.96);
+  background: rgba(var(--venue-rgb), 0.32);
+}
+
+.about-venue-tile--k2 .venue-menu-btn:active {
+  background: rgba(242, 242, 247, 0.65);
+}
+
+@media (max-width: 360px) {
+  .venue-menu-btn { margin-left: 0; }
+}
+
 .about-venue-tile { --venue-rgb: 255, 255, 255; }
 .about-venue-tile--k1 { --venue-rgb: 255, 159, 10; }
 .about-venue-tile--k2 { --venue-rgb: 242, 242, 247; }

@@ -9,7 +9,7 @@ window.KET_EVENTS = [
   { thu: [3], ten: "Latin dance", quan: "Kết Fai", lich: "Thứ 4 · Vào cửa miễn phí · Mua 1 cocktail/mocktail tặng 1 wine / dừa / 3 nước suối / 1 Tiger", href: "k5.html", fePoLabel: true, icon: "💃", mau: "#BF5AF2", rgb: "191,90,242" },
   { thu: [6], ten: "Extra Happy Hour", quan: "Kết Underground", lich: "Thứ 7 · Mua 1 tặng 1 tới 21:30 · DJ Minh", href: "k9.html", icon: "🎧", mau: "#FF453A", rgb: "255,69,58" },
   { thu: "moi", ten: "Happy Hour", quan: "Tất cả các quán", lich: "Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round", href: "#venue-list-home-wrap", icon: "🥂", mau: "#30D158", rgb: "48,209,88" },
-  { thu: "moi", ten: "Giảm 15%", quan: "Tất cả các quán", lich: "Mỗi ngày · Phi công / tiếp viên / bartender (xuất trình ID hoặc trang cá nhân)", href: "#venue-list-home-wrap", icon: "✈️", mau: "#64D2FF", rgb: "100,210,255" }
+  { thu: "moi", ten: "Giảm 15%", quan: "Tất cả các quán", lich: "Mỗi ngày · Phi công / tiếp viên / bartender (xuất trình ID hoặc trang cá nhân)", href: "#venue-list-home-wrap", icon: "✈️", mau: "#64D2FF", rgb: "100,210,255", teaserOnly: true }
 ];
 (function(){
   function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
@@ -19,8 +19,10 @@ window.KET_EVENTS = [
   }
   function render(){
     var root=document.getElementById("event-strip"); if(!root) return;
-    root.classList.toggle('one', window.KET_EVENTS.length===1);
+    var stripEvs = window.KET_EVENTS.filter(function(e){ return !e.teaserOnly; });
+    root.classList.toggle('one', stripEvs.length===1);
     root.innerHTML = window.KET_EVENTS.map(function(e,i){
+      if (e.teaserOnly) return "";
       var tagCls = e.fePoLabel ? ' has-fepo' : (e.preorder ? ' has-preorder' : '');
       return '<a data-ev="'+i+'" class="event-btn'+tagCls+'" href="'+esc(e.href)+'" style="--c:'+esc(e.mau)+';--glow:rgba('+esc(e.rgb)+',.38);--d:'+(i*.12)+'s">'+
         tagHtml(e)+'<span class="event-btn-icon" aria-hidden="true">'+esc(e.icon)+'</span><span><b>'+esc(e.ten+" · "+e.quan)+'</b><small>'+esc(e.lich)+'</small></span></a>';
