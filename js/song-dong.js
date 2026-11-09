@@ -7,6 +7,7 @@
     function setup() {
       var seen = [], groups = new Map();
       document.querySelectorAll(SEL).forEach(function (el) {
+        if (document.body.classList.contains("page-home") && el.classList.contains("about-venue-tile")) return;
         if (el.closest(".apply-shell") || el.closest(".reveal") || el.closest(".sd-reveal") || el.closest(".ios-tab-bar") || el.closest(".ios-nav")) return;
         el.classList.add("sd-reveal"); seen.push(el);
         var p = el.parentNode, i = groups.get(p) || 0; groups.set(p, i + 1);
