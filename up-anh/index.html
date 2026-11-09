@@ -1,12 +1,106 @@
 <!DOCTYPE html>
-<html lang="vi"><head>
-<meta charset="utf-8">
+<html lang="vi"><head><meta charset="utf-8"><title>Kết · Up ảnh món</title><link rel="icon" href="../img/logos/favicon.png?v=20261110e"><link rel="apple-touch-icon" href="../img/logos/apple-touch-icon.png?v=20261110e">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Kết · Up ảnh món</title>
-<link rel="icon" href="../img/logos/favicon.png?v=20261110d">
-<link rel="apple-touch-icon" href="../img/logos/apple-touch-icon.png?v=20261110d">
-<link rel="stylesheet" href="captain.css?v=20261110d">
-<script>window.KET_CAP_PICK_VENUE=true;window.KET_CAP_CACHE="20261110d";</script>
-<script src="captain.js?v=20261110d" defer></script>
-</head><body></body></html>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>(function(){var t=localStorage.getItem("ketTheme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t})()</script>
+<style>
+:root{--bg:#f2f2f7;--card:#fff;--txt:#1c1c1e;--sub:#8e8e93;--sep:#e5e5ea;--acc:#b8862b;--red:#ff3b30;--green:#34c759}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.35 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif}
+header{position:sticky;top:0;z-index:5;background:rgba(242,242,247,.92);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);padding:calc(10px + env(safe-area-inset-top)) 16px 8px;border-bottom:.5px solid rgba(0,0,0,.08)}
+.top{display:flex;align-items:center;gap:10px}
+.top img{width:38px;height:38px;border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+h1{font-size:26px;font-weight:700;margin:0;letter-spacing:-.4px}
+.sub{color:var(--sub);font-size:13px}
+.seg{display:flex;background:#e3e3e8;border-radius:9px;padding:2px;margin:10px 0 8px}
+.seg button{flex:1;border:0;background:none;padding:7px 0;font:600 14px inherit;border-radius:7px;color:var(--txt);font-family:inherit}
+.seg button.on{background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.seg.f button{font-weight:500;font-size:13px}
+.search{width:100%;border:0;background:#e3e3e8;border-radius:10px;padding:9px 12px;font:16px inherit;font-family:inherit;outline:none}
+.prog{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:12px;color:var(--sub)}
+.bar{flex:1;height:6px;background:#e3e3e8;border-radius:3px;overflow:hidden}.bar i{display:block;height:100%;background:var(--green)}
+main{padding:4px 16px 60px}
+.grp{font-size:13px;color:var(--sub);text-transform:uppercase;margin:20px 4px 6px;letter-spacing:.2px}
+.list{background:var(--card);border-radius:12px;overflow:hidden}
+.row{display:flex;align-items:center;gap:12px;padding:10px 12px;position:relative}
+.row+.row:before{content:"";position:absolute;top:0;left:88px;right:0;border-top:.5px solid var(--sep)}
+.ph{width:64px;height:64px;border-radius:10px;background:#f0f0f4 center/cover no-repeat;flex:none;display:flex;align-items:center;justify-content:center;color:#c7c7cc;font-size:26px}
+.info{flex:1;min-width:0}.ten{font-weight:600;font-size:15px;overflow-wrap:anywhere}
+.meta{color:var(--sub);font-size:12.5px;margin-top:2px}
+.ok{color:var(--green)}.miss{color:var(--red)}
+.btn{flex:none;border:0;border-radius:16px;padding:7px 12px;font:600 13px inherit;font-family:inherit;background:var(--acc);color:#fff}
+.btn.thay{background:#eceae4;color:var(--acc)}
+.row.hot{animation:hot 1s ease-in-out infinite}
+.row.hot .ten:after{content:" · đang được order";color:var(--red);font-weight:500;font-size:12px}
+@keyframes hot{0%,100%{background:#fff}50%{background:#ffd9d6}}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translateX(-50%);background:rgba(28,28,30,.92);color:#fff;padding:10px 16px;border-radius:14px;font-size:14px;display:none;max-width:90%}
+.who{margin-left:auto;font-size:12px;color:var(--acc);border:0;background:none;font-family:inherit}
+.empty{text-align:center;color:var(--sub);padding:40px 0}
+html[data-theme=dark]{--bg:#000;--card:#1c1c1e;--txt:#f2f2f7;--sub:#98989f;--sep:#38383a;color-scheme:dark}
+html[data-theme=dark] header{background:rgba(0,0,0,.85);border-color:#38383a}
+html[data-theme=dark] .seg,html[data-theme=dark] .search,html[data-theme=dark] .bar{background:#2c2c2e;color:var(--txt)}
+html[data-theme=dark] .seg button.on{background:#636366}
+html[data-theme=dark] .ph{background-color:#2c2c2e;color:#636366}
+html[data-theme=dark] .btn.thay{background:#3a3220}
+html[data-theme=dark] .row.hot{animation-name:hotd}
+@keyframes hotd{0%,100%{background:#1c1c1e}50%{background:#5c1a16}}
+.theme{border:0;background:none;font-size:20px;padding:4px 6px;cursor:pointer}
+</style></head><body>
+<header>
+ <div class="top"><img src="../img/logos/ket-logo-mau.png?v=20261110e" alt="Kết"><div><h1>Ảnh món e-menu</h1><div class="sub" id="sub">Đang tải menu…</div></div><button class="who" id="who"></button><button class="theme" id="theme" aria-label="Sáng/Tối"></button></div>
+ <div class="seg" id="quan"></div>
+ <div class="seg f" id="loc"><button data-v="thieu" class="on">Chưa có hình</button><button data-v="co">Có hình rồi</button><button data-v="all">Tất cả</button></div>
+ <input class="search" id="q" placeholder="Tìm món…" type="search">
+ <div class="prog"><div class="bar"><i id="pbar" style="width:0"></i></div><span id="ptxt"></span></div>
+</header>
+<main id="main"><div class="empty">Đang tải…</div></main>
+<input type="file" id="file" accept="image/*" hidden>
+<div class="toast" id="toast"></div>
+<script>
+var API='https://script.google.com/macros/s/AKfycbzm-H___UuyyEowOE_y359i6l3MJHeXmMJP3LCGzr3imR8ZNeUQDkXhRDL2-FDZROCy/exec', D=null, Q='ALL', LOC='thieu', thumbs={}, cur=null, SRV=true;
+var $=function(s){return document.querySelector(s)};
+function toast(t,ms){var e=$('#toast');e.textContent=t;e.style.display='block';clearTimeout(e._t);e._t=setTimeout(function(){e.style.display='none'},ms||2500)}
+(function(){var m=location.search.match(/[?&]k=([^&#]+)/);if(m){localStorage.setItem('ketUpK',decodeURIComponent(m[1]));history.replaceState(null,'',location.pathname+location.hash)}})();
+var DEF_K='C3SAItpttvE07U6visS6BZPG6UZ0zyEH';function tok(){return localStorage.getItem('ketUpK')||DEF_K}
+function merge(d){var A=[],P={},H={};Object.keys(d.menu).forEach(function(q){(d.menu[q]||[]).forEach(function(i){var k=q+'~'+i.ma;A.push({ma:k,ten:i.ten,gia:i.gia,dvt:q+(i.dvt?' · '+i.dvt:''),nhom:q+' · '+i.nhom});
+ var p=(d.photos[q]||{})[i.ma];if(p)P[k]=p;var h=((d.hot||{})[q]||{})[i.ma];if(h)H[k]=h})});
+ var m={ALL:A},ph={ALL:P},ho={ALL:H};for(var q in d.menu){m[q]=d.menu[q];ph[q]=d.photos[q]||{};ho[q]=(d.hot||{})[q]||{}}d.menu=m;d.photos=ph;d.hot=ho;return d}
+function jget(u){return fetch(u,{cache:'no-store'}).then(function(r){return r.json()})}
+function list(){return jget(API+'?api=list&k='+encodeURIComponent(tok())+'&t='+Date.now()).then(function(x){if(!x||!x.ok||!x.photos)throw 0;SRV=true;return x}).catch(function(){SRV=false;return {photos:{K1:{},K2:{},K5:{},K9:{}},hot:{}}})}
+var MENU=null,STAT=null;
+function run(fn){var a=[].slice.call(arguments,1);
+ if(fn==='getData')return Promise.all([MENU?Promise.resolve(MENU):jget('../data/emenu/menu.json?v=20261110e').then(function(m){return MENU=m}),list(),STAT?Promise.resolve(STAT):jget('../data/emenu/co-anh.json?v=20261110e').then(function(x){return STAT=x}).catch(function(){return STAT={}})]).then(function(r){
+ var ph={};['K1','K2','K5','K9'].forEach(function(q){ph[q]={};var st=r[2][q]||{};for(var m in st){var id='s:'+st[m].f;ph[q][m]={id:id,name:m,t:0,st:1};thumbs[id]='../data/emenu/'+st[m].f+'?v=20261110e'}var ap=(r[1].photos||{})[q]||{};for(var m2 in ap)ph[q][m2]=ap[m2]});r[1].photos=ph;if(!SRV)toast(tok()?'Chưa kết nối được máy chủ ảnh (mã sai hoặc đang cập nhật)':'Chưa có mã up ảnh – mở link quản lý gửi hoặc bấm «Chụp / chọn» để nhập mã',6000);return merge({menu:JSON.parse(JSON.stringify(r[0])),photos:r[1].photos,hot:r[1].hot})});
+ if(fn==='getThumbs')return SRV?jget(API+'?api=thumbs&k='+encodeURIComponent(tok())+'&ids='+a[0].join(',')).then(function(x){return (x&&x.thumbs)||{}}).catch(function(){return {}}):Promise.resolve({});
+ if(fn==='uploadPhoto'){var q=a[0],ma=a[1];if(q==='ALL'){q=ma.split('~')[0];ma=ma.split('~')[1]}
+  return fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({k:tok(),src:location.origin,quan:q,ma:ma,data:a[3],nguoi:a[4]})}).then(function(r){return r.json()}).catch(function(){return null})
+  .then(function(x){if(x&&x.ok===false){if(/quyền/.test(x.error))localStorage.removeItem('ketUpK');throw new Error(x.error)}return list().then(function(l){var p=l.photos[q]&&l.photos[q][ma];if(!p)throw new Error('Máy chủ chưa xác nhận ảnh, thử lại');return {id:p.id,name:p.name}})})}
+ return Promise.reject(new Error(fn))}
+function who(){return localStorage.getItem('ketWho')||''}
+function setWho(){var v=prompt('Tên người chụp (vd: Captain Thắng, Trâm MKT):',who());if(v!==null){localStorage.setItem('ketWho',v.trim());$('#who').textContent=v.trim()||'Đặt tên'}}
+$('#who').textContent=who()||'Đặt tên';$('#who').onclick=setWho;
+function vnd(n){return n?n.toLocaleString('vi-VN')+'đ':''}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function load(){run('getData').then(function(d){D=d;segs();render();loadThumbs()}).catch(function(e){$('#main').innerHTML='<div class="empty">Lỗi: '+esc(e.message)+'</div>'})}
+function segs(){$('#quan').innerHTML=Object.keys(D.menu).map(function(q){var n=D.menu[q].filter(function(i){return !D.photos[q][i.ma]}).length;return '<button data-v="'+q+'" class="'+(q===Q?'on':'')+'">'+(q==='ALL'?'Tất cả':q)+(n?' · '+n:'')+'</button>'}).join('')}
+document.addEventListener('click',function(e){var b=e.target.closest('.seg button');if(b){if(b.parentNode.id==='quan')Q=b.dataset.v;else LOC=b.dataset.v;[].forEach.call(b.parentNode.children,function(x){x.classList.toggle('on',x===b)});render();loadThumbs();window.scrollTo(0,0)}
+ var u=e.target.closest('[data-up]');if(u){if(!who()){setWho();if(!who())return}cur=JSON.parse(u.dataset.up);$('#file').value='';$('#file').click()}});
+$('#q').oninput=function(){render();loadThumbs()};
+function render(){var q=$('#q').value.trim().toLowerCase(),items=D.menu[Q],ph=D.photos[Q],hot=(D.hot||{})[Q]||{};
+ var co=items.filter(function(i){return ph[i.ma]}).length;$('#pbar').style.width=(100*co/items.length)+'%';$('#ptxt').textContent=co+'/'+items.length+' món có hình';
+ $('#sub').textContent=(Q==='ALL'?'Tất cả 4 quán':Q)+' · '+items.length+' món · thiếu '+(items.length-co);
+ var g={},order=[];items.forEach(function(i){var has=!!ph[i.ma];if(LOC==='thieu'&&has||LOC==='co'&&!has)return;if(q&&(i.ten+' '+i.nhom).toLowerCase().indexOf(q)<0)return;if(!g[i.nhom]){g[i.nhom]=[];order.push(i.nhom)}g[i.nhom].push(i)});
+ order.sort(function(a,b){return g[b].some(function(i){return hot[i.ma]})-g[a].some(function(i){return hot[i.ma]})});
+ $('#main').innerHTML=order.length?order.map(function(n){return '<div class="grp">'+esc(n)+' · '+g[n].length+'</div><div class="list">'+g[n].map(function(i){var p=ph[i.ma],h=hot[i.ma];
+  return '<div class="row'+(h&&!p?' hot':'')+'" id="r-'+esc(i.ma)+'"><div class="ph" data-id="'+(p?p.id:'')+'">'+(p?'':'📷')+'</div><div class="info"><div class="ten">'+esc(i.ten)+'</div><div class="meta">'+[vnd(i.gia),i.dvt].filter(Boolean).join(' · ')+' · '+(p?'<span class="ok">✓ Có hình</span>':'<span class="miss">Chưa có hình</span>')+(h&&!p?' · order '+h.lan+' lần':'')+'</div></div><button class="btn'+(p?' thay':'')+'" data-up="'+esc(JSON.stringify({ma:i.ma,ten:i.ten}))+'">'+(p?'Thay':'Chụp / chọn')+'</button></div>'}).join('')+'</div>'}).join(''):'<div class="empty">'+(LOC==='thieu'?'Quán này đã đủ hình 🎉':'Không có món nào')+'</div>';
+ [].forEach.call(document.querySelectorAll('.ph[data-id]'),function(e){var id=e.dataset.id;if(id&&thumbs[id]){e.style.backgroundImage='url('+thumbs[id]+')';e.textContent=''}})}
+function loadThumbs(){var ids=[].map.call(document.querySelectorAll('.ph[data-id]'),function(e){return e.dataset.id}).filter(function(id){return id&&!thumbs[id]});
+ for(var i=0;i<ids.length;i+=40)run('getThumbs',ids.slice(i,i+40)).then(function(r){for(var k in r)thumbs[k]=r[k];render()})}
+function resize(f){return new Promise(function(ok,no){var img=new Image(),u=URL.createObjectURL(f);img.onload=function(){var m=1600,s=Math.min(1,m/Math.max(img.width,img.height)),c=document.createElement('canvas');c.width=Math.round(img.width*s);c.height=Math.round(img.height*s);c.getContext('2d').drawImage(img,0,0,c.width,c.height);URL.revokeObjectURL(u);ok(c.toDataURL('image/jpeg',.86))};img.onerror=no;img.src=u})}
+$('#file').onchange=function(){var f=this.files[0],c=cur;if(!f||!c)return;toast('Đang tải ảnh '+c.ten+'…',60000);
+ resize(f).then(function(d){thumbs['tmp-'+c.ma]=d;return run('uploadPhoto',Q,c.ma,c.ten,d,who()).then(function(r){thumbs[r.id]=d;D.photos[Q][c.ma]={id:r.id,name:r.name,t:Date.now()};if(D.hot&&D.hot[Q])delete D.hot[Q][c.ma];segs();render();toast('✓ Đã lưu: '+r.name)})}).catch(function(e){toast('Lỗi tải ảnh: '+e.message,5000)})};
+setInterval(function(){if(D)run('getData').then(function(d){var keep=thumbs;D.hot=d.hot;D.photos=d.photos;segs();render();loadThumbs()})},60000);
+function th(){var d=document.documentElement.dataset.theme==='dark';$('#theme').textContent=d?'☀️':'🌙'}th();
+$('#theme').onclick=function(){var t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;localStorage.setItem('ketTheme',t);th()};
+load();
+</script></body></html>
