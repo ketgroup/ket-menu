@@ -4,7 +4,7 @@
   var API =
     "https://script.google.com/macros/s/AKfycbzm-H___UuyyEowOE_y359i6l3MJHeXmMJP3LCGzr3imR8ZNeUQDkXhRDL2-FDZROCy/exec";
   var DEF_K = "C3SAItpttvE07U6visS6BZPG6UZ0zyEH";
-  var V = window.KET_CAP_CACHE || "20261110c";
+  var V = window.KET_CAP_CACHE || "20261110d";
 
   var VENUES = {
     K1: { label: "Kết Bar", cls: "k1", logo: "../img/logos/k1.png" },
@@ -47,6 +47,49 @@
       .replace(/Đ/g, "d");
   }
 
+  function normMa(ma) {
+    return String(ma || "").toUpperCase();
+  }
+
+  function vnd(n) {
+    return n || n === 0 ? Number(n).toLocaleString("vi-VN") + "đ" : "";
+  }
+
+  function duplicateGroups(items) {
+    var by = {};
+    items.forEach(function (i) {
+      var k = norm(i.ten);
+      by[k] = by[k] || [];
+      by[k].push(i);
+    });
+    return by;
+  }
+
+  function needsPriceTag(i, by) {
+    var g = by[norm(i.ten)];
+    if (!g || g.length < 2) return false;
+    var dvts = g.map(function (x) {
+      return x.dvt || "";
+    });
+    if (
+      dvts.every(function (d) {
+        return !d;
+      })
+    )
+      return true;
+    var uniq = {};
+    dvts.forEach(function (d) {
+      if (d) uniq[d] = 1;
+    });
+    return Object.keys(uniq).length <= 1;
+  }
+
+  function dishLines(i, by) {
+    var title = i.ten + (i.dvt ? " · " + i.dvt : "");
+    var sub = i.ma + (needsPriceTag(i, by) ? " · " + vnd(i.gia) : "");
+    return { title: title, sub: sub };
+  }
+
   function esc(s) {
     return String(s).replace(/[&<>"]/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
@@ -86,20 +129,40 @@
         photos[q] = {};
         var st = stat[q] || {};
         Object.keys(st).forEach(function (ma) {
-          photos[q][ma] = { id: "s:" + st[ma].f, local: true };
+          photos[q][normMa(ma)] = { id: "s:" + st[ma].f, local: true, srcMa: ma };
         });
         var ap = (srv.photos || {})[q] || {};
         Object.keys(ap).forEach(function (ma) {
-          photos[q][ma] = ap[ma];
+          photos[q][normMa(ma)] = ap[ma];
         });
       });
       DATA = { menu: menu, photos: photos };
+      window.KET_CAP_PHOTO_STATS = photoStats();
       return DATA;
     });
   }
 
+  function photoStats() {
+    var out = {};
+    ["K1", "K2", "K5", "K9"].forEach(function (q) {
+      var items = DATA.menu[q] || [];
+      var co = 0;
+      var miss = 0;
+      items.forEach(function (i) {
+        if (hasPhotoFor(q, i.ma)) co++;
+        else miss++;
+      });
+      out[q] = { withPhoto: co, withoutPhoto: miss, total: items.length };
+    });
+    return out;
+  }
+
+  function hasPhotoFor(q, ma) {
+    return !!(DATA && DATA.photos[q] && DATA.photos[q][normMa(ma)]);
+  }
+
   function hasPhoto(ma) {
-    return !!(DATA && DATA.photos[Q] && DATA.photos[Q][ma]);
+    return hasPhotoFor(Q, ma);
   }
 
   function resize(f) {
@@ -176,8 +239,13 @@
   }
 
   function renderDishes() {
+    if (!DATA) {
+      $("#dish-list").innerHTML = '<p style="padding:16px;color:var(--sub);text-align:center">Đang tải danh sách…</p>';
+      return;
+    }
     var q = norm($("#search").value);
     var items = (DATA.menu[Q] || []).slice();
+    var dups = duplicateGroups(items);
     items.sort(function (a, b) {
       var ha = hasPhoto(a.ma) ? 1 : 0;
       var hb = hasPhoto(b.ma) ? 1 : 0;
@@ -187,22 +255,27 @@
     var html = "";
     items.forEach(function (i) {
       if (q) {
-        var hay = norm(i.ten + " " + i.ma + " " + (i.nhom || ""));
+        var hay = norm(i.ten + " " + i.ma + " " + (i.nhom || "") + " " + (i.dvt || ""));
         if (hay.indexOf(q) < 0) return;
       }
       var got = hasPhoto(i.ma);
+      var lines = dishLines(i, dups);
       html +=
         '<button type="button" class="dish' +
-        (got ? "" : " miss") +
+        (got ? " has-photo" : " miss") +
         '" data-ma="' +
         esc(i.ma) +
-        '" data-ten="' +
-        esc(i.ten) +
+        '" data-title="' +
+        esc(lines.title) +
         '"><div><div class="name">' +
-        esc(i.ten) +
+        esc(lines.title) +
         '</div><div class="code">' +
-        esc(i.ma) +
-        '</div></div><span class="mark">' +
+        esc(lines.sub) +
+        '</div></div><span class="mark' +
+        (got ? " on" : "") +
+        '" aria-label="' +
+        (got ? "Đã có ảnh" : "Chưa có ảnh") +
+        '">' +
         (got ? "✓" : "") +
         "</span></button>";
     });
@@ -210,8 +283,8 @@
   }
 
   function startSent(dish) {
-    pending = { ma: dish.ma, ten: dish.ten, data: photoDataUrl, cancelled: false };
-    $("#sent-title").textContent = "Đã gửi ✓ " + dish.ten;
+    pending = { ma: dish.ma, title: dish.title, data: photoDataUrl, cancelled: false };
+    $("#sent-title").textContent = "Đã gửi ✓ " + dish.title;
     $("#sent-img").src = photoDataUrl;
     $("#sent-status").textContent = "Huỷ trong 10 giây nếu chọn nhầm";
     $("#btn-cancel").style.display = "";
@@ -223,7 +296,7 @@
       uploadPhoto(dish.ma, dish.ten, photoDataUrl)
         .then(function () {
           if (pending && pending.cancelled) return;
-          if (DATA.photos[Q]) DATA.photos[Q][dish.ma] = { id: "new", t: Date.now() };
+          if (DATA.photos[Q]) DATA.photos[Q][normMa(dish.ma)] = { id: "new", t: Date.now() };
           $("#sent-status").textContent = "Đã lưu lên Drive";
           setTimeout(resetFlow, 800);
         })
@@ -280,7 +353,7 @@
     $("#dish-list").onclick = function (e) {
       var b = e.target.closest(".dish");
       if (!b || !photoDataUrl) return;
-      startSent({ ma: b.dataset.ma, ten: b.dataset.ten });
+      startSent({ ma: b.dataset.ma, title: b.dataset.title || b.dataset.ma });
     };
     $("#btn-cancel").onclick = function () {
       if (pending) pending.cancelled = true;
@@ -340,9 +413,13 @@
 
   function init() {
     buildShell();
-    loadData().catch(function () {
-      /* vẫn cho chụp; danh sách có thể trống */
-    });
+    loadData()
+      .then(function () {
+        if ($("#view-pick").classList.contains("on")) renderDishes();
+      })
+      .catch(function () {
+        DATA = DATA || { menu: {}, photos: {} };
+      });
   }
 
   Q = resolveVenue();
