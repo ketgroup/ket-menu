@@ -9,7 +9,7 @@
    function add(el, cls, d){ if (!el || el.classList.contains("bv")) return; el.classList.remove("sd-reveal","sd-in");
      el.classList.add("bv", cls); el.style.setProperty("--bv-d", (d||0)+"ms"); items.push(el); }
    if (isHome) {
-    document.querySelectorAll(".home-venues .about-venue-tile").forEach(function(el,i){ add(el, (i%2)?"bv-right":"bv-left", 120+i*110); });
+    document.querySelectorAll(".home-venues .about-venue-tile").forEach(function(el,i){ add(el, (i%2)?"bv-right":"bv-left", i*180); });
    } else {
     // khối lớn xen kẽ trái/phải, nội dung bên trong từ dưới lên so le
     document.querySelectorAll(".about-block-inner").forEach(function(b){
@@ -24,13 +24,31 @@
     ap.forEach(function(el,i){ if (el.closest(".bv")&&!el.matches(".form-section")) { add(el,"bv-up",80+(i%4)*70); return; } add(el,(side++%2)?"bv-right":"bv-left",0); });
     document.querySelectorAll(".about-venue-tile").forEach(function(el,i){ add(el, (i%2)?"bv-right":"bv-left", 120+i*110); });
    }
-   items.forEach(function(el){ var r=el.getBoundingClientRect(); if (r.top<innerHeight && r.bottom>0) el.classList.add("bv-in","bv-now"); });
+   if (isHome) {
+    items.forEach(function(el){ var r=el.getBoundingClientRect(); if (r.top<innerHeight*0.9&&r.bottom>innerHeight*0.12) el.classList.add("bv-now"); });
+   } else {
+    items.forEach(function(el){ var r=el.getBoundingClientRect(); if (r.top<innerHeight && r.bottom>0) el.classList.add("bv-in","bv-now"); });
+   }
    root.classList.add("bv-js");
-   requestAnimationFrame(function(){ requestAnimationFrame(function(){ items.forEach(function(el){el.classList.remove("bv-now");}); }); });
+   requestAnimationFrame(function(){ requestAnimationFrame(function(){
+     items.forEach(function(el){ el.classList.remove("bv-now"); });
+     if (isHome) items.forEach(function(el,i){
+       var r=el.getBoundingClientRect();
+       if (r.top<innerHeight*0.92&&r.bottom>innerHeight*0.1)
+         setTimeout(function(){ el.classList.add("bv-in"); }, 60+i*180);
+     });
+   }); });
+   var ioOpts=isHome?{ threshold:[0,0.06,0.14,0.28], rootMargin:"-4% 0px -22% 0px" }:{ threshold:0, rootMargin:"0px 0px 12% 0px" };
    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ var el=e.target;
-     if (e.isIntersecting) el.classList.add("bv-in");
-     else if (!el.closest(".apply-shell")) { el.classList.toggle("bv-top", e.boundingClientRect.top < 0); el.classList.remove("bv-in"); }
-   }); }, { threshold: 0, rootMargin: "0px 0px 12% 0px" });
+     if (e.isIntersecting && e.intersectionRatio>=0.06) {
+       if (!el.classList.contains("bv-in")) {
+         requestAnimationFrame(function(){ requestAnimationFrame(function(){ el.classList.add("bv-in"); }); });
+       }
+     } else if (!e.isIntersecting && !el.closest(".apply-shell")) {
+       el.classList.toggle("bv-top", e.boundingClientRect.top < 0);
+       el.classList.remove("bv-in");
+     }
+   }); }, ioOpts);
    items.forEach(function(el){ io.observe(el); });
    document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("is-visible");});
    var apItems=items.filter(function(el){return el.closest(".apply-shell");});
