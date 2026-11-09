@@ -205,9 +205,7 @@
       ngay_den: val("po_ngay"), gio_den: val("po_gio"), so_khach: Math.min(50, nguoi),
       mon: data.mon.slice(0, 40).map(function (m) { return { ma: m.ma, so_luong: m.so_luong, buoc: m.buoc }; }).concat(tangMa.map(function (g) { return { ma: g.ma, so_luong: g.so_luong, tang: true, buoc: 2 }; })),
       ghi_chu: (tomTat + (tang ? " | Free chưa có mã: " + tang : "") + (data.ghi_chu ? " · " + data.ghi_chu : "")).slice(0, 500),
-      website: hpFilled() ? hpEl.value : "",
-      _honey: "",
-      po_hp_x7: "" };
+      website: "" };
     var errBox = document.getElementById("po_err"), doneBox = document.getElementById("po_done");
     errBox.hidden = true;
     function again(msg) { btn.disabled = false; btn.textContent = "Gửi đặt món"; errBox.innerHTML = esc(msg) + poContactLinks(); errBox.hidden = false; errBox.scrollIntoView({ block: "center", behavior: "smooth" }); }
