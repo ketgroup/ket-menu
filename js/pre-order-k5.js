@@ -4,7 +4,7 @@
   var USE_API = true; // Chỉ gửi về app Kết. Đã bỏ FormSubmit (31/10 22:30).
   var PREORDER_ENDPOINT = USE_API ? "https://ket-app.vercel.app/api/pre-order" : "";
   var MENU_ENDPOINT = "https://ket-app.vercel.app/api/menu?quan=K5";
-  var MENU_FALLBACK = "data/menu-k5.json?v=20261110p";
+  var MENU_FALLBACK = "data/menu-k5.json?v=20261110q";
   var GET_TIMEOUT = 6000;
   var THANKS = "pre-order-k5-thanh-cong.html";
 

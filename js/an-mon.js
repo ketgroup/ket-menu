@@ -1,6 +1,6 @@
 (function () {
   "use strict";
-  var V = "20261110p";
+  var V = "20261110q";
   var DATA = { K5: {} };
 
   function normMa(ma) { return String(ma || "").trim().toUpperCase(); }

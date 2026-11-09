@@ -1,3 +1,4 @@
+.page-ct #ct-error[hidden],.page-ct #ct-loading[hidden]{display:none!important}
 .page-ct .apply-shell{padding-bottom:40px}
 .ct-bar{height:6px;border-radius:3px;background:rgba(255,255,255,.1);overflow:hidden;margin-top:8px}
 .ct-bar i{display:block;height:100%;width:0;background:#30d158;transition:width .3s}
@@ -52,8 +53,11 @@
 .ct-nl-opt small{display:block;font-size:11px;color:#6b7280;margin-top:2px}
 .ct-nl-opt:last-of-type{border-bottom:0}
 .ct-nl-de-nghi{display:block;width:100%;border:0;border-top:1px dashed #d1d5db;background:#eff6ff;color:#1d4ed8;font-weight:700;padding:10px;font-size:14px;cursor:pointer;font:inherit}
-.ct-nl-sug{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
-.ct-nl-sug-btn{border:1px solid #93c5fd;background:#eff6ff;color:#1d4ed8;border-radius:8px;padding:4px 8px;font-size:11px;font-weight:700;cursor:pointer;font:inherit;max-width:100%}
+.ct-row-wrap{display:flex;flex-direction:column;gap:0}
+.ct-nl-foot{width:100%;margin:2px 0 4px;display:flex;flex-direction:column;gap:4px;align-items:stretch}
+.ct-nl-foot .ct-nl-warn{align-self:flex-start}
+.ct-nl-sug{display:flex;flex-direction:row;flex-wrap:nowrap;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%;max-width:100%;padding-bottom:2px}
+.ct-nl-sug-btn{flex:none;border:1px solid #93c5fd;background:#eff6ff;color:#1d4ed8;border-radius:8px;padding:5px 10px;font-size:11px;font-weight:700;cursor:pointer;font:inherit;max-width:85%}
 .ct-nl-reselect{color:#b91c1c!important}
 .ct-dn-mask{position:fixed;inset:0;z-index:2000;background:rgba(17,24,39,.45);display:flex;align-items:flex-end;justify-content:center;padding:12px}
 .ct-dn-mask[hidden]{display:none!important}

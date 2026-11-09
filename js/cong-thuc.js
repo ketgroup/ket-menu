@@ -5,13 +5,14 @@
   var $ = function (id) { return document.getElementById(id); };
   var KEY = "ket_ct_" + t, ENDPOINT = window.KET_FORM_ENDPOINT || "";
   var DATA, ST = {}, quan = "all", filt = "all", q = "", sec = "chua";
-  var KHO_LIST = [], KHO_BY_MA = {}, KHO_BY_TEN = {}, MENU_MA = {};
+  var KHO_LIST = [], KHO_BY_MA = {}, KHO_BY_TEN = {}, TEN_MA_BY_NORM = {}, TEN_MA_BY_MA = {}, MENU_MA = {};
   var NEED_RESELECT = 0, DN_CTX = null, nlDropCloseTimer = 0;
   function hasCT(m) { return filled(st(m)); }
   function tang(m) { return /^make you happy$/i.test(String(m.nhom || "").trim()); }
   var UNITS = ["ml", "g", "gr", "dash", "giọt", "lát", "quả", "cái", "muỗng", "phần", "shot", "chai", "lon", "gói"];
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d"); }
+  function normTen(s) { return norm(s).replace(/\s+/g, " ").trim(); }
   function save() { try { localStorage.setItem(KEY, JSON.stringify({ st: ST, name: $("ct-name").value })); } catch (e) {} }
   function nlInit(x) {
     var o = { t: x.t || "", dl: x.dl || "", dv: x.dv || "", ma: x.ma || "", de_nghi_ten: x.de_nghi_ten || "", de_nghi_gc: x.de_nghi_gc || "", nl_cho_duyet: !!x.nl_cho_duyet };
@@ -26,9 +27,14 @@
   function filled(s) { return s.nl.some(function (x) { return rowKhoOk(x) && String(x.dl).trim() !== ""; }); }
   function status(m) { var s = st(m); return s.done ? "done" : filled(s) ? "part" : "empty"; }
   function rowKhoOk(x) {
-    if (x.ma && KHO_BY_MA[x.ma]) return true;
+    if (x.ma && (KHO_BY_MA[x.ma] || TEN_MA_BY_MA[x.ma])) return true;
     if (x.nl_cho_duyet && String(x.de_nghi_ten || x.t || "").trim()) return true;
     return false;
+  }
+  function itemForMa(ma) {
+    if (KHO_BY_MA[ma]) return KHO_BY_MA[ma];
+    if (TEN_MA_BY_MA[ma]) return TEN_MA_BY_MA[ma];
+    return null;
   }
   function needsReselect(x) {
     if (rowKhoOk(x)) return false;
@@ -40,9 +46,15 @@
     x.nl_moi = !!x.nl_cho_duyet;
   }
   function resolveMa(o) {
+    var nt = normTen(o.t), map = nt && TEN_MA_BY_NORM[nt];
+    if (map) {
+      o.ma = map.ma;
+      o.t = KHO_BY_MA[map.ma] ? KHO_BY_MA[map.ma].ten : map.ten;
+      return;
+    }
     if (o.ma && KHO_BY_MA[o.ma]) { o.t = KHO_BY_MA[o.ma].ten; return; }
-    if (o.ma && !KHO_BY_MA[o.ma]) return;
-    var hit = KHO_BY_TEN[norm(o.t)];
+    if (o.ma && TEN_MA_BY_MA[o.ma]) { o.t = TEN_MA_BY_MA[o.ma].ten; return; }
+    var hit = KHO_BY_TEN[nt];
     if (hit) { o.ma = hit.ma; o.t = hit.ten; }
   }
   function applyPick(x, item) {
@@ -103,10 +115,7 @@
       if (!String(x.t || "").trim() && !String(x.dl || "").trim() && !String(x.dv || "").trim()) continue;
       rows++;
       var msgs = [];
-      if (!rowKhoOk(x)) {
-        if (needsReselect(x)) msgs.push("Cần chọn lại từ kho");
-        else msgs.push("Chọn nguyên liệu từ kho");
-      }
+      if (!rowKhoOk(x) && !needsReselect(x)) msgs.push("Chọn nguyên liệu từ kho");
       if (!qtyOk(x.dl)) msgs.push("Định lượng phải > 0");
       if (!String(x.dv || "").trim()) msgs.push("Thiếu đơn vị");
       if (msgs.length) { errs.push({ i: i, msgs: msgs }); rowMsgs[i] = msgs.join(" · "); }
@@ -116,6 +125,7 @@
   }
   function displayTen(x) {
     if (x.ma && KHO_BY_MA[x.ma]) return KHO_BY_MA[x.ma].ten;
+    if (x.ma && TEN_MA_BY_MA[x.ma]) return TEN_MA_BY_MA[x.ma].ten;
     if (x.nl_cho_duyet) return x.de_nghi_ten || x.t;
     return x.t || "";
   }
@@ -136,9 +146,14 @@
     });
     return out.join("\n");
   }
-  function rowWarnHtml(x) {
-    if (x.nl_cho_duyet) return '<span class="ct-nl-warn">Chờ Kỹ thuật duyệt</span>';
-    if (needsReselect(x)) return '<span class="ct-nl-warn ct-nl-reselect">Cần chọn lại từ kho</span>';
+  function rowFootHtml(x) {
+    if (x.nl_cho_duyet) return '<div class="ct-nl-foot"><span class="ct-nl-warn">Chờ Kỹ thuật duyệt</span></div>';
+    if (!needsReselect(x)) return "";
+    var sug = nearestKho(x.t, 3);
+    var sugHtml = sug.length ? '<div class="ct-nl-sug">' + sug.map(function (h) {
+      return '<button type="button" class="ct-nl-sug-btn" data-ma="' + esc(h.ma) + '">' + esc(h.ten) + "</button>";
+    }).join("") + "</div>" : "";
+    return '<div class="ct-nl-foot is-reselect"><span class="ct-nl-warn ct-nl-reselect">Cần chọn lại từ kho</span>' + sugHtml + "</div>";
   }
   function paintValidation(it, m, v) {
     var b = it.querySelector(".ct-body");
@@ -152,16 +167,6 @@
       var i = +w.dataset.i, el = w.querySelector(".ct-row-msg");
       var msg = v.rowMsgs[i] || "";
       if (el) { el.textContent = msg; el.hidden = !msg; }
-    });
-    b.querySelectorAll(".ct-row-wrap").forEach(function (w) {
-      var row = w.querySelector(".ct-row"), i = +w.dataset.i, x = st(m).nl[i];
-      if (!row) return;
-      var cell = row.querySelector(".ct-nl-cell"), nw = cell && cell.querySelector(".ct-nl-warn");
-      var wh = rowWarnHtml(x);
-      if (wh) {
-        if (!nw) { nw = document.createElement("span"); nw.className = "ct-nl-warn"; cell.appendChild(nw); }
-        nw.outerHTML = wh;
-      } else if (nw) nw.remove();
     });
   }
   function validateBeforeSend(list) {
@@ -252,21 +257,17 @@
   function nlPickHtml(x, i) {
     syncNlMoi(x);
     var disp = esc(displayTen(x));
-    var reselect = needsReselect(x);
-    var sug = reselect ? nearestKho(x.t, 3) : [];
-    var sugHtml = sug.length ? '<div class="ct-nl-sug">' + sug.map(function (h) {
-      return '<button type="button" class="ct-nl-sug-btn" data-ma="' + esc(h.ma) + '">' + esc(h.ten) + "</button>";
-    }).join("") + "</div>" : "";
-    return '<div class="ct-nl-pick' + (reselect ? " is-reselect" : "") + '" data-i="' + i + '">' +
+    return '<div class="ct-nl-pick' + (needsReselect(x) ? " is-reselect" : "") + '" data-i="' + i + '">' +
       '<input type="search" class="nl-q" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="search" placeholder="Gõ tìm trong kho…" value="' + disp + '">' +
-      '<div class="ct-nl-drop" hidden role="listbox"></div>' + (rowWarnHtml(x) || "") + sugHtml + "</div>";
+      '<div class="ct-nl-drop" hidden role="listbox"></div></div>';
   }
   function rowHtml(x, i) {
     var opts = UNITS.slice(); if (x.dv && opts.indexOf(x.dv) < 0) opts.unshift(x.dv);
     var dv0 = !String(x.dv || "").trim() ? '<option value="" selected disabled hidden>–</option>' : "";
     return '<div class="ct-row-wrap" data-i="' + i + '"><div class="ct-row" data-i="' + i + '"><span class="ct-nl-cell">' + nlPickHtml(x, i) +
       '</span><input class="dl" inputmode="decimal" placeholder="0" value="' + esc(x.dl) + '"><select class="dv">' + dv0 +
-      opts.map(function (u) { return "<option" + (u === x.dv ? " selected" : "") + ">" + esc(u) + "</option>"; }).join("") + '</select><button type="button" class="ct-del" aria-label="Xoá">×</button></div><p class="ct-row-msg" hidden role="alert"></p></div>';
+      opts.map(function (u) { return "<option" + (u === x.dv ? " selected" : "") + ">" + esc(u) + "</option>"; }).join("") + '</select><button type="button" class="ct-del" aria-label="Xoá">×</button></div>' +
+      rowFootHtml(x) + '<p class="ct-row-msg" hidden role="alert"></p></div>';
   }
   function fillDrop(drop, items, showDeNghi) {
     var html = items.map(function (h) {
@@ -372,12 +373,12 @@
       var it = e.target.closest(".ct-item"); if (!it) return; var m = byId(it.dataset.id), s = st(m), b = it.querySelector(".ct-body");
       if (e.target.closest(".ct-head")) { if (!it.classList.contains("open")) b.innerHTML = bodyHtml(m); it.classList.toggle("open"); return; }
       if (e.target.closest(".ct-nl-opt")) {
-        var ma = e.target.closest(".ct-nl-opt").dataset.ma, item = KHO_BY_MA[ma], wrap = e.target.closest(".ct-row-wrap"), i = +wrap.dataset.i;
+        var ma = e.target.closest(".ct-nl-opt").dataset.ma, item = itemForMa(ma), wrap = e.target.closest(".ct-row-wrap"), i = +wrap.dataset.i;
         if (item) { applyPick(s.nl[i], item); rowFromPick(it, m, i); }
         return;
       }
       if (e.target.closest(".ct-nl-sug-btn")) {
-        var ma2 = e.target.closest(".ct-nl-sug-btn").dataset.ma, item2 = KHO_BY_MA[ma2], wrap2 = e.target.closest(".ct-row-wrap"), i2 = +wrap2.dataset.i;
+        var ma2 = e.target.closest(".ct-nl-sug-btn").dataset.ma, item2 = itemForMa(ma2), wrap2 = e.target.closest(".ct-row-wrap"), i2 = +wrap2.dataset.i;
         if (item2) { applyPick(s.nl[i2], item2); rowFromPick(it, m, i2); }
         return;
       }
@@ -475,10 +476,23 @@
       if (!item.ma || !item.ten) return;
       KHO_LIST.push(item);
       KHO_BY_MA[item.ma] = item;
-      var nk = norm(item.ten);
+      var nk = normTen(item.ten);
       if (!KHO_BY_TEN[nk]) KHO_BY_TEN[nk] = item;
     });
     KHO_LIST.sort(function (a, b) { return a.ten.localeCompare(b.ten, "vi"); });
+  }
+  function tenMaFromFile(file) {
+    TEN_MA_BY_NORM = {};
+    TEN_MA_BY_MA = {};
+    var block = (file && file.ten_ma) || {};
+    Object.keys(block).forEach(function (ten) {
+      var ma = String(block[ten] || "").trim(), key = normTen(ten);
+      if (!ma || !key) return;
+      if (!TEN_MA_BY_NORM[key]) TEN_MA_BY_NORM[key] = { ma: ma, ten: String(ten).trim() };
+      if (!TEN_MA_BY_MA[ma]) {
+        TEN_MA_BY_MA[ma] = KHO_BY_MA[ma] ? { ma: ma, ten: KHO_BY_MA[ma].ten, dv: KHO_BY_MA[ma].dv } : { ma: ma, ten: String(ten).trim() };
+      }
+    });
   }
   function menuFromFile(menu) {
     Object.keys(menu || {}).forEach(function (q) {
@@ -513,11 +527,13 @@
   Promise.all([
     fetch("data/cong-thuc/" + t + ".json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw 0; return r.json(); }),
     fetch("data/kho/master.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : { hang: [] }; }).catch(function () { return { hang: [] }; }),
+    fetch("data/kho/ten-ma.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : { ten_ma: {} }; }).catch(function () { return { ten_ma: {} }; }),
     fetch("data/emenu/menu.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
   ]).then(function (res) {
     var d = res[0];
     khoFromMaster(res[1]);
-    menuFromFile(res[2]);
+    tenMaFromFile(res[2]);
+    menuFromFile(res[3]);
     try {
       var sv = JSON.parse(localStorage.getItem(KEY) || "{}");
       ST = sv.st || {};
@@ -533,7 +549,13 @@
     var qs = []; d.mon.forEach(function (m) { if (qs.indexOf(m.q) < 0) qs.push(m.q); });
     $("ct-quan").innerHTML = '<button type="button" data-q="all" class="on">4 quán</button>' + qs.map(function (x) { return '<button type="button" data-q="' + x + '">' + x + "</button>"; }).join("");
     countReselect();
-    $("ct-loading").hidden = true; $("ct-app").hidden = false; bind(); render(); qLoad().forEach(function (j) { runJob(j, 0); });
-    tuSheet();
-  }).catch(function () { $("ct-loading").hidden = true; $("ct-error").hidden = false; });
+    $("ct-loading").hidden = true;
+    $("ct-error").hidden = true;
+    $("ct-app").hidden = false;
+    try { bind(); render(); qLoad().forEach(function (j) { runJob(j, 0); }); tuSheet(); }
+    catch (bootErr) { console.error(bootErr); }
+  }).catch(function () {
+    $("ct-loading").hidden = true;
+    if ($("ct-app").hidden) $("ct-error").hidden = false;
+  });
 })();
