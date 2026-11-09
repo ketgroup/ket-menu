@@ -170,10 +170,10 @@
     "Thứ 4 & Thứ 6 · Social Dance Night · Vào cửa miễn phí": "Freitag · Social Dance Night · Freier Eintritt",
     "Thứ 6 · Social Dance Night · Vào cửa miễn phí": "Freitag · Social Dance Night · Freier Eintritt",
     "Thứ 6 · Vào cửa miễn phí": "Freitag · Freier Eintritt",
-    "Thứ 4 · Latin dance · Vào cửa miễn phí · Mua 1 cocktail/mocktail tặng 1 wine / dừa / 3 nước suối / 1 Tiger": "Mittwoch · Latin dance · Freier Eintritt · Buy 1 cocktail/mocktail get 1 wine / coconut / 3 waters / 1 Tiger",
     "KET FAI · Thứ 4 Latin dance · Thứ 6 Social Dance Night · Vào cửa miễn phí": "KET FAI · Mittwoch Latin dance · Freitag Social Dance Night · Freier Eintritt",
     "Giá chưa gồm 5% phí dịch vụ": "Preise exklusive 5 % Servicegebühr",
-    "Giá": "Preis"
+    "Giá": "Preis",
+    "Thứ 4 · Latin dance · Vào cửa miễn phí · Mua 1 cocktail tặng 1 ly vang": "Mittwoch · Latin dance · Freier Eintritt · Buy 1 cocktail/mocktail get 1 wine / coconut / 3 waters / 1 Tiger"
   },
   "p": {
     "gift": "{a}/{b} Gratisartikel gewählt",
