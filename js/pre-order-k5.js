@@ -10,6 +10,11 @@
 
   var form = document.getElementById("po-form");
   if (!form) return;
+  var HP_NAME = "po_hp_x7";
+  var hpEl = form.elements[HP_NAME];
+  if (hpEl) hpEl.value = "";
+  var PO_TEL = (window.KET_HOTLINE && window.KET_HOTLINE.phone) || "0896789768";
+  var PO_TEL_DISP = (window.KET_HOTLINE && window.KET_HOTLINE.phoneDisplay) || "089 6789768";
   var box = document.getElementById("po_menu"), totalEl = document.getElementById("po_total");
   var btn = document.getElementById("po_submit");
   var menu = [], qty = {}, fromApi = false;
@@ -160,9 +165,21 @@
   function phoneOk(p) { p = p.replace(/[\s.\-()]/g, "").replace(/^\+84/, "0").replace(/^84(?=\d{9}$)/, "0"); return /^0(3|5|7|8|9)\d{8}$/.test(p) ? p : null; }
   function fail(id, msg) { window.alert(msg); var el = document.getElementById(id); if (el) el.focus(); return false; }
 
+  function hpFilled() { return hpEl && String(hpEl.value || "").trim(); }
+  function poContactLinks() {
+    return ' <a href="tel:' + PO_TEL + '">Gọi ' + PO_TEL_DISP + '</a> · <a href="https://zalo.me/' + PO_TEL + '" rel="noopener noreferrer" target="_blank">Zalo</a>';
+  }
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    if (form._honey && form._honey.value) return;
+    if (hpFilled()) {
+      hpEl.value = "";
+      var errBox0 = document.getElementById("po_err");
+      errBox0.innerHTML = "Trình duyệt điền nhầm vào ô ẩn nên đơn chưa được gửi. Vui lòng bấm Gửi lại." + poContactLinks();
+      errBox0.hidden = false;
+      errBox0.scrollIntoView({ block: "center", behavior: "smooth" });
+      return;
+    }
     var ten = val("po_ten"), sdt = phoneOk(val("po_sdt")), email = val("po_email"), den = (val("po_ngay") && val("po_gio")) ? val("po_ngay") + "T" + val("po_gio") : "", nguoi = parseInt(val("po_nguoi"), 10);
     if (!ten) return fail("po_ten", "Vui lòng nhập tên.");
     if (!sdt) return fail("po_sdt", "Số điện thoại chưa đúng (VD 0896789768).");
@@ -188,17 +205,21 @@
       ngay_den: val("po_ngay"), gio_den: val("po_gio"), so_khach: Math.min(50, nguoi),
       mon: data.mon.slice(0, 40).map(function (m) { return { ma: m.ma, so_luong: m.so_luong, buoc: m.buoc }; }).concat(tangMa.map(function (g) { return { ma: g.ma, so_luong: g.so_luong, tang: true, buoc: 2 }; })),
       ghi_chu: (tomTat + (tang ? " | Free chưa có mã: " + tang : "") + (data.ghi_chu ? " · " + data.ghi_chu : "")).slice(0, 500),
-      website: form._honey ? form._honey.value : "" };
+      website: "" };
     var errBox = document.getElementById("po_err"), doneBox = document.getElementById("po_done");
     errBox.hidden = true;
-    function again(msg) { btn.disabled = false; btn.textContent = "Gửi đặt món"; errBox.innerHTML = esc(msg) + ' <a href="tel:0896789768">Gọi 089 6789768</a>'; errBox.hidden = false; errBox.scrollIntoView({ block: "center", behavior: "smooth" }); }
-    function done(ma) { form.hidden = true; doneBox.innerHTML = '<h2>Cảm ơn bạn! 💃</h2><p>Quán đã nhận đơn pre-order. Mã đơn: <b>' + esc(ma) + '</b></p><p>Quán sẽ gọi lại xác nhận. Cần gấp gọi <a href="tel:0896789768">089 6789768</a>.</p>'; doneBox.hidden = false; window.scrollTo(0, 0); }
+    function again(msg) { btn.disabled = false; btn.textContent = "Gửi đặt món"; errBox.innerHTML = esc(msg) + poContactLinks(); errBox.hidden = false; errBox.scrollIntoView({ block: "center", behavior: "smooth" }); }
+    function done(ma) { form.hidden = true; doneBox.innerHTML = '<h2>Cảm ơn bạn! 💃</h2><p>Quán đã nhận đơn pre-order. Mã đơn: <b>' + esc(ma) + '</b></p><p>Quán sẽ gọi lại xác nhận. Cần gấp gọi <a href="tel:' + PO_TEL + '">' + PO_TEL_DISP + '</a>.</p>'; doneBox.hidden = false; window.scrollTo(0, 0); }
+    function poOk(r, j) { return r.status === 201 || j.ok === true; }
+    var PO_FAIL = "Chưa gửi được đơn — hệ thống chưa xác nhận. Bạn thử bấm Gửi lại hoặc đặt tay qua điện thoại.";
     Promise.race([fetch(PREORDER_ENDPOINT, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(api) }), timeout(8000)])
       .then(function (r) {
-        if (r.status === 201 || r.ok) return r.json().catch(function () { return {}; }).then(function (j) { done(j.id || data.id); });
-        if (r.status === 429) return again("Bạn đã gửi quá nhiều lần. Vui lòng thử lại sau khoảng 10 phút hoặc gọi quán.");
-        if (r.status === 400) return r.json().then(function (j) { again(j.error || "Thông tin chưa hợp lệ, bạn kiểm tra lại nhé."); }, function () { again("Thông tin chưa hợp lệ, bạn kiểm tra lại nhé."); });
-        throw new Error("HTTP " + r.status);
+        return r.json().catch(function () { return {}; }).then(function (j) {
+          if (poOk(r, j)) { done(j.id || data.id); return; }
+          if (r.status === 429) return again("Bạn đã gửi quá nhiều lần. Vui lòng thử lại sau khoảng 10 phút hoặc gọi quán.");
+          if (r.status === 400) return again(j.error || "Thông tin chưa hợp lệ, bạn kiểm tra lại nhé.");
+          again(j.error || PO_FAIL);
+        });
       })
       .catch(function () { again("Chưa gửi được đơn (lỗi mạng). Bạn thử lại sau ít phút hoặc gọi quán."); });
   });

@@ -2,6 +2,7 @@
    Khoá từ điển = chữ tiếng Việt gốc. Chỉ đổi chữ hiển thị, không đổi giá trị gửi đi. */
 (function () {
   var V = "20261110o";
+
   var LANGS = [
     ["vi","Tiếng Việt","VI"],["en","English","EN"],["zh-Hans","中文简体","简"],["zh-Hant","中文繁體","繁"],
     ["ko","한국어","KO"],["ja","日本語","JA"],["th","ภาษาไทย","TH"],["fr","Français","FR"],["de","Deutsch","DE"],
