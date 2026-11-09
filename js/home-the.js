@@ -52,7 +52,7 @@
       vel = vel * 0.82 + dy * 0.18;
       if (Math.abs(dy) > 0.2) scrollIdle = 0;
       else scrollIdle += 1;
-      var targetTilt = clamp(-vel * 0.14, -6, 6);
+      var targetTilt = clamp(-vel * 0.06, -2.5, 2.5);
       tilt += (targetTilt - tilt) * (scrollIdle < 4 ? 0.22 : 0.08);
       if (scrollIdle > 18) tilt *= 0.92;
 
@@ -60,8 +60,8 @@
       tiles.forEach(function (el, i) {
         if (!el.classList.contains("bv-in")) return;
         var phase = parseFloat(el.style.getPropertyValue("--the-phase")) || i * 1.35;
-        var bob = Math.sin(t * 1.05 + phase) * 5;
-        var side = el.classList.contains("bv-left") ? -0.35 : 0.35;
+        var bob = Math.sin(t * 0.9 + phase) * 2.5;
+        var side = el.classList.contains("bv-left") ? -0.45 : 0.45;
         var r = tilt * side;
         if (!el.classList.contains("the-touch") && !(el.matches && el.matches(":hover"))) {
           el.style.setProperty("--the-dy", bob.toFixed(2) + "px");

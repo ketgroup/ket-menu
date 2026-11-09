@@ -4,6 +4,11 @@
   overflow-x: clip;
   max-width: 100%;
 }
+.page-home .home-venues .bv-slot {
+  overflow: visible;
+  max-width: 100%;
+  contain: layout style;
+}
 .page-home .home-venues .about-venue-tile {
   transition: box-shadow 0.35s ease, opacity 0.5s ease-out;
   transform: translate3d(0, var(--the-dy, 0px), 0) rotate(var(--the-tilt, 0deg));
@@ -12,8 +17,8 @@
 /* Bay vào — ghi đè bay-vao mặc định trên trang chủ */
 .bv-js .page-home .home-venues .about-venue-tile.bv {
   transition:
-    opacity 0.6s ease-out,
-    transform 0.95s cubic-bezier(0.34, 1.52, 0.64, 1);
+    opacity 0.5s ease-out,
+    transform 0.72s cubic-bezier(0.34, 1.22, 0.64, 1);
   transition-delay: var(--bv-d, 0ms);
 }
 .bv-js .page-home .home-venues .about-venue-tile.bv.bv-now {
@@ -24,16 +29,16 @@
   pointer-events: none;
 }
 .bv-js .page-home .home-venues .about-venue-tile.bv-left:not(.bv-in) {
-  transform: translate3d(-118%, calc(var(--the-dy, 0px) + 12px), 0) rotate(-11deg) scale(0.84);
+  transform: translate3d(-42%, calc(var(--the-dy, 0px) + 6px), 0) rotate(-4.5deg) scale(0.94);
 }
 .bv-js .page-home .home-venues .about-venue-tile.bv-right:not(.bv-in) {
-  transform: translate3d(118%, calc(var(--the-dy, 0px) + 12px), 0) rotate(11deg) scale(0.84);
+  transform: translate3d(42%, calc(var(--the-dy, 0px) + 6px), 0) rotate(4.5deg) scale(0.94);
 }
 .bv-js .page-home .home-venues .about-venue-tile.bv-left.bv-top:not(.bv-in) {
-  transform: translate3d(-118%, calc(var(--the-dy, 0px) - 16px), 0) rotate(-11deg) scale(0.84);
+  transform: translate3d(-42%, calc(var(--the-dy, 0px) - 8px), 0) rotate(-4.5deg) scale(0.94);
 }
 .bv-js .page-home .home-venues .about-venue-tile.bv-right.bv-top:not(.bv-in) {
-  transform: translate3d(118%, calc(var(--the-dy, 0px) - 16px), 0) rotate(11deg) scale(0.84);
+  transform: translate3d(42%, calc(var(--the-dy, 0px) - 8px), 0) rotate(4.5deg) scale(0.94);
 }
 .bv-js .page-home .home-venues .about-venue-tile.bv-in {
   opacity: 1;
@@ -63,7 +68,7 @@
     filter: brightness(1);
   }
   50% {
-    filter: brightness(1.35);
+    filter: brightness(1.18);
   }
 }
 .page-home .home-venues .about-venue-tile.bv-in {
@@ -77,14 +82,8 @@
   100% {
     transform: translateY(0) rotate(0deg);
   }
-  25% {
-    transform: translateY(-4px) rotate(-6deg);
-  }
-  55% {
-    transform: translateY(-1px) rotate(5deg);
-  }
-  80% {
-    transform: translateY(-3px) rotate(-3deg);
+  50% {
+    transform: translateY(-1.5px) rotate(2deg);
   }
 }
 @media (hover: hover) {

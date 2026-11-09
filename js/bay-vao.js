@@ -8,8 +8,20 @@
    var isHome=document.body.classList.contains("page-home");
    function add(el, cls, d){ if (!el || el.classList.contains("bv")) return; el.classList.remove("sd-reveal","sd-in");
      el.classList.add("bv", cls); el.style.setProperty("--bv-d", (d||0)+"ms"); items.push(el); }
+   var homeTiles=[];
+   function wrapHomeTile(tile){
+     if (tile.parentNode && tile.parentNode.classList && tile.parentNode.classList.contains("bv-slot")) return tile.parentNode;
+     var slot=document.createElement("div");
+     slot.className="bv-slot";
+     tile.parentNode.insertBefore(slot,tile);
+     slot.appendChild(tile);
+     return slot;
+   }
    if (isHome) {
-    document.querySelectorAll(".home-venues .about-venue-tile").forEach(function(el,i){ add(el, (i%2)?"bv-right":"bv-left", i*180); });
+    document.querySelectorAll(".home-venues .about-venue-tile").forEach(function(el,i){
+     add(el, (i%2)?"bv-right":"bv-left", i*120);
+     homeTiles.push({tile:el, slot:wrapHomeTile(el)});
+    });
    } else {
     // khối lớn xen kẽ trái/phải, nội dung bên trong từ dưới lên so le
     document.querySelectorAll(".about-block-inner").forEach(function(b){
@@ -25,31 +37,55 @@
     document.querySelectorAll(".about-venue-tile").forEach(function(el,i){ add(el, (i%2)?"bv-right":"bv-left", 120+i*110); });
    }
    if (isHome) {
-    items.forEach(function(el){ var r=el.getBoundingClientRect(); if (r.top<innerHeight*0.9&&r.bottom>innerHeight*0.12) el.classList.add("bv-now"); });
+    homeTiles.forEach(function(p){ var r=p.slot.getBoundingClientRect(); if (r.top<innerHeight*0.9&&r.bottom>innerHeight*0.12) p.tile.classList.add("bv-now"); });
    } else {
     items.forEach(function(el){ var r=el.getBoundingClientRect(); if (r.top<innerHeight && r.bottom>0) el.classList.add("bv-in","bv-now"); });
    }
    root.classList.add("bv-js");
    requestAnimationFrame(function(){ requestAnimationFrame(function(){
      items.forEach(function(el){ el.classList.remove("bv-now"); });
-     if (isHome) items.forEach(function(el,i){
-       var r=el.getBoundingClientRect();
-       if (r.top<innerHeight*0.92&&r.bottom>innerHeight*0.1)
-         setTimeout(function(){ el.classList.add("bv-in"); }, 60+i*180);
+     if (isHome) homeTiles.forEach(function(p,i){
+       var r=p.slot.getBoundingClientRect();
+       if (r.top<innerHeight*0.95&&r.bottom>innerHeight*0.05)
+         setTimeout(function(){ p.tile.classList.add("bv-in"); }, 50+i*120);
      });
    }); });
-   var ioOpts=isHome?{ threshold:[0,0.06,0.14,0.28], rootMargin:"-4% 0px -22% 0px" }:{ threshold:0, rootMargin:"0px 0px 12% 0px" };
-   var io=new IntersectionObserver(function(es){ es.forEach(function(e){ var el=e.target;
-     if (e.isIntersecting && e.intersectionRatio>=0.06) {
-       if (!el.classList.contains("bv-in")) {
-         requestAnimationFrame(function(){ requestAnimationFrame(function(){ el.classList.add("bv-in"); }); });
-       }
-     } else if (!e.isIntersecting && !el.closest(".apply-shell")) {
-       el.classList.toggle("bv-top", e.boundingClientRect.top < 0);
-       el.classList.remove("bv-in");
+   if (isHome) {
+    function showTile(tile, fromTop){
+     tile.classList.toggle("bv-top", !!fromTop);
+     if (!tile.classList.contains("bv-in")) {
+       requestAnimationFrame(function(){ requestAnimationFrame(function(){ tile.classList.add("bv-in"); }); });
      }
+    }
+    function hideTile(tile, fromTop){
+     var r=tile.closest(".bv-slot").getBoundingClientRect();
+     if (r.bottom<0||r.top>innerHeight){ tile.classList.toggle("bv-top", r.bottom<0); tile.classList.remove("bv-in"); }
+    }
+    function syncHomeVisible(){
+     homeTiles.forEach(function(p){
+       var r=p.slot.getBoundingClientRect();
+       if (r.bottom>2&&r.top<innerHeight-2) p.tile.classList.add("bv-in");
+     });
+    }
+    var ioHome=new IntersectionObserver(function(es){ es.forEach(function(e){
+     var slot=e.target, tile=slot.firstElementChild;
+     if (!tile||!tile.classList.contains("about-venue-tile")) return;
+     if (e.isIntersecting){ showTile(tile, e.boundingClientRect.top<0); }
+     else hideTile(tile);
+    }); }, { threshold:[0,0.05,0.12], rootMargin:"0px 0px 0px 0px" });
+    homeTiles.forEach(function(p){ ioHome.observe(p.slot); });
+    var syncT=0;
+    addEventListener("scroll",function(){ clearTimeout(syncT); syncT=setTimeout(syncHomeVisible,120); },{passive:true});
+    addEventListener("scrollend",syncHomeVisible,{passive:true});
+    setTimeout(syncHomeVisible,1200);
+   } else {
+   var ioOpts={ threshold:0, rootMargin:"0px 0px 12% 0px" };
+   var io=new IntersectionObserver(function(es){ es.forEach(function(e){ var el=e.target;
+     if (e.isIntersecting) el.classList.add("bv-in");
+     else if (!el.closest(".apply-shell")) { el.classList.toggle("bv-top", e.boundingClientRect.top < 0); el.classList.remove("bv-in"); }
    }); }, ioOpts);
    items.forEach(function(el){ io.observe(el); });
+   }
    document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("is-visible");});
    var apItems=items.filter(function(el){return el.closest(".apply-shell");});
    function apAll(){ apItems.forEach(function(el){el.classList.add("bv-in");}); }
