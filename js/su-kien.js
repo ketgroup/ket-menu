@@ -1,4 +1,4 @@
-/* Dữ liệu sự kiện trang chủ. Thêm sự kiện: thêm 1 object vào mảng KET_EVENTS.
+/* Dữ liệu sự kiện trang chủ. K5 Latin Dance: một thẻ Thứ 4 & Thứ 6 (không tách Social / Latin). Thêm sự kiện: thêm 1 object vào mảng KET_EVENTS.
    thu: ngày trong tuần theo giờ VN (0=CN … 6=T7) hoặc "moi" = mỗi ngày, dùng cho khung HÔM NAY; ten: tên; quan: mã quán; lich: chữ hiện dòng 2; href: link khi bấm; icon: emoji; mau/rgb: màu quán. */
 window.KET_EVENTS = [
   { thu: [3, 5], ten: "Latin Dance", quan: "Kết Fai", lich: "Thứ 4 & Thứ 6", href: "pre-order-k5.html", preorder: true, freeEntry: true, badgeRow: true, icon: "💃", mau: "#d84cff", rgb: "216,76,255" },
