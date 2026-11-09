@@ -19,7 +19,7 @@ window.KET_VENUES = {
     logo: "img/logos/k1.png",
     accent: "#FF9F0A",
     accentRgb: "255, 159, 10",
-    hours: ["19:00 – 02:30"],
+    hours: ["19:30 – 02:30"],
     priceNote: "Giá chưa gồm 5% phí dịch vụ",
     promos: [
       "Happy Hour · Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round",
@@ -43,7 +43,7 @@ window.KET_VENUES = {
     accent: "#F2F2F7",
     accentRgb: "242, 242, 247",
     lightAccent: true,
-    hours: ["19:00 – 02:30"],
+    hours: ["19:30 – 02:30"],
     priceNote: "Giá chưa gồm 5% phí dịch vụ",
     promos: [
       "Happy Hour · Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round",
@@ -70,7 +70,7 @@ window.KET_VENUES = {
     priceNote: "Giá chưa gồm 5% phí dịch vụ",
     promos: [
       "Happy Hour · Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round",
-      "Thứ 4 · Latin dance · Vào cửa miễn phí · Mua 1 cocktail/mocktail tặng 1 wine / dừa / 3 nước suối / 1 Tiger",
+      "Thứ 4 · Latin dance · Vào cửa miễn phí · Mua 1 cocktail tặng 1 ly vang",
       "Thứ 6 · Social Dance Night · Vào cửa miễn phí",
       "Chủ nhật · Extra Happy Hour · Mua 1 tặng 1 tới 21:30 · DJ Minh",
       "Giảm 15% cho phi công, tiếp viên, bartender"
@@ -91,7 +91,7 @@ window.KET_VENUES = {
     logo: "img/logos/k9.png",
     accent: "#FF453A",
     accentRgb: "255, 69, 58",
-    hours: ["19:00 – 03:00"],
+    hours: ["19:30 – 02:30"],
     priceNote: "Giá chưa gồm 5% phí dịch vụ",
     promos: [
       "Happy Hour · Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round",
@@ -99,7 +99,7 @@ window.KET_VENUES = {
       "Thứ 7 · Extra Happy Hour · Mua 1 tặng 1 tới 21:30 · DJ Minh",
       "Giảm 15% cho phi công, tiếp viên, bartender"
     ],
-    address: "106 Bạch Đằng – 04 Hùng Vương",
+    address: "106 Bạch Đằng – 04 Hùng Vương, Hải Châu",
     /* Link tìm kiếm Google Maps (chưa tìm được link listing riêng) */
     maps: "https://www.google.com/maps/search/?api=1&query=K%E1%BA%BFt+Underground+106+B%E1%BA%A1ch+%C4%90%E1%BA%B1ng+%C4%90%C3%A0+N%E1%BA%B5ng",
     phone: window.KET_HOTLINE.phone,
