@@ -66,3 +66,9 @@ body.page-ncc .apply-submit, body.page-ct .apply-submit {
 .page-ct .ct-done-btn.on { background: var(--gt-xanh); color: #fff; }
 .page-ct .ct-send-btn { background: var(--gt-giamoi); color: #fff; border: 0; font-weight: 800; }
 .page-ct .ct-msg, .page-ct #ct-msg { color: var(--gt-xanh); font-weight: 700; }
+.page-ct .ct-nl-drop { border-color: var(--gt-vien) !important; }
+.page-ct .ct-nl-opt { color: var(--gt-chu) !important; }
+.page-ct .ct-nl-opt b { color: var(--gt-ten) !important; }
+.page-ct .ct-nl-de-nghi { background: #eff6ff !important; color: var(--gt-giamoi) !important; }
+.page-ct .ct-nl-sug-btn { border-color: #93c5fd; color: var(--gt-giamoi); }
+.page-ct .ct-nl-reselect { color: var(--gt-do) !important; }
