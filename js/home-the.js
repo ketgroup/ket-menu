@@ -2,7 +2,7 @@
   try {
     if (!document.body.classList.contains("page-home")) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    document.querySelectorAll(".page-home .about-venue-tile").forEach(function (tile) {
+    document.querySelectorAll(".page-home .home-venues .about-venue-tile").forEach(function (tile) {
       if (tile._theTouch) return;
       tile._theTouch = 1;
       function lift() {

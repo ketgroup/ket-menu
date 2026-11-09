@@ -38,6 +38,9 @@
       s.style.left = ev.clientX - r.left - d / 2 + "px"; s.style.top = ev.clientY - r.top - d / 2 + "px";
       t.appendChild(s); setTimeout(function () { s.remove(); }, 700);
     }, { passive: true });
-    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", setup); else setup();
+    if (!document.body.classList.contains("page-home")) {
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", setup);
+      else setup();
+    }
   } catch (e) { document.documentElement.classList.remove("sd-js"); }
 })();
