@@ -13,12 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Gọi API ket-app, ghi data/ncc/<slug>.json khi hợp lệ
+      - name: Gọi API ket-app, ghi data/ncc/<slug>.json (kể cả mon=[])
         env:
           NCC_TOKENS: ${{ secrets.NCC_TOKENS }}
         run: |
           for x in $NCC_TOKENS; do echo "::add-mask::$x"; done
           python3 .github/scripts/lam-moi-ncc.py
+      - name: Thử nghiệm script (mock)
+        run: python3 .github/scripts/test-lam-moi-ncc.py
       - name: Commit nếu có thay đổi
         run: |
           if git diff --quiet -- data/ncc; then echo "Không có thay đổi"; exit 0; fi

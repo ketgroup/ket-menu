@@ -5,11 +5,14 @@
   var ENDPOINT = window.KET_FORM_ENDPOINT || "";
   var MAIL = "ketcocktail@gmail.com", LS = "ketNccGia2:", QUEUE = "ketNccGiaHang";
   // Link cũ ?t=/?token= (đã gửi ra, token đã lộ, anh Lan bỏ mã) → chuyển sang ?ncc=<slug>.
-  var CU = {"3K1j5uS5CWDk6Ckj93N3Jk2l": "trai-cay", "7GJuEBH8PUIjilGtCDVnOzUq": "cho-snack", "Gz5xbvTtrIkssnaKRv9VpCq9y1wtuxF7": "cho-le", "J5y4rUZlgWftIdwxr5PUL2K5": "hai-gia-cat", "MeXqBX7NzcBLxJGCnxNlTq720KKgn4m1": "cho-snack", "XB8csaR7hFvBzlmNDshM22zFcz6u8Pv5": "hai-gia-cat", "dutleFgjiGzi0TJS14UcBJW8": "cho-le", "gSqouxt0u7BL6lZOsqOLURtZ": "bia-huda", "lFqIvAUg3qzzNcSC9xAH1FsT": "hoa", "npCrsTBvbFKBr7XdvM56IwUg9yOpsh7A": "hoa", "qYu8kUP5LfI8ymGBYTmO1tJdBq8487Bd": "trai-cay", "swKvV5lGcMLScPw1yM6xkpbB": "vinamilk", "vynIWnYsTPqKBdarkAaW6OVsZ1OrHccO": "nuoc-ngot", "xf76ewqBfRzOvvlqRk6MP5qe": "nuoc-ngot", "zcx5tjaOyrqaXxM8qjJG8yzk": "syrup", "zxg1XkJ0vwKvWyKveY4YMh7R": "chi-hong"};
+  var CU = {"3K1j5uS5CWDk6Ckj93N3Jk2l": "trai-cay", "7GJuEBH8PUIjilGtCDVnOzUq": "cho-snack", "Gz5xbvTtrIkssnaKRv9VpCq9y1wtuxF7": "online-cho-le", "J5y4rUZlgWftIdwxr5PUL2K5": "ruou-hai-gia-cat", "MeXqBX7NzcBLxJGCnxNlTq720KKgn4m1": "cho-snack", "XB8csaR7hFvBzlmNDshM22zFcz6u8Pv5": "ruou-hai-gia-cat", "dutleFgjiGzi0TJS14UcBJW8": "online-cho-le", "gSqouxt0u7BL6lZOsqOLURtZ": "bia", "lFqIvAUg3qzzNcSC9xAH1FsT": "hoa", "npCrsTBvbFKBr7XdvM56IwUg9yOpsh7A": "hoa", "qYu8kUP5LfI8ymGBYTmO1tJdBq8487Bd": "trai-cay", "swKvV5lGcMLScPw1yM6xkpbB": "vinamilk", "vynIWnYsTPqKBdarkAaW6OVsZ1OrHccO": "nuoc-ngot", "xf76ewqBfRzOvvlqRk6MP5qe": "nuoc-ngot", "zcx5tjaOyrqaXxM8qjJG8yzk": "syrup", "zxg1XkJ0vwKvWyKveY4YMh7R": "chi-hong-cho-han"};
+  // Alias slug cũ → file canonical (data/ncc/ma-ncc.json)
+  var ALIAS = {"bia-huda": "bia", "chi-hong": "chi-hong-cho-han", "cho-le": "online-cho-le", "hai-gia-cat": "ruou-hai-gia-cat"};
   var $ = function (id) { return document.getElementById(id); };
   var q = new URLSearchParams(location.search), oldTk = (q.get("t") || q.get("token") || "").trim();
   if (!q.get("ncc") && oldTk && CU[oldTk]) { location.replace(location.pathname + "?ncc=" + CU[oldTk]); return; }
   var slug = (q.get("ncc") || "").trim().toLowerCase();
+  var fileSlug = ALIAS[slug] || slug;
   var data = null, items = [];
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function digits(s) { return String(s || "").replace(/\D/g, ""); }
@@ -17,7 +20,13 @@
   function num(v) { if (v == null || v === "") return 0; if (typeof v === "number") return v > 0 ? Math.round(v) : 0; var d = String(v).replace(/[.,\s]|đ|vnd|₫/gi, ""); return /^\d+$/.test(d) ? +d : 0; }
   function vnDate(s) { var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(s || ""); return m ? m[3] + "/" + m[2] + "/" + m[1] : (s || ""); }
   function getJSON(u) { return fetch(u, { cache: "no-store" }).then(function (r) { if (!r.ok) throw r.status; return r.json(); }); }
-  function fail() { $("ncc-loading").hidden = true; $("ncc-error").hidden = false; }
+  function fail() { $("ncc-loading").hidden = true; $("ncc-error").hidden = false; $("ncc-error").dataset.kind = "generic"; }
+  function failMissing() {
+    $("ncc-loading").hidden = true; $("ncc-form").hidden = true;
+    $("ncc-error").hidden = false; $("ncc-error").dataset.kind = "missing";
+    $("ncc-error").querySelector("h2").textContent = "Chưa có bảng giá cho link này";
+    $("ncc-error").querySelector("p").textContent = "Mã nhà cung cấp «" + esc(slug) + "» chưa có trên hệ thống (hoặc file chưa được đồng bộ). Anh/chị báo Kết Group (089 6789768) hoặc dùng link trong nhóm Zalo.";
+  }
   function key(m) { return m.ma || String(m.ten).trim().toLowerCase(); }
   function lsGet(k, d) { try { return JSON.parse(localStorage.getItem(k) || "null") || d; } catch (e) { return d; } }
   function lsSet(k, v) { try { if (v == null) localStorage.removeItem(k); else localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
@@ -29,8 +38,11 @@
   // Giá cũ hiện ngay từ data/ncc/<slug>.json (Action làm mới mỗi 20 phút từ ket-app); Sheet (GET ENDPOINT) chỉ cập nhật ngầm sau.
   function fromFile(f) {
     var list = (f && f.mon) || [];
-    if (!list.length && !(f && f.ncc && f.chuyen_het)) throw "empty"; // trang hết món (đã chuyển nhóm) vẫn mở được
-    data = { ncc: f.ncc || slug, ma_ncc: f.ma_ncc || slug, chuyen_het: f.chuyen_het || "" };
+    if (!list.length && f && f.ncc && !f.chuyen_het) {
+      data = { ncc: f.ncc, ma_ncc: f.ma_ncc || fileSlug, chuyen_het: "" }; items = []; return;
+    }
+    if (!list.length && !(f && f.ncc && f.chuyen_het)) throw "empty";
+    data = { ncc: f.ncc || slug, ma_ncc: f.ma_ncc || fileSlug, chuyen_het: f.chuyen_het || "" };
     items = list.map(function (m) { return { ma: m.ma || "", ten: m.ten, dv: m.don_vi || m.dv || m.don_vi_sheet || m.don_vi_bo_sung || "", gia_cu: 0, ngay: "", nguon: "" }; }).map(function (it, i) {
       // Giá cũ: giá NCC gửi (form) vs giá kho (bảng giá/hoá đơn) — lấy ngày mới hơn; bằng ngày giữ giá NCC gửi.
       // Ứng viên: Sheet form (gia_sheet), API (gia), kho (gia_kho) — ngày mới nhất thắng; bằng ngày ưu tiên theo thứ tự này.
@@ -43,7 +55,7 @@
   }
   function sheetUpdate() {
     if (!ENDPOINT) return;
-    getJSON(ENDPOINT + (ENDPOINT.indexOf("?") < 0 ? "?" : "&") + "form=ncc&ncc=" + encodeURIComponent(slug)).then(function (s) {
+    getJSON(ENDPOINT + (ENDPOINT.indexOf("?") < 0 ? "?" : "&") + "form=ncc&ncc=" + encodeURIComponent(fileSlug)).then(function (s) {
       var by = {}; ((s && (s.items || s.mon)) || []).forEach(function (m) { if (m && (m.ma || m.ten)) by[key(m)] = m; });
       items.forEach(function (it, i) {
         var x = by[key(it)], g = x && num(x.gia_moi || x.gia); if (!g) return;
@@ -89,8 +101,10 @@
         '<p class="ncc-item-ket" id="ncc-old-' + i + '">' + oldHtml(it) + '</p>' +
         '<div class="ncc-row"><label class="ncc-price"><input class="field-control ncc-price-input" data-i="' + i + '" type="text" inputmode="numeric" autocomplete="off" placeholder="Giá mới" value="' + fmt(v) + '" aria-label="Giá mới ' + esc(it.ten) + '"><span>đ</span></label>' +
         '<label class="ncc-dv-wrap"><span>/</span><select class="ncc-dv" data-i="' + i + '" aria-label="Đơn vị ' + esc(it.ten) + '">' + opts.map(function (u) { return '<option' + (u === dv ? ' selected' : '') + '>' + esc(u) + '</option>'; }).join("") + '</select></label></div></li>';
-    }).join("") || ('<li class="ncc-item inset-card"><p class="ncc-item-name">Các món của nhóm này đã chuyển sang trang <a href="ncc-gia.html?ncc=' + esc(String(data.chuyen_het)) + '">Chợ lẻ</a>.</p></li>');
-    $("ncc-submit").hidden = !items.length;
+    }).join("") || (data.chuyen_het
+      ? ('<li class="ncc-item inset-card"><p class="ncc-item-name">Các món của nhóm này đã chuyển sang trang <a href="ncc-gia.html?ncc=' + esc(String(data.chuyen_het)) + '">' + esc(String(data.chuyen_het)) + "</a>.</p></li>")
+      : '<li class="ncc-item inset-card"><p class="ncc-item-name">Chưa có món — đang cập nhật</p><p class="ncc-item-ket">Kết sẽ bổ sung danh sách món sớm. Anh/chị có thể ghi chú bên dưới nếu cần.</p></li>');
+    $("ncc-submit").hidden = !!(data.chuyen_het && !items.length);
     demGiaCu();
     if (dr.name) $("f-name").value = dr.name;
     if (dr.note) $("f-note").value = dr.note;
@@ -99,7 +113,7 @@
   function payload() {
     var out = [];
     document.querySelectorAll(".ncc-price-input").forEach(function (el) { var it = items[+el.dataset.i]; var u = document.querySelector('.ncc-dv[data-i="' + el.dataset.i + '"]'); out.push({ ma: it.ma, ten: it.ten, don_vi: (u && u.value) || it.dv, gia_cu: it.gia_cu || "", gia_moi: digits(el.value) ? +digits(el.value) : "" }); });
-    return { form: "ncc", ncc: data.ncc, ma_ncc: data.ma_ncc, slug: slug, nguoi: $("f-name").value.trim(), ghi_chu: $("f-note").value.trim(), thoi_gian: new Date().toLocaleString("vi-VN"), id: Date.now() + "-" + Math.random().toString(36).slice(2, 8), items: out };
+    return { form: "ncc", ncc: data.ncc, ma_ncc: data.ma_ncc, slug: fileSlug, nguoi: $("f-name").value.trim(), ghi_chu: $("f-note").value.trim(), thoi_gian: new Date().toLocaleString("vi-VN"), id: Date.now() + "-" + Math.random().toString(36).slice(2, 8), items: out };
   }
   function text(p) {
     var ch = p.items.filter(function (x) { return x.gia_moi !== ""; });
@@ -137,7 +151,7 @@
   }
   document.addEventListener("DOMContentLoaded", function () {
     if (!/^[a-z0-9-]{2,40}$/.test(slug)) return fail();
-    getJSON("data/ncc/" + slug + ".json").then(function (f) { fromFile(f); sapXep(); render(); sheetUpdate(); }).catch(fail);
+    getJSON("data/ncc/" + fileSlug + ".json").then(function (f) { fromFile(f); sapXep(); render(); sheetUpdate(); }).catch(function (st) { if (st === 404) failMissing(); else fail(); });
     // Bản chưa gửi được lần trước (mất mạng, đóng trang) → gửi lại ngầm.
     if (ENDPOINT) queue().forEach(function (p) { deliver(p, WAIT.length - 1, null); });
     $("ncc-form").addEventListener("input", function (e) {

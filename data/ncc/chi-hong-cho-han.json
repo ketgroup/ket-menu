@@ -23,9 +23,7 @@
    "gia_ket_dang_ghi": 25000,
    "gia_kho": 25000,
    "ngay_kho": "2026-11-02",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 25000,
-   "ngay_sheet": "2026-11-05"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-142",
@@ -42,9 +40,7 @@
    "gia_ket_dang_ghi": 35000,
    "gia_kho": 35000,
    "ngay_kho": "2026-11-02",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 35000,
-   "ngay_sheet": "2026-11-05"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-156",
@@ -61,9 +57,7 @@
    "gia_ket_dang_ghi": 130000,
    "gia_kho": 130000,
    "ngay_kho": "2026-11-02",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 130000,
-   "ngay_sheet": "2026-11-05"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "",
@@ -80,9 +74,7 @@
    "gia_ket_dang_ghi": 90000,
    "gia_kho": 90000,
    "ngay_kho": "2026-11-02",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 90000,
-   "ngay_sheet": "2026-11-05"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "",
@@ -99,9 +91,7 @@
    "gia_ket_dang_ghi": 90000,
    "gia_kho": 90000,
    "ngay_kho": "2026-11-02",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 90000,
-   "ngay_sheet": "2026-11-05"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "",
@@ -118,9 +108,7 @@
    "gia_ket_dang_ghi": 40000,
    "gia_kho": 40000,
    "ngay_kho": "2026-11-02",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 40000,
-   "ngay_sheet": "2026-11-05"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "",
@@ -137,9 +125,7 @@
    "gia_ket_dang_ghi": null,
    "gia_kho": 40000,
    "ngay_kho": "2026-11-02",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 40000,
-   "ngay_sheet": "2026-11-05"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "",
@@ -156,9 +142,7 @@
    "gia_ket_dang_ghi": null,
    "gia_kho": 25000,
    "ngay_kho": "2026-11-02",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 35000,
-   "ngay_sheet": "2026-11-05"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "",
@@ -175,9 +159,7 @@
    "gia_ket_dang_ghi": null,
    "gia_kho": 50000,
    "ngay_kho": "2026-10-22",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 60000,
-   "ngay_sheet": "2026-11-05"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "",
@@ -194,9 +176,7 @@
    "gia_ket_dang_ghi": null,
    "gia_kho": 85000,
    "ngay_kho": "2026-10-22",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 150000,
-   "ngay_sheet": "2026-11-05"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "",
@@ -213,10 +193,8 @@
    "gia_ket_dang_ghi": null,
    "gia_kho": 90000,
    "ngay_kho": "2026-10-22",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 30000,
-   "ngay_sheet": "2026-11-05"
+   "nguon_kho": "Bảng giá kho"
   }
  ],
- "slug": "chi-hong"
+ "slug": "chi-hong-cho-han"
 }

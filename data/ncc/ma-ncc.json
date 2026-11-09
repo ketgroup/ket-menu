@@ -1,0 +1,22 @@
+{
+ "ghi_chu": "Slug canonical cho ncc-gia.html?ncc=<slug> — khớp tab gia_ncc (Sheet «Kết – Form web»). alias: link cũ vẫn mở được.",
+ "ncc": [
+  {"slug": "trai-cay", "ncc": "Trái cây", "ma_ncc": "TRAICAY"},
+  {"slug": "cho-snack", "ncc": "Chợ – Snack", "ma_ncc": "SNACK"},
+  {"slug": "ruou-hai-gia-cat", "ncc": "Rượu Hải Gia Cát", "ma_ncc": "HGC"},
+  {"slug": "online-cho-le", "ncc": "Online / Chợ lẻ", "ma_ncc": null},
+  {"slug": "bia", "ncc": "Bia Huda", "ma_ncc": "BIA"},
+  {"slug": "hoa", "ncc": "Hoa", "ma_ncc": "HOA"},
+  {"slug": "vinamilk", "ncc": "Vinamilk", "ma_ncc": "VINAMILK"},
+  {"slug": "nuoc-ngot", "ncc": "Nước ngọt", "ma_ncc": null},
+  {"slug": "syrup", "ncc": "Syrup", "ma_ncc": "SYRUP"},
+  {"slug": "chi-hong-cho-han", "ncc": "Chị Hồng Chợ Hàn", "ma_ncc": "CHONG"},
+  {"slug": "huki", "ncc": "HUKI Gourmet Food", "ma_ncc": "HUKI"}
+ ],
+ "alias": {
+  "bia-huda": "bia",
+  "chi-hong": "chi-hong-cho-han",
+  "cho-le": "online-cho-le",
+  "hai-gia-cat": "ruou-hai-gia-cat"
+ }
+}
