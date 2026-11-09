@@ -13,16 +13,25 @@ html:not(.bv-js) .reveal { opacity: 1 !important; transform: none !important; }
 .bv-js .bv.bv-in { opacity: 1; transform: none; }
 .bv-js .reveal { opacity: 1; transform: none; transition: none; }
 .bv-js .bv.bv-now { transition: none; }
-/* thẻ quán: viền sáng chạy vòng + glow */
-.about-venue-tile { position: relative; isolation: isolate; box-shadow: 0 0 18px -6px rgba(var(--venue-rgb),.45); }
-.about-venue-tile::before { content:""; position:absolute; inset:-1.5px; border-radius:inherit; z-index:-1; pointer-events:none; padding:1.5px;
+/* thẻ quán: viền sáng chạy vòng + glow (trang chủ: chỉ .home-venues; trang khác: mọi .about-venue-tile) */
+.page-home .home-venues .about-venue-tile,
+body:not(.page-home) .about-venue-tile { position: relative; isolation: isolate; box-shadow: 0 0 18px -6px rgba(var(--venue-rgb),.45); }
+.page-home .home-venues .about-venue-tile::before,
+body:not(.page-home) .about-venue-tile::before { content:""; position:absolute; inset:-1.5px; border-radius:inherit; z-index:-1; pointer-events:none; padding:1.5px;
   background: conic-gradient(from var(--cv-a), transparent 0 55%, rgb(var(--venue-rgb)) 75%, transparent 92%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
   animation: cv-spin 3.4s linear infinite; }
-.about-venue-tile--k2::before{animation-delay:-.8s}.about-venue-tile--k5::before{animation-delay:-1.6s}.about-venue-tile--k9::before{animation-delay:-2.4s}
-.about-venue-tile .venue-app-icon { animation: cv-logo 4.2s ease-in-out infinite; }
-.about-venue-tile.bv-in { animation: cv-breathe 3.6s ease-in-out 1s infinite; }
-.about-venue-tile:active { transform: scale(.95) !important; transition-duration: .12s; }
+.page-home .home-venues .about-venue-tile--k2::before,
+body:not(.page-home) .about-venue-tile--k2::before{animation-delay:-.8s}
+.page-home .home-venues .about-venue-tile--k5::before,
+body:not(.page-home) .about-venue-tile--k5::before{animation-delay:-1.6s}
+.page-home .home-venues .about-venue-tile--k9::before,
+body:not(.page-home) .about-venue-tile--k9::before{animation-delay:-2.4s}
+.page-home .home-venues .about-venue-tile .venue-app-icon,
+body:not(.page-home) .about-venue-tile .venue-app-icon { animation: cv-logo 4.2s ease-in-out infinite; }
+.page-home .home-venues .about-venue-tile.bv-in,
+body:not(.page-home) .about-venue-tile.bv-in { animation: cv-breathe 3.6s ease-in-out 1s infinite; }
+body:not(.page-home) .about-venue-tile:active { transform: scale(.95) !important; transition-duration: .12s; }
 @keyframes cv-spin { to { --cv-a: 360deg; } }
 @keyframes cv-breathe { 50% { box-shadow: 0 0 30px -2px rgba(var(--venue-rgb),.6); } }
 @keyframes cv-logo { 0%,100% { transform: none; } 30% { transform: translateY(-3px) rotate(-5deg); } 65% { transform: translateY(-1px) rotate(3deg); } }
@@ -46,7 +55,11 @@ html:not(.bv-js) .reveal { opacity: 1 !important; transform: none !important; }
 .field-control:focus { box-shadow: 0 0 0 3px rgba(255,159,10,.35); transform: scale(1.01); }
 @media (prefers-reduced-motion: reduce) {
   .bv-js .bv:not(.bv-in) { opacity: 1 !important; transform: none !important; }
-  .about-venue-tile::before, .about-venue-tile .venue-app-icon, .apply-submit::after { animation: none !important; }
+  .page-home .home-venues .about-venue-tile::before,
+  body:not(.page-home) .about-venue-tile::before,
+  .page-home .home-venues .about-venue-tile .venue-app-icon,
+  body:not(.page-home) .about-venue-tile .venue-app-icon,
+  .apply-submit::after { animation: none !important; }
 }
 /* Thanh đầu cân đối: 2 nút tròn cùng cỡ */
 .ios-nav-bar .ios-btn--back { width: 34px; height: 34px; min-width: 34px; padding: 0 !important; border-radius: 50% !important; justify-content: center; gap: 0; }
