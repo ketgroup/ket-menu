@@ -17,7 +17,7 @@
 .ct-tag.sent{background:rgba(48,209,88,.2);color:#30d158}
 .ct-body{padding:0 12px 14px;display:none}
 .ct-item.open .ct-body{display:block}
-.ct-row{display:grid;grid-template-columns:1fr 64px 62px 32px;gap:6px;margin-bottom:6px;align-items:center}
+.ct-row{display:grid;grid-template-columns:1fr 64px 62px 32px;gap:6px;margin-bottom:0;align-items:start}
 .ct-row input,.ct-row select,.ct-body textarea,.ct-body .ct-in{background:var(--bg-secondary);border:1px solid transparent;color:var(--label-primary);border-radius:8px;padding:9px 8px;font-size:15px;width:100%;box-sizing:border-box;font-family:inherit}
 .ct-row input:focus,.ct-body textarea:focus,.ct-body .ct-in:focus{border-color:var(--accent,#0a84ff);outline:0}
 .ct-row .dl{text-align:right;font-variant-numeric:tabular-nums}
@@ -32,6 +32,11 @@
 .ct-done-btn.on{background:#30d158;color:#000}
 .ct-send-btn{background:#fff;color:#000}
 .ct-send-btn:disabled{opacity:.5}
+.ct-nl-cell{position:relative;display:flex;flex-direction:column;gap:2px;min-width:0}
+.ct-nl-warn{font-size:11px;line-height:1.2;color:#ff9f0a;font-weight:600}
+.ct-row-msg,.ct-dish-err{font-size:12px;line-height:1.3;color:#ff453a;margin:0 0 4px;padding:0 2px}
+.ct-venue-warn{font-size:12px;line-height:1.3;color:#ff9f0a;margin:0 0 8px;padding:0 2px}
+.ct-row-wrap{margin-bottom:2px}
 .ct-send{margin-top:24px}
 .ct-tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:12px 0 4px}
 .ct-tabs button{border:1px solid rgba(255,255,255,.18);background:transparent;color:var(--label-secondary);border-radius:12px;padding:10px 8px;font-size:15px;font-weight:600}
