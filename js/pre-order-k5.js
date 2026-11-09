@@ -4,7 +4,7 @@
   var USE_API = true; // Chỉ gửi về app Kết. Đã bỏ FormSubmit (31/10 22:30).
   var PREORDER_ENDPOINT = USE_API ? "https://ket-app.vercel.app/api/pre-order" : "";
   var MENU_ENDPOINT = "https://ket-app.vercel.app/api/menu?quan=K5";
-  var MENU_FALLBACK = "data/menu-k5.json?v=20261110o";
+  var MENU_FALLBACK = "data/menu-k5.json?v=20261110p";
   var GET_TIMEOUT = 6000;
   var THANKS = "pre-order-k5-thanh-cong.html";
 
@@ -135,9 +135,12 @@
     qty[ma] = q; row.querySelector("output").textContent = q; row.classList.toggle("is-picked", q > 0); updateBadges(); syncGifts(); updateTotal();
   };
   box.addEventListener("click", poClick); document.getElementById("po_menu_top").addEventListener("click", poClick);
-  (USE_API ? getJSON(MENU_ENDPOINT) : Promise.reject(0)).then(norm).then(function (m) { if (!m.length) throw 0; fromApi = true; return m; })
-    .catch(function () { return getJSON(MENU_FALLBACK).then(norm); })
-    .then(function (m) { menu = m; render(); renderGifts(); updateTotal(); syncGifts(); })
+  function anLoc(m) { return (window.KET_locMon ? window.KET_locMon("K5", m) : m); }
+  function waitAn() { return window.KET_anMonReady || Promise.resolve(); }
+  waitAn().then(function () {
+    return (USE_API ? getJSON(MENU_ENDPOINT) : Promise.reject(0)).then(norm).then(function (m) { if (!m.length) throw 0; fromApi = true; return anLoc(m); })
+      .catch(function () { return getJSON(MENU_FALLBACK).then(norm).then(anLoc); });
+  }).then(function (m) { menu = m; render(); renderGifts(); updateTotal(); syncGifts(); })
     .catch(function () { document.getElementById("po_menu_top").innerHTML = ""; box.innerHTML = '<p class="po-loading">Không tải được menu, bạn ghi món vào ô Ghi chú nhé.</p>'; });
 
   // Ngày thứ 4 / thứ 6 trong 8 tuần tới, theo giờ Việt Nam

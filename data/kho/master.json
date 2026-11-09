@@ -1,0 +1,2518 @@
+{
+"nguon": "Sheet KHO (id 1QHT8mA5uLKooM1m8r8crYmFXFanAItgjhYqFIBAP3DQ) — tab MASTER SP, MASTER DI CHO, MASTER BẾP K5; đọc qua load_nvl() của ton-ly-thuyet-tuan.py (chỉ đọc)",
+"luc": "2026-11-10 04:12 (giờ VN)",
+"so_hang": 375,
+"ghi_chu": "gop_vao = mã phụ đã gộp về mã chính (theo ghi chú MASTER DI CHO); canh_bao = mã đang dùng cho 2 hàng khác nhau ở 2 tab",
+"hang": [
+{
+"ma": "BK5-001",
+"ten": "Thăn ngoại bò tuyết hokube",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "BK5-002",
+"ten": "Bột mỳ thường đa dụng",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "BK5-003",
+"ten": "Lá oregano",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "BK5-004",
+"ten": "Bột hành, tỏi",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "BK5-005",
+"ten": "Giấm Anh",
+"nhom": "BEP K5",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "BK5-006",
+"ten": "Mỳ ý",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "BK5-007",
+"ten": "Cream cheese",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "BK5-008",
+"ten": "Mỳ lá lasgna",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "BK5-009",
+"ten": "Thịt bò úc xay",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "BK5-010",
+"ten": "Peperoni",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "BK5-011",
+"ten": "Sandwich",
+"nhom": "BEP K5",
+"don_vi": "lát"
+},
+{
+"ma": "BT-001",
+"ten": "Angostura Bitter",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "BT-002",
+"ten": "Orange Bitter",
+"nhom": "SP",
+"don_vi": "chai"
+},
+{
+"ma": "BT-003",
+"ten": "Peychaud Bitter",
+"nhom": "SP",
+"don_vi": "chai"
+},
+{
+"ma": "DC-001",
+"ten": "Thăn ngoại bò úc",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-002",
+"ten": "Ức Gà",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-003",
+"ten": "Bacon Lacusina",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-004",
+"ten": "Trứng Gà",
+"nhom": "SP",
+"don_vi": "vỉ"
+},
+{
+"ma": "DC-005",
+"ten": "Cá Hồi Nguyên Con",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-006",
+"ten": "Xúc Xich Heo Nấm",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-007",
+"ten": "Rocket",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-008",
+"ten": "Salad romance",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-009",
+"ten": "Cà chua baby",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-010",
+"ten": "Chanh xanh có hạt",
+"nhom": "SP",
+"don_vi": "kg",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-011",
+"ten": "Cà rốt baby",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-012",
+"ten": "Ớt chuông",
+"nhom": "BEP K5",
+"don_vi": "quả"
+},
+{
+"ma": "DC-013",
+"ten": "Khoai tây",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-014",
+"ten": "Búp lơ xanh",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-015",
+"ten": "Búp lơ trắng",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-016",
+"ten": "Bắp Mỹ",
+"nhom": "BEP K5",
+"don_vi": "quả"
+},
+{
+"ma": "DC-017",
+"ten": "Nấm đùi gà",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-018",
+"ten": "Bơ trái",
+"nhom": "BEP K5",
+"don_vi": "trái"
+},
+{
+"ma": "DC-019",
+"ten": "Ngò rí",
+"nhom": "BEP K5",
+"don_vi": "bó"
+},
+{
+"ma": "DC-020",
+"ten": "Cà chua việt nam",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-021",
+"ten": "Lá Bay Leaf",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-022",
+"ten": "Bột Thì Là Ai Cập",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-023",
+"ten": "Bột Parika",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-024",
+"ten": "Bột bánh số 13",
+"nhom": "BEP K5",
+"don_vi": "thùng"
+},
+{
+"ma": "DC-025",
+"ten": "Men nở",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-026",
+"ten": "Muối",
+"nhom": "SP",
+"don_vi": "bịch"
+},
+{
+"ma": "DC-027",
+"ten": "Đường",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-028",
+"ten": "Tiêu",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-029",
+"ten": "Mật Ong Tam Đảo",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "DC-030",
+"ten": "Liquid Smoke",
+"nhom": "BEP K5",
+"don_vi": ""
+},
+{
+"ma": "DC-031",
+"ten": "Dấm Coroli",
+"nhom": "BEP K5",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "DC-032",
+"ten": "Mù Tạt Vàng",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-033",
+"ten": "Mayonaise",
+"nhom": "SP",
+"don_vi": "bình",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-034",
+"ten": "Tương Ớt",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-035",
+"ten": "Tương Cà",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-036",
+"ten": "Tobasco",
+"nhom": "BEP K5",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "DC-037",
+"ten": "Whisping Cream",
+"nhom": "BEP K5",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "DC-038",
+"ten": "Xốt HP",
+"nhom": "BEP K5",
+"don_vi": "chai"
+},
+{
+"ma": "DC-039",
+"ten": "Sữa tươi không đường",
+"nhom": "SP",
+"don_vi": "hộp"
+},
+{
+"ma": "DC-040",
+"ten": "Oliu Trái",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-041",
+"ten": "Nụ bạch Hoa",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-042",
+"ten": "Cheddar Cheese",
+"nhom": "BEP K5",
+"don_vi": "lát"
+},
+{
+"ma": "DC-043",
+"ten": "Mozzarella Cheese",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-044",
+"ten": "Cheese bột Grand'Or",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-045",
+"ten": "Bơ Lạc Anchor",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-046",
+"ten": "Sourdough",
+"nhom": "BEP K5",
+"don_vi": "lát"
+},
+{
+"ma": "DC-047",
+"ten": "English Muffin",
+"nhom": "BEP K5",
+"don_vi": "cái"
+},
+{
+"ma": "DC-048",
+"ten": "Tortilla",
+"nhom": "BEP K5",
+"don_vi": "cái"
+},
+{
+"ma": "DC-049",
+"ten": "Hộp giấy mang về",
+"nhom": "BEP K5",
+"don_vi": "cái"
+},
+{
+"ma": "DC-050",
+"ten": "Hộp nhựa sốt mang về",
+"nhom": "BEP K5",
+"don_vi": "cái"
+},
+{
+"ma": "DC-051",
+"ten": "Hộp Pizza",
+"nhom": "BEP K5",
+"don_vi": "cái"
+},
+{
+"ma": "DC-052",
+"ten": "Bao ni lông mang về",
+"nhom": "BEP K5",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-053",
+"ten": "Dalat milk",
+"nhom": "DI CHO",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "DC-054",
+"ten": "Oatside",
+"nhom": "DI CHO",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "DC-055",
+"ten": "sữa đặc",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-056",
+"ten": "rich",
+"nhom": "SP",
+"don_vi": "hộp"
+},
+{
+"ma": "DC-057",
+"ten": "bột matcha Ami",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-058",
+"ten": "chunky ổi hồng",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-059",
+"ten": "bodua ổi hồng",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-060",
+"ten": "chunky dâu",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-061",
+"ten": "trà lài",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-062",
+"ten": "caramel",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-063",
+"ten": "syrup hạnh nhân",
+"nhom": "DI CHO",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "DC-064",
+"ten": "Syrup rose",
+"nhom": "DI CHO",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml",
+"gop_vao": "SY-001"
+},
+{
+"ma": "DC-065",
+"ten": "cacao heshey",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-066",
+"ten": "bột frappe",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-067",
+"ten": "bột salt vanila",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-068",
+"ten": "sốt chôclate",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-069",
+"ten": "cốt dừa lon",
+"nhom": "SP",
+"don_vi": "lon"
+},
+{
+"ma": "DC-070",
+"ten": "hạt granola",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-071",
+"ten": "cafe hạt arabica",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-072",
+"ten": "cafe bột robusta",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-073",
+"ten": "Xoài",
+"nhom": "DI CHO",
+"don_vi": "quả"
+},
+{
+"ma": "DC-074",
+"ten": "dâu",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-075",
+"ten": "Ổi",
+"nhom": "DI CHO",
+"don_vi": "quả"
+},
+{
+"ma": "DC-076",
+"ten": "Cần tây",
+"nhom": "DI CHO",
+"don_vi": "bó"
+},
+{
+"ma": "DC-077",
+"ten": "táo xanh",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-078",
+"ten": "chuối",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-079",
+"ten": "Dừa trái",
+"nhom": "DI CHO",
+"don_vi": "trái"
+},
+{
+"ma": "DC-080",
+"ten": "tắc",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-081",
+"ten": "Cam xanh",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-082",
+"ten": "cacao nguyên chất",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-083",
+"ten": "Cam vàng",
+"nhom": "DI CHO",
+"don_vi": "quả"
+},
+{
+"ma": "DC-084",
+"ten": "khăn lau bàn",
+"nhom": "DI CHO",
+"don_vi": "cái"
+},
+{
+"ma": "DC-085",
+"ten": "nước dừa",
+"nhom": "DI CHO",
+"don_vi": "hộp"
+},
+{
+"ma": "DC-086",
+"ten": "Snack",
+"nhom": "DI CHO",
+"don_vi": "kg",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-087",
+"ten": "Đá 4 phân",
+"nhom": "DI CHO",
+"don_vi": ""
+},
+{
+"ma": "DC-088",
+"ten": "hoa",
+"nhom": "DI CHO",
+"don_vi": ""
+},
+{
+"ma": "DC-089",
+"ten": "bảng tên",
+"nhom": "DI CHO",
+"don_vi": "cái"
+},
+{
+"ma": "DC-090",
+"ten": "Rượu",
+"nhom": "DI CHO",
+"don_vi": "chai"
+},
+{
+"ma": "DC-091",
+"ten": "Syrup",
+"nhom": "DI CHO",
+"don_vi": "chai"
+},
+{
+"ma": "DC-092",
+"ten": "Hành tây",
+"nhom": "BEP K5",
+"don_vi": "củ"
+},
+{
+"ma": "DC-093",
+"ten": "Gừng tươi",
+"nhom": "SP",
+"don_vi": "kg",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-094",
+"ten": "Chanh vàng",
+"nhom": "BEP K5",
+"don_vi": "quả"
+},
+{
+"ma": "DC-095",
+"ten": "Chanh dây",
+"nhom": "DI CHO",
+"don_vi": "kg",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-096",
+"ten": "Dứa",
+"nhom": "DI CHO",
+"don_vi": "quả"
+},
+{
+"ma": "DC-097",
+"ten": "Dưa chuột",
+"nhom": "SP",
+"don_vi": "trái"
+},
+{
+"ma": "DC-098",
+"ten": "Dưa hấu",
+"nhom": "DI CHO",
+"don_vi": "quả"
+},
+{
+"ma": "DC-099",
+"ten": "Dưa lưới",
+"nhom": "DI CHO",
+"don_vi": "quả"
+},
+{
+"ma": "DC-100",
+"ten": "Lá mint",
+"nhom": "SP",
+"don_vi": "bó"
+},
+{
+"ma": "DC-101",
+"ten": "Lá dill",
+"nhom": "SP",
+"don_vi": "bó"
+},
+{
+"ma": "DC-102",
+"ten": "Lá basil",
+"nhom": "BEP K5",
+"don_vi": "lạng"
+},
+{
+"ma": "DC-103",
+"ten": "Lá pandan",
+"nhom": "DI CHO",
+"don_vi": "bó"
+},
+{
+"ma": "DC-104",
+"ten": "Lá shiso nhật",
+"nhom": "SP",
+"don_vi": "hộp"
+},
+{
+"ma": "DC-105",
+"ten": "Rau ngổ",
+"nhom": "SP",
+"don_vi": "bó"
+},
+{
+"ma": "DC-106",
+"ten": "Hoa hồng",
+"nhom": "DI CHO",
+"don_vi": "bông"
+},
+{
+"ma": "DC-107",
+"ten": "Hoa viola",
+"nhom": "DI CHO",
+"don_vi": "hộp"
+},
+{
+"ma": "DC-108",
+"ten": "Hoa sen",
+"nhom": "DI CHO",
+"don_vi": "bông"
+},
+{
+"ma": "DC-109",
+"ten": "Hạt sen",
+"nhom": "DI CHO",
+"don_vi": "hộp"
+},
+{
+"ma": "DC-110",
+"ten": "Bò striploin",
+"nhom": "DI CHO",
+"don_vi": "kg",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-111",
+"ten": "Bò khô",
+"nhom": "DI CHO",
+"don_vi": "gói"
+},
+{
+"ma": "DC-112",
+"ten": "Gà khô",
+"nhom": "DI CHO",
+"don_vi": "gói"
+},
+{
+"ma": "DC-113",
+"ten": "Hươu khô",
+"nhom": "DI CHO",
+"don_vi": "gói"
+},
+{
+"ma": "DC-114",
+"ten": "Kem béo sữa dừa nhất hương",
+"nhom": "BEP K5",
+"don_vi": "hộp"
+},
+{
+"ma": "DC-115",
+"ten": "Đường cát trắng",
+"nhom": "BEP K5",
+"don_vi": "kg",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-116",
+"ten": "Đường đen",
+"nhom": "BEP K5",
+"don_vi": "kg",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-117",
+"ten": "Bột mì số 11",
+"nhom": "BEP K5",
+"don_vi": "kg",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-118",
+"ten": "Bột semola",
+"nhom": "BEP K5",
+"don_vi": "gói"
+},
+{
+"ma": "DC-119",
+"ten": "Bột khoai môn",
+"nhom": "DI CHO",
+"don_vi": "gói"
+},
+{
+"ma": "DC-120",
+"ten": "Bánh tráng nướng",
+"nhom": "DI CHO",
+"don_vi": "gói"
+},
+{
+"ma": "DC-121",
+"ten": "Bánh tráng sữa",
+"nhom": "DI CHO",
+"don_vi": "bịch"
+},
+{
+"ma": "DC-122",
+"ten": "Kẹo bông gòn",
+"nhom": "DI CHO",
+"don_vi": "cây"
+},
+{
+"ma": "DC-123",
+"ten": "Soda",
+"nhom": "DI CHO",
+"don_vi": "thùng"
+},
+{
+"ma": "DC-124",
+"ten": "Coca",
+"nhom": "DI CHO",
+"don_vi": "thùng"
+},
+{
+"ma": "DC-125",
+"ten": "Bò húc",
+"nhom": "DI CHO",
+"don_vi": "thùng"
+},
+{
+"ma": "DC-126",
+"ten": "Tonic",
+"nhom": "DI CHO",
+"don_vi": "thùng"
+},
+{
+"ma": "DC-127",
+"ten": "Corona",
+"nhom": "DI CHO",
+"don_vi": "thùng"
+},
+{
+"ma": "DC-128",
+"ten": "Bia Huda",
+"nhom": "DI CHO",
+"don_vi": "thùng"
+},
+{
+"ma": "DC-129",
+"ten": "Nước cam hộp",
+"nhom": "DI CHO",
+"don_vi": "hộp"
+},
+{
+"ma": "DC-130",
+"ten": "Nước ép lựu",
+"nhom": "DI CHO",
+"don_vi": "chai"
+},
+{
+"ma": "DC-131",
+"ten": "Syrup popcorn Monin",
+"nhom": "DI CHO",
+"don_vi": "chai",
+"gop_vao": "SY-019"
+},
+{
+"ma": "DC-132",
+"ten": "Syrup pandan Monin",
+"nhom": "DI CHO",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "DC-133",
+"ten": "Syrup green apple Monin",
+"nhom": "DI CHO",
+"don_vi": "chai"
+},
+{
+"ma": "DC-134",
+"ten": "Syrup mango",
+"nhom": "DI CHO",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml",
+"gop_vao": "SY-018"
+},
+{
+"ma": "DC-135",
+"ten": "Syrup vanilla",
+"nhom": "DI CHO",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml",
+"gop_vao": "SY-005"
+},
+{
+"ma": "DC-136",
+"ten": "Syrup elderflower",
+"nhom": "DI CHO",
+"don_vi": "chai",
+"gop_vao": "SY-009"
+},
+{
+"ma": "DC-137",
+"ten": "Syrup bubblegum",
+"nhom": "DI CHO",
+"don_vi": "chai"
+},
+{
+"ma": "DC-138",
+"ten": "Syrup coconut",
+"nhom": "DI CHO",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml",
+"gop_vao": "SY-011"
+},
+{
+"ma": "DC-139",
+"ten": "Syrup ume plum",
+"nhom": "DI CHO",
+"don_vi": "chai",
+"gop_vao": "SY-016"
+},
+{
+"ma": "DC-140",
+"ten": "Ống hút",
+"nhom": "DI CHO",
+"don_vi": "bịch"
+},
+{
+"ma": "DC-141",
+"ten": "Túi zip",
+"nhom": "DI CHO",
+"don_vi": "kg",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-142",
+"ten": "Bao rác",
+"nhom": "DI CHO",
+"don_vi": "bịch"
+},
+{
+"ma": "DC-143",
+"ten": "Giấy in logo",
+"nhom": "DI CHO",
+"don_vi": "bịch"
+},
+{
+"ma": "DC-144",
+"ten": "Giấy in bill",
+"nhom": "DI CHO",
+"don_vi": "cuộn"
+},
+{
+"ma": "DC-145",
+"ten": "Giấy ăn",
+"nhom": "DI CHO",
+"don_vi": "lốc"
+},
+{
+"ma": "DC-146",
+"ten": "Giấy vệ sinh",
+"nhom": "DI CHO",
+"don_vi": "cuộn"
+},
+{
+"ma": "DC-147",
+"ten": "Hộp nhựa tròn bột pizza",
+"nhom": "BEP K5",
+"don_vi": "cái"
+},
+{
+"ma": "DC-148",
+"ten": "Bình nhựa tương ớt",
+"nhom": "BEP K5",
+"don_vi": "cái"
+},
+{
+"ma": "DC-149",
+"ten": "Ly cup",
+"nhom": "DI CHO",
+"don_vi": "ly"
+},
+{
+"ma": "DC-150",
+"ten": "Ly martini",
+"nhom": "DI CHO",
+"don_vi": "ly"
+},
+{
+"ma": "DC-151",
+"ten": "Xiên decor",
+"nhom": "DI CHO",
+"don_vi": "gói"
+},
+{
+"ma": "DC-152",
+"ten": "Dĩa nhỏ",
+"nhom": "DI CHO",
+"don_vi": "cái"
+},
+{
+"ma": "DC-153",
+"ten": "Jigger",
+"nhom": "DI CHO",
+"don_vi": "cái"
+},
+{
+"ma": "DC-154",
+"ten": "Gas quẹt khò",
+"nhom": "DI CHO",
+"don_vi": "bình"
+},
+{
+"ma": "DC-155",
+"ten": "Khăn lau ly",
+"nhom": "DI CHO",
+"don_vi": "cái"
+},
+{
+"ma": "DC-156",
+"ten": "Nước rửa chén",
+"nhom": "DI CHO",
+"don_vi": "chai"
+},
+{
+"ma": "DC-157",
+"ten": "Nước lau kính",
+"nhom": "DI CHO",
+"don_vi": "can"
+},
+{
+"ma": "DC-158",
+"ten": "Nước lau nhà",
+"nhom": "DI CHO",
+"don_vi": "can"
+},
+{
+"ma": "DC-159",
+"ten": "Xịt phòng",
+"nhom": "DI CHO",
+"don_vi": "chai"
+},
+{
+"ma": "DC-160",
+"ten": "Xịt côn trùng",
+"nhom": "DI CHO",
+"don_vi": "chai"
+},
+{
+"ma": "DC-161",
+"ten": "Cây lau nhà",
+"nhom": "DI CHO",
+"don_vi": "cái"
+},
+{
+"ma": "DC-162",
+"ten": "Cây chổi",
+"nhom": "DI CHO",
+"don_vi": "cái"
+},
+{
+"ma": "DC-163",
+"ten": "Bẫy chuột",
+"nhom": "DI CHO",
+"don_vi": "miếng"
+},
+{
+"ma": "DC-164",
+"ten": "Bàn chải đánh răng",
+"nhom": "DI CHO",
+"don_vi": "cái"
+},
+{
+"ma": "DC-165",
+"ten": "Băng vệ sinh",
+"nhom": "DI CHO",
+"don_vi": "gói"
+},
+{
+"ma": "DC-166",
+"ten": "Dao bào",
+"nhom": "DI CHO",
+"don_vi": "cái"
+},
+{
+"ma": "DC-167",
+"ten": "Ổ điện",
+"nhom": "DI CHO",
+"don_vi": "cái"
+},
+{
+"ma": "DC-168",
+"ten": "Ô che mưa",
+"nhom": "DI CHO",
+"don_vi": "cái"
+},
+{
+"ma": "DC-169",
+"ten": "Kéo",
+"nhom": "DI CHO",
+"don_vi": "cây"
+},
+{
+"ma": "DC-170",
+"ten": "Dây xích",
+"nhom": "DI CHO",
+"don_vi": "dây"
+},
+{
+"ma": "DC-171",
+"ten": "Ca thủy tinh",
+"nhom": "DI CHO",
+"don_vi": "cái"
+},
+{
+"ma": "DC-172",
+"ten": "chunky yuzu(bưởi)",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-173",
+"ten": "Nước ngọt và beer (HC)",
+"nhom": "DI CHO",
+"don_vi": ""
+},
+{
+"ma": "DC-174",
+"ten": "1664 Blanc Beer",
+"nhom": "DI CHO",
+"don_vi": "thùng"
+},
+{
+"ma": "DC-175",
+"ten": "Tiger Bottle",
+"nhom": "DI CHO",
+"don_vi": "thùng"
+},
+{
+"ma": "DC-176",
+"ten": "Esse Change",
+"nhom": "DI CHO",
+"don_vi": "gói"
+},
+{
+"ma": "DC-177",
+"ten": "Marlboro Light",
+"nhom": "DI CHO",
+"don_vi": "gói"
+},
+{
+"ma": "DC-178",
+"ten": "Bechamel sauce",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-179",
+"ten": "Pesto sauce",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-180",
+"ten": "Sauce Ceasar",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-181",
+"ten": "Crouton",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-182",
+"ten": "Lá hoành thánh",
+"nhom": "DI CHO",
+"don_vi": "kg",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-183",
+"ten": "mực rim",
+"nhom": "DI CHO",
+"don_vi": "g",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-184",
+"ten": "Butter",
+"nhom": "DI CHO",
+"don_vi": "kg",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "DC-185",
+"ten": "Dăm bông ba chú beo",
+"nhom": "BEP K5",
+"don_vi": "kg",
+"don_vi_cong_thuc": "g",
+"canh_bao": "mã trùng tab khác hàng: MASTER DI CHO: Budweiser"
+},
+{
+"ma": "DC-186",
+"ten": "Dăm bông ĐNA",
+"nhom": "BEP K5",
+"don_vi": "kg",
+"don_vi_cong_thuc": "g"
+},
+{
+"ma": "HP-001",
+"ten": "JImbeam white",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "HP-002",
+"ten": "Red Lable",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "HP-003",
+"ten": "Rum isc",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "HP-004",
+"ten": "Jose Cruevo Reposado",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "HP-005",
+"ten": "Pisco",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "HP-006",
+"ten": "st-remy VSOP",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "HP-007",
+"ten": "Captain Morgan Dark",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "HP-008",
+"ten": "Gordon Gin",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "HP-009",
+"ten": "Vodka HaNoi",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-001",
+"ten": "Aperol",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-002",
+"ten": "campari",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-003",
+"ten": "Grand Marnier",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-004",
+"ten": "Umesu",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-005",
+"ten": "Dom",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-006",
+"ten": "Midori",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-007",
+"ten": "Countreau",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-008",
+"ten": "Baieys",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-009",
+"ten": "Kalua",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-010",
+"ten": "Violette",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-011",
+"ten": "White Cacao",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-012",
+"ten": "Green Mint",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-013",
+"ten": "Lichi",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-014",
+"ten": "Amaretto",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-015",
+"ten": "Cherry brandy",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-016",
+"ten": "Peche",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-017",
+"ten": "Blue Curacao",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-018",
+"ten": "Creme de cassic",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-019",
+"ten": "Elder flower",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-020",
+"ten": "Disaronno",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-021",
+"ten": "Cynar",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-022",
+"ten": "Frangelico",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-023",
+"ten": "Sambuca",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-024",
+"ten": "Absinthe",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-025",
+"ten": "Ricard",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-026",
+"ten": "Strawberry",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-027",
+"ten": "Rosso vermouth",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-028",
+"ten": "Bianco",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-029",
+"ten": "Dry vermouth",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-030",
+"ten": "Jagermaister",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-031",
+"ten": "Banana Liqueur",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "LQ-032",
+"ten": "Malibu",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-001",
+"ten": "Botanical Wine",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-002",
+"ten": "Campari Tiramisu",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-003",
+"ten": "Canh Chua Soup Cordial",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-004",
+"ten": "Chanh Xả Cordial",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-005",
+"ten": "Citrus Butter",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-006",
+"ten": "Coconut Ginger Ale",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-007",
+"ten": "Creamy Form",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-008",
+"ten": "Gin Bún Bò",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-009",
+"ten": "Gold Rum Infuse Banana",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-010",
+"ten": "Mót Water",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-011",
+"ten": "Nước acid citric",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-012",
+"ten": "Nếp Mắc Mật",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-013",
+"ten": "Nếp Pandan",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-014",
+"ten": "Oxymel",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-015",
+"ten": "Passion Cordial",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-016",
+"ten": "Pineapple Cordial",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-017",
+"ten": "rum cinamon",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-018",
+"ten": "Sour Mix",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-019",
+"ten": "Taro Form",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-020",
+"ten": "Tequila Coffee",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-021",
+"ten": "Tequila Hibicus",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-022",
+"ten": "Tiramisu Cream",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-023",
+"ten": "Umami Liquer",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-024",
+"ten": "Whisky Coffee",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-025",
+"ten": "Whisky olong tea",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "PC-026",
+"ten": "Yogurt Water",
+"nhom": "SP",
+"don_vi": "ml",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SD-001",
+"ten": "Ginger Ale",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SD-002",
+"ten": "Red bull",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SD-003",
+"ten": "Coca cola",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SD-004",
+"ten": "Sprite",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SD-005",
+"ten": "Soda",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SD-006",
+"ten": "Tonic",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-001",
+"ten": "Belvedere",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-002",
+"ten": "Absolute Vodka",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-003",
+"ten": "Absolute Extrakt",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-004",
+"ten": "Absolute Mango",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-005",
+"ten": "Svedka Vanilla",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-006",
+"ten": "Zubrowka",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-007",
+"ten": "Grey Goose",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-008",
+"ten": "olmeca tequila",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-009",
+"ten": "Sminoff",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-010",
+"ten": "Jose Cruevo Silver",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-011",
+"ten": "Don Julio Blanco",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-012",
+"ten": "Patron Silver",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-013",
+"ten": "1800 Blanco",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-014",
+"ten": "1800 Coconut",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-015",
+"ten": "1800 Reposado",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-016",
+"ten": "Sampan",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-017",
+"ten": "Bacadi",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-018",
+"ten": "Kraken",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-019",
+"ten": "Havana 3YO",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-020",
+"ten": "Havana 7YO",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-021",
+"ten": "Flo De Cana 4",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-022",
+"ten": "Bulldog",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-023",
+"ten": "Bombay Saphire",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-024",
+"ten": "Roku Gin",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-025",
+"ten": "Monkey 47",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-026",
+"ten": "Tanqueray",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-027",
+"ten": "Ophir",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-028",
+"ten": "Hendrick's Gin",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-029",
+"ten": "Lady Trieu citrus tea",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-030",
+"ten": "Lady Trieu spice",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-031",
+"ten": "Glenfiddich 12YO",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-032",
+"ten": "Glenlivet 12YO",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-033",
+"ten": "Macallan 12YO",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-034",
+"ten": "Highland Park 12YO",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-035",
+"ten": "Talisker 10YO",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-036",
+"ten": "Laphroaig 10YO",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-037",
+"ten": "Singerton 12YO",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-038",
+"ten": "Galavulin 16YO",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-039",
+"ten": "Johnny Walker Black Lable",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-040",
+"ten": "Johnny Walker Gold Lable",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-041",
+"ten": "Ballantine's Finest",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-042",
+"ten": "Dewar 12YO",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-043",
+"ten": "Even Wiliam",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-044",
+"ten": "Wild Turkey 101",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-045",
+"ten": "Jack Daniel's",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-046",
+"ten": "Bulleit Bourbon",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-047",
+"ten": "Gentleman Jack",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-048",
+"ten": "Hibiki",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-049",
+"ten": "Jameson",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-050",
+"ten": "Ritten House",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-051",
+"ten": "Teacher's",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-052",
+"ten": "Bushmills black",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-053",
+"ten": "Bushmills white",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-054",
+"ten": "Bullet's bourbon",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-055",
+"ten": "Marker's Mark",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-056",
+"ten": "Chivas Regal 12YO",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-057",
+"ten": "Hennessy Very Special",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-058",
+"ten": "Luc Belaire Rare Luxe",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-059",
+"ten": "Luc Belaire Rose",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-060",
+"ten": "Bottega Gold Prosecco Brut",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-061",
+"ten": "Captain Morgan Gold",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SP-062",
+"ten": "Ketel One",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-001",
+"ten": "Rose",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-002",
+"ten": "Grenadine",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-003",
+"ten": "Tiramisu",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-004",
+"ten": "Almon",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-005",
+"ten": "Vanilla",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-006",
+"ten": "Caramel",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-007",
+"ten": "Jasmine",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-008",
+"ten": "Browbutter",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-009",
+"ten": "Elder flower",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-010",
+"ten": "Bubbergum",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-011",
+"ten": "Coconut",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-012",
+"ten": "Pandan",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-013",
+"ten": "Lemon",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-014",
+"ten": "Liche",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-015",
+"ten": "Wartermelon",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-016",
+"ten": "Ume plum",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-017",
+"ten": "Chocolate",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-018",
+"ten": "Mango",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-019",
+"ten": "Popcorn",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-020",
+"ten": "Blood orange",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-021",
+"ten": "Kiwi",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-022",
+"ten": "Cherry Blossom",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-023",
+"ten": "Peach",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "SY-024",
+"ten": "Strawberry",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+},
+{
+"ma": "TU-002",
+"ten": "Coconut Cream",
+"nhom": "SP",
+"don_vi": ""
+},
+{
+"ma": "TU-005",
+"ten": "Dầu ớt (giọt)",
+"nhom": "SP",
+"don_vi": ""
+},
+{
+"ma": "TU-006",
+"ten": "Espresso",
+"nhom": "SP",
+"don_vi": ""
+},
+{
+"ma": "TU-008",
+"ten": "Jasmine Flower (giọt)",
+"nhom": "SP",
+"don_vi": ""
+},
+{
+"ma": "TU-015",
+"ten": "Nước cam (Orange Juice)",
+"nhom": "SP",
+"don_vi": ""
+},
+{
+"ma": "TU-016",
+"ten": "Nước cốt chanh (Lime Juice)",
+"nhom": "SP",
+"don_vi": ""
+},
+{
+"ma": "TU-017",
+"ten": "Nước dừa (Coconut Water)",
+"nhom": "SP",
+"don_vi": ""
+},
+{
+"ma": "TU-018",
+"ten": "Nước mắm (giọt)",
+"nhom": "SP",
+"don_vi": ""
+},
+{
+"ma": "TU-019",
+"ten": "Nước ép dứa (Pineapple Juice)",
+"nhom": "SP",
+"don_vi": ""
+},
+{
+"ma": "TU-020",
+"ten": "Orange Flower Water",
+"nhom": "SP",
+"don_vi": ""
+},
+{
+"ma": "TU-023",
+"ten": "Syrup đường (Simple Syrup)",
+"nhom": "SP",
+"don_vi": ""
+},
+{
+"ma": "TU-024",
+"ten": "Syrup đường đen (Black Sugar)",
+"nhom": "SP",
+"don_vi": ""
+},
+{
+"ma": "TU-027",
+"ten": "Wasabi",
+"nhom": "SP",
+"don_vi": ""
+},
+{
+"ma": "TU-028",
+"ten": "Ô mai mận (Salted Plum)",
+"nhom": "SP",
+"don_vi": ""
+},
+{
+"ma": "TU-029",
+"ten": "Đường trắng (White Sugar)",
+"nhom": "SP",
+"don_vi": ""
+},
+{
+"ma": "VG-001",
+"ten": "Moscato Wine",
+"nhom": "SP",
+"don_vi": "chai",
+"don_vi_cong_thuc": "ml"
+}
+]
+}

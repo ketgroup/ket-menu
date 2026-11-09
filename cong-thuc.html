@@ -9,12 +9,12 @@
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/png" href="img/logos/favicon.png">
 <link rel="apple-touch-icon" href="img/logos/apple-touch-icon.png">
-<link rel="stylesheet" href="css/app.css?v=20261110o">
-<link rel="stylesheet" href="css/ncc-gia.css?v=20261110o">
-<link rel="stylesheet" href="css/cong-thuc.css?v=20261110o">
-<link rel="stylesheet" href="css/giay-trang.css?v=20261110o">
-<script src="js/form-endpoint.js?v=20261110o"></script>
-<script src="js/cong-thuc.js?v=20261110o" defer></script>
+<link rel="stylesheet" href="css/app.css?v=20261110p">
+<link rel="stylesheet" href="css/ncc-gia.css?v=20261110p">
+<link rel="stylesheet" href="css/cong-thuc.css?v=20261110p">
+<link rel="stylesheet" href="css/giay-trang.css?v=20261110p">
+<script src="js/form-endpoint.js?v=20261110p"></script>
+<script src="js/cong-thuc.js?v=20261110p" defer></script>
 
 </head>
 <body class="page-site page-static page-ncc page-ct">
@@ -49,6 +49,19 @@
 </section>
 </div>
 </main>
-<datalist id="ct-nl"></datalist>
+<div id="ct-dn-mask" class="ct-dn-mask" hidden>
+<div class="ct-dn-panel" role="dialog" aria-labelledby="ct-dn-title">
+<h3 id="ct-dn-title">Đề nghị thêm hàng</h3>
+<p class="ct-dn-hint">Bộ phận Kỹ thuật duyệt trước khi hàng vào kho chính thức.</p>
+<label class="field"><span class="field-label">Tên hàng *</span><input class="field-control" id="ct-dn-ten" autocomplete="off"></label>
+<label class="field"><span class="field-label">Đơn vị *</span><input class="field-control" id="ct-dn-dv" placeholder="ml, g, chai…" autocomplete="off"></label>
+<label class="field"><span class="field-label">Ghi chú</span><textarea class="field-control" id="ct-dn-gc" rows="2"></textarea></label>
+<p id="ct-dn-err" class="ncc-msg" hidden role="alert"></p>
+<div class="ct-dn-acts">
+<button type="button" class="ct-dn-cancel">Huỷ</button>
+<button type="button" class="apply-submit ct-dn-send" id="ct-dn-send">Gửi đề nghị</button>
+</div>
+</div>
+</div>
 </body>
 </html>
