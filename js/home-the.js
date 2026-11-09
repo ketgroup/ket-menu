@@ -10,6 +10,10 @@
     reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   } catch (e2) {}
 
+  function motionOf(tile) {
+    return tile.closest(".the-motion");
+  }
+
   function bindTouch() {
     if (reduce) return;
     document.querySelectorAll(".page-home .home-venues .about-venue-tile").forEach(function (tile) {
@@ -30,13 +34,12 @@
 
   function startMotion() {
     if (reduce) return;
-    var tiles = [].slice.call(document.querySelectorAll(".page-home .home-venues .about-venue-tile"));
-    if (!tiles.length) return;
-    tiles.forEach(function (el, i) {
-      el.style.setProperty("--the-phase", String(i * 1.35));
+    var motions = [].slice.call(document.querySelectorAll(".page-home .home-venues .the-motion"));
+    if (!motions.length) return;
+    motions.forEach(function (motion, i) {
+      motion.style.setProperty("--the-phase", String(i * 1.35));
     });
-    var scrollY = window.scrollY || 0;
-    var lastY = scrollY;
+    var lastY = window.scrollY || 0;
     var tilt = 0;
     var vel = 0;
     var scrollIdle = 0;
@@ -57,15 +60,20 @@
       if (scrollIdle > 18) tilt *= 0.92;
 
       var t = (now - t0) * 0.001;
-      tiles.forEach(function (el, i) {
-        if (!el.classList.contains("bv-in")) return;
-        var phase = parseFloat(el.style.getPropertyValue("--the-phase")) || i * 1.35;
+      motions.forEach(function (motion, i) {
+        var tile = motion.querySelector(".about-venue-tile");
+        if (!tile || !tile.classList.contains("bv-settled")) {
+          motion.style.setProperty("--the-dy", "0px");
+          motion.style.setProperty("--the-tilt", "0deg");
+          return;
+        }
+        var phase = parseFloat(motion.style.getPropertyValue("--the-phase")) || i * 1.35;
         var bob = Math.sin(t * 0.9 + phase) * 2.5;
-        var side = el.classList.contains("bv-left") ? -0.45 : 0.45;
+        var side = tile.classList.contains("bv-left") ? -0.45 : 0.45;
         var r = tilt * side;
-        if (!el.classList.contains("the-touch") && !(el.matches && el.matches(":hover"))) {
-          el.style.setProperty("--the-dy", bob.toFixed(2) + "px");
-          el.style.setProperty("--the-tilt", r.toFixed(2) + "deg");
+        if (!tile.classList.contains("the-touch")) {
+          motion.style.setProperty("--the-dy", bob.toFixed(2) + "px");
+          motion.style.setProperty("--the-tilt", r.toFixed(2) + "deg");
         }
       });
       requestAnimationFrame(tick);

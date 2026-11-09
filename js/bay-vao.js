@@ -10,12 +10,38 @@
      el.classList.add("bv", cls); el.style.setProperty("--bv-d", (d||0)+"ms"); items.push(el); }
    var homeTiles=[];
    function wrapHomeTile(tile){
-     if (tile.parentNode && tile.parentNode.classList && tile.parentNode.classList.contains("bv-slot")) return tile.parentNode;
-     var slot=document.createElement("div");
-     slot.className="bv-slot";
-     tile.parentNode.insertBefore(slot,tile);
-     slot.appendChild(tile);
+     var slot, motion;
+     if (tile.parentNode && tile.parentNode.classList.contains("the-motion")) {
+       motion=tile.parentNode; slot=motion.parentNode;
+       if (slot&&slot.classList.contains("bv-slot")) return slot;
+     }
+     if (tile.parentNode&&tile.parentNode.classList.contains("bv-slot")) slot=tile.parentNode;
+     else {
+       slot=document.createElement("div");
+       slot.className="bv-slot";
+       tile.parentNode.insertBefore(slot,tile);
+       slot.appendChild(tile);
+     }
+     motion=slot.querySelector(":scope > .the-motion");
+     if (!motion){
+       motion=document.createElement("div");
+       motion.className="the-motion";
+       var inner=slot.querySelector(":scope > .about-venue-tile");
+       if (inner){ slot.insertBefore(motion,inner); motion.appendChild(inner); }
+     }
      return slot;
+   }
+   function tileFromSlot(slot){
+     var m=slot.querySelector(":scope > .the-motion");
+     return m ? m.querySelector(".about-venue-tile") : slot.querySelector(".about-venue-tile");
+   }
+   function armSettle(tile){
+     if (tile._bvSettle) clearTimeout(tile._bvSettle);
+     var d=parseInt(String(tile.style.getPropertyValue("--bv-d")||"0").replace("ms",""),10)||0;
+     var wait=Math.min(1500, Math.max(750, d+720));
+     tile._bvSettle=setTimeout(function(){
+       tile.classList.add("bv-in","bv-settled");
+     }, wait);
    }
    if (isHome) {
     document.querySelectorAll(".home-venues .about-venue-tile").forEach(function(el,i){
@@ -47,29 +73,39 @@
      if (isHome) homeTiles.forEach(function(p,i){
        var r=p.slot.getBoundingClientRect();
        if (r.top<innerHeight*0.95&&r.bottom>innerHeight*0.05)
-         setTimeout(function(){ p.tile.classList.add("bv-in"); }, 50+i*120);
+         setTimeout(function(){ p.tile.classList.add("bv-in"); armSettle(p.tile); }, 50+i*120);
      });
    }); });
    if (isHome) {
     function showTile(tile, fromTop){
      tile.classList.toggle("bv-top", !!fromTop);
      if (!tile.classList.contains("bv-in")) {
-       requestAnimationFrame(function(){ requestAnimationFrame(function(){ tile.classList.add("bv-in"); }); });
-     }
+       requestAnimationFrame(function(){ requestAnimationFrame(function(){
+         tile.classList.add("bv-in");
+         armSettle(tile);
+       }); });
+     } else armSettle(tile);
     }
-    function hideTile(tile, fromTop){
+    function hideTile(tile){
      var r=tile.closest(".bv-slot").getBoundingClientRect();
-     if (r.bottom<0||r.top>innerHeight){ tile.classList.toggle("bv-top", r.bottom<0); tile.classList.remove("bv-in"); }
+     if (r.bottom<0||r.top>innerHeight){
+       tile.classList.toggle("bv-top", r.bottom<0);
+       tile.classList.remove("bv-in","bv-settled");
+       if (tile._bvSettle) clearTimeout(tile._bvSettle);
+     }
     }
     function syncHomeVisible(){
      homeTiles.forEach(function(p){
        var r=p.slot.getBoundingClientRect();
-       if (r.bottom>2&&r.top<innerHeight-2) p.tile.classList.add("bv-in");
+       if (r.bottom>2&&r.top<innerHeight-2){
+         p.tile.classList.add("bv-in");
+         armSettle(p.tile);
+       }
      });
     }
     var ioHome=new IntersectionObserver(function(es){ es.forEach(function(e){
-     var slot=e.target, tile=slot.firstElementChild;
-     if (!tile||!tile.classList.contains("about-venue-tile")) return;
+     var slot=e.target, tile=tileFromSlot(slot);
+     if (!tile) return;
      if (e.isIntersecting){ showTile(tile, e.boundingClientRect.top<0); }
      else hideTile(tile);
     }); }, { threshold:[0,0.05,0.12], rootMargin:"0px 0px 0px 0px" });
