@@ -2,11 +2,54 @@
  "v": 1,
  "ncc": "Vinamilk",
  "ma_ncc": "VINAMILK",
- "cap_nhat": "2026-11-10T01:48:21+07:00",
- "trang_thai": null,
+ "cap_nhat": "2026-11-10T01:53:06+07:00",
+ "trang_thai": "chua_gui",
  "ngay_bao_gan_nhat": null,
  "vat": null,
  "vat_chu": null,
- "mon": [],
+ "mon": [
+  {
+   "ma": "DC-039",
+   "ten": "Sữa tươi không đường",
+   "don_vi": "hộp",
+   "quy_cach": null,
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": "tab MASTER DI CHO; nguồn ds-mon (vinamilk); không giá — nạp danh sách món; do_tin_cay=chac",
+   "la_thu_thu": false,
+   "nghi_sai": null,
+   "gia_ket_dang_ghi": null
+  },
+  {
+   "ma": "DC-053",
+   "ten": "Dalat milk",
+   "don_vi": "ml",
+   "quy_cach": null,
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": "tab MASTER DI CHO; nguồn ds-mon (vinamilk); không giá — nạp danh sách món; cần xác nhận NCC (do_tin_cay=can_xac_nhan)",
+   "la_thu_thu": false,
+   "nghi_sai": "can_xac_nhan",
+   "gia_ket_dang_ghi": null
+  },
+  {
+   "ma": "DC-055",
+   "ten": "sữa đặc",
+   "don_vi": "g",
+   "quy_cach": null,
+   "gia": null,
+   "ngay": null,
+   "vat": null,
+   "vat_chu": null,
+   "ghi_chu": "tab MASTER DI CHO; nguồn ds-mon (vinamilk); không giá — nạp danh sách món; cần xác nhận NCC (do_tin_cay=can_xac_nhan)",
+   "la_thu_thu": false,
+   "nghi_sai": "can_xac_nhan",
+   "gia_ket_dang_ghi": null
+  }
+ ],
  "slug": "vinamilk"
 }

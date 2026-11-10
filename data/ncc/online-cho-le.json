@@ -2,7 +2,7 @@
  "v": 1,
  "ncc": "Online / Chợ lẻ",
  "ma_ncc": null,
- "cap_nhat": "2026-11-05T13:58:16+07:00",
+ "cap_nhat": "2026-11-10T01:53:06+07:00",
  "trang_thai": "da_gui",
  "ngay_bao_gan_nhat": "2026-11-02",
  "vat": "da_gom_vat",
@@ -1383,7 +1383,7 @@
    "la_thu_thu": false,
    "nghi_sai": null,
    "gia_ket_dang_ghi": null,
-   "nhom_goc": "hai-gia-cat"
+   "nhom_goc": "ruou-hai-gia-cat"
   }
  ],
  "slug": "online-cho-le"

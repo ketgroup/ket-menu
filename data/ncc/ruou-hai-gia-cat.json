@@ -2,7 +2,7 @@
  "v": 1,
  "ncc": "Rượu Hải Gia Cát",
  "ma_ncc": "HGC",
- "cap_nhat": "2026-11-05T13:58:16+07:00",
+ "cap_nhat": "2026-11-10T01:53:06+07:00",
  "trang_thai": "chua_gui",
  "ngay_bao_gan_nhat": null,
  "vat": "khong_ro",
@@ -20,7 +20,7 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": 69000,
+   "gia_ket_dang_ghi": 65233,
    "gia_kho": 65250,
    "ngay_kho": "2026-11-03",
    "nguon_kho": "Hoá đơn HGC (gồm VAT)"
@@ -37,7 +37,7 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null,
+   "gia_ket_dang_ghi": 533000,
    "gia_kho": 550000,
    "ngay_kho": "2026-11-04",
    "nguon_kho": "Bảng giá kho"
@@ -173,7 +173,7 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null,
+   "gia_ket_dang_ghi": 363000,
    "gia_kho": 410000,
    "ngay_kho": "2026-11-04",
    "nguon_kho": "Bảng giá kho"
@@ -258,7 +258,7 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null,
+   "gia_ket_dang_ghi": 1424500,
    "gia_kho": 1550000,
    "ngay_kho": "2026-11-04",
    "nguon_kho": "Bảng giá kho"
@@ -428,7 +428,7 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null,
+   "gia_ket_dang_ghi": 572000,
    "gia_kho": 650000,
    "ngay_kho": "2026-11-04",
    "nguon_kho": "Bảng giá kho"
@@ -530,7 +530,7 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null,
+   "gia_ket_dang_ghi": 835500,
    "gia_kho": 880000,
    "ngay_kho": "2026-11-04",
    "nguon_kho": "Bảng giá kho"
@@ -632,7 +632,7 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null,
+   "gia_ket_dang_ghi": 522500,
    "gia_kho": 550000,
    "ngay_kho": "2026-11-04",
    "nguon_kho": "Bảng giá kho"

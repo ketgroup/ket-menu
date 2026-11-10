@@ -2,7 +2,7 @@
  "v": 1,
  "ncc": "Trái cây",
  "ma_ncc": "TRAICAY",
- "cap_nhat": "2026-11-05T13:58:16+07:00",
+ "cap_nhat": "2026-11-10T01:53:06+07:00",
  "trang_thai": "chua_gui",
  "ngay_bao_gan_nhat": null,
  "vat": "chua_gom_vat",
@@ -23,9 +23,7 @@
    "gia_ket_dang_ghi": null,
    "gia_kho": 30000,
    "ngay_kho": "2026-11-02",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 30000,
-   "ngay_sheet": "2026-11-05"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-018",
@@ -42,9 +40,7 @@
    "gia_ket_dang_ghi": null,
    "gia_kho": 50000,
    "ngay_kho": "2026-10-25",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 50000,
-   "ngay_sheet": "2026-11-05"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-078",
@@ -61,10 +57,7 @@
    "gia_ket_dang_ghi": null,
    "gia_kho": 54000,
    "ngay_kho": "2026-10-29",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 20000,
-   "ngay_sheet": "2026-11-05",
-   "don_vi_sheet": "kg"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-079",
@@ -81,10 +74,7 @@
    "gia_ket_dang_ghi": null,
    "gia_kho": 22000,
    "ngay_kho": "2026-10-23",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 22000,
-   "ngay_sheet": "2026-11-05",
-   "don_vi_sheet": "trái"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-083",
@@ -101,9 +91,7 @@
    "gia_ket_dang_ghi": null,
    "gia_kho": 70000,
    "ngay_kho": "2026-10-30",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 70000,
-   "ngay_sheet": "2026-11-05"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-094",
@@ -120,10 +108,7 @@
    "gia_ket_dang_ghi": null,
    "gia_kho": 20000,
    "ngay_kho": "2026-11-02",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 90000,
-   "ngay_sheet": "2026-11-05",
-   "don_vi_sheet": "kg"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-095",
@@ -140,10 +125,7 @@
    "gia_ket_dang_ghi": null,
    "gia_kho": 30000,
    "ngay_kho": "2026-11-03",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 30000,
-   "ngay_sheet": "2026-11-05",
-   "don_vi_sheet": "kg"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-096",
@@ -160,10 +142,7 @@
    "gia_ket_dang_ghi": null,
    "gia_kho": 22000,
    "ngay_kho": "2026-10-31",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 20000,
-   "ngay_sheet": "2026-11-05",
-   "don_vi_sheet": "quả"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "TU-002",
@@ -177,10 +156,7 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null,
-   "gia_sheet": 33000,
-   "ngay_sheet": "2026-11-05",
-   "don_vi_sheet": "lon"
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-100",
@@ -231,10 +207,7 @@
    "gia_ket_dang_ghi": null,
    "gia_kho": 10000,
    "ngay_kho": "2026-11-02",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 40000,
-   "ngay_sheet": "2026-11-05",
-   "don_vi_sheet": "kg"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-004",
@@ -265,9 +238,7 @@
    "ghi_chu": null,
    "la_thu_thu": true,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null,
-   "gia_sheet": 25000,
-   "ngay_sheet": "2026-11-05"
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-013",
@@ -301,10 +272,7 @@
    "gia_ket_dang_ghi": null,
    "gia_kho": 12000,
    "ngay_kho": "2026-10-29",
-   "nguon_kho": "Bảng giá kho",
-   "gia_sheet": 12000,
-   "ngay_sheet": "2026-11-05",
-   "don_vi_sheet": "quả"
+   "nguon_kho": "Bảng giá kho"
   },
   {
    "ma": "DC-076",
@@ -352,9 +320,7 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null,
-   "gia_sheet": 200000,
-   "ngay_sheet": "2026-11-05"
+   "gia_ket_dang_ghi": null
   }
  ],
  "slug": "trai-cay"

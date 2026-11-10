@@ -2,7 +2,7 @@
  "v": 1,
  "ncc": "Nước ngọt",
  "ma_ncc": null,
- "cap_nhat": "2026-11-05T13:58:16+07:00",
+ "cap_nhat": "2026-11-10T01:53:06+07:00",
  "trang_thai": "da_gui",
  "ngay_bao_gan_nhat": "2026-11-03",
  "vat": "khong_ro",
@@ -71,9 +71,7 @@
    "ghi_chu": "Gộp DC-125 (Bò húc) 05/11 APP-0511-12 t752u. Giá DC lúc gộp: null → giữ giá SD.",
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null,
-   "gia_sheet": 240000,
-   "ngay_sheet": "2026-11-05"
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "SD-003",
@@ -121,9 +119,7 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null,
-   "gia_sheet": 60000,
-   "ngay_sheet": "2026-11-05"
+   "gia_ket_dang_ghi": null
   },
   {
    "ma": "DC-130",
@@ -137,9 +133,7 @@
    "ghi_chu": null,
    "la_thu_thu": false,
    "nghi_sai": null,
-   "gia_ket_dang_ghi": null,
-   "gia_sheet": 55000,
-   "ngay_sheet": "2026-11-05"
+   "gia_ket_dang_ghi": null
   }
  ],
  "slug": "nuoc-ngot"
