@@ -177,7 +177,8 @@
 /* v2: lưới 2 cột thay cuộn ngang */
 .teaser-chips { display:grid; grid-template-columns:1fr 1fr; gap:8px; overflow:visible; scroll-snap-type:none; padding:0; margin:0; -webkit-mask-image:none; mask-image:none; justify-content:stretch; }
 .teaser-chip { max-width:none; min-width:0; flex:initial; scroll-snap-align:none; justify-content:center; text-align:center; flex-wrap:wrap; gap:4px 6px; padding:8px; }
-.teaser-chip:last-child:nth-child(odd) { grid-column:1 / -1; }
+.teaser-chip:last-child:nth-child(odd),
+.teaser-chip--span { grid-column:1 / -1; }
 .teaser-chip-tx { align-items:center; }
 .teaser-chip-tx b, .teaser-chip-tx small { white-space:normal; overflow:visible; text-overflow:clip; overflow-wrap:anywhere; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; }
 .teaser-chip-tx small { -webkit-line-clamp:2; }

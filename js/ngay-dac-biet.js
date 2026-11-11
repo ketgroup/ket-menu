@@ -47,9 +47,11 @@ window.KET_NGAY_DAC_BIET = [
     var html = '<span class="teaser-shine" aria-hidden="true"></span><span class="teaser-live"><i aria-hidden="true"></i><span>Hôm nay</span></span>';
     if (hit) html += '<a class="teaser-dip-link" href="#event-strip"><b class="teaser-dip">' + esc(hit[1]) + '</b><span class="teaser-cau">Hôm nay các quán Kết có bất ngờ đang chờ bạn…</span></a>';
     if (evs.length) {
-      html += '<div class="teaser-ev"><div class="teaser-chips" role="list">' + evs.map(function (x) {
+      var nNarrow = 0, lastNarrow = -1;
+      evs.forEach(function (x, i) { if (!x[0].teaserOnly) { nNarrow++; lastNarrow = i; } });
+      html += '<div class="teaser-ev"><div class="teaser-chips" role="list">' + evs.map(function (x, i) {
         var e = x[0];
-        var chipCls = "teaser-chip" + (e.teaserOnly ? " teaser-chip--detail" : "");
+        var chipCls = "teaser-chip" + (e.teaserOnly ? " teaser-chip--detail" : (nNarrow % 2 === 1 && i === lastNarrow ? " teaser-chip--span" : ""));
         var chipHref = e.preorder ? esc(e.href) : (e.teaserOnly && e.href ? esc(e.href) : "#event-strip");
         var sub = e.teaserOnly ? e.lich : e.quan;
         var title = e.teaserOnly ? (e.ten + " · " + e.quan) : e.ten;
