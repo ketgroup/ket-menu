@@ -91,7 +91,7 @@ window.KET_VENUES = {
     logo: "img/logos/k9.png",
     accent: "#FF453A",
     accentRgb: "255, 69, 58",
-    hours: ["19:30 – 02:30"],
+    hours: ["Đón khách từ 19:00", "Phục vụ đồ uống 19:30 – 02:30"],
     priceNote: "Giá chưa gồm 5% phí dịch vụ",
     promos: [
       "Happy Hour · Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round",
