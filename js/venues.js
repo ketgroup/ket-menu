@@ -68,8 +68,8 @@ window.KET_VENUES = {
     logo: "img/logos/k5.png",
     accent: "#BF5AF2",
     accentRgb: "191, 90, 242",
-    hours: ["Bếp 16:00 – 22:30 (order cuối 22:30)", "Cocktail 19:00 – 02:30"],
-    hoursEn: ["Kitchen 4:00 – 10:30 PM (last food order 10:30 PM)", "Cocktails 7:00 PM – 2:30 AM"],
+    hours: ["Bếp & Cà phê 16:00 – 22:30 (order cuối 22:30)", "Cocktail 19:00 – 02:30"],
+    hoursEn: ["Kitchen & Coffee 4:00 – 10:30 PM (last order 10:30 PM)", "Cocktails 7:00 PM – 2:30 AM"],
     priceNote: "Giá chưa gồm 5% phí dịch vụ",
     promos: [
       "Happy Hour · Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round",
