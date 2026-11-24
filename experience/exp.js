@@ -5,7 +5,7 @@ var ANH={k1:"k1-1.jpg",k2:"k2-1.jpg",k5:"k5-douong-1.jpg",k9:"k9-1.jpg"};
 var tr=document.getElementById("truyen"),nq=document.getElementById("nutquan");
 O.forEach(function(id){var v=V[id];if(!v)return;
   var d=document.createElement("a");d.className="o-quan";d.href="../"+v.href;
-  d.innerHTML='<img class="anh" src="../img/'+ANH[id]+'" alt=""><div class="phu" style="background:'+MAU[id]+'"></div><img class="logo" src="../'+v.logo+'" alt=""><div class="the"><b>'+v.title+'</b>'+v.tagline+'<br>'+v.hours.join(" · ")+'</div>';
+  d.innerHTML='<img class="anh" src="../img/'+ANH[id]+'" alt=""><div class="phu" style="background:'+MAU[id]+'"></div><img class="logo" src="../'+v.logo+'" alt=""><div class="the"><b>'+v.title+'</b>'+v.tagline+'<br>'+(window.KET_hoursHome?window.KET_hoursHome(v):v.hours.join(" · "))+'</div>';
   tr.appendChild(d);
   var a=document.createElement("a");a.href="../"+v.href;a.style.background=MAU[id];a.textContent=v.title;nq.appendChild(a);
 });
