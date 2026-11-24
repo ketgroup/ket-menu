@@ -20,6 +20,7 @@ window.KET_VENUES = {
     accent: "#FF9F0A",
     accentRgb: "255, 159, 10",
     hours: ["Đón khách từ 19:00", "Phục vụ đồ uống 19:30 – 02:30"],
+    hoursEn: ["Doors open 7:00 PM", "Drinks 7:30 PM – 2:30 AM"],
     priceNote: "Giá chưa gồm 5% phí dịch vụ",
     promos: [
       "Happy Hour · Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round",
@@ -44,6 +45,7 @@ window.KET_VENUES = {
     accentRgb: "242, 242, 247",
     lightAccent: true,
     hours: ["Đón khách từ 19:00", "Phục vụ đồ uống 19:30 – 02:30"],
+    hoursEn: ["Doors open 7:00 PM", "Drinks 7:30 PM – 2:30 AM"],
     priceNote: "Giá chưa gồm 5% phí dịch vụ",
     promos: [
       "Happy Hour · Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round",
@@ -67,6 +69,7 @@ window.KET_VENUES = {
     accent: "#BF5AF2",
     accentRgb: "191, 90, 242",
     hours: ["Bếp & Café 15:00 – 22:30", "Cocktail 19:00 – 02:30"],
+    hoursEn: ["Kitchen & Café 3:00 – 10:30 PM", "Cocktails 7:00 PM – 2:30 AM"],
     priceNote: "Giá chưa gồm 5% phí dịch vụ",
     promos: [
       "Happy Hour · Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round",
@@ -92,6 +95,7 @@ window.KET_VENUES = {
     accent: "#FF453A",
     accentRgb: "255, 69, 58",
     hours: ["Đón khách từ 19:00", "Phục vụ đồ uống 19:30 – 02:30"],
+    hoursEn: ["Doors open 7:00 PM", "Drinks 7:30 PM – 2:30 AM"],
     priceNote: "Giá chưa gồm 5% phí dịch vụ",
     promos: [
       "Happy Hour · Mỗi ngày 19:30–20:30 · Buy 1 round get 1 round",
@@ -138,9 +142,15 @@ window.KET_mapsUrl = function (address) {
   );
 };
 
+/* Giờ: MỘT NGUỒN là hours (tiếng Việt) / hoursEn (mọi ngôn ngữ khác) ở trên — trang chủ, trang quán, experience đều đọc qua đây, không ghi cứng giờ trong HTML (t1435u 24/11/2026). */
+window.KET_hoursLines = function (venue) {
+  if (!venue) return [];
+  var lang = window.KET_LANG || document.documentElement.getAttribute("lang") || "vi";
+  var l = lang !== "vi" && venue.hoursEn && venue.hoursEn.length ? venue.hoursEn : venue.hours;
+  return l || [];
+};
 window.KET_hoursHome = function (venue) {
-  if (!venue.hours || !venue.hours.length) return "";
-  return venue.hours.join(" · ");
+  return window.KET_hoursLines(venue).join(" · ");
 };
 
 window.applyVenueTheme = function () {
