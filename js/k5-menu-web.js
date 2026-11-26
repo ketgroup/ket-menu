@@ -7,7 +7,7 @@
   if (!root || !body) return;
 
   var MENU_ENDPOINT = "https://ket-app.vercel.app/api/menu?quan=K5";
-  var MENU_FALLBACK = "data/menu-k5.json?v=20261110q";
+  var MENU_FALLBACK = "data/menu-k5.json?v=20261126a";
   var menu = [];
 
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
